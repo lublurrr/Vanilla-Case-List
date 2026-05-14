@@ -1,20 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "Virtual Turnabout",
-    "creator": "Fricka",
-    "description": "All Hail the Virtual Boy! It’s 1995 and Nintendo is providing a close look for their newest piece of tech. Will this be a bright future for the company, or will it mark its very end?",
-    "difficulty": "easy",
-    "length": "Short",
-    "tags": [
-      "NEW"
-    ],
-    "url": "https://docs.google.com/document/d/1wT6iyqH0tEWm6iSZzuUujX5yzumorb9mdSYavVQpOyw/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2026-05-01",
-    "image": "images/cases/case_001.jpg"
-  },
-  {
     "id": 2,
     "title": "Turnabout Divinity",
     "creator": "Sheepish",
