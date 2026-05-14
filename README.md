@@ -15,7 +15,7 @@ vanilla-case-list/
 ├── cases.json               The case data — edit this to add/remove cases
 ├── site_info.json           Last-updated / scheduled-update labels for the Docket panel
 ├── images/
-│   └── cases/               118 case logos (case_NNN.jpg)
+│   └── cases/               Many case logos
 ├── GITHUB_PAGES_SETUP.md    Beginner guide to hosting on GitHub Pages
 └── README.md                This file
 ```
