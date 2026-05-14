@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla Case List</title>
+  <meta name="description" content="The best Ace Attorney fan cases — for roleplay on Attorney Online, objection.lol, and beyond." />
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png" />
+
+  <!-- Open Graph (Discord, Facebook, etc.)
+       NOTE: og:image and twitter:image should be ABSOLUTE URLs for embeds to
+       work. Once the site is live, replace the two image paths below with the
+       full URL, e.g. https://your-username.github.io/vanilla-case-list/images/vcl-logo.png
+       See GITHUB_PAGES_SETUP.md for details. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vanilla Case List" />
+  <meta property="og:description" content="The best Ace Attorney fan cases — for roleplay on Attorney Online, objection.lol, and beyond." />
+  <meta property="og:image" content="images/vcl-logo.png" />
+  <meta property="og:image:alt" content="Vanilla Case List logo" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vanilla Case List" />
+  <meta name="twitter:description" content="The best Ace Attorney fan cases — for roleplay on Attorney Online, objection.lol, and beyond." />
+  <meta name="twitter:image" content="images/vcl-logo.png" />
+
+  <!-- Embed accent colour (the deep navy from the logo's "V") -->
+  <meta name="theme-color" content="#0a2563" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">
+        <img class="site-logo" src="images/vcl-logo.png" alt="Vanilla Case List — A compilation of the best Vanilla cases!" />
+      </h1>
+      <p class="site-credits">
+        Maintained by <strong>Fricka U, PinaDaPina, Knight, Wolfang, and Sheepish</strong><br>
+        <small>Started by Sp, Ordice, and Deadly</small>
+      </p>
+    </div>
+  </header>
+
+  <!-- Resource link strip -->
+  <nav class="resources-nav" aria-label="Related resources">
+    <div class="resources-inner">
+      <a class="resource-link" href="https://docs.google.com/document/d/1qsdx5w8xxOmNuoyU0XQqZ9owFCZ5Xt2ihsLVP0tWqjw/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <span class="resource-icon">📚</span>
+        <span class="resource-text"><strong>Vanilla Ultimate Archive</strong><span>Find every case ever created</span></span>
+      </a>
+      <a class="resource-link" href="https://docs.google.com/document/d/1XS_D2jgcGp_61gl2dnAozOop3shUC06HEPOT3iuaU-s/edit" target="_blank" rel="noopener noreferrer">
+        <span class="resource-icon">🛠</span>
+        <span class="resource-text"><strong>Resource Library</strong><span>Guides &amp; tools</span></span>
+      </a>
+      <a class="resource-link" href="https://discord.gg/5VwA7zTpvv" target="_blank" rel="noopener noreferrer">
+        <span class="resource-icon">💬</span>
+        <span class="resource-text"><strong>Casing Hub Discord</strong><span>Updates &amp; community</span></span>
+      </a>
+      <a class="resource-link" href="https://tiermaker.com/create/vanilla-case-list-logos-17506473" target="_blank" rel="noopener noreferrer">
+        <span class="resource-icon">📊</span>
+        <span class="resource-text"><strong>VCL Tier List</strong><span>Rank cases your way</span></span>
+      </a>
+      <a class="resource-link resource-submit" href="https://docs.google.com/forms/d/e/1FAIpQLSevKI9XmbUKZlO_xm3kX7hg1PfYXNavnLzc1dCu0XNt3ndtEg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
+        <span class="resource-icon">✉</span>
+        <span class="resource-text"><strong>Submit a Case</strong><span>Add yours to the list</span></span>
+      </a>
+      <button class="resource-link resource-faq-toggle" type="button" id="faq-toggle" aria-expanded="false" aria-controls="faq-section">
+        <span class="resource-icon">❓</span>
+        <span class="resource-text"><strong>FAQ</strong><span>How this all works</span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- FAQ: hidden by default, toggled via the FAQ button in resources-nav -->
+    <section class="faq-section" id="faq-section" hidden aria-label="Frequently asked questions">
+      <div class="faq-inner">
+        <p class="faq-intro">Everything you need to know about how the case list works.</p>
+
+        <details class="faq-item">
+          <summary>How can I get my case added?</summary>
+          <p>Use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSevKI9XmbUKZlO_xm3kX7hg1PfYXNavnLzc1dCu0XNt3ndtEg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">submission form</a>.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What are the requirements for a case to be added?</summary>
+          <p>It must be a fully-functional, complete case — not a Work in Progress, and free of known plot-holes that ruin gameplay.</p>
+          <p>It also needs a functional witness document with appropriate notes, and a clear path through the case made known to the witness.</p>
+          <p>Requests are allowed for smaller details. Requests that are illogical in the context of the case are not. Requests required for truth should be hinted at in a testimony or court record.</p>
+          <p>Finally, your plot should be at least logical and reasonably figure-out-able by a person.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I select a case to play?</summary>
+          <p>Click the case logo on the card — it'll open the case document. On mobile, the cards are a bit smaller but the link works the same way.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I change the way cases are organised?</summary>
+          <p>Use the <strong>Sort</strong> dropdown above the grid. You can sort by:</p>
+          <ul>
+            <li><strong>Difficulty Order</strong> — the original VCL format</li>
+            <li><strong>Length Order</strong> — Short, Moderate, Long</li>
+            <li><strong>Alphabetical</strong> — A→Z or Z→A</li>
+            <li><strong>Newest First</strong> — newest cases at the top</li>
+          </ul>
+          <p>You can also stack filters: e.g. show only Hard cases tagged "Custom Files".</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>I had an issue with a case on the list — how can I report it?</summary>
+          <p>DM any issues to one of the editors on Discord: <strong>frickau</strong>, <strong>kfcgull</strong>, or <strong>pinadapina</strong>.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How can I get a case removed from the list?</summary>
+          <p>For any reason, contact the editors on Discord: <strong>frickau</strong>, <strong>kfcgull</strong>, or <strong>pinadapina</strong>.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How long after submission until my case is added?</summary>
+          <p>The goal is to add new cases monthly at the start of each month, but schedules can shift due to other circumstances.</p>
+          <p>Your case will be tested by an editor — either by joining a run or supervising one (this run cannot involve the CM).</p>
+          <p>You'll then be contacted via Discord with the approval/denial. If denied, a valid reason will be provided to help you improve the case.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How frequently is the document updated?</summary>
+          <p>The aim is monthly updates on the first of every month at midnight GMT/BST (depending on Daylight Savings).</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I submit Non-Vanilla?</summary>
+          <p>Yes — non-vanilla cases can be submitted. A Google Drive link with the required files for non-vanilla characters will be embedded in the <strong>Custom Files</strong> tag on the case card.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are the Google Drive links safe to download?</summary>
+          <p>Yes — the editors made the Drive links themselves and they're 100% trusted. If you need help with ini-swapping or setting up the files, the <a href="https://docs.google.com/document/d/1XS_D2jgcGp_61gl2dnAozOop3shUC06HEPOT3iuaU-s/edit" target="_blank" rel="noopener noreferrer">Resource Library</a> has guides.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What do the tags mean?</summary>
+          <p>Each case has tags in its description giving extra context:</p>
+          <ul>
+            <li><strong>Difficulty</strong> — approximate challenge for the defence: Easy, Medium, or Hard.</li>
+            <li><strong>Length</strong> — average duration: Short (&lt;3 hours), Moderate (3–5 hours), Long (5+ hours).</li>
+            <li><strong>⭐ NEW</strong> — recently added in the latest update.</li>
+            <li><strong>Tutorial Case</strong> — recommended for starters in the Easy category.</li>
+            <li><strong>NSFW</strong> — explicit sexual and/or graphic content. Toggle "Hide NSFW cases" in the filter row to remove these from the list.</li>
+            <li><strong>Custom Files</strong> — needs additional asset files; click the tag to download them.</li>
+          </ul>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why is [X] case missing?</summary>
+          <p>Cases are reviewed for playability. If a case doesn't meet the conditions outlined above, it's likely been removed or denied.</p>
+          <p>For more in-depth info on why a case got removed/denied, contact the editors on Discord (<strong>frickau</strong>, <strong>kfcgull</strong>, <strong>pinadapina</strong>).</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How can I get a logo for my case?</summary>
+          <p>Logos are made for every approved VCL case. If you'd like to use the logo for your own case page, ask an editor for permission and credit them on the case.</p>
+          <p>Logos generally aren't created for cases that aren't going on VCL — they take time to make.</p>
+          <p>Logos are made by <strong>Wolfang</strong> (Discord: luwolfang), <strong>Fricka</strong>, <strong>Pina</strong>, and <strong>Knight</strong>. Don't use them without permission.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I change the logo for my case?</summary>
+          <p>If you don't like the provided logo, or have a different idea, DM an editor on Discord and they'll try to help suit the design to your needs. If you want to make your own, they can offer guidance on that too (no guarantees).</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I make my own version/copy of VCL?</summary>
+          <p>Other case lists are welcome — but please don't copy the formatting of VCL. The team has put significant time into the doc, so any plagiarism (even unintentional) is discouraged.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What constitutes a case being NSFW?</summary>
+          <p>A case depicting murder is far from enough to be NSFW (that's what Ace Attorney is built on). NSFW means more overt and gruesome depictions — gore images, evidence with technical/violent imagery that may unsettle some viewers.</p>
+          <p>NSFW also includes nudity or sexual themes that aren't appropriate for minors. A case can touch on these themes (and sensitive topics like suicide) as long as it isn't overly explicit.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I make a case?</summary>
+          <p>Everyone has their own approach, but Fricka has written a guide that can help and provide advice on supporting VCL. <a href="https://docs.google.com/document/d/1WRAzGB8P_5c5U5r9fA5WSmofkKHAedZardhwn7dbIu4/edit?tab=t.0" target="_blank" rel="noopener noreferrer">Find the guide here</a>.</p>
+        </details>
+
+        <p class="faq-footer-note">Have a different question? Reach an editor on Discord: <strong>frickau</strong>, <strong>kfcgull</strong>, or <strong>pinadapina</strong>.</p>
+      </div>
+    </section>
+
+    <!-- Random + Docket-Info + Stats Panel -->
+    <section class="random-panel">
+      <div class="random-card" data-tab-label="Random">
+        <div class="random-card-body">
+          <h2>Give Me a Random Case!</h2>
+          <p class="random-sub">Can't pick? Let fate decide.</p>
+          <div class="random-buttons">
+            <button class="btn-random btn-any" data-difficulty="any">Any</button>
+            <button class="btn-random btn-easy" data-difficulty="easy">Easy</button>
+            <button class="btn-random btn-medium" data-difficulty="medium">Medium</button>
+            <button class="btn-random btn-hard" data-difficulty="hard">Hard</button>
+          </div>
+        </div>
+        <!-- Featured case fills the empty space below the buttons -->
+        <div class="featured-case" id="featured-case">
+          <span class="featured-label">Featured Case</span>
+          <!-- Filled by app.js renderFeatured() -->
+        </div>
+      </div>
+      <div class="docket-info-card" data-tab-label="The Docket" id="docket-info">
+        <div class="docket-rows">
+          <div class="docket-row">
+            <span class="docket-label">Last updated</span>
+            <span class="docket-value" id="info-last-updated">—</span>
+          </div>
+          <div class="docket-row">
+            <span class="docket-label">Scheduled update</span>
+            <span class="docket-value" id="info-scheduled">—</span>
+          </div>
+          <div class="docket-row">
+            <span class="docket-label">Current case count</span>
+            <span class="docket-value" id="info-count">—</span>
+          </div>
+        </div>
+        <div class="docket-whats-new">
+          <h4 class="docket-subhead">What's new:</h4>
+          <ul id="info-whats-new" class="whats-new-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats summary as its own narrow row -->
+    <section class="stats-strip">
+      <div class="stat-pill stat-easy"><span class="stat-num" id="stat-easy">—</span> <span class="stat-label">Easy</span></div>
+      <div class="stat-pill stat-medium"><span class="stat-num" id="stat-medium">—</span> <span class="stat-label">Medium</span></div>
+      <div class="stat-pill stat-hard"><span class="stat-num" id="stat-hard">—</span> <span class="stat-label">Hard</span></div>
+      <div class="stat-pill stat-total"><span class="stat-num" id="stat-total">—</span> <span class="stat-label">Total</span></div>
+    </section>
+
+    <!-- Filter Toolbar -->
+    <section class="toolbar">
+      <div class="toolbar-row toolbar-search">
+        <label class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm5.5-2.5L21 21" />
+          </svg>
+          <input type="search" id="search" placeholder="Search by title, creator, or description..." autocomplete="off" />
+          <button type="button" id="search-clear" class="search-clear" aria-label="Clear search" hidden>×</button>
+        </label>
+      </div>
+
+      <div class="toolbar-row toolbar-filters">
+        <div class="filter-group">
+          <span class="filter-label">Difficulty</span>
+          <div class="chips" data-filter="difficulty">
+            <button class="chip chip-all is-active" data-value="all">All</button>
+            <button class="chip chip-easy" data-value="easy">Easy</button>
+            <button class="chip chip-medium" data-value="medium">Medium</button>
+            <button class="chip chip-hard" data-value="hard">Hard</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Length</span>
+          <div class="chips" data-filter="length">
+            <button class="chip is-active" data-value="all">All</button>
+            <button class="chip" data-value="Short">Short</button>
+            <button class="chip" data-value="Moderate">Moderate</button>
+            <button class="chip" data-value="Long">Long</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Tags</span>
+          <div class="chips" data-filter="tags">
+            <button class="chip chip-tag-new" data-value="NEW">⭐ New</button>
+            <button class="chip chip-tag-tutorial" data-value="Tutorial Case">Tutorial</button>
+            <button class="chip chip-tag-custom" data-value="CUSTOM FILES">Custom Files</button>
+          </div>
+        </div>
+
+        <div class="filter-group filter-sort">
+          <span class="filter-label">Sort</span>
+          <select id="sort">
+            <option value="default">Difficulty Order</option>
+            <option value="length">Length Order</option>
+            <option value="alpha">Alphabetical (A–Z)</option>
+            <option value="alpha-desc">Alphabetical (Z–A)</option>
+            <option value="newest">Most Recently Added</option>
+          </select>
+        </div>
+
+        <div class="filter-group filter-view">
+          <span class="filter-label">View</span>
+          <div class="view-toggle" role="group" aria-label="View mode">
+            <button type="button" class="view-btn is-active" data-view="grid" aria-pressed="true" title="Grid view">
+              <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor"/>
+                <rect x="9" y="1" width="6" height="6" rx="1" fill="currentColor"/>
+                <rect x="1" y="9" width="6" height="6" rx="1" fill="currentColor"/>
+                <rect x="9" y="9" width="6" height="6" rx="1" fill="currentColor"/>
+              </svg>
+              <span>Grid</span>
+            </button>
+            <button type="button" class="view-btn" data-view="list" aria-pressed="false" title="List view (like the original doc)">
+              <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                <rect x="1" y="2" width="14" height="3" rx="1" fill="currentColor"/>
+                <rect x="1" y="6.5" width="14" height="3" rx="1" fill="currentColor"/>
+                <rect x="1" y="11" width="14" height="3" rx="1" fill="currentColor"/>
+              </svg>
+              <span>List</span>
+            </button>
+          </div>
+        </div>
+
+        <button class="reset-btn" id="reset-filters" type="button">Reset</button>
+      </div>
+
+      <!-- NSFW gate: dedicated toggle so the polarity is unambiguous.
+           Default ON = NSFW cases are hidden. Toggle OFF to show them. -->
+      <div class="toolbar-row toolbar-nsfw">
+        <label class="nsfw-toggle">
+          <input type="checkbox" id="hide-nsfw" />
+          <span class="nsfw-toggle-track" aria-hidden="true">
+            <span class="nsfw-toggle-thumb"></span>
+          </span>
+          <span class="nsfw-toggle-text">
+            <strong>Hide NSFW cases</strong>
+            <span class="nsfw-toggle-hint">A few cases contain explicit/graphic content. Toggle off to include them in the list.</span>
+          </span>
+        </label>
+      </div>
+
+      <div class="results-count" id="results-count" aria-live="polite"></div>
+    </section>
+
+    <!-- Cases Grid -->
+    <section class="cases-section">
+      <div class="cases-grid" id="cases-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <p class="empty-title">No cases match your filters.</p>
+        <p class="empty-sub">Hold it! Try adjusting your search or hit reset.</p>
+        <button class="reset-btn" type="button" onclick="document.getElementById('reset-filters').click()">Reset filters</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>The best Ace Attorney fan cases — for roleplay on Attorney Online, objection.lol, and beyond.</p>
+    <p class="footer-small">Click any case to open its document. Cases courtesy of their respective creators.</p>
+  </footer>
+
+  <!-- Random Case Modal -->
+  <div class="modal" id="random-modal" hidden role="dialog" aria-modal="true" aria-labelledby="random-modal-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-body">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <h2 id="random-modal-title" class="modal-title">Your Random Case</h2>
+      <div id="random-result"></div>
+      <div class="modal-actions">
+        <button class="btn-random" id="random-again">Roll Again</button>
+        <button class="btn-secondary" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Detail Modal -->
+  <div class="modal" id="case-modal" hidden role="dialog" aria-modal="true" aria-labelledby="case-modal-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-body case-modal-body">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div id="case-modal-content"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
