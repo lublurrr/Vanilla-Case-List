@@ -378,6 +378,8 @@ function openCaseModal(caseId) {
         <h2 id="case-modal-title" class="case-modal-title">${escapeHtml(c.title)}</h2>
         <p class="case-modal-creator">${escapeHtml(c.creator || 'Unknown')}</p>
 
+        ${openBtn}
+
         <div class="case-modal-meta">
           <span class="case-modal-meta-item">
             <span class="case-modal-meta-label">Difficulty</span>
@@ -401,7 +403,7 @@ function openCaseModal(caseId) {
           <p class="case-modal-description">${escapeHtml(c.description || 'No description available.')}</p>
         </div>
 
-        ${openBtn}
+        
       </div>
     </div>
   `;
