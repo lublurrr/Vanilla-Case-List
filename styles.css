@@ -1741,7 +1741,8 @@ main {
    ========================================================================== */
 
 .case-modal-body {
-  max-width: 1000px;
+  max-width: 1000px !important;
+  width: min(1000px, calc(100vw - 2rem)) !important;
   padding: 0;
   overflow: visible;
   /* let the close button + tab show fully */
