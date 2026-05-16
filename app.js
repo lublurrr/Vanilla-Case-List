@@ -13,14 +13,14 @@ const LENGTH_ORDER     = { Short: 0, Moderate: 1, Long: 2 };
 const state = {
   cases: [],
   filters: {
-    difficulty: 'all',     // 'all' | 'easy' | 'medium' | 'hard'
-    length:     'all',     // 'all' | 'Short' | 'Moderate' | 'Long'
-    tags:       new Set(), // active tag filters (case must have ALL of these)
+    difficulty: 'all',
+    length:     'all',
+    tags:       new Set(),
     search:     '',
-    hideNsfw:   false,     // NSFW visible by default; toggle on to hide
+    hideNsfw:   false,
   },
   sort: 'default',
-  view: 'grid',           // 'grid' | 'list' — persisted in localStorage
+  view: 'grid',
 };
 
 /* ----------------------------------------------------------------
@@ -46,19 +46,17 @@ async function init() {
     return;
   }
 
-  // Optional site info (last/scheduled update labels). Failure is non-fatal.
   let siteInfo = {};
   try {
     const r = await fetch('site_info.json', { cache: 'no-store' });
     if (r.ok) siteInfo = await r.json();
-  } catch { /* fall through with empty siteInfo */ }
+  } catch { /* fall through */ }
   state.siteInfo = siteInfo;
 
-  // Restore saved view preference (grid/list)
   try {
     const saved = localStorage.getItem('vcl-view');
     if (saved === 'list' || saved === 'grid') state.view = saved;
-  } catch { /* localStorage unavailable, ignore */ }
+  } catch { /* ignore */ }
 
   renderStats();
   renderDocketInfo();
@@ -68,11 +66,10 @@ async function init() {
 }
 
 /* ----------------------------------------------------------------
- * Docket info: last updated / scheduled / count / what's new
+ * Docket info
  * ---------------------------------------------------------------- */
 function renderDocketInfo() {
   const info = state.siteInfo || {};
-  // Most recent approval_date across all cases
   const datedCases = state.cases.filter(c => c.approval_date);
   let lastDate = null;
   if (datedCases.length) {
@@ -90,10 +87,8 @@ function renderDocketInfo() {
   document.getElementById('info-scheduled').textContent = schedLabel;
   document.getElementById('info-count').textContent = state.cases.length;
 
-  // What's new: cases whose approval_date matches the most recent date
   let newCases;
   if (Array.isArray(info.whats_new_override) && info.whats_new_override.length) {
-    // Override: array of case IDs
     newCases = info.whats_new_override
       .map(id => state.cases.find(c => c.id === id))
       .filter(Boolean);
@@ -118,7 +113,6 @@ function renderDocketInfo() {
 }
 
 function formatDateLong(iso) {
-  // "2026-05-01" -> "1st May 2026"
   const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})/);
   if (!m) return iso;
   const day = parseInt(m[3], 10);
@@ -139,20 +133,14 @@ function formatDateLong(iso) {
 }
 
 /* ----------------------------------------------------------------
- * Featured Case — a random case that cycles once per day.
- *
- * The pick is seeded by today's date, so it's deterministic: everyone who
- * loads the page on the same calendar day sees the same featured case, and
- * it changes automatically at local midnight. No server or storage needed.
+ * Featured Case
  * ---------------------------------------------------------------- */
 function dailySeed() {
-  // Local-date string like "2026-05-14" -> integer YYYYMMDD
   const now = new Date();
   return now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
 }
 
 function seededIndex(seed, length) {
-  // Small deterministic hash (mulberry32-style) -> index in [0, length).
   let t = seed + 0x6D2B79F5;
   t = Math.imul(t ^ (t >>> 15), t | 1);
   t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
@@ -169,13 +157,12 @@ function renderFeatured() {
     return;
   }
 
-  // Deterministic daily pick across the entire list.
   const idx = seededIndex(dailySeed(), state.cases.length);
   const featured = state.cases[idx];
 
   const lengthLabel = featured.length || '?';
   const tagsHtml = featured.tags
-    .filter(t => t === 'NEW')  // Keep it minimal — NEW is the only tag worth showing here
+    .filter(t => t === 'NEW')
     .map(t => renderTag(t, featured))
     .join('');
 
@@ -245,7 +232,6 @@ function getFiltered() {
         (DIFFICULTY_ORDER[a.difficulty] ?? 9) - (DIFFICULTY_ORDER[b.difficulty] ?? 9));
       break;
     case 'newest':
-      // Sort by approval date descending (most recently added first), tiebreak by id
       list.sort((a, b) => {
         const da = a.approval_date || '';
         const db = b.approval_date || '';
@@ -276,7 +262,6 @@ function render() {
   const empty = document.getElementById('empty-state');
   const count = document.getElementById('results-count');
 
-  // Apply view mode class
   grid.classList.toggle('view-list', state.view === 'list');
 
   if (list.length === 0) {
@@ -292,9 +277,6 @@ function render() {
 }
 
 function renderCard(c) {
-  // Cards on the grid are uniform and compact — no description, no expansion.
-  // Clicking a card opens the detail modal. We store the case id on the
-  // element so the click handler can look the case back up.
   const cls = ['case-card', 'card-openable'];
 
   const tagsHtml = c.tags.length
@@ -304,7 +286,6 @@ function renderCard(c) {
   const diffLabel = capitalize(c.difficulty);
   const lengthLabel = c.length || '?';
 
-  // Format approval date as e.g. "Added May 2026"
   let dateLabel = '';
   if (c.approval_date) {
     const m = c.approval_date.match(/^(\d{4})-(\d{2})/);
@@ -351,7 +332,6 @@ function openCaseModal(caseId) {
   const lengthLabel = c.length || 'Unknown';
   const dateLabel = c.approval_date ? formatDateLong(c.approval_date) : null;
 
-  // All tags rendered (including Custom Files as a download link)
   const tagsHtml = c.tags.length
     ? `<div class="case-modal-tags">${c.tags.map(t => renderTag(t, c)).join('')}</div>`
     : '';
@@ -394,15 +374,12 @@ function openCaseModal(caseId) {
           <span class="case-modal-desc-label">Description</span>
           <p class="case-modal-description">${escapeHtml(c.description || 'No description available.')}</p>
         </div>
-
-        
       </div>
     </div>
   `;
 
   modal.hidden = false;
   document.body.style.overflow = 'hidden';
-  // Focus the close button for keyboard users
   const closeBtn = modal.querySelector('.modal-close');
   if (closeBtn) closeBtn.focus();
 }
@@ -413,7 +390,6 @@ function closeCaseModal() {
 }
 
 function renderTag(tag, caseObj) {
-  // CUSTOM FILES becomes a clickable download link when the case has a url for it.
   if (tag === 'CUSTOM FILES') {
     const url = caseObj && caseObj.custom_files_url;
     if (url) {
@@ -438,39 +414,32 @@ function renderTag(tag, caseObj) {
  * Controls
  * ---------------------------------------------------------------- */
 function bindControls() {
-  // Grid cards open the detail modal on click. The random-modal result card
-  // still uses .card-clickable (opens its URL directly). Event delegation.
   document.addEventListener('click', e => {
-    // Random-modal result card: opens the URL directly.
-    const clickableCard = e.target.closest('.card-clickable');
-    if (clickableCard) {
+    // Any .card-openable opens the case detail modal
+    const card = e.target.closest('.card-openable');
+    if (card) {
       const interactive = e.target.closest('a, button');
-      if (interactive && interactive !== clickableCard && clickableCard.contains(interactive)) return;
-      const url = clickableCard.dataset.url;
-      if (url) window.open(url, '_blank', 'noopener,noreferrer');
+      if (interactive && card.contains(interactive)) return;
+      const id = parseInt(card.dataset.caseId, 10);
+      if (!Number.isNaN(id)) {
+        closeModal(); // close random modal if open
+        openCaseModal(id);
+      }
       return;
     }
-    // Grid cards / featured / random result: open the detail modal.
-    const card = e.target.closest('.card-openable');
-    if (!card) return;
-    // If the click landed on an inner link/button, let it handle the click.
-    const interactive = e.target.closest('a, button');
-    if (interactive && card.contains(interactive)) return;
-    const id = parseInt(card.dataset.caseId, 10);
-    if (!Number.isNaN(id)) {
-      // Close the random modal first if it's open
-      closeModal();
-      openCaseModal(id);
-    }
   });
-  // Keyboard activation for grid cards (Enter / Space)
+
+  // Keyboard activation for .card-openable (Enter / Space)
   document.addEventListener('keydown', e => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
     const card = e.target.closest('.card-openable');
     if (!card || card !== e.target) return;
     e.preventDefault();
     const id = parseInt(card.dataset.caseId, 10);
-    if (!Number.isNaN(id)) openCaseModal(id);
+    if (!Number.isNaN(id)) {
+      closeModal();
+      openCaseModal(id);
+    }
   });
 
   // Search input
@@ -498,7 +467,6 @@ function bindControls() {
       const value = btn.dataset.value;
 
       if (filterKey === 'tags') {
-        // Toggle behavior, multiple allowed
         if (state.filters.tags.has(value)) {
           state.filters.tags.delete(value);
           btn.classList.remove('is-active');
@@ -507,7 +475,6 @@ function bindControls() {
           btn.classList.add('is-active');
         }
       } else {
-        // Single-select within group
         state.filters[filterKey] = value;
         group.querySelectorAll('.chip').forEach(b => b.classList.toggle('is-active', b === btn));
       }
@@ -575,6 +542,7 @@ function bindControls() {
     if (!modal.hidden) closeModal();
     if (!caseModal.hidden) closeCaseModal();
   });
+
   // NSFW toggle
   const hideNsfwInput = document.getElementById('hide-nsfw');
   if (hideNsfwInput) {
@@ -586,7 +554,6 @@ function bindControls() {
 
   // View toggle (Grid / List)
   document.querySelectorAll('.view-btn').forEach(btn => {
-    // Sync initial pressed state with state.view
     const isActive = btn.dataset.view === state.view;
     btn.classList.toggle('is-active', isActive);
     btn.setAttribute('aria-pressed', String(isActive));
@@ -595,9 +562,7 @@ function bindControls() {
       const v = btn.dataset.view;
       if (v !== 'grid' && v !== 'list') return;
       state.view = v;
-      // Persist preference
       try { localStorage.setItem('vcl-view', v); } catch { /* ignore */ }
-      // Update all view buttons' active state
       document.querySelectorAll('.view-btn').forEach(b => {
         const active = b.dataset.view === v;
         b.classList.toggle('is-active', active);
@@ -626,9 +591,6 @@ function bindControls() {
  * Random selector
  * ---------------------------------------------------------------- */
 function rollRandom(difficulty) {
-  // Pool starts with all cases, then we apply the NSFW filter so the random
-  // picker respects the user's safety toggle. We don't apply the other
-  // filters — the point of the random picker is broad discovery.
   let pool = state.cases.slice();
   if (state.filters.hideNsfw) {
     pool = pool.filter(c => !c.tags.includes('NSFW'));
@@ -638,29 +600,28 @@ function rollRandom(difficulty) {
   }
 
   if (pool.length === 0) {
-    showRandom([], difficulty);
+    showRandom(null, difficulty);
     return;
   }
 
-  // Pick up to 2 distinct cases
-  const shuffled = pool.slice().sort(() => Math.random() - 0.5);
-  const picks = shuffled.slice(0, Math.min(2, shuffled.length));
-  showRandom(picks, difficulty);
+  const pick = pool[Math.floor(Math.random() * pool.length)];
+  showRandom(pick, difficulty);
 }
 
-function showRandom(picks, difficulty) {
+function showRandom(c, difficulty) {
   const modal = document.getElementById('random-modal');
   modal.dataset.lastDifficulty = difficulty;
   const result = document.getElementById('random-result');
 
-  if (!picks || picks.length === 0) {
+  if (!c) {
     result.innerHTML = `<p style="text-align:center;color:var(--red-deep)">No cases available for that filter.</p>`;
   } else {
+    // Render using the same renderCard() as the grid — folder tab, hover pop, click-to-modal
     result.innerHTML = `
-      <div class="random-results-grid">
-        ${picks.map(c => renderCard(c)).join('')}
+      <div class="random-result-wrap">
+        ${renderCard(c)}
       </div>
-      <p style="font-size:0.8rem;color:var(--ink-light);text-align:center;margin:0.75rem 0 0;font-style:italic;">Click a card to see full details.</p>
+      <p class="random-hint">Click the card for full details — or roll again!</p>
     `;
   }
 
