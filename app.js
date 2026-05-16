@@ -173,15 +173,23 @@ function renderFeatured() {
   const idx = seededIndex(dailySeed(), state.cases.length);
   const featured = state.cases[idx];
 
+  const hasUrl = Boolean(featured.url);
+  const cls = ['featured-card-inner'];
+  if (hasUrl) cls.push('card-clickable');
+
   const lengthLabel = featured.length || '?';
   const tagsHtml = featured.tags
     .filter(t => t === 'NEW')  // Keep it minimal — NEW is the only tag worth showing here
     .map(t => renderTag(t, featured))
     .join('');
 
+  const dataAttrs = hasUrl
+    ? `data-url="${escapeAttr(featured.url)}" tabindex="0" role="link" aria-label="Open ${escapeAttr(featured.title)} case document"`
+    : '';
+
   container.innerHTML = `
     <span class="featured-label">Featured Case</span>
-    <div class="featured-card-inner card-openable" data-difficulty="${escapeAttr(featured.difficulty)}" data-case-id="${featured.id}" tabindex="0" role="button" aria-label="${escapeAttr(featured.title)} — click for full details">
+    <div class="${cls.join(' ')}" data-difficulty="${escapeAttr(featured.difficulty)}" ${dataAttrs}>
       <img class="featured-image" src="${escapeAttr(featured.image)}" alt="${escapeAttr(featured.title)} logo" onerror="this.style.display='none'">
       <div class="featured-text">
         <h3 class="featured-title">${escapeHtml(featured.title)}</h3>
@@ -450,18 +458,14 @@ function bindControls() {
       if (url) window.open(url, '_blank', 'noopener,noreferrer');
       return;
     }
-    // Grid cards / featured / random result: open the detail modal.
+    // Grid cards: open the detail modal.
     const card = e.target.closest('.card-openable');
     if (!card) return;
     // If the click landed on an inner link/button, let it handle the click.
     const interactive = e.target.closest('a, button');
     if (interactive && card.contains(interactive)) return;
     const id = parseInt(card.dataset.caseId, 10);
-    if (!Number.isNaN(id)) {
-      // Close the random modal first if it's open
-      closeModal();
-      openCaseModal(id);
-    }
+    if (!Number.isNaN(id)) openCaseModal(id);
   });
   // Keyboard activation for grid cards (Enter / Space)
   document.addEventListener('keydown', e => {
@@ -654,8 +658,12 @@ function showRandom(c, difficulty) {
   if (!c) {
     result.innerHTML = `<p style="text-align:center;color:var(--red-deep)">No cases available for that filter.</p>`;
   } else {
+    const hasUrl = Boolean(c.url);
+    const dataAttrs = hasUrl
+      ? `class="random-result-card card-clickable" data-url="${escapeAttr(c.url)}" tabindex="0" role="link"`
+      : `class="random-result-card no-link"`;
     result.innerHTML = `
-      <div class="random-result-card card-openable" data-case-id="${c.id}" tabindex="0" role="button" aria-label="${escapeAttr(c.title)} — click for full details">
+      <div ${dataAttrs}>
         <img src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)}" onerror="this.style.display='none'">
         <h3>${escapeHtml(c.title)}</h3>
         <p class="card-creator">${escapeHtml(c.creator || 'Unknown')}</p>
@@ -666,7 +674,7 @@ function showRandom(c, difficulty) {
           ${c.tags.map(t => renderTag(t, c)).join('')}
         </div>
       </div>
-      <p style="font-size:0.8rem;color:var(--ink-light);text-align:center;margin:0.5rem 0 0;font-style:italic;">Click the card above for details.</p>
+      ${hasUrl ? '<p style="font-size:0.8rem;color:var(--ink-light);text-align:center;margin:0.5rem 0 0;font-style:italic;">Click the card above to open the case.</p>' : ''}
     `;
   }
 
