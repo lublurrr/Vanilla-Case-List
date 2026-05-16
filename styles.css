@@ -1749,6 +1749,15 @@ main {
   background-color: var(--cream-light);
 }
 
+#random-modal .modal-body,
+#case-modal .modal-body {
+  max-width: 1000px;
+  width: min(1000px, calc(100vw - 2rem));
+  padding: 0;
+  background-color: var(--cream-light);
+  overflow: visible;
+}
+
 .case-modal-body .modal-actions {
   padding: 1rem 1.5rem 1.5rem;
   background-color: var(--cream-light);
