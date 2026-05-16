@@ -602,26 +602,8 @@ function showRandom(c, difficulty) {
   if (!c) {
     result.innerHTML = `<p style="text-align:center;color:var(--red-deep);margin:0.5rem 0;">No cases available for that filter.</p>`;
   } else {
-    const lengthLabel = c.length || '?';
-    const tagsHtml = c.tags
-      .filter(t => t === 'NEW')
-      .map(t => renderTag(t, c))
-      .join('');
-
-    // Same HTML structure as featured-card-inner — horizontal, image left, info right
-    result.innerHTML = `
-      <div class="featured-card-inner card-openable" data-difficulty="${escapeAttr(c.difficulty)}" data-case-id="${c.id}" tabindex="0" role="button" aria-label="${escapeAttr(c.title)} — click for full details">
-        <img class="featured-image" src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)} logo" onerror="this.style.display='none'">
-        <div class="featured-text">
-          <h3 class="featured-title">${escapeHtml(c.title)}</h3>
-          <p class="featured-creator">${escapeHtml(c.creator || 'Unknown')}</p>
-          <div class="featured-meta">
-            <span class="card-meta-item length-${escapeAttr(lengthLabel)}">${lengthLabel}</span>
-            ${tagsHtml}
-          </div>
-        </div>
-      </div>
-    `;
+    // Render exactly like a grid card — folder tab, vertical layout, same pop on hover
+    result.innerHTML = `<div class="random-card-wrap">${renderCard(c)}</div>`;
   }
 
   randomModal.hidden = false;
