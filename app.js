@@ -93,6 +93,7 @@ function renderDocketInfo() {
   // What's new: cases whose approval_date matches the most recent date
   let newCases;
   if (Array.isArray(info.whats_new_override) && info.whats_new_override.length) {
+    // Override: array of case IDs
     newCases = info.whats_new_override
       .map(id => state.cases.find(c => c.id === id))
       .filter(Boolean);
@@ -102,18 +103,13 @@ function renderDocketInfo() {
     newCases = [];
   }
 
-  const ul = document.getElementById('info-whats-new');
+  const whatsNewGrid = document.getElementById('info-whats-new');
   if (!newCases.length) {
-    ul.innerHTML = '<li style="color:var(--ink-light);font-style:italic;">No new cases yet.</li>';
+    whatsNewGrid.innerHTML = '<p style="color:var(--ink-light);font-style:italic;margin:0;">No new cases yet.</p>';
     return;
   }
-  ul.innerHTML = newCases.map(c => {
-    const diffLetter = c.difficulty[0].toUpperCase();
-    const link = c.url
-      ? `<a href="${escapeAttr(c.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(c.title)}</a>`
-      : escapeHtml(c.title);
-    return `<li>${link} <span class="diff-badge diff-${escapeAttr(c.difficulty)}">${diffLetter}</span></li>`;
-  }).join('');
+  // Render as grid cards — same as the main case grid
+  whatsNewGrid.innerHTML = newCases.map(c => renderCard(c)).join('');
 }
 
 function formatDateLong(iso) {
@@ -139,13 +135,19 @@ function formatDateLong(iso) {
 
 /* ----------------------------------------------------------------
  * Featured Case — a random case that cycles once per day.
+ *
+ * The pick is seeded by today's date, so it's deterministic: everyone who
+ * loads the page on the same calendar day sees the same featured case, and
+ * it changes automatically at local midnight. No server or storage needed.
  * ---------------------------------------------------------------- */
 function dailySeed() {
+  // Local-date string like "2026-05-14" -> integer YYYYMMDD
   const now = new Date();
   return now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
 }
 
 function seededIndex(seed, length) {
+  // Small deterministic hash (mulberry32-style) -> index in [0, length).
   let t = seed + 0x6D2B79F5;
   t = Math.imul(t ^ (t >>> 15), t | 1);
   t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
@@ -162,12 +164,13 @@ function renderFeatured() {
     return;
   }
 
+  // Deterministic daily pick across the entire list.
   const idx = seededIndex(dailySeed(), state.cases.length);
   const featured = state.cases[idx];
 
   const lengthLabel = featured.length || '?';
   const tagsHtml = featured.tags
-    .filter(t => t === 'NEW')
+    .filter(t => t === 'NEW')  // Keep it minimal — NEW is the only tag worth showing here
     .map(t => renderTag(t, featured))
     .join('');
 
@@ -237,6 +240,7 @@ function getFiltered() {
         (DIFFICULTY_ORDER[a.difficulty] ?? 9) - (DIFFICULTY_ORDER[b.difficulty] ?? 9));
       break;
     case 'newest':
+      // Sort by approval date descending (most recently added first), tiebreak by id
       list.sort((a, b) => {
         const da = a.approval_date || '';
         const db = b.approval_date || '';
@@ -267,6 +271,7 @@ function render() {
   const empty = document.getElementById('empty-state');
   const count = document.getElementById('results-count');
 
+  // Apply view mode class
   grid.classList.toggle('view-list', state.view === 'list');
 
   if (list.length === 0) {
@@ -282,6 +287,9 @@ function render() {
 }
 
 function renderCard(c) {
+  // Cards on the grid are uniform and compact — no description, no expansion.
+  // Clicking a card opens the detail modal. We store the case id on the
+  // element so the click handler can look the case back up.
   const cls = ['case-card', 'card-openable'];
 
   const tagsHtml = c.tags.length
@@ -291,6 +299,7 @@ function renderCard(c) {
   const diffLabel = capitalize(c.difficulty);
   const lengthLabel = c.length || '?';
 
+  // Format approval date as e.g. "Added May 2026"
   let dateLabel = '';
   if (c.approval_date) {
     const m = c.approval_date.match(/^(\d{4})-(\d{2})/);
@@ -337,6 +346,7 @@ function openCaseModal(caseId) {
   const lengthLabel = c.length || 'Unknown';
   const dateLabel = c.approval_date ? formatDateLong(c.approval_date) : null;
 
+  // All tags rendered (including Custom Files as a download link)
   const tagsHtml = c.tags.length
     ? `<div class="case-modal-tags">${c.tags.map(t => renderTag(t, c)).join('')}</div>`
     : '';
@@ -379,12 +389,15 @@ function openCaseModal(caseId) {
           <span class="case-modal-desc-label">Description</span>
           <p class="case-modal-description">${escapeHtml(c.description || 'No description available.')}</p>
         </div>
+
+        
       </div>
     </div>
   `;
 
   modal.hidden = false;
   document.body.style.overflow = 'hidden';
+  // Focus the close button for keyboard users
   const closeBtn = modal.querySelector('.modal-close');
   if (closeBtn) closeBtn.focus();
 }
@@ -395,6 +408,7 @@ function closeCaseModal() {
 }
 
 function renderTag(tag, caseObj) {
+  // CUSTOM FILES becomes a clickable download link when the case has a url for it.
   if (tag === 'CUSTOM FILES') {
     const url = caseObj && caseObj.custom_files_url;
     if (url) {
@@ -419,35 +433,42 @@ function renderTag(tag, caseObj) {
  * Controls
  * ---------------------------------------------------------------- */
 function bindControls() {
+  // Grid cards open the detail modal on click. The random-modal result card
+  // still uses .card-clickable (opens its URL directly). Event delegation.
   document.addEventListener('click', e => {
-    // .card-openable — opens case detail modal (grid, featured, and random result)
-    const card = e.target.closest('.card-openable');
-    if (card) {
+    // Random-modal result card: opens the URL directly.
+    const clickableCard = e.target.closest('.card-clickable');
+    if (clickableCard) {
       const interactive = e.target.closest('a, button');
-      if (interactive && card.contains(interactive)) return;
-      const id = parseInt(card.dataset.caseId, 10);
-      if (!Number.isNaN(id)) {
-        closeRandomModal();
-        openCaseModal(id);
-      }
+      if (interactive && interactive !== clickableCard && clickableCard.contains(interactive)) return;
+      const url = clickableCard.dataset.url;
+      if (url) window.open(url, '_blank', 'noopener,noreferrer');
       return;
     }
+    // Grid cards / featured / random result: open the detail modal.
+    const card = e.target.closest('.card-openable');
+    if (!card) return;
+    // If the click landed on an inner link/button, let it handle the click.
+    const interactive = e.target.closest('a, button');
+    if (interactive && card.contains(interactive)) return;
+    const id = parseInt(card.dataset.caseId, 10);
+    if (!Number.isNaN(id)) {
+      // Close the random modal first if it's open
+      closeModal();
+      openCaseModal(id);
+    }
   });
-
-  // Keyboard activation (Enter / Space)
+  // Keyboard activation for grid cards (Enter / Space)
   document.addEventListener('keydown', e => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
     const card = e.target.closest('.card-openable');
     if (!card || card !== e.target) return;
     e.preventDefault();
     const id = parseInt(card.dataset.caseId, 10);
-    if (!Number.isNaN(id)) {
-      closeRandomModal();
-      openCaseModal(id);
-    }
+    if (!Number.isNaN(id)) openCaseModal(id);
   });
 
-  // Search
+  // Search input
   const searchInput = document.getElementById('search');
   const searchClear = document.getElementById('search-clear');
   searchInput.addEventListener('input', () => {
@@ -470,7 +491,9 @@ function bindControls() {
       const btn = e.target.closest('.chip');
       if (!btn) return;
       const value = btn.dataset.value;
+
       if (filterKey === 'tags') {
+        // Toggle behavior, multiple allowed
         if (state.filters.tags.has(value)) {
           state.filters.tags.delete(value);
           btn.classList.remove('is-active');
@@ -479,6 +502,7 @@ function bindControls() {
           btn.classList.add('is-active');
         }
       } else {
+        // Single-select within group
         state.filters[filterKey] = value;
         group.querySelectorAll('.chip').forEach(b => b.classList.toggle('is-active', b === btn));
       }
@@ -486,7 +510,7 @@ function bindControls() {
     });
   });
 
-  // Sort
+  // Sort dropdown
   document.getElementById('sort').addEventListener('change', e => {
     state.sort = e.target.value;
     render();
@@ -494,7 +518,13 @@ function bindControls() {
 
   // Reset
   document.getElementById('reset-filters').addEventListener('click', () => {
-    state.filters = { difficulty: 'all', length: 'all', tags: new Set(), search: '', hideNsfw: false };
+    state.filters = {
+      difficulty: 'all',
+      length: 'all',
+      tags: new Set(),
+      search: '',
+      hideNsfw: false,
+    };
     state.sort = 'default';
     document.getElementById('search').value = '';
     document.getElementById('search-clear').hidden = true;
@@ -519,28 +549,27 @@ function bindControls() {
     btn.addEventListener('click', () => rollRandom(btn.dataset.difficulty));
   });
 
-  // Random modal — close + roll again
-  const randomModal = document.getElementById('random-modal');
-  randomModal.addEventListener('click', e => {
-    if (e.target.matches('[data-close]')) closeRandomModal();
+  // Modal close — random modal
+  const modal = document.getElementById('random-modal');
+  modal.addEventListener('click', e => {
+    if (e.target.matches('[data-close]')) closeModal();
   });
   document.getElementById('random-again').addEventListener('click', () => {
-    rollRandom(randomModal.dataset.lastDifficulty || 'any');
+    rollRandom(modal.dataset.lastDifficulty || 'any');
   });
 
-  // Case detail modal — close
+  // Modal close — case detail modal
   const caseModal = document.getElementById('case-modal');
   caseModal.addEventListener('click', e => {
     if (e.target.matches('[data-close]')) closeCaseModal();
   });
 
-  // Escape
+  // Escape closes whichever modal is open
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
-    if (!randomModal.hidden) closeRandomModal();
+    if (!modal.hidden) closeModal();
     if (!caseModal.hidden) closeCaseModal();
   });
-
   // NSFW toggle
   const hideNsfwInput = document.getElementById('hide-nsfw');
   if (hideNsfwInput) {
@@ -550,16 +579,20 @@ function bindControls() {
     });
   }
 
-  // View toggle
+  // View toggle (Grid / List)
   document.querySelectorAll('.view-btn').forEach(btn => {
+    // Sync initial pressed state with state.view
     const isActive = btn.dataset.view === state.view;
     btn.classList.toggle('is-active', isActive);
     btn.setAttribute('aria-pressed', String(isActive));
+
     btn.addEventListener('click', () => {
       const v = btn.dataset.view;
       if (v !== 'grid' && v !== 'list') return;
       state.view = v;
+      // Persist preference
       try { localStorage.setItem('vcl-view', v); } catch { /* ignore */ }
+      // Update all view buttons' active state
       document.querySelectorAll('.view-btn').forEach(b => {
         const active = b.dataset.view === v;
         b.classList.toggle('is-active', active);
@@ -577,7 +610,9 @@ function bindControls() {
       const isOpen = !faqSection.hidden;
       faqSection.hidden = isOpen;
       faqToggle.setAttribute('aria-expanded', String(!isOpen));
-      if (!isOpen) faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (!isOpen) {
+        faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   }
 }
@@ -586,85 +621,52 @@ function bindControls() {
  * Random selector
  * ---------------------------------------------------------------- */
 function rollRandom(difficulty) {
+  // Pool starts with all cases, then we apply the NSFW filter so the random
+  // picker respects the user's safety toggle. We don't apply the other
+  // filters — the point of the random picker is broad discovery.
   let pool = state.cases.slice();
-  if (state.filters.hideNsfw) pool = pool.filter(c => !c.tags.includes('NSFW'));
-  if (difficulty !== 'any') pool = pool.filter(c => c.difficulty === difficulty);
+  if (state.filters.hideNsfw) {
+    pool = pool.filter(c => !c.tags.includes('NSFW'));
+  }
+  if (difficulty !== 'any') {
+    pool = pool.filter(c => c.difficulty === difficulty);
+  }
 
-  const pick = pool.length ? pool[Math.floor(Math.random() * pool.length)] : null;
-  showRandom(pick, difficulty);
+  if (pool.length === 0) {
+    showRandom([], difficulty);
+    return;
+  }
+
+  // Pick up to 2 distinct cases
+  const shuffled = pool.slice().sort(() => Math.random() - 0.5);
+  const picks = shuffled.slice(0, Math.min(2, shuffled.length));
+  showRandom(picks, difficulty);
 }
 
-function showRandom(c, difficulty) {
-  const randomModal = document.getElementById('random-modal');
-  randomModal.dataset.lastDifficulty = difficulty;
+function showRandom(picks, difficulty) {
+  const modal = document.getElementById('random-modal');
+  modal.dataset.lastDifficulty = difficulty;
   const result = document.getElementById('random-result');
 
-  if (!c) {
-    result.innerHTML = `<p style="text-align:center;color:var(--red-deep);margin:0.5rem 0;">No cases available for that filter.</p>`;
+  if (!picks || picks.length === 0) {
+    result.innerHTML = `<p style="text-align:center;color:var(--red-deep)">No cases available for that filter.</p>`;
   } else {
-    // Render using the same full case-detail card UI as openCaseModal
-    const diffLabel = capitalize(c.difficulty);
-    const lengthLabel = c.length || 'Unknown';
-    const dateLabel = c.approval_date ? formatDateLong(c.approval_date) : null;
-
-    const tagsHtml = c.tags.length
-      ? `<div class="case-modal-tags">${c.tags.map(t => renderTag(t, c)).join('')}</div>`
-      : '';
-
-    const openBtn = c.url
-      ? `<a class="card-open-btn case-modal-open-btn" href="${escapeAttr(c.url)}" target="_blank" rel="noopener noreferrer">Open Case Document ↗</a>`
-      : `<span class="card-open-btn card-open-btn-disabled" aria-disabled="true">No document available yet</span>`;
-
     result.innerHTML = `
-      <div class="case-modal-card" data-difficulty="${escapeAttr(c.difficulty)}">
-        <div class="case-modal-tab" data-label="${diffLabel}"></div>
-        <div class="case-modal-image-wrap">
-          <img class="case-modal-image" src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)} logo" onerror="this.style.display='none'">
-        </div>
-        <div class="case-modal-info">
-          <h2 class="case-modal-title">${escapeHtml(c.title)}</h2>
-          <p class="case-modal-creator">${escapeHtml(c.creator || 'Unknown')}</p>
-
-          ${openBtn}
-
-          <div class="case-modal-meta">
-            <span class="case-modal-meta-item">
-              <span class="case-modal-meta-label">Difficulty</span>
-              <span class="card-meta-item diff-${escapeAttr(c.difficulty)}">${diffLabel}</span>
-            </span>
-            <span class="case-modal-meta-item">
-              <span class="case-modal-meta-label">Length</span>
-              <span class="card-meta-item length-${escapeAttr(lengthLabel)}">${lengthLabel}</span>
-            </span>
-            ${dateLabel ? `
-            <span class="case-modal-meta-item">
-              <span class="case-modal-meta-label">Added</span>
-              <span class="case-modal-meta-value">${dateLabel}</span>
-            </span>` : ''}
-          </div>
-
-          ${tagsHtml}
-
-          <div class="case-modal-desc-block">
-            <span class="case-modal-desc-label">Description</span>
-            <p class="case-modal-description">${escapeHtml(c.description || 'No description available.')}</p>
-          </div>
-        </div>
+      <div class="random-results-grid">
+        ${picks.map(c => renderCard(c)).join('')}
       </div>
+      <p style="font-size:0.8rem;color:var(--ink-light);text-align:center;margin:0.75rem 0 0;font-style:italic;">Click a card to see full details.</p>
     `;
   }
 
-  randomModal.hidden = false;
+  modal.hidden = false;
   document.body.style.overflow = 'hidden';
 }
 
-function closeRandomModal() {
+function closeModal() {
   document.getElementById('random-modal').hidden = true;
   document.body.style.overflow = '';
 }
-
-// Keep closeModal as an alias so nothing else breaks
-function closeModal() { closeRandomModal(); }
 
 /* ----------------------------------------------------------------
  * Helpers
