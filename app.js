@@ -602,8 +602,56 @@ function showRandom(c, difficulty) {
   if (!c) {
     result.innerHTML = `<p style="text-align:center;color:var(--red-deep);margin:0.5rem 0;">No cases available for that filter.</p>`;
   } else {
-    // Render exactly like a grid card — folder tab, vertical layout, same pop on hover
-    result.innerHTML = `<div class="random-card-wrap">${renderCard(c)}</div>`;
+    // Render using the same full case-detail card UI as openCaseModal
+    const diffLabel = capitalize(c.difficulty);
+    const lengthLabel = c.length || 'Unknown';
+    const dateLabel = c.approval_date ? formatDateLong(c.approval_date) : null;
+
+    const tagsHtml = c.tags.length
+      ? `<div class="case-modal-tags">${c.tags.map(t => renderTag(t, c)).join('')}</div>`
+      : '';
+
+    const openBtn = c.url
+      ? `<a class="card-open-btn case-modal-open-btn" href="${escapeAttr(c.url)}" target="_blank" rel="noopener noreferrer">Open Case Document ↗</a>`
+      : `<span class="card-open-btn card-open-btn-disabled" aria-disabled="true">No document available yet</span>`;
+
+    result.innerHTML = `
+      <div class="case-modal-card" data-difficulty="${escapeAttr(c.difficulty)}">
+        <div class="case-modal-tab" data-label="${diffLabel}"></div>
+        <div class="case-modal-image-wrap">
+          <img class="case-modal-image" src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)} logo" onerror="this.style.display='none'">
+        </div>
+        <div class="case-modal-info">
+          <h2 class="case-modal-title">${escapeHtml(c.title)}</h2>
+          <p class="case-modal-creator">${escapeHtml(c.creator || 'Unknown')}</p>
+
+          ${openBtn}
+
+          <div class="case-modal-meta">
+            <span class="case-modal-meta-item">
+              <span class="case-modal-meta-label">Difficulty</span>
+              <span class="card-meta-item diff-${escapeAttr(c.difficulty)}">${diffLabel}</span>
+            </span>
+            <span class="case-modal-meta-item">
+              <span class="case-modal-meta-label">Length</span>
+              <span class="card-meta-item length-${escapeAttr(lengthLabel)}">${lengthLabel}</span>
+            </span>
+            ${dateLabel ? `
+            <span class="case-modal-meta-item">
+              <span class="case-modal-meta-label">Added</span>
+              <span class="case-modal-meta-value">${dateLabel}</span>
+            </span>` : ''}
+          </div>
+
+          ${tagsHtml}
+
+          <div class="case-modal-desc-block">
+            <span class="case-modal-desc-label">Description</span>
+            <p class="case-modal-description">${escapeHtml(c.description || 'No description available.')}</p>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
   randomModal.hidden = false;
