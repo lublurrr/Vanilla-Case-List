@@ -1726,13 +1726,13 @@ main {
   box-shadow: 0 2px 0 var(--ink);
 }
 
-.random-card-wrap {
-  /* Pad top so the folder tab (positioned -22px from card top) isn't clipped */
-  padding-top: 28px;
-}
-
-.random-card-wrap .case-card {
-  width: 100%;
+.random-modal-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem 1.5rem 1.25rem;
+  background-color: var(--cream-light);
+  border-top: var(--border-thin);
 }
 
 /* ==========================================================================
@@ -1962,6 +1962,18 @@ main {
 
   .case-modal-meta {
     gap: 0.85rem;
+  }
+
+  /* Random modal: full-height scroll on mobile */
+  #random-modal .modal-body {
+    max-height: 92dvh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #random-modal .case-modal-card {
+    flex: 1;
   }
 }
 
