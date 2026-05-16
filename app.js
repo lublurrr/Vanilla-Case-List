@@ -13,14 +13,14 @@ const LENGTH_ORDER     = { Short: 0, Moderate: 1, Long: 2 };
 const state = {
   cases: [],
   filters: {
-    difficulty: 'all',
-    length:     'all',
-    tags:       new Set(),
+    difficulty: 'all',     // 'all' | 'easy' | 'medium' | 'hard'
+    length:     'all',     // 'all' | 'Short' | 'Moderate' | 'Long'
+    tags:       new Set(), // active tag filters (case must have ALL of these)
     search:     '',
-    hideNsfw:   false,
+    hideNsfw:   false,     // NSFW visible by default; toggle on to hide
   },
   sort: 'default',
-  view: 'grid',
+  view: 'grid',           // 'grid' | 'list' — persisted in localStorage
 };
 
 /* ----------------------------------------------------------------
@@ -46,17 +46,19 @@ async function init() {
     return;
   }
 
+  // Optional site info (last/scheduled update labels). Failure is non-fatal.
   let siteInfo = {};
   try {
     const r = await fetch('site_info.json', { cache: 'no-store' });
     if (r.ok) siteInfo = await r.json();
-  } catch { /* fall through */ }
+  } catch { /* fall through with empty siteInfo */ }
   state.siteInfo = siteInfo;
 
+  // Restore saved view preference (grid/list)
   try {
     const saved = localStorage.getItem('vcl-view');
     if (saved === 'list' || saved === 'grid') state.view = saved;
-  } catch { /* ignore */ }
+  } catch { /* localStorage unavailable, ignore */ }
 
   renderStats();
   renderDocketInfo();
@@ -66,10 +68,11 @@ async function init() {
 }
 
 /* ----------------------------------------------------------------
- * Docket info
+ * Docket info: last updated / scheduled / count / what's new
  * ---------------------------------------------------------------- */
 function renderDocketInfo() {
   const info = state.siteInfo || {};
+  // Most recent approval_date across all cases
   const datedCases = state.cases.filter(c => c.approval_date);
   let lastDate = null;
   if (datedCases.length) {
@@ -87,6 +90,7 @@ function renderDocketInfo() {
   document.getElementById('info-scheduled').textContent = schedLabel;
   document.getElementById('info-count').textContent = state.cases.length;
 
+  // What's new: cases whose approval_date matches the most recent date
   let newCases;
   if (Array.isArray(info.whats_new_override) && info.whats_new_override.length) {
     newCases = info.whats_new_override
@@ -113,6 +117,7 @@ function renderDocketInfo() {
 }
 
 function formatDateLong(iso) {
+  // "2026-05-01" -> "1st May 2026"
   const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})/);
   if (!m) return iso;
   const day = parseInt(m[3], 10);
@@ -133,7 +138,7 @@ function formatDateLong(iso) {
 }
 
 /* ----------------------------------------------------------------
- * Featured Case
+ * Featured Case — a random case that cycles once per day.
  * ---------------------------------------------------------------- */
 function dailySeed() {
   const now = new Date();
@@ -415,20 +420,21 @@ function renderTag(tag, caseObj) {
  * ---------------------------------------------------------------- */
 function bindControls() {
   document.addEventListener('click', e => {
-    // Any .card-openable opens the case detail modal
+    // .card-openable — opens case detail modal (grid, featured, and random result)
     const card = e.target.closest('.card-openable');
     if (card) {
       const interactive = e.target.closest('a, button');
       if (interactive && card.contains(interactive)) return;
       const id = parseInt(card.dataset.caseId, 10);
       if (!Number.isNaN(id)) {
+        closeRandomModal();
         openCaseModal(id);
       }
       return;
     }
   });
 
-  // Keyboard activation for .card-openable (Enter / Space)
+  // Keyboard activation (Enter / Space)
   document.addEventListener('keydown', e => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
     const card = e.target.closest('.card-openable');
@@ -436,11 +442,12 @@ function bindControls() {
     e.preventDefault();
     const id = parseInt(card.dataset.caseId, 10);
     if (!Number.isNaN(id)) {
+      closeRandomModal();
       openCaseModal(id);
     }
   });
 
-  // Search input
+  // Search
   const searchInput = document.getElementById('search');
   const searchClear = document.getElementById('search-clear');
   searchInput.addEventListener('input', () => {
@@ -463,7 +470,6 @@ function bindControls() {
       const btn = e.target.closest('.chip');
       if (!btn) return;
       const value = btn.dataset.value;
-
       if (filterKey === 'tags') {
         if (state.filters.tags.has(value)) {
           state.filters.tags.delete(value);
@@ -480,7 +486,7 @@ function bindControls() {
     });
   });
 
-  // Sort dropdown
+  // Sort
   document.getElementById('sort').addEventListener('change', e => {
     state.sort = e.target.value;
     render();
@@ -488,13 +494,7 @@ function bindControls() {
 
   // Reset
   document.getElementById('reset-filters').addEventListener('click', () => {
-    state.filters = {
-      difficulty: 'all',
-      length: 'all',
-      tags: new Set(),
-      search: '',
-      hideNsfw: false,
-    };
+    state.filters = { difficulty: 'all', length: 'all', tags: new Set(), search: '', hideNsfw: false };
     state.sort = 'default';
     document.getElementById('search').value = '';
     document.getElementById('search-clear').hidden = true;
@@ -519,24 +519,25 @@ function bindControls() {
     btn.addEventListener('click', () => rollRandom(btn.dataset.difficulty));
   });
 
-  // Re-roll button — rolls a new random and replaces the inline card
-  const randomAgainBtn = document.getElementById('random-again');
-  if (randomAgainBtn) {
-    randomAgainBtn.addEventListener('click', () => {
-      const lastDifficulty = randomAgainBtn.dataset.lastDifficulty || 'any';
-      rollRandom(lastDifficulty);
-    });
-  }
+  // Random modal — close + roll again
+  const randomModal = document.getElementById('random-modal');
+  randomModal.addEventListener('click', e => {
+    if (e.target.matches('[data-close]')) closeRandomModal();
+  });
+  document.getElementById('random-again').addEventListener('click', () => {
+    rollRandom(randomModal.dataset.lastDifficulty || 'any');
+  });
 
-  // Modal close — case detail modal
+  // Case detail modal — close
   const caseModal = document.getElementById('case-modal');
   caseModal.addEventListener('click', e => {
     if (e.target.matches('[data-close]')) closeCaseModal();
   });
 
-  // Escape closes the case detail modal
+  // Escape
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
+    if (!randomModal.hidden) closeRandomModal();
     if (!caseModal.hidden) closeCaseModal();
   });
 
@@ -549,12 +550,11 @@ function bindControls() {
     });
   }
 
-  // View toggle (Grid / List)
+  // View toggle
   document.querySelectorAll('.view-btn').forEach(btn => {
     const isActive = btn.dataset.view === state.view;
     btn.classList.toggle('is-active', isActive);
     btn.setAttribute('aria-pressed', String(isActive));
-
     btn.addEventListener('click', () => {
       const v = btn.dataset.view;
       if (v !== 'grid' && v !== 'list') return;
@@ -577,9 +577,7 @@ function bindControls() {
       const isOpen = !faqSection.hidden;
       faqSection.hidden = isOpen;
       faqToggle.setAttribute('aria-expanded', String(!isOpen));
-      if (!isOpen) {
-        faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (!isOpen) faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 }
@@ -589,66 +587,54 @@ function bindControls() {
  * ---------------------------------------------------------------- */
 function rollRandom(difficulty) {
   let pool = state.cases.slice();
-  if (state.filters.hideNsfw) {
-    pool = pool.filter(c => !c.tags.includes('NSFW'));
-  }
-  if (difficulty !== 'any') {
-    pool = pool.filter(c => c.difficulty === difficulty);
-  }
+  if (state.filters.hideNsfw) pool = pool.filter(c => !c.tags.includes('NSFW'));
+  if (difficulty !== 'any') pool = pool.filter(c => c.difficulty === difficulty);
 
-  if (pool.length === 0) {
-    const againBtn = document.getElementById('random-again');
-    if (againBtn) againBtn.dataset.lastDifficulty = difficulty;
-    showRandom(null, difficulty);
-    return;
-  }
-
-  const pick = pool[Math.floor(Math.random() * pool.length)];
-  // Store difficulty on re-roll button so it knows what filter to use
-  const againBtn = document.getElementById('random-again');
-  if (againBtn) againBtn.dataset.lastDifficulty = difficulty;
+  const pick = pool.length ? pool[Math.floor(Math.random() * pool.length)] : null;
   showRandom(pick, difficulty);
 }
 
 function showRandom(c, difficulty) {
-  // Render inline in the featured-case panel — same layout, one click opens detail modal
-  const container = document.getElementById('featured-case');
-  if (!container) return;
+  const randomModal = document.getElementById('random-modal');
+  randomModal.dataset.lastDifficulty = difficulty;
+  const result = document.getElementById('random-result');
 
   if (!c) {
-    container.innerHTML = `
-      <span class="featured-label">Your Random Case</span>
-      <p style="color:var(--red-deep);font-style:italic;margin:0.5rem 0 0;">No cases found for that filter.</p>
-    `;
-    return;
-  }
+    result.innerHTML = `<p style="text-align:center;color:var(--red-deep);margin:0.5rem 0;">No cases available for that filter.</p>`;
+  } else {
+    const lengthLabel = c.length || '?';
+    const tagsHtml = c.tags
+      .filter(t => t === 'NEW')
+      .map(t => renderTag(t, c))
+      .join('');
 
-  const lengthLabel = c.length || '?';
-  const tagsHtml = c.tags
-    .filter(t => t === 'NEW')
-    .map(t => renderTag(t, c))
-    .join('');
-
-  container.innerHTML = `
-    <span class="featured-label">Your Random Case</span>
-    <div class="featured-card-inner card-openable" data-difficulty="${escapeAttr(c.difficulty)}" data-case-id="${c.id}" tabindex="0" role="button" aria-label="${escapeAttr(c.title)} — click for full details">
-      <img class="featured-image" src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)} logo" onerror="this.style.display='none'">
-      <div class="featured-text">
-        <h3 class="featured-title">${escapeHtml(c.title)}</h3>
-        <p class="featured-creator">${escapeHtml(c.creator || 'Unknown')}</p>
-        <div class="featured-meta">
-          <span class="card-meta-item length-${escapeAttr(lengthLabel)}">${lengthLabel}</span>
-          ${tagsHtml}
+    // Same HTML structure as featured-card-inner — horizontal, image left, info right
+    result.innerHTML = `
+      <div class="featured-card-inner card-openable" data-difficulty="${escapeAttr(c.difficulty)}" data-case-id="${c.id}" tabindex="0" role="button" aria-label="${escapeAttr(c.title)} — click for full details">
+        <img class="featured-image" src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)} logo" onerror="this.style.display='none'">
+        <div class="featured-text">
+          <h3 class="featured-title">${escapeHtml(c.title)}</h3>
+          <p class="featured-creator">${escapeHtml(c.creator || 'Unknown')}</p>
+          <div class="featured-meta">
+            <span class="card-meta-item length-${escapeAttr(lengthLabel)}">${lengthLabel}</span>
+            ${tagsHtml}
+          </div>
         </div>
       </div>
-    </div>
-  `;
+    `;
+  }
+
+  randomModal.hidden = false;
+  document.body.style.overflow = 'hidden';
 }
 
-function closeModal() {
+function closeRandomModal() {
   document.getElementById('random-modal').hidden = true;
   document.body.style.overflow = '';
 }
+
+// Keep closeModal as an alias so nothing else breaks
+function closeModal() { closeRandomModal(); }
 
 /* ----------------------------------------------------------------
  * Helpers
