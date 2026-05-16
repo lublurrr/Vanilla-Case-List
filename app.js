@@ -638,35 +638,29 @@ function rollRandom(difficulty) {
   }
 
   if (pool.length === 0) {
-    showRandom(null, difficulty);
+    showRandom([], difficulty);
     return;
   }
 
-  const pick = pool[Math.floor(Math.random() * pool.length)];
-  showRandom(pick, difficulty);
+  // Pick up to 2 distinct cases
+  const shuffled = pool.slice().sort(() => Math.random() - 0.5);
+  const picks = shuffled.slice(0, Math.min(2, shuffled.length));
+  showRandom(picks, difficulty);
 }
 
-function showRandom(c, difficulty) {
+function showRandom(picks, difficulty) {
   const modal = document.getElementById('random-modal');
   modal.dataset.lastDifficulty = difficulty;
   const result = document.getElementById('random-result');
 
-  if (!c) {
+  if (!picks || picks.length === 0) {
     result.innerHTML = `<p style="text-align:center;color:var(--red-deep)">No cases available for that filter.</p>`;
   } else {
     result.innerHTML = `
-      <div class="random-result-card card-openable" data-case-id="${c.id}" tabindex="0" role="button" aria-label="${escapeAttr(c.title)} — click for full details">
-        <img src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)}" onerror="this.style.display='none'">
-        <h3>${escapeHtml(c.title)}</h3>
-        <p class="card-creator">${escapeHtml(c.creator || 'Unknown')}</p>
-        <p class="desc">${escapeHtml(c.description || '')}</p>
-        <div class="card-meta" style="margin-top:0.5rem;">
-          <span class="card-meta-item diff-${escapeAttr(c.difficulty)}">${capitalize(c.difficulty)}</span>
-          <span class="card-meta-item length-${escapeAttr(c.length || '?')}">${c.length || '?'}</span>
-          ${c.tags.map(t => renderTag(t, c)).join('')}
-        </div>
+      <div class="random-results-grid">
+        ${picks.map(c => renderCard(c)).join('')}
       </div>
-      <p style="font-size:0.8rem;color:var(--ink-light);text-align:center;margin:0.5rem 0 0;font-style:italic;">Click the card above for details.</p>
+      <p style="font-size:0.8rem;color:var(--ink-light);text-align:center;margin:0.75rem 0 0;font-style:italic;">Click a card to see full details.</p>
     `;
   }
 
