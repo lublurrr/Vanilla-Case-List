@@ -1748,6 +1748,13 @@ main {
   background-color: var(--cream-light);
 }
 
+.case-modal-body .modal-actions {
+  padding: 1rem 1.5rem 1.5rem;
+  background-color: var(--cream-light);
+  border-top: var(--border-medium);
+  margin-top: 0;
+}
+
 /* The detail card inside the modal — styled like a larger manilla folder.
    Desktop: 2-column grid. Mobile: single column (see media query below).
    The logo column gets a generous width so long descriptions in the right
