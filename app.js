@@ -422,7 +422,6 @@ function bindControls() {
       if (interactive && card.contains(interactive)) return;
       const id = parseInt(card.dataset.caseId, 10);
       if (!Number.isNaN(id)) {
-        closeModal(); // close random modal if open
         openCaseModal(id);
       }
       return;
@@ -437,7 +436,6 @@ function bindControls() {
     e.preventDefault();
     const id = parseInt(card.dataset.caseId, 10);
     if (!Number.isNaN(id)) {
-      closeModal();
       openCaseModal(id);
     }
   });
@@ -521,14 +519,14 @@ function bindControls() {
     btn.addEventListener('click', () => rollRandom(btn.dataset.difficulty));
   });
 
-  // Modal close — random modal
-  const modal = document.getElementById('random-modal');
-  modal.addEventListener('click', e => {
-    if (e.target.matches('[data-close]')) closeModal();
-  });
-  document.getElementById('random-again').addEventListener('click', () => {
-    rollRandom(modal.dataset.lastDifficulty || 'any');
-  });
+  // Re-roll button — rolls a new random and replaces the inline card
+  const randomAgainBtn = document.getElementById('random-again');
+  if (randomAgainBtn) {
+    randomAgainBtn.addEventListener('click', () => {
+      const lastDifficulty = randomAgainBtn.dataset.lastDifficulty || 'any';
+      rollRandom(lastDifficulty);
+    });
+  }
 
   // Modal close — case detail modal
   const caseModal = document.getElementById('case-modal');
@@ -536,10 +534,9 @@ function bindControls() {
     if (e.target.matches('[data-close]')) closeCaseModal();
   });
 
-  // Escape closes whichever modal is open
+  // Escape closes the case detail modal
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
-    if (!modal.hidden) closeModal();
     if (!caseModal.hidden) closeCaseModal();
   });
 
@@ -600,33 +597,52 @@ function rollRandom(difficulty) {
   }
 
   if (pool.length === 0) {
+    const againBtn = document.getElementById('random-again');
+    if (againBtn) againBtn.dataset.lastDifficulty = difficulty;
     showRandom(null, difficulty);
     return;
   }
 
   const pick = pool[Math.floor(Math.random() * pool.length)];
+  // Store difficulty on re-roll button so it knows what filter to use
+  const againBtn = document.getElementById('random-again');
+  if (againBtn) againBtn.dataset.lastDifficulty = difficulty;
   showRandom(pick, difficulty);
 }
 
 function showRandom(c, difficulty) {
-  const modal = document.getElementById('random-modal');
-  modal.dataset.lastDifficulty = difficulty;
-  const result = document.getElementById('random-result');
+  // Render inline in the featured-case panel — same layout, one click opens detail modal
+  const container = document.getElementById('featured-case');
+  if (!container) return;
 
   if (!c) {
-    result.innerHTML = `<p style="text-align:center;color:var(--red-deep)">No cases available for that filter.</p>`;
-  } else {
-    // Render using the same renderCard() as the grid — folder tab, hover pop, click-to-modal
-    result.innerHTML = `
-      <div class="random-result-wrap">
-        ${renderCard(c)}
-      </div>
-      <p class="random-hint">Click the card for full details — or roll again!</p>
+    container.innerHTML = `
+      <span class="featured-label">Your Random Case</span>
+      <p style="color:var(--red-deep);font-style:italic;margin:0.5rem 0 0;">No cases found for that filter.</p>
     `;
+    return;
   }
 
-  modal.hidden = false;
-  document.body.style.overflow = 'hidden';
+  const lengthLabel = c.length || '?';
+  const tagsHtml = c.tags
+    .filter(t => t === 'NEW')
+    .map(t => renderTag(t, c))
+    .join('');
+
+  container.innerHTML = `
+    <span class="featured-label">Your Random Case</span>
+    <div class="featured-card-inner card-openable" data-difficulty="${escapeAttr(c.difficulty)}" data-case-id="${c.id}" tabindex="0" role="button" aria-label="${escapeAttr(c.title)} — click for full details">
+      <img class="featured-image" src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)} logo" onerror="this.style.display='none'">
+      <div class="featured-text">
+        <h3 class="featured-title">${escapeHtml(c.title)}</h3>
+        <p class="featured-creator">${escapeHtml(c.creator || 'Unknown')}</p>
+        <div class="featured-meta">
+          <span class="card-meta-item length-${escapeAttr(lengthLabel)}">${lengthLabel}</span>
+          ${tagsHtml}
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function closeModal() {
