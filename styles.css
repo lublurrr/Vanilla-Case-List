@@ -1726,21 +1726,41 @@ main {
   box-shadow: 0 2px 0 var(--ink);
 }
 
-.random-results-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem 1.25rem;
-  margin-top: 1.75rem;
+.random-result-card {
+  display: block;
+  background-color: var(--cream-light);
+  border: var(--border-medium);
+  border-radius: 3px;
+  padding: 0.85rem;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 0.5rem;
+  transition: transform 0.12s;
 }
 
-@media (max-width: 480px) {
-  .random-results-grid {
-    grid-template-columns: 1fr;
-  }
+.random-result-card:hover {
+  transform: translateY(-1px);
 }
 
-.random-results-grid .case-card {
-  margin-top: 22px;
+.random-result-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border: var(--border-thin);
+  background-color: var(--paper);
+  margin-bottom: 0.6rem;
+}
+
+.random-result-card h3 {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--blue-deep);
+  margin: 0 0 0.3rem;
+}
+
+.random-result-card .desc {
+  font-size: 0.85rem;
+  margin: 0.4rem 0 0;
 }
 
 /* ==========================================================================
