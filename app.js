@@ -103,13 +103,17 @@ function renderDocketInfo() {
     newCases = [];
   }
 
-  const whatsNewGrid = document.getElementById('info-whats-new');
+  const ul = document.getElementById('info-whats-new');
   if (!newCases.length) {
-    whatsNewGrid.innerHTML = '<p style="color:var(--ink-light);font-style:italic;margin:0;">No new cases yet.</p>';
+    ul.innerHTML = '<li style="color:var(--ink-light);font-style:italic;">No new cases yet.</li>';
     return;
   }
-  // Render as grid cards — same as the main case grid
-  whatsNewGrid.innerHTML = newCases.map(c => renderCard(c)).join('');
+  ul.innerHTML = newCases.map(c => {
+    const diffLetter = c.difficulty[0].toUpperCase();
+    // Clicking the title opens the case detail modal instead of navigating
+    const link = `<a href="#" class="whats-new-case-link" data-case-id="${c.id}" onclick="event.preventDefault();">${escapeHtml(c.title)}</a>`;
+    return `<li>${link} <span class="diff-badge diff-${escapeAttr(c.difficulty)}">${diffLetter}</span></li>`;
+  }).join('');
 }
 
 function formatDateLong(iso) {
@@ -436,6 +440,15 @@ function bindControls() {
   // Grid cards open the detail modal on click. The random-modal result card
   // still uses .card-clickable (opens its URL directly). Event delegation.
   document.addEventListener('click', e => {
+    // What's new links — open case detail modal
+    const whatsNewLink = e.target.closest('.whats-new-case-link');
+    if (whatsNewLink) {
+      e.preventDefault();
+      const id = parseInt(whatsNewLink.dataset.caseId, 10);
+      if (!Number.isNaN(id)) openCaseModal(id);
+      return;
+    }
+
     // Random-modal result card: opens the URL directly.
     const clickableCard = e.target.closest('.card-clickable');
     if (clickableCard) {
