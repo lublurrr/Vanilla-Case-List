@@ -1595,6 +1595,27 @@ main {
   color: white;
 }
 
+.tag-Easy {
+  background-color: var(--easy-bg);
+  color: var(--easy);
+  border: 1px solid var(--easy);
+  text-align: center;
+}
+
+.tag-Medium {
+  background-color: var(--medium-bg);
+  color: var(--medium-strip);
+  border: 1px solid var(--medium-strip);
+  text-align: center;
+}
+
+.tag-Hard {
+  background-color: var(--hard-bg);
+  color: var(--hard);
+  border: 1px solid var(--hard);
+  text-align: center;
+}
+
 .no-link {
   cursor: default;
   opacity: 0.85;
