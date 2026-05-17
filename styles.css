@@ -1825,7 +1825,7 @@ main {
   position: absolute;
   top: 0;
   width: 160px;
-  left: max(0px, calc(22.5% - 80px));
+  left: -2px;
   height: 28px;
   background-color: var(--ink-light);
   border-top: 2px solid var(--ink);
