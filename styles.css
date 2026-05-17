@@ -1769,9 +1769,8 @@ main {
   margin: 0;
 }
 
-/* Random modal: borders above and below the rolled case card */
+/* Random modal: border only below the rolled case card (above Roll Again row) */
 #random-result {
-  border-top: var(--border-medium);
   border-bottom: var(--border-medium);
 }
 
@@ -1883,7 +1882,6 @@ main {
   overflow-y: auto;
   /* scroll long descriptions instead of overflowing */
   max-height: 80vh;
-  border-top: var(--border-medium);
 }
 
 .case-modal-title {
@@ -1917,8 +1915,6 @@ main {
   gap: 1.1rem;
   margin: 1rem 0 0.85rem;
   padding: 0.75rem 0;
-  border-top: 1px dashed var(--ink-light);
-  border-bottom: 1px dashed var(--ink-light);
 }
 
 .case-modal-meta-item {
@@ -1998,7 +1994,6 @@ main {
   .case-modal-info {
     padding: 1rem 1.1rem 1.25rem;
     max-height: none;
-    border-top: none; /* image-wrap border-bottom already separates on mobile */
   }
 
   .case-modal-title {
