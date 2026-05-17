@@ -991,6 +991,43 @@ main {
   border-color: var(--green);
 }
 
+/* Length filter chips — tinted to match the length tag pills on the cases */
+.chip.chip-short {
+  background-color: #a2c4c9;
+  color: var(--ink);
+  border-color: #7aaab1;
+}
+
+.chip.chip-short.is-active {
+  background-color: #6a9da4;
+  color: var(--ink);
+  border-color: #4a8090;
+}
+
+.chip.chip-moderate {
+  background-color: #f9cb9c;
+  color: var(--ink);
+  border-color: #e8a96a;
+}
+
+.chip.chip-moderate.is-active {
+  background-color: #e8a96a;
+  color: var(--ink);
+  border-color: #c07a30;
+}
+
+.chip.chip-long {
+  background-color: #d5a6bd;
+  color: var(--ink);
+  border-color: #b87aa0;
+}
+
+.chip.chip-long.is-active {
+  background-color: #b87aa0;
+  color: white;
+  border-color: #8a4a78;
+}
+
 /* ==========================================================================
    NSFW toggle — dedicated control so the polarity is unambiguous.
    ========================================================================== */
@@ -2403,6 +2440,42 @@ main {
 [data-theme="dark"] .chip.chip-hard.is-active {
   background-color: var(--hard);
   color: var(--paper);
+}
+
+[data-theme="dark"] .chip.chip-short {
+  background-color: #1e3035;
+  color: #6a9aa0;
+  border-color: #2a4a50;
+}
+
+[data-theme="dark"] .chip.chip-short.is-active {
+  background-color: #2a4a50;
+  color: #a0d0d8;
+  border-color: #4a8090;
+}
+
+[data-theme="dark"] .chip.chip-moderate {
+  background-color: #2e2010;
+  color: #9a7040;
+  border-color: #3e2e18;
+}
+
+[data-theme="dark"] .chip.chip-moderate.is-active {
+  background-color: #3e2e18;
+  color: #e8a96a;
+  border-color: #c07a30;
+}
+
+[data-theme="dark"] .chip.chip-long {
+  background-color: #281a24;
+  color: #9a6880;
+  border-color: #3a2434;
+}
+
+[data-theme="dark"] .chip.chip-long.is-active {
+  background-color: #3a2434;
+  color: #d5a6bd;
+  border-color: #8a4a78;
 }
 
 /* ── Sort select ── */
