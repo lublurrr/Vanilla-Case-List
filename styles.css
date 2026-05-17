@@ -1955,6 +1955,46 @@ main {
   margin-top: 1.1rem;
 }
 
+/* Horizontal border below the folder tab — visually anchors the tab to
+   the card content and serves as the "border above" the image / info area.
+   Uses ::before on the card (free — the tab's label is via .case-modal-tab::before).
+   z-index: 4 keeps it behind the tab strip (z-index: 5) so the tab
+   overlaps the line naturally at its base. */
+.case-modal-card::before {
+  content: '';
+  position: absolute;
+  top: 26px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--ink);
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* ============================================================
+   Random modal — borders above + below the case card, and
+   padding for the title and action-button zones so the layout
+   matches the case-detail modal's visual language.
+   ============================================================ */
+
+#random-modal .modal-title {
+  padding: 0.85rem 1.5rem 0.75rem;
+  margin: 0;
+  border-bottom: none;
+  /* border is on #random-result top instead */
+}
+
+#random-result {
+  border-top: var(--border-medium);
+  border-bottom: var(--border-medium);
+}
+
+#random-modal .modal-actions {
+  padding: 0.85rem 1.5rem 1.25rem;
+  margin: 0;
+}
+
 /* Mobile / narrow: stack vertically (logo on top, details below) */
 @media (max-width: 780px) {
   .case-modal-card {
