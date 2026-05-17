@@ -7,17 +7,6 @@
    To add or remove a case: edit cases.json. No code changes needed.
    ============================================================ */
 
-/* ── Theme: apply before first paint to avoid flash ── */
-(function () {
-  try {
-    const saved = localStorage.getItem('vcl-theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (saved === 'dark' || (!saved && prefersDark)) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  } catch { /* localStorage unavailable */ }
-})();
-
 const DIFFICULTY_ORDER = { easy: 0, medium: 1, hard: 2 };
 const LENGTH_ORDER     = { Short: 0, Moderate: 1, Long: 2 };
 
@@ -637,29 +626,6 @@ function bindControls() {
       if (!isOpen) {
         faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    });
-  }
-
-  // Dark mode toggle
-  const themeBtn = document.getElementById('theme-toggle');
-  if (themeBtn) {
-    const updateIcon = () => {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      themeBtn.textContent = isDark ? '☀️' : '🌙';
-      themeBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-      themeBtn.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
-    };
-    updateIcon();
-    themeBtn.addEventListener('click', () => {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      if (isDark) {
-        document.documentElement.removeAttribute('data-theme');
-        try { localStorage.setItem('vcl-theme', 'light'); } catch { /* ignore */ }
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        try { localStorage.setItem('vcl-theme', 'dark'); } catch { /* ignore */ }
-      }
-      updateIcon();
     });
   }
 }
