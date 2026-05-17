@@ -1264,11 +1264,10 @@ main {
   width: 130px;
   height: 24px;
   background-color: var(--ink-light);
-  border-top: 2px solid var(--ink);
-  border-left: 2px solid var(--ink);
-  border-right: 2px solid var(--ink);
+  border: 2px solid var(--ink);
   border-bottom: none;
   border-radius: 8px 8px 0 0;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1832,6 +1831,7 @@ main {
   border: 2px solid var(--ink);
   border-bottom: none;
   border-radius: 8px 8px 0 0;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
