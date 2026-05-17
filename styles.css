@@ -1542,6 +1542,10 @@ main {
   padding: 0.15rem 0.5rem;
   border-radius: 3px;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* NEW tag: high-contrast dark background so the gold star pops */
@@ -1771,7 +1775,7 @@ main {
 
 /* Random modal: border only below the rolled case card (above Roll Again row) */
 #random-result {
-  border-bottom: var(--border-medium);
+  border-bottom: none;
 }
 
 /* Random modal: action buttons row — flush padding like case-modal-body actions */
@@ -1916,9 +1920,7 @@ main {
   margin: 1rem 0 0.85rem;
   padding: 0.75rem 0;
   border-top: none;
-  /* ← removes the line between button and metadata */
   border-bottom: none;
-  /* ← keeps it clean below too */
 }
 
 .case-modal-meta-item {
