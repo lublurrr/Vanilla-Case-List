@@ -1763,6 +1763,24 @@ main {
   overflow: visible;
 }
 
+/* Random modal: title header area */
+#random-modal .modal-title {
+  padding: 1rem 3rem 0.9rem 1.5rem;
+  margin: 0;
+}
+
+/* Random modal: borders above and below the rolled case card */
+#random-result {
+  border-top: var(--border-medium);
+  border-bottom: var(--border-medium);
+}
+
+/* Random modal: action buttons row — flush padding like case-modal-body actions */
+#random-modal .modal-actions {
+  padding: 1rem 1.5rem 1.25rem;
+  margin-top: 0;
+}
+
 .case-modal-body .modal-actions {
   padding: 1rem 1.5rem 1.5rem;
   background-color: var(--cream-light);
@@ -1784,6 +1802,8 @@ main {
   overflow: hidden;
   /* clip the card's own rounded corners */
 }
+
+
 
 .case-modal-tab {
   position: absolute;
@@ -1831,6 +1851,7 @@ main {
 
 .case-modal-image-wrap {
   background-color: var(--paper);
+  border-top: var(--border-medium);
   border-right: 2px solid var(--ink);
   display: grid;
   place-items: center;
@@ -1862,6 +1883,7 @@ main {
   overflow-y: auto;
   /* scroll long descriptions instead of overflowing */
   max-height: 80vh;
+  border-top: var(--border-medium);
 }
 
 .case-modal-title {
@@ -1955,46 +1977,6 @@ main {
   margin-top: 1.1rem;
 }
 
-/* Horizontal border below the folder tab — visually anchors the tab to
-   the card content and serves as the "border above" the image / info area.
-   Uses ::before on the card (free — the tab's label is via .case-modal-tab::before).
-   z-index: 4 keeps it behind the tab strip (z-index: 5) so the tab
-   overlaps the line naturally at its base. */
-.case-modal-card::before {
-  content: '';
-  position: absolute;
-  top: 26px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: var(--ink);
-  z-index: 4;
-  pointer-events: none;
-}
-
-/* ============================================================
-   Random modal — borders above + below the case card, and
-   padding for the title and action-button zones so the layout
-   matches the case-detail modal's visual language.
-   ============================================================ */
-
-#random-modal .modal-title {
-  padding: 0.85rem 1.5rem 0.75rem;
-  margin: 0;
-  border-bottom: none;
-  /* border is on #random-result top instead */
-}
-
-#random-result {
-  border-top: var(--border-medium);
-  border-bottom: var(--border-medium);
-}
-
-#random-modal .modal-actions {
-  padding: 0.85rem 1.5rem 1.25rem;
-  margin: 0;
-}
-
 /* Mobile / narrow: stack vertically (logo on top, details below) */
 @media (max-width: 780px) {
   .case-modal-card {
@@ -2016,6 +1998,7 @@ main {
   .case-modal-info {
     padding: 1rem 1.1rem 1.25rem;
     max-height: none;
+    border-top: none; /* image-wrap border-bottom already separates on mobile */
   }
 
   .case-modal-title {
