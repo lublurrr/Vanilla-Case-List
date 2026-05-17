@@ -1351,16 +1351,25 @@ main {
   margin-top: 0;
 }
 
-.case-card[data-difficulty="easy"] .card-image-wrap {
-  background-color: var(--easy-bg);
+.case-card[data-difficulty="easy"] .card-difficulty-strip {
+  background-color: #0a2563;
+  color: var(--cream-light);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+  border-color: #0a2563;
 }
 
-.case-card[data-difficulty="medium"] .card-image-wrap {
-  background-color: var(--medium-bg);
+.case-card[data-difficulty="medium"] .card-difficulty-strip {
+  background-color: #c9962b;
+  color: var(--ink);
+  text-shadow: none;
+  border-color: #c9962b;
 }
 
-.case-card[data-difficulty="hard"] .card-image-wrap {
-  background-color: var(--hard-bg);
+.case-card[data-difficulty="hard"] .card-difficulty-strip {
+  background-color: #7d1a1f;
+  color: var(--cream-light);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+  border-color: #7d1a1f;
 }
 
 .card-image {
@@ -1827,7 +1836,7 @@ main {
   top: 0;
   width: 160px;
   /* center over the image column (~45% of card width) */
-  left: max(0px, calc(22.5% - 80px));
+  left: 0;
   height: 28px;
   background-color: var(--ink-light);
   border: 2px solid var(--ink);
@@ -1853,24 +1862,24 @@ main {
 }
 
 .case-modal-card[data-difficulty="easy"] .case-modal-tab {
-  background-color: var(--easy-bg);
-  color: var(--easy);
-  text-shadow: none;
-  border-color: var(--easy);
+  background-color: #0a2563;
+  color: var(--cream-light);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+  border-color: #0a2563;
 }
 
 .case-modal-card[data-difficulty="medium"] .case-modal-tab {
-  background-color: var(--medium-bg);
-  color: var(--medium-strip);
+  background-color: #c9962b;
+  color: var(--ink);
   text-shadow: none;
-  border-color: var(--medium-strip);
+  border-color: #c9962b;
 }
 
 .case-modal-card[data-difficulty="hard"] .case-modal-tab {
-  background-color: var(--hard-bg);
-  color: var(--hard);
-  text-shadow: none;
-  border-color: var(--hard);
+  background-color: #7d1a1f;
+  color: var(--cream-light);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+  border-color: #7d1a1f;
 }
 
 .case-modal-image-wrap {
