@@ -1839,17 +1839,24 @@ main {
 }
 
 .case-modal-card[data-difficulty="easy"] .case-modal-tab {
-  background-color: var(--easy);
+  background-color: var(--easy-bg);
+  color: var(--easy);
+  text-shadow: none;
+  border-color: var(--easy);
 }
 
 .case-modal-card[data-difficulty="medium"] .case-modal-tab {
-  background-color: var(--medium);
-  color: var(--ink);
+  background-color: var(--medium-bg);
+  color: var(--medium-strip);
   text-shadow: none;
+  border-color: var(--medium-strip);
 }
 
 .case-modal-card[data-difficulty="hard"] .case-modal-tab {
-  background-color: var(--hard);
+  background-color: var(--hard-bg);
+  color: var(--hard);
+  text-shadow: none;
+  border-color: var(--hard);
 }
 
 .case-modal-image-wrap {
