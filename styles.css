@@ -1811,14 +1811,14 @@ main {
 .case-modal-tab {
   position: absolute;
   top: 0;
-  left: -1px;
   width: 160px;
+  /* center over the image column (~45% of card width) */
+  left: max(0px, calc(22.5% - 80px));
   height: 28px;
   background-color: var(--ink-light);
   border: 2px solid var(--ink);
   border-bottom: none;
   border-radius: 8px 8px 0 0;
-  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 100%, 0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1830,7 +1830,7 @@ main {
   text-transform: uppercase;
   color: var(--cream-light);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
-  padding: 0 0.7rem 0 0.6rem;
+  padding: 0 0.7rem;
   z-index: 5;
 }
 
@@ -1856,6 +1856,8 @@ main {
   background-color: var(--paper);
   border-top: var(--border-medium);
   border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  border-left: 2px solid var(--ink);
   display: grid;
   place-items: center;
   overflow: hidden;
