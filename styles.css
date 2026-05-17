@@ -1959,6 +1959,49 @@ main {
   gap: 0.3rem;
 }
 
+.case-modal-meta .card-meta-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.case-modal-meta .card-meta-item.diff-easy {
+  background-color: var(--easy-bg);
+  color: var(--easy);
+  border-color: var(--easy);
+}
+
+.case-modal-meta .card-meta-item.diff-medium {
+  background-color: var(--medium-bg);
+  color: var(--medium-strip);
+  border-color: var(--medium-strip);
+}
+
+.case-modal-meta .card-meta-item.diff-hard {
+  background-color: var(--hard-bg);
+  color: var(--hard);
+  border-color: var(--hard);
+}
+
+.case-modal-meta .card-meta-item.length-Short {
+  background-color: var(--paper);
+  color: var(--ink-soft);
+  border-color: var(--ink-light);
+}
+
+.case-modal-meta .card-meta-item.length-Moderate {
+  background-color: var(--cream-deep);
+  color: var(--ink);
+  border-color: var(--ink-light);
+}
+
+.case-modal-meta .card-meta-item.length-Long {
+  background-color: var(--ink);
+  color: var(--cream-light);
+  border-color: var(--ink);
+}
+
 .case-modal-meta-label {
   font-family: var(--font-display);
   font-style: italic;
