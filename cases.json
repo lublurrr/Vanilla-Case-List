@@ -1,4 +1,22 @@
 [
+  
+  //---EASY CASES
+  
+    {
+    "id": 1,
+    "title": "Turnabout Gensokyo",
+    "creator": "Dereos",
+    "description": "Murder at the gaming arena. It's a Touhou based case.",
+    "difficulty": "easy",
+    "length": "Moderate",
+    "tags": [
+      "NEW"
+    ],
+    "url": "https://docs.google.com/document/d/1M_WeH90qmVLyzDkQ_ueQ1F5q4uWDTQy4N-FBZMigDEo/edit?tab=t.0",
+    "custom_files_url": null,
+    "approval_date": "2026-06-01",
+    "image": "images/cases/Gensokyo.png"
+  },
   {
     "id": 1,
     "title": "Virtual Turnabout",
@@ -6,9 +24,7 @@
     "description": "All Hail the Virtual Boy! It’s 1995 and Nintendo is providing a close look for their newest piece of tech. Will this be a bright future for the company, or will it mark its very end?",
     "difficulty": "easy",
     "length": "Short",
-    "tags": [
-      "NEW"
-    ],
+    "tags": [],
     "url": "https://docs.google.com/document/d/1wT6iyqH0tEWm6iSZzuUujX5yzumorb9mdSYavVQpOyw/edit?usp=sharing",
     "custom_files_url": null,
     "approval_date": "2026-05-01",
@@ -21,9 +37,7 @@
     "description": "Who lies in the dead lands? The dead bodies or the people? Who knows…",
     "difficulty": "easy",
     "length": "Short",
-    "tags": [
-      "NEW"
-    ],
+    "tags": [],
     "url": "https://docs.google.com/document/d/1G04FriUPM2P0s8mqSFggAIi87IEBFDthMAjvFDkHylI/edit?tab=t.0#heading=h.rouj0oapt2hm",
     "custom_files_url": null,
     "approval_date": "2026-05-01",
@@ -36,9 +50,7 @@
     "description": "Johnny tutors two boys in a classroom. If one of them dies, another flees, and one calls for help, How many victims are there?",
     "difficulty": "easy",
     "length": "Short",
-    "tags": [
-      "NEW"
-    ],
+    "tags": [],
     "url": "https://docs.google.com/document/d/1_ctOIBhpY9scxEyxGi-NIB8L00ON1psJLHCoqiWGmOc/edit?usp=sharing",
     "custom_files_url": null,
     "approval_date": "2026-05-01",
@@ -428,6 +440,9 @@
     "approval_date": "2020-08-21",
     "image": "images/cases/Standpoint.png"
   },
+  
+    //---MEDIUM CASES
+  
   {
     "id": 32,
     "title": "Pump Up The Turnabout",
@@ -435,9 +450,7 @@
     "description": "Car tyres are not meant to be cannons but fill one up with enough air and your lights will be knocked straight out.",
     "difficulty": "medium",
     "length": "Short",
-    "tags": [
-      "NEW"
-    ],
+    "tags": [],
     "url": "https://docs.google.com/document/d/1SdQ7ORQZnlldZWJoAV_JHjyYXM752L22nqoG60MLh-w/edit?usp=sharing",
     "custom_files_url": null,
     "approval_date": "2026-05-01",
@@ -450,9 +463,7 @@
     "description": "On the night, in the night club, while everyone was having fun, the disco ball struck Redd White’s head from above, killing him on the spot.",
     "difficulty": "medium",
     "length": "Moderate",
-    "tags": [
-      "NEW"
-    ],
+    "tags": [],
     "url": "https://docs.google.com/document/d/1M2X5NYFJbOE5mtVd6eX_Wg-5-FCKxggGJB9syMl0_XU/edit?usp=sharing",
     "custom_files_url": null,
     "approval_date": "2026-05-01",
@@ -1225,6 +1236,9 @@
     "approval_date": "2020-08-21",
     "image": "images/cases/Vigilante.png"
   },
+
+  //---HARD CASES
+  
   {
     "id": 91,
     "title": "Turnabout Godfather",
@@ -1588,17 +1602,4 @@
     "approval_date": "2020-08-21",
     "image": "images/cases/tiltheend.png"
   },
-  {
-    "id": 118,
-    "title": "Turnabout on Death-Row",
-    "creator": "Daenerys, Orianna",
-    "description": "Fearsome-looking case with a complex plot. Has haunting visuals regarding the death of Gant.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1Z7W2FE0WoeigGoptM8bjRpUgsDaB6KVrqC_z3BR_JgU",
-    "custom_files_url": null,
-    "approval_date": "2020-08-21",
-    "image": "images/cases/Death Row.png"
-  }
 ]
