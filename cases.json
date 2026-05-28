@@ -1,7 +1,4 @@
 [
-  
-  //---EASY CASES
-  
     {
     "id": 1,
     "title": "Turnabout Gensokyo",
@@ -440,8 +437,8 @@
     "approval_date": "2020-08-21",
     "image": "images/cases/Standpoint.png"
   },
-  
-    //---MEDIUM CASES
+
+
   
   {
     "id": 32,
@@ -1237,7 +1234,7 @@
     "image": "images/cases/Vigilante.png"
   },
 
-  //---HARD CASES
+  
   
   {
     "id": 91,
