@@ -1899,8 +1899,12 @@ main {
   border-right: 2px solid var(--ink);
   border-bottom: 2px solid var(--ink);
   border-left: 2px solid var(--ink);
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem;
   overflow: hidden;
   min-height: 100%;
 }
@@ -1920,8 +1924,9 @@ main {
 .case-modal-image {
   width: 100%;
   object-fit: contain;
-  padding: 1rem;
   display: block;
+  flex: 0 1 auto;
+  min-height: 0;
 }
 
 .case-modal-info {
@@ -2074,13 +2079,12 @@ main {
   .case-modal-image-wrap {
     border-right: none;
     border-bottom: 2px solid var(--ink);
-    aspect-ratio: 16 / 9;
     min-height: 0;
+    padding: 0.85rem 0.75rem 0.65rem;
   }
 
   .case-modal-image {
-    height: 100%;
-    padding: 0.75rem;
+    max-height: 38vh;
   }
 
   .case-modal-info {
@@ -2221,7 +2225,6 @@ main {
   .case-modal-image-wrap {
     border-right: none;
     border-bottom: 2px solid var(--ink);
-    aspect-ratio: 16 / 9;
     min-height: 0;
     border-radius: 0;
     /* Ensures the crisp left edge stays straight */
@@ -2229,7 +2232,9 @@ main {
 }
 
 /* ==========================================================================
-   Logo credit — bottom-right of the image panel in the case detail modal
+   Logo credit — caption below the logo in the case detail modal.
+   Rendered in normal flow (not overlaid) so it never sits on top of the
+   artwork, on any screen size.
    ========================================================================== */
 
 .case-modal-image-wrap {
@@ -2237,16 +2242,14 @@ main {
 }
 
 .case-modal-logo-credit {
-  position: absolute;
-  bottom: 0.35rem;
-  right: 0.5rem;
-  font-size: 0.68rem;
+  flex: 0 0 auto;
+  max-width: 100%;
+  font-size: 0.7rem;
   font-style: italic;
   color: var(--ink-light);
-  opacity: 0.75;
-  pointer-events: none;
   line-height: 1.2;
-  text-align: right;
+  text-align: center;
+  opacity: 0.85;
 }
 
 .case-modal-logo-credit strong {
