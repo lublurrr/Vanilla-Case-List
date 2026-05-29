@@ -1277,7 +1277,7 @@
     "custom_files_url": null,
     "approval_date": "2020-10-15",
     "image": "images/cases/Entwined Souls.png",
-    "logo_credit": "Ordice"
+    "logo_credit": "Wolfang"
   },
   {
     "id": 88,
@@ -1291,7 +1291,7 @@
     "custom_files_url": null,
     "approval_date": "2020-08-21",
     "image": "images/cases/The Elementary.png",
-    "logo_credit": "SillyKevin"
+    "logo_credit": "Wolfang"
   },
   {
     "id": 89,
@@ -1305,7 +1305,7 @@
     "custom_files_url": null,
     "approval_date": "2020-08-21",
     "image": "images/cases/Thief.png",
-    "logo_credit": "Zugwer"
+    "logo_credit": "Wolfang"
   },
   {
     "id": 90,
@@ -1319,7 +1319,42 @@
     "custom_files_url": null,
     "approval_date": "2020-08-21",
     "image": "images/cases/Vigilante.png",
-    "logo_credit": "Deadly"
+    "logo_credit": "Wolfang"
+  },
+
+
+
+    {
+    "id": -3,
+    "title": "Beast and the Turnabout",
+    "creator": "Pina",
+    "description": "Someone said once that “man is the wolf of man”, and within us there are beasts that fight. Beasts, who roam at night… and kill, kill, kill…",
+    "difficulty": "hard",
+    "length": "Long",
+    "tags": [
+      "NEW"
+    ],
+    "url": "https://docs.google.com/document/d/1RuRPG2P_198pyr6KGjkd53bjEIoAKZYPKhS6qERQseA/edit?tab=t.0",
+    "custom_files_url": null,
+    "approval_date": "2026-06-01",
+    "image": "images/cases/",
+    "logo_credit": "Pina"
+  },
+  {
+    "id": -2,
+    "title": "Secret of the Turnabout",
+    "creator": "Wolfang",
+    "description": "The forest hides many secrets... from gnomes, creatures... to old tales.",
+    "difficulty": "hard",
+    "length": "Long",
+    "tags": [
+      "NEW"
+    ],
+    "url": "https://docs.google.com/document/d/1x4vUgDYi71WhfCMI3rzhDvsXDSIOMfRjRWQACvetwSg/edit?tab=t.0#heading=h.illkap2s4brz",
+    "custom_files_url": "https://drive.google.com/drive/folders/1_ata4YTMgPQCarYBMNlrbllYCNfQCi9z?usp=drive_link",
+    "approval_date": "2026-06-01",
+    "image": "images/cases/Secret.gif",
+    "logo_credit": "Wolfang"
   },
   {
     "id": 91,
@@ -1409,7 +1444,7 @@
     "custom_files_url": "https://drive.google.com/drive/folders/1XoisAIcBu3gczn2hPMI2b5coCdQPo_w8",
     "approval_date": "2025-05-01",
     "image": "images/cases/Paying.png",
-    "logo_credit": "Yoru, LegalGina, cass, KanameDate, NintenGunner, Alias_Crouton2, MLink, somebody"
+    "logo_credit": "Knight"
   },
   {
     "id": 97,
