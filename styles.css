@@ -32,11 +32,11 @@
   --easy-strip: #1d4391;
   --easy-tile: #b6cef0;
 
-  --medium: #d4a017;
-  /* gold/yellow */
-  --medium-bg: #fbe8a6;
-  --medium-strip: #c9962b;
-  --medium-tile: #f6d97a;
+  --medium: #b8860b;
+  /* gold/yellow — deeper amber */
+  --medium-bg: #f5d050;
+  --medium-strip: #a07010;
+  --medium-tile: #f0c830;
 
   --hard: #b13438;
   /* red — prosecution */
@@ -1314,7 +1314,7 @@ main {
 }
 
 .case-card[data-difficulty="medium"] .card-difficulty-strip {
-  background-color: #c9962b;
+  background-color: #a07010;
   color: var(--ink);
   text-shadow: none;
   border-color: var(--ink);
@@ -1878,7 +1878,7 @@ main {
 }
 
 .case-modal-card[data-difficulty="medium"] .case-modal-tab {
-  background-color: #c9962b;
+  background-color: #a07010;
   color: var(--ink);
   text-shadow: none;
   border-color: var(--ink);
