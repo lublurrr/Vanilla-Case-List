@@ -75,7 +75,8 @@ Open `cases.json` and append a new object to the array. Example:
   "url": "https://docs.google.com/document/d/.../edit",
   "custom_files_url": "https://drive.google.com/drive/folders/.../",
   "approval_date": "2026-06-01",
-  "image": "images/cases/case_119.jpg"
+  "image": "images/cases/case_119.jpg",
+  "logo_credit": "Artist Name"
 }
 ```
 
@@ -94,6 +95,8 @@ Open `cases.json` and append a new object to the array. Example:
 | `custom_files_url` | string   | (Optional) Direct download URL for case-specific assets. Used when `"CUSTOM FILES"` is in `tags`. |
 | `approval_date`    | string   | ISO date when added to VCL (e.g. `"2026-05-01"`). Used by the "Most Recently Added" sort and shown on the card. |
 | `image`            | string   | Path to the logo image, e.g. `"images/cases/case_119.jpg"`         |
+| `logo_credit`      | string   | (Optional) Who made the case logo. Shown as "Logo by …" beneath the logo in the case popup. Omit it or use `null`/`""` if there's no credit to show. |
+
 
 Then drop the logo image into `images/cases/` using a matching filename. Recommended size: ~300×170 px, JPG or PNG. The grid scales it to fit automatically.
 
