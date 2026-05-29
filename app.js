@@ -364,6 +364,7 @@ function openCaseModal(caseId) {
       <div class="case-modal-tab" data-label="${diffLabel}"></div>
       <div class="case-modal-image-wrap">
         <img class="case-modal-image" src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)} logo" onerror="this.style.display='none'">
+        ${c.logo_credit ? `<span class="case-modal-logo-credit">Logo by <strong>${escapeHtml(c.logo_credit)}</strong></span>` : ''}
       </div>
       <div class="case-modal-info">
         <h2 id="case-modal-title" class="case-modal-title">${escapeHtml(c.title)}</h2>
@@ -679,6 +680,7 @@ function showRandom(c, difficulty) {
         <div class="case-modal-tab" data-label="${diffLabel}"></div>
         <div class="case-modal-image-wrap">
           <img class="case-modal-image" src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)} logo" onerror="this.style.display='none'">
+          ${c.logo_credit ? `<span class="case-modal-logo-credit">Logo by <strong>${escapeHtml(c.logo_credit)}</strong></span>` : ''}
         </div>
         <div class="case-modal-info">
           <h2 class="case-modal-title">${escapeHtml(c.title)}</h2>
