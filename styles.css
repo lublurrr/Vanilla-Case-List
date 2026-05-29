@@ -1797,6 +1797,8 @@ main {
   padding: 0;
   background-color: var(--cream-light);
   overflow: visible;
+  /* Reset top-left radius to match the folder theme */
+  border-radius: 0 4px 4px 4px;
 }
 
 /* Random modal: title header area */
@@ -1832,12 +1834,10 @@ main {
   display: grid;
   grid-template-columns: minmax(min(320px, 45%), 1fr) minmax(0, 1.15fr);
   padding-top: 26px;
-  /* room for the folder tab */
-  border-radius: 4px;
+  /* Keeps the top-left and bottom-left square, matching the aesthetic */
+  border-radius: 0 4px 4px 0;
   overflow: hidden;
-  /* clip the card's own rounded corners */
 }
-
 
 
 .case-modal-tab {
@@ -2208,6 +2208,23 @@ main {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .case-modal-card {
+    grid-template-columns: 1fr;
+    border-radius: 0 0 4px 4px;
+    /* Flattens the top completely on mobile */
+  }
+
+  .case-modal-image-wrap {
+    border-right: none;
+    border-bottom: 2px solid var(--ink);
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    border-radius: 0;
+    /* Ensures the crisp left edge stays straight */
   }
 }
 
