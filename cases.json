@@ -1,22 +1,6 @@
 [
   {
     "id": 1,
-    "title": "Turnabout Gensokyo",
-    "creator": "Dereos",
-    "description": "Murder at the gaming arena. It's a Touhou based case.",
-    "difficulty": "easy",
-    "length": "Moderate",
-    "tags": [
-      "NEW"
-    ],
-    "url": "https://docs.google.com/document/d/1M_WeH90qmVLyzDkQ_ueQ1F5q4uWDTQy4N-FBZMigDEo/edit?tab=t.0",
-    "custom_files_url": null,
-    "approval_date": "2026-06-01",
-    "image": "images/cases/Gensokyo.png",
-    "logo_credit": "Dereos"
-  },
-  {
-    "id": 1,
     "title": "Virtual Turnabout",
     "creator": "Fricka",
     "description": "All Hail the Virtual Boy! It’s 1995 and Nintendo is providing a close look for their newest piece of tech. Will this be a bright future for the company, or will it mark its very end?",
@@ -31,20 +15,6 @@
   },
   {
     "id": 2,
-    "title": "Turnabout Divinity",
-    "creator": "Sheepish",
-    "description": "Who lies in the dead lands? The dead bodies or the people? Who knows…",
-    "difficulty": "easy",
-    "length": "Short",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1G04FriUPM2P0s8mqSFggAIi87IEBFDthMAjvFDkHylI/edit?tab=t.0#heading=h.rouj0oapt2hm",
-    "custom_files_url": null,
-    "approval_date": "2026-05-01",
-    "image": "images/cases/Divinity_1.png",
-    "logo_credit": "Sheepish"
-  },
-  {
-    "id": 3,
     "title": "Turnabout Squared",
     "creator": "Snowby & Joniys",
     "description": "Johnny tutors two boys in a classroom. If one of them dies, another flees, and one calls for help, How many victims are there?",
@@ -53,12 +23,12 @@
     "tags": [],
     "url": "https://docs.google.com/document/d/1_ctOIBhpY9scxEyxGi-NIB8L00ON1psJLHCoqiWGmOc/edit?usp=sharing",
     "custom_files_url": null,
-    "approval_date": "2026-05-01",
+    "approval_date": "2025-05-01",
     "image": "images/cases/Squared.png",
-    "logo_credit": "Snowby & Joniys"
+    "logo_credit": "Snowby"
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "Turnabout Crimson Manor",
     "creator": "Orel",
     "description": "A few years after Turnabout WizzoRee, another murder occurs, this time behind closed doors. The Crimson Sorcerer (also known as Orel) invited a guest in the form of Binah Culars to a late-evening dinner in his fully crimson-colored manor. That dinner proved to be deadly, as a minute after the victim ate her meal, she died!",
@@ -74,7 +44,7 @@
     "logo_credit": "Orel"
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Turnabout Defective",
     "creator": "Najimi",
     "description": "Gumshoe was about to receive his hugest salary yet. And yet, fate had other plans…",
@@ -85,10 +55,10 @@
     "custom_files_url": null,
     "approval_date": "2026-04-05",
     "image": "images/cases/Defective.png",
-    "logo_credit": "Najimi"
+    "logo_credit": "Knight"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Turnabout WizzoRee",
     "creator": "Team Orakiza",
     "description": "Prosecutor Fae Ree's neck has been slashed with the own bottle of beer she drank from. The suspect? An 8 years divorced ex-husband who delivered the blow out of spite.",
@@ -104,7 +74,7 @@
     "logo_credit": "Team Orakiza"
   },
   {
-    "id": 7,
+    "id": 6,
     "title": "The Jewels of the Sea Turnabout",
     "creator": "Wolfang",
     "description": "Jack Sparrow, scuba-divin’ went after this treasure, but he fell victim in the depths o’ sea.",
@@ -118,7 +88,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 8,
+    "id": 7,
     "title": "Mining Towards A Turnabout",
     "creator": "Sheepish",
     "description": "We mine for coal! But what if we find another treasure…?! An easy short case about a murder deep in the mines.",
@@ -129,10 +99,10 @@
     "custom_files_url": null,
     "approval_date": "2025-08-21",
     "image": "images/cases/Mining.png",
-    "logo_credit": "Sheepish"
+    "logo_credit": "Knight"
   },
   {
-    "id": 9,
+    "id": 8,
     "title": "Turnabout Chance Time",
     "creator": "Knight",
     "description": "Chance Time… a rage inducing classic minigame from the older Mario party titles. Something able to completely alter the leaderboard with 3 simple boxes, and a lot of luck. Somebody took this luck a little too seriously.",
@@ -146,7 +116,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 10,
+    "id": 9,
     "title": "Crackalacking Turnabout",
     "creator": "Sheepish",
     "description": "Find the truth behind the cracking of wealth… Or you might end up cracked… Rahaheha…",
@@ -157,13 +127,13 @@
     "custom_files_url": null,
     "approval_date": "2025-06-05",
     "image": "images/cases/Crackalacking.png",
-    "logo_credit": "Sheepish"
+    "logo_credit": "Knight"
   },
   {
-    "id": 11,
+    "id": 10,
     "title": "The First Turnabout",
     "creator": "Shu Takumi",
-    "description": "は、ゲーム『逆転裁判』>の最初のエピソードであり、アニメ版『逆転裁判』三部 作の最初のストーリーアークで、1 つのエピソード「最初の逆転」で構成されてい ます。",
+    "description": "は、ゲーム『逆転裁判』の最初のエピソードであり、アニメ版『逆転裁判』三部作の最初のストーリーアークで、1 つのエピソード「最初の逆転」で構成されています。",
     "difficulty": "easy",
     "length": "Short",
     "tags": [
@@ -173,10 +143,10 @@
     "custom_files_url": null,
     "approval_date": "2025-04-01",
     "image": "images/cases/The_First_Turnabout.png",
-    "logo_credit": "Shu Takumi"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 12,
+    "id": 11,
     "title": "Turnabout Feast",
     "creator": "Delinard",
     "description": "The King hosted a feast to negotiate a peace deal between two nobles, but off the battlefield, poison is the deadliest adversary. Can you handle santique rules and a lack of science in this totally historically accurate trial while facing multiple witnesses at the same time?",
@@ -187,10 +157,10 @@
     "custom_files_url": null,
     "approval_date": "2025-04-01",
     "image": "images/cases/Feast.png",
-    "logo_credit": "Delinard"
+    "logo_credit": "Fricka"
   },
   {
-    "id": 13,
+    "id": 12,
     "title": "Crosswords and a Turnabout",
     "creator": "Pina",
     "description": "March 2001, and it seems that this month the crosswords have a special puzzle! …However, perhaps after 20 years of routine, breaking it might break your own… life!",
@@ -204,7 +174,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 14,
+    "id": 13,
     "title": "The Cryo Witch Trial",
     "creator": "Knight",
     "description": "On Foal Lake lakeside near the outskirts of Labyrinthia, a young man was frozen in Ice. The Accused? A witch, or so we believe. She is to be lowered into the fire, unless the apprentice baker can prove her innocence.",
@@ -215,10 +185,10 @@
     "custom_files_url": null,
     "approval_date": "2024-09-22",
     "image": "images/cases/Cryo Witch.png",
-    "logo_credit": "Knight"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 15,
+    "id": 14,
     "title": "The Shine of a Turnabout",
     "creator": "Sheepish",
     "description": "A case where you learn to live in the sunlight and learn to love the moonlight. A straightforward case better for newer players.",
@@ -229,10 +199,10 @@
     "custom_files_url": null,
     "approval_date": "2024-09-22",
     "image": "images/cases/Shine.png",
-    "logo_credit": "Sheepish"
+    "logo_credit": "Pina"
   },
   {
-    "id": 16,
+    "id": 15,
     "title": "Check and Turnabout",
     "creator": "Krabbenfischer",
     "description": "Derwood Park always advertised itself as a place of calmness, where you can clear out all your thoughts. However, when a famous craftsman ends up dead in it, all advertisements become nothing more than a lie.",
@@ -243,10 +213,10 @@
     "custom_files_url": null,
     "approval_date": "2024-09-22",
     "image": "images/cases/Check.png",
-    "logo_credit": "Krabbenfischer"
+    "logo_credit": "Fricka"
   },
   {
-    "id": 17,
+    "id": 16,
     "title": "Chime, Turnabout, Chime",
     "creator": "Fricka",
     "description": "A man killed, a woman accused. Flowers are usually a symbol of beauty, a gesture of good will. As time ticks forward, it is constantly shown how bad faith exists in all.",
@@ -262,7 +232,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 18,
+    "id": 17,
     "title": "Turnabout Jerkin’ It",
     "creator": "Miless",
     "description": "After being caught jerkin’ it, Apollo pushed a woman to her death from the 3rd floor balcony of the luxurious May-Kout Hotel.",
@@ -275,10 +245,10 @@
     "custom_files_url": null,
     "approval_date": "2024-06-01",
     "image": "images/cases/Jerkin_ It.png",
-    "logo_credit": "Miless"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 19,
+    "id": 18,
     "title": "Turnabout Unleashed",
     "creator": "Fricka",
     "description": "In a quiet chemist lab, hidden from the world, a man falls ill and dies of a harmful pathogen, a very pathogen that he himself manufactured. A case with a subversive story premise.",
@@ -289,10 +259,10 @@
     "custom_files_url": null,
     "approval_date": "2024-06-01",
     "image": "images/cases/Unleashed.png",
-    "logo_credit": "Fricka"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 20,
+    "id": 19,
     "title": "Turnabout Blue",
     "creator": "Wolfang",
     "description": "The revival and remake of Attorney Online’s most infamous case, updated for modern standards.",
@@ -308,7 +278,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 21,
+    "id": 20,
     "title": "Turnabout Tumble",
     "creator": "Knight",
     "description": "A romantic evening and a proposal turn sour when one lover gets hurled off a cliff to their death. A tutorial case that goes through the basics of casing.",
@@ -324,7 +294,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 22,
+    "id": 21,
     "title": "Turnabout of Smiles",
     "creator": "Paprini",
     "description": "A simple dock worker is killed by none other than the serial killer Jack of Smiles, in 1896 Fallen London. A simple case that subverts realism.",
@@ -335,10 +305,10 @@
     "custom_files_url": null,
     "approval_date": "2024-04-01",
     "image": "images/cases/of Smiles.png",
-    "logo_credit": "Paprini"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 23,
+    "id": 22,
     "title": "A Tingly Turnabout",
     "creator": "Papirini",
     "description": "A writer of gay erotica is arrested for the murder of a protester against porn.",
@@ -351,10 +321,10 @@
     "custom_files_url": null,
     "approval_date": "2024-04-01",
     "image": "images/cases/A Tingly.png",
-    "logo_credit": "Papirini"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 24,
+    "id": 23,
     "title": "Turnabout Amnesiac",
     "creator": "Distant",
     "description": "A prosecution-based case where a wedding party turns sour, leading to the groom and two attendants being killed allegedly by the bride.",
@@ -367,10 +337,10 @@
     "custom_files_url": "https://drive.google.com/drive/folders/1TSZKpxUg1kvn6EvaGX6IltD5mQfnE3q6?usp=sharing",
     "approval_date": "2022-03-01",
     "image": "images/cases/Amnesiac.png",
-    "logo_credit": "Distant"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 25,
+    "id": 24,
     "title": "In Flander’s Turnabout",
     "creator": "Fricka",
     "description": "The Queen is assassinated once again after Prince Richard Wellington is executed. A cleaner who was cleaning the room where the shot was fired, is arrested as the prime suspect. A Sequel to Turnabout Royal.",
@@ -381,10 +351,10 @@
     "custom_files_url": null,
     "approval_date": "2024-03-01",
     "image": "images/cases/flander_s.png",
-    "logo_credit": "Fricka"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 26,
+    "id": 25,
     "title": "Turnabout Rent Problems",
     "creator": "Apollo 11",
     "description": "The landlord of the apartment complex on Turnabout Road has been murdered, will the defence be able to get an acquittal for the defendant, Wendy Olgbag?",
@@ -395,10 +365,10 @@
     "custom_files_url": null,
     "approval_date": "2022-03-01",
     "image": "images/cases/Rent Problems.png",
-    "logo_credit": "Apollo 11"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 27,
+    "id": 26,
     "title": "Turnabout Ringmaster",
     "creator": "P1CKP0CK3T",
     "description": "A remake of the original. A fun starter case involving clowns, and a blackout.",
@@ -409,10 +379,10 @@
     "custom_files_url": null,
     "approval_date": "2022-02-01",
     "image": "images/cases/Ringmaster.png",
-    "logo_credit": "P1CKP0CK3T"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 28,
+    "id": 27,
     "title": "Turnabout Mc Lovin’ It",
     "creator": "Alice",
     "description": "On a cold winter day, murder was committed in the hot kitchen of Mcdonalds. Did the defendant really commit a hideous crime over a patty? It is up to the defence to find out….",
@@ -423,10 +393,10 @@
     "custom_files_url": null,
     "approval_date": "2024-04-01",
     "image": "images/cases/Mc Lovin It.png",
-    "logo_credit": "Alice"
+    "logo_credit": "Fricka"
   },
   {
-    "id": 29,
+    "id": 28,
     "title": "Turnabout Abe: Tutorial",
     "creator": "XYZ",
     "description": "A farmer murders his boss in front of another farmer. A case loosely based on a real trial of Abraham Lincoln during his career as an Abe attorney.",
@@ -439,10 +409,10 @@
     "custom_files_url": null,
     "approval_date": "2021-03-01",
     "image": "images/cases/Abe.png",
-    "logo_credit": "XYZ"
+    "logo_credit": "Fricka"
   },
   {
-    "id": 30,
+    "id": 29,
     "title": "Turnabout Royal",
     "creator": "Fricka",
     "description": "The Queen is killed, and her personal chef is accused of the deed. A short case with some mild difficulty to its solution.",
@@ -453,10 +423,10 @@
     "custom_files_url": null,
     "approval_date": "2020-08-21",
     "image": "images/cases/Royal Logo.png",
-    "logo_credit": "Fricka"
+    "logo_credit": "Knight"
   },
   {
-    "id": 31,
+    "id": 30,
     "title": "Turnabout Standpoint",
     "creator": "Noobie",
     "description": "A marriage ends tragically when a husband allegedly kills his own wife. A classic case that is simple in nature.",
@@ -467,10 +437,10 @@
     "custom_files_url": null,
     "approval_date": "2020-08-21",
     "image": "images/cases/Standpoint.png",
-    "logo_credit": "Noobie"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 32,
+    "id": 31,
     "title": "Pump Up The Turnabout",
     "creator": "Knight",
     "description": "Car tyres are not meant to be cannons but fill one up with enough air and your lights will be knocked straight out.",
@@ -484,7 +454,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 33,
+    "id": 32,
     "title": "Turnabout Disco!",
     "creator": "Joniys",
     "description": "On the night, in the night club, while everyone was having fun, the disco ball struck Redd White’s head from above, killing him on the spot.",
@@ -498,7 +468,7 @@
     "logo_credit": "Joniys"
   },
   {
-    "id": 34,
+    "id": 33,
     "title": "Super Turnabout World",
     "creator": "Yoru",
     "description": "WAHOOOOO!!! Let-sa go with a Super Mario themed case.",
@@ -511,10 +481,10 @@
     "custom_files_url": "https://drive.google.com/file/d/1unZjRKjW5DLpo0Vuk8RqKJAR_EAAcoi1/view?usp=sharing",
     "approval_date": "2026-04-05",
     "image": "images/cases/Super World.png",
-    "logo_credit": "Yoru"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 35,
+    "id": 34,
     "title": "Turnabout Voyage to the West",
     "creator": "Dereos & Orel",
     "description": "On the S.S. Wizzoree, a private investigator fell victim to a most tragic occurrence -- dying before he could expose the truth. From this, a new locked room mystery begins to take shape. Mandatory Cornelia:",
@@ -527,10 +497,10 @@
     "custom_files_url": "https://drive.google.com/file/d/1xqXDK8-zeCe2jete9l8AildwYsCG0gPE/view?usp=drive_link",
     "approval_date": "2026-04-05",
     "image": "images/cases/Voyage to the West.png",
-    "logo_credit": "Dereos & Orel"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 36,
+    "id": 35,
     "title": "Turnabout Burned",
     "creator": "Gilnaml",
     "description": "The Chief of Police’s holiday lodge got burned to the ground, in what could have only been an act of arsoning. Can the defense prove their client innocent?",
@@ -541,10 +511,10 @@
     "custom_files_url": null,
     "approval_date": "2026-04-05",
     "image": "images/cases/Burned.png",
-    "logo_credit": "Gilnaml"
+    "logo_credit": "Fricka"
   },
   {
-    "id": 37,
+    "id": 36,
     "title": "The Undead Witch Trial",
     "creator": "Knight",
     "description": "At Dampé’s Graveyard to the west of Labyrinthia, a father was brutally dismembered by the living dead. A witch trial is to commence as the accused is lowered into flames.",
@@ -555,10 +525,10 @@
     "custom_files_url": null,
     "approval_date": "2025-12-23",
     "image": "images/cases/Undead Witch.png",
-    "logo_credit": "Knight"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 38,
+    "id": 37,
     "title": "Bet On Turnabout",
     "creator": "Lom",
     "description": "A regular goer of a casino in immense debt…a woman with an incredible amount of luck. One bets on black. The other bleeds red. LETS GO GAMBLING!!",
@@ -569,10 +539,10 @@
     "custom_files_url": null,
     "approval_date": "2025-08-21",
     "image": "images/cases/Bet On 4.png",
-    "logo_credit": "Lom"
+    "logo_credit": "Knight"
   },
   {
-    "id": 39,
+    "id": 38,
     "title": "Railing on the Turnabout",
     "creator": "Sheepish",
     "description": "When the rails reach its stop, it appears it has brought yet another passenger… The Reaper…",
@@ -583,10 +553,10 @@
     "custom_files_url": null,
     "approval_date": "2025-06-05",
     "image": "images/cases/Railing.png",
-    "logo_credit": "Sheepish"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 40,
+    "id": 39,
     "title": "Knock Out! Turnabout!",
     "creator": "Sheepish",
     "description": "In this corner… We have the one who wandered the world… Searching for the next one to follow them… We have… DEEEEATH!!!",
@@ -597,10 +567,10 @@
     "custom_files_url": null,
     "approval_date": "2025-06-05",
     "image": "images/cases/knock_out_3.png",
-    "logo_credit": "Sheepish"
+    "logo_credit": "Knight"
   },
   {
-    "id": 41,
+    "id": 40,
     "title": "Turnabout French Garden",
     "creator": "Yoru",
     "description": "An autistic child is accused of killing his mother in a Maze. (This case is by no means a parody. But any resemblance with real events is fortuitous.)",
@@ -613,10 +583,10 @@
     "custom_files_url": "https://drive.google.com/drive/folders/1iyi0llYDajma993GSP3lic_AmLXDRzzS?usp=drive_link",
     "approval_date": "2025-06-05",
     "image": "images/cases/French_Garden.png",
-    "logo_credit": "Yoru"
+    "logo_credit": "Wolfang"
   },
   {
-    "id": 42,
+    "id": 41,
     "title": "Drive! It’s for a Turnabout!",
     "creator": "Sheepish",
     "description": "Speed, I am speed. One winner, one loser. I eat the loser for breakfast.",
@@ -627,10 +597,10 @@
     "custom_files_url": null,
     "approval_date": "2025-05-01",
     "image": "images/cases/Drive-Its-For.png",
-    "logo_credit": "Sheepish"
+    "logo_credit": "Pina"
   },
   {
-    "id": 43,
+    "id": 42,
     "title": "Royal Bank of a Turnabout (Remake)",
     "creator": "Knight",
     "description": "A midnight murder at the city Bank over money troubles… Ironic isn’t it.",
@@ -644,7 +614,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 44,
+    "id": 43,
     "title": "Turnabout Like You’re Livin’ La Vida Loca",
     "creator": "Knight",
     "description": "Famous singer and dancer Ricky Martin gets shot in the head by his dance partner at a prestigious dance competition. I guess he’s no longer “Livin’ La Vida Loca”.",
@@ -658,7 +628,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 45,
+    "id": 44,
     "title": "Turnabout Keyboard",
     "creator": "Window",
     "description": "Klavier Gavin is accused of killing someone with a keyboard over a contract that unfairly pays the Gavineer band.",
@@ -671,10 +641,10 @@
     "custom_files_url": "https://drive.google.com/file/d/13Dgi_vwzfuy0ZLVzRvrW_uv_e93WzTfx/view",
     "approval_date": "2025-04-01",
     "image": "images/cases/Keyboard.png",
-    "logo_credit": "Window"
+    "logo_credit": "Knight"
   },
   {
-    "id": 46,
+    "id": 45,
     "title": "Turnabout Menace to Society",
     "creator": "Mephisto",
     "description": "A murder on a sidewalk. A police man lays dead, a biker gang lead accused. The police force are cracking down on criminal gangs. The gangs trying to survive are more ruthless than ever. Who will win? Who will lose? In this trial, we will decide the future of Noelia city!",
@@ -687,10 +657,10 @@
     "custom_files_url": "https://drive.google.com/drive/folders/1QApwJryqHxediAb14nVh7n70VIJWEkJs?usp=sharing",
     "approval_date": "2025-04-01",
     "image": "images/cases/menace.png",
-    "logo_credit": "Mephisto"
+    "logo_credit": "Knight"
   },
   {
-    "id": 47,
+    "id": 46,
     "title": "To Forget a Turnabout",
     "creator": "Fricka",
     "description": "Fates collide in one cataclysmic car crash. One is paralysed for life, the other walks scot free. Who is decidedly at fault?",
@@ -704,7 +674,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 48,
+    "id": 47,
     "title": "Ra! Curse this Turnabout!!",
     "creator": "Pina",
     "description": "Ancient Egypt is simply a fascinating thing for us westerners, and such legends around it make it incredibly profitable! Is this a true curse? Or simply a case of honour?",
@@ -718,7 +688,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 49,
+    "id": 48,
     "title": "Turnabout Tens",
     "creator": "Sheepish",
     "description": "Heart of the country, with mysteries running around, are you able to save this heart or let it bleed out?",
@@ -729,1021 +699,98 @@
     "custom_files_url": null,
     "approval_date": "2024-10-31",
     "image": "images/cases/Tens.png",
-    "logo_credit": "Sheepish"
+    "logo_credit": "Pina"
   },
   {
-    "id": 50,
+    "id": 49,
     "title": "Turnabout Malware",
     "creator": "Krabbenfischer",
-    "description": "Mr.Blackhat has left a scar on many companies already. Mysterious, and always able to get away, it seemed like he would never be caught, as police feared. However, their fears were quickly crushed after reports of Mr.Blackhat caught in Blue Screens Inc. arrive.",
+    "description": "Mr.Blackhat has left a scar on many companies already. Mysterious, and always able to get away, it seemed like he would never be caught, as police feared.",
     "difficulty": "medium",
     "length": "Moderate",
     "tags": [],
-    "url": "https://docs.google.com/document/d/14z4_A-cLuDn0hCApmahw3Ib7lOuqI0jm8Nfn8SmUnp0/edit?usp=sharing",
+    "url": "https://docs.google.com/document/d/1ds3M2LxTMyOZMgj5F-0u7y7BdHZdTrhWZ3siXSYrgeI/edit?tab=t.0",
     "custom_files_url": null,
     "approval_date": "2024-10-31",
     "image": "images/cases/Malware.png",
-    "logo_credit": "Krabbenfischer"
+    "logo_credit": "Wolfang"
+  },
+  {
+    "id": 50,
+    "title": "Turnabout Divinity",
+    "creator": "Sheepish",
+    "description": "Who lies in the dead lands? The dead bodies or the people? Who knows…",
+    "difficulty": "easy",
+    "length": "Short",
+    "tags": [],
+    "url": "https://docs.google.com/document/d/1G04FriUPM2P0s8mqSFggAIi87IEBFDthMAjvFDkHylI/edit?tab=t.0#heading=h.rouj0oapt2hm",
+    "custom_files_url": null,
+    "approval_date": "2026-05-01",
+    "image": "images/cases/Divinity_1.png",
+    "logo_credit": "Knight"
   },
   {
     "id": 51,
-    "title": "Turnabout on Tape",
-    "creator": "Fricka",
-    "description": "BOO!! Ghosts!! That’s what grandpa Joe thought, hiring ‘em. Turns out, ghosts aren’t real, but do you know what is? A good old mystery.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/13P99pI2r830DMUYGRwrMXKAyOWay5g6xLAoo7NJIDF4/edit?tab=t.0",
-    "custom_files_url": null,
-    "approval_date": "2024-10-31",
-    "image": "images/cases/On Tape.png",
-    "logo_credit": "Fricka"
-  },
-  {
-    "id": 52,
-    "title": "Funfair and Turnabout",
-    "creator": "LegalGina",
-    "description": "A roller coaster derails, injuring an innocent man. For what usually would seem an accident, a fault in machinery, was instead a deliberate act of the worst intentions…",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/15Tj9M4myoPAX-Mynh4kOTV12QbDaXv78qHR1Rs00Kww/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2024-10-31",
-    "image": "images/cases/Funfair.png",
-    "logo_credit": "LegalGina"
-  },
-  {
-    "id": 53,
-    "title": "The Colors of Turnabout",
+    "title": "All On the Turnabout",
     "creator": "Sheepish",
-    "description": "A nice peaceful night ruined by a deadly rainbow with sinister motives. A man witnessed in the front, a woman from the back. Can the rainbow give a hint to the truth of this night?",
+    "description": "I raise by my SOUL! Another casino themed case.",
     "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1wlnp_CrYtIZbXyTpSH4AUaRUVZN0mIdxsxouf2wU3xI/edit?tab=t.0",
-    "custom_files_url": null,
-    "approval_date": "2024-10-31",
-    "image": "images/cases/Colors.png",
-    "logo_credit": "Sheepish"
-  },
-  {
-    "id": 54,
-    "title": "Stereotypical Russian Turnabout",
-    "creator": "Clamet",
-    "description": "In Russia it is vital to wear appropriate clothing in order to survive the cold winter. If you are in Russia and have no clothing, Russian weather will kill. It takes 2 days in-game to be beaten.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/13ioAr8KTHnpdqBpqoOmaudsv_U1lQKZ79iW2RC621O8/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-09-22",
-    "image": "images/cases/Russian.png",
-    "logo_credit": "Clamet"
-  },
-  {
-    "id": 55,
-    "title": "Turnabout Shrink",
-    "creator": "XYZ",
-    "description": "A dead cleaning lady is found in the office of a clinical psychiatrist, his files all in disarray… All the evidence points to one of his patients, but is he innocent as he claims, or has he truly lost it…?",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/u/0/d/1cttpZPQCzC_2_DpggineE8330KnhuOw3psJz7aDW0vE/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-09-22",
-    "image": "images/cases/Shrink.png",
-    "logo_credit": "XYZ"
-  },
-  {
-    "id": 56,
-    "title": "The Elixir of Turnabout",
-    "creator": "Fricka",
-    "description": "The Elixir of Life has gone missing at an Arabian conference, and a Swedish princess is the suspect. A spiritual successor to Turnabout In the Shadows.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1_7dKzGItSx9nANY1ExnKOdy1oArT-kfIMna2kuJtp-w/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2024-09-22",
-    "image": "images/cases/Elixir.png",
-    "logo_credit": "Fricka"
-  },
-  {
-    "id": 57,
-    "title": "Turnabout Karma",
-    "creator": "Wolfang",
-    "description": "Franziska is accused of killing her father, Manfred, inside Phoenix’s own office. An old case updated to modern times, it is a dynamic gameplay-based trial that tackles different endings where your logic dictates the path.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [
-      "NSFW"
-    ],
-    "url": "https://docs.google.com/document/u/0/d/1neIlPCqICB63z_T_Ra6xTImA7ydOyGPmNwKmgP-GJJE/edit",
-    "custom_files_url": null,
-    "approval_date": "2020-08-21",
-    "image": "images/cases/Karma.png",
-    "logo_credit": "Wolfang"
-  },
-  {
-    "id": 58,
-    "title": "Love Thy Turnabout",
-    "creator": "Fricka & Pina",
-    "description": "In a rural village, secluded from the world, a corrupt politician is hung on the cross by none other than his own daughter. Religion has a control on them all. No one went to his funeral. Everyone wanted this to happen. Can there truly be salvation in sin?",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1mPFUJ_JnSkV5wYr0p81Iubj2hJo3wtUHYVJ8e5bJ0CQ/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2024-08-01",
-    "image": "images/cases/LoveThy.png",
-    "logo_credit": "Fricka & Pina"
-  },
-  {
-    "id": 59,
-    "title": "An Odyssey to a Greater Turnabout",
-    "creator": "Fricka",
-    "description": "A play goes awfully wrong when the lead actress is crushed whilst in flight through the air, with the culprit being a diagnosed schizophrenic.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1ZaRnvm99PNzMfRLLY2WAQuG0VKStDs-d-cOqJvgGAGM/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-08-01",
-    "image": "images/cases/Odyssey.png",
-    "logo_credit": "Fricka"
-  },
-  {
-    "id": 60,
-    "title": "Turnabout Revenge",
-    "creator": "Burber",
-    "description": "The owner of a loan agency is shot dead by their own security guard upon realising the dirty and gruesome world of loan sharks.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1A02CdR8BrstwQ05zvKUyLyQ-eS_SeWV7IeBnrPabp0k/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-08-01",
-    "image": "images/cases/Revenge.png",
-    "logo_credit": "Burber"
-  },
-  {
-    "id": 61,
-    "title": "A Shortage of Turnabout",
-    "creator": "Fricka",
-    "description": "A farm and family goes into disarray when the tenant worker is grinded by a tractor whilst working the fields.",
-    "difficulty": "medium",
-    "length": "Short",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/13-laxmL4ohorI0lTiIEotsCaQ_tCHV5BQutxio0Eel8/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2024-08-01",
-    "image": "images/cases/Shortage.png",
-    "logo_credit": "Fricka"
-  },
-  {
-    "id": 62,
-    "title": "Krabby Patty and Turnabout",
-    "creator": "Yoru",
-    "description": "On a normal day in Bikini Bottom, Spongebob Squarepants steals a Krabby Patty using a counterfeit bill and is placed on trial in the Krusty Krab diner.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [
-      "CUSTOM FILES"
-    ],
-    "url": "https://docs.google.com/document/d/1y8QdJuLV_GbaRkV7DlcZO14L9jXNT5WzFK1xNiQ06bU/edit?usp=sharing",
-    "custom_files_url": "https://drive.google.com/file/d/1QfW3EvA8wgGNxWB_3ATZRzNaYBDFsRDS/view?usp=sharing",
-    "approval_date": "2024-06-01",
-    "image": "images/cases/Krabby Patty.png",
-    "logo_credit": "Yoru"
-  },
-  {
-    "id": 63,
-    "title": "What’s in the Turnabout",
-    "creator": "Pina",
-    "description": "A civil trial over a property dispute between an explorer digging for treasure and a landlord unfolds. What’s in the box? Find out in What’s in the Turnabout!",
-    "difficulty": "medium",
-    "length": "Short",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1UOQDqpcLnIk07GBWbaOjLEYwwTGf9sT3lQQVmYk3QxI/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-06-01",
-    "image": "images/cases/WhatsInThe.png",
-    "logo_credit": "Pina"
-  },
-  {
-    "id": 64,
-    "title": "Broadcast my Turnabout",
-    "creator": "Pina",
-    "description": "All the glamour and excitement of Live Television comes together to mourn the loss of its biggest producers! Or perhaps, the loss of its biggest villain. The show is on!!",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1K_erqDDU72-QC2aN1R8eCA5LaVRNYAEV3BGwZXqxrFQ/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2024-05-01",
-    "image": "images/cases/Broadcast.png",
-    "logo_credit": "Pina"
-  },
-  {
-    "id": 65,
-    "title": "Turnabout Takeover",
-    "creator": "Miless",
-    "description": "Murder case involving a failed robbery in a paintball arena. Traumatised child and Larry Butz guest star in this slightly puzzling mystery.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/u/0/d/13shDPl539zLZMjfSxh4Bjd3XMA4TBGvA-jrzFgYx6c0/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-05-01",
-    "image": "images/cases/Takeover.png",
-    "logo_credit": "Miless"
-  },
-  {
-    "id": 66,
-    "title": "This is a Turnabout… Get me out of Here! (Remake)",
-    "creator": "Knight",
-    "description": "The jungle of famous reality TV show “I’m a celebrity. . . Get me out of here” became a crime scene for a mass murder. It’s safe to say this season is cancelled. The show is over.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1cNp83wsMWgMulbYImTekIOhC3UBxvsyrww7ck5zzMyc/edit?usp=drivesdk",
-    "custom_files_url": null,
-    "approval_date": "2024-05-01",
-    "image": "images/cases/Ramsay.png",
-    "logo_credit": "Knight"
-  },
-  {
-    "id": 67,
-    "title": "The Disappeared Turnabout",
-    "creator": "Fricka",
-    "description": "A drug deal goes wrong and a murder becomes the centre of it. A case with a fun plot and even funnier characters.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [
-      "CUSTOM FILES"
-    ],
-    "url": "https://docs.google.com/document/d/1fvmJIWvqkaI_t169ctBig-AFg5YivHza6vBQKNInYCs/edit?usp=sharing",
-    "custom_files_url": "https://drive.google.com/drive/folders/1h1ONkg-qYVpWUHsRLCzN-Z0Ebn8G771m?usp=sharing",
-    "approval_date": "2024-05-01",
-    "image": "images/cases/Disappeared.png",
-    "logo_credit": "Fricka"
-  },
-  {
-    "id": 68,
-    "title": "Turnabout Tempest",
-    "creator": "Fricka",
-    "description": "Two missing men, one blistering tempest. The snow of Antarctica seems to have no end, but one body has been found, and their death was no accident…",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1NRIdHn1nY8v-K4zoqnc_unRG8MQ0TDQmI3AQ9Cdk3xw/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-04-01",
-    "image": "images/cases/Tempest.png",
-    "logo_credit": "Fricka"
-  },
-  {
-    "id": 69,
-    "title": "Turnabout Faculty",
-    "creator": "Jpeg & Womenarepog",
-    "description": "A Parent-Teacher conference turns sour when the wife of the Principal is found drenched in the blood of the school nurse.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1fHJw_WIGuQRHhhC-jCPHlRsxPZ1JH5DHPwGpDB0puH8/edit",
-    "custom_files_url": null,
-    "approval_date": "2021-12-01",
-    "image": "images/cases/Faculty.png",
-    "logo_credit": "Jpeg & Womenarepog"
-  },
-  {
-    "id": 70,
-    "title": "Flaming Turnabout",
-    "creator": "Papirini",
-    "description": "Year-long rumours of the Minister’s daughter finally result in the attempted murder of her father and his fiancee on her 18th birthday.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [
-      "CUSTOM FILES"
-    ],
-    "url": "https://docs.google.com/document/d/1fUeFd6MZnEBV5uNcBrN5treudXoRpGHjPSAFcM2Jmt4/edit?usp=sharing",
-    "custom_files_url": "https://drive.google.com/drive/folders/1_AEB9q0rldHD4nM1xejTspx2LdZnmykG?usp=drive_link",
-    "approval_date": "2024-04-01",
-    "image": "images/cases/Flaming.png",
-    "logo_credit": "Papirini"
-  },
-  {
-    "id": 71,
-    "title": "Turnabout Heated Gaming Session",
-    "creator": "Edgeworthless & SylphWind",
-    "description": "Larry Butz’s mother was murdered during an intimate encounter with Sal Manella. Stabbed in the chest and exsanguinated to death after a fight in the bedroom, with only 2 witnesses to the seemingly impulsive crime.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/13R-_Rut0XFMT0Jl1k67Dds7du4RJaaurEXTIky9a-_4/edit",
-    "custom_files_url": null,
-    "approval_date": "2023-12-01",
-    "image": "images/cases/Heated Gaming Session.png",
-    "logo_credit": "Edgeworthless & SylphWind"
-  },
-  {
-    "id": 72,
-    "title": "A Little Turnabout",
-    "creator": "Papirini",
-    "description": "Phoenix Wright has the worst luck. Over a decade ago, he was accused of killing a man over love. Now, on the anniversary of that first murder… He’s being accused again.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [
-      "NSFW"
-    ],
-    "url": "https://docs.google.com/document/d/1qxko306phk24V8VGfOia86eo1ESZmrGSet5IQmH3VXs/edit",
-    "custom_files_url": null,
-    "approval_date": "2023-05-30",
-    "image": "images/cases/A Little.png",
-    "logo_credit": "Papirini"
-  },
-  {
-    "id": 73,
-    "title": "Clean my Turnabout",
-    "creator": "Pina",
-    "description": "20th of May, a day as good as any to do some laundry, wouldn’t you say? But, be careful, in some laundry places… They’re mixing white and red! Blood red!",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1E--FvSUXmpzah-k2l5kKNNmIORupj4V976iWoDegh3Y/edit#",
-    "custom_files_url": null,
-    "approval_date": "2022-09-01",
-    "image": "images/cases/Clean.png",
-    "logo_credit": "Pina"
-  },
-  {
-    "id": 74,
-    "title": "The Reborn Turnabout",
-    "creator": "Rod123",
-    "description": "An unfortunate actor finds himself on the wrong end of a loan shark’s shovel. Good luck representing him.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1iHbqDsUiztIoV6_ff8LSlTkiprlzJRdLag8nosvhr2s/edit#heading=h.5pp9ep4xsbza",
-    "custom_files_url": null,
-    "approval_date": "2022-09-01",
-    "image": "images/cases/The Reborn.png",
-    "logo_credit": "Rod123"
-  },
-  {
-    "id": 75,
-    "title": "Cuckoo for Turnabout",
-    "creator": "JJ",
-    "description": "I honestly can’t stop myself from laughing whenever I see this case. In essence, Ema’s cereal is stolen, and Larry gets his eyes scooped out with a spoon. Good luck.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1EXKRz-BmoQgYmRVxwNmD_uerNQCXMcqS6Nw3npdno3U/edit",
-    "custom_files_url": null,
-    "approval_date": "2022-05-01",
-    "image": "images/cases/CuckooForTurnabout.png",
-    "logo_credit": "JJ"
-  },
-  {
-    "id": 76,
-    "title": "Turnabout Gold Rush",
-    "creator": "Rod123",
-    "description": "Gold… the ultimate metal to bring out the vices of man. Treachery, and deceit often follow in the wake of its discovery. Now, it goes one step further, to murder.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1PtD21SqZ6m8JUjw6y5AB9j-GnX7BSKXAII72b2H2gLY/edit#",
-    "custom_files_url": null,
-    "approval_date": "2022-05-01",
-    "image": "images/cases/Gold-Rush.png",
-    "logo_credit": "Rod123"
-  },
-  {
-    "id": 77,
-    "title": "Turnabout of the Ring",
-    "creator": "Zizzy",
-    "description": "One ring to rule them all…or, maybe just the courtroom. A single ring, a single victim, a single turnabout. Can you traverse to Middle-Earth and back to find the truth? …or, will you fall prey to the Turnabout of the Ring?",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1WMZ7JAQqN0eKI7dchmZ7KpieUaicAUI8vVSO8mY0xdQ/edit",
-    "custom_files_url": null,
-    "approval_date": "2022-03-01",
-    "image": "images/cases/of the Ring.png",
-    "logo_credit": "Zizzy"
-  },
-  {
-    "id": 78,
-    "title": "Turnabout Performance",
-    "creator": "Jpeg & Womenarepog",
-    "description": "It’s now for the grand end-of-school-year production! A fire breaks out during Macbeth. Do Sebastian and Apollo have what it takes to find the truth in this flaming finale?",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [
-      "CUSTOM FILES"
-    ],
-    "url": "https://docs.google.com/document/d/1lxy-0NLv8F0u1oYvhdt3K2Zv62DbDQi9I4aDDq1_iEs/edit",
-    "custom_files_url": "https://drive.google.com/file/d/1XrwZUsHGao6Lt9vnA9Jm5j6zeaiLjDFY/view?usp=sharing",
-    "approval_date": "2022-01-01",
-    "image": "images/cases/Performance.png",
-    "logo_credit": "Jpeg & Womenarepog"
-  },
-  {
-    "id": 79,
-    "title": "Turnabout Field Trip",
-    "creator": "Jpeg & Womenarepog",
-    "description": "The faculty have decided to arrange some field trips. Turns out, the vice principal they have in mind is actually a local rockstar! Unfortunately, things ended pretty badly for the band…",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1dXiHk51bcdIUyqtW9ixAPWXXoyBRpQyJ2-I_AVaQkNA/edit",
-    "custom_files_url": null,
-    "approval_date": "2021-12-01",
-    "image": "images/cases/Field Trip.png",
-    "logo_credit": "Jpeg & Womenarepog"
-  },
-  {
-    "id": 80,
-    "title": "Turnabout Lawn",
-    "creator": "Delinard",
-    "description": "A domestic conflict between Doug Swallows and Ini Miney results in the former being shot by the latter. A nicely detailed case.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1IAwCv3h4_Lcc_O2ntYP7_wgS4cg6_bXkmZOWlj5dHIo/edit",
-    "custom_files_url": null,
-    "approval_date": "2021-10-01",
-    "image": "images/cases/Lawn.png",
-    "logo_credit": "Delinard"
-  },
-  {
-    "id": 81,
-    "title": "Turnabout Grisly",
-    "creator": "Ordice",
-    "description": "A magic trick gone horribly, horribly wrong. . . or murder? Ron Delite is accused of killing his long time rival Luke Atmey.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1SihmtdcgTkKrUdlY6wluYNE9x7jmGj3Ogm-R42MtsxE/edit#",
-    "custom_files_url": null,
-    "approval_date": "2021-09-01",
-    "image": "images/cases/Grisly.png",
-    "logo_credit": "Ordice"
-  },
-  {
-    "id": 82,
-    "title": "Alike a Turnabout",
-    "creator": "Pina",
-    "description": "A mysteriously simple killing, carried out in a simple neighbourhood. One shot, one victim, one defendant.",
-    "difficulty": "medium",
-    "length": "Short",
-    "tags": [
-      "CUSTOM FILES"
-    ],
-    "url": "https://docs.google.com/document/d/1uts4C7UFv2_4QUQJiELjoDfFR0CGE4PTs_qAe71IPG0/edit",
-    "custom_files_url": "https://drive.google.com/file/d/1bede-iDUEGJTE4vPDThXdH7nDR4xHPbr/view?usp=sharing",
-    "approval_date": "2021-06-01",
-    "image": "images/cases/Alike.png",
-    "logo_credit": "Pina"
-  },
-  {
-    "id": 83,
-    "title": "Turnabout High Moon",
-    "creator": "Pina, Holyman, XYZ",
-    "description": "On a horrible night, when the moon was high, a gunshot was heard throughout the locomotives speeding through the night.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1ISFa8iz6xyQ1lRX1lxfEEPdBTJqODX8Z6xRlVpWedDk/edit#",
-    "custom_files_url": null,
-    "approval_date": "2021-03-01",
-    "image": "images/cases/High-Moon.png",
-    "logo_credit": "Pina, Holyman, XYZ"
-  },
-  {
-    "id": 84,
-    "title": "Turnabout Bruh Moment",
-    "creator": "Bioro",
-    "description": "An interesting case where Blackquill is accused of using his bird, Taka, to commit murder during a trial.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/17XI98cmniKOiOpNHe8HIE6R0st-xQKOjYhDZKBU5H3g/edit",
-    "custom_files_url": null,
-    "approval_date": "2020-12-22",
-    "image": "images/cases/Bruh Moment.png",
-    "logo_credit": "Bioro"
-  },
-  {
-    "id": 85,
-    "title": "The Parting Turnabout",
-    "creator": "Deadly",
-    "description": "The Judge himself is accused of poisoning his own grandson, in a case of twists and turns.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/10FwLO2PrObmBNYgqMNOzVIybRPLQCfRxdL9MjASPrWo",
-    "custom_files_url": null,
-    "approval_date": "2020-12-22",
-    "image": "images/cases/The Parting.png",
-    "logo_credit": "Deadly"
-  },
-  {
-    "id": 86,
-    "title": "Turnabout Assessment",
-    "creator": "Noobie",
-    "description": "Within the time an exam was being held, one of the students was killed in the act. Simplistic case which can reach long lengths.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1G_UzxCjlhl6NcE4YS6xYJ_M5aKkP26ax1SLXWCKEhqE/edit",
-    "custom_files_url": null,
-    "approval_date": "2020-10-15",
-    "image": "images/cases/Assessment.png",
-    "logo_credit": "Noobie"
-  },
-  {
-    "id": 87,
-    "title": "Turnabout Entwined Souls",
-    "creator": "Ordice",
-    "description": "Phoenix Wright is accused of killing his long time friend Maya Fey. A bit silly, a bit saucy. Not one to be taken too seriously.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [
-      "NSFW"
-    ],
-    "url": "https://docs.google.com/document/d/17x4Bv0S71r4WtztbdgUy2IXtXEenQpEx1jh75rWvMTI/edit",
-    "custom_files_url": null,
-    "approval_date": "2020-10-15",
-    "image": "images/cases/Entwined Souls.png",
-    "logo_credit": "Wolfang"
-  },
-  {
-    "id": 88,
-    "title": "The Elementary Turnabout",
-    "creator": "SillyKevin",
-    "description": "A job dispute turns violent, and a teacher is murdered in her own classroom by one of her peers. Thankfully none of the children saw.",
-    "difficulty": "medium",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1jWf9Ymrs9RU2r3XEQeQSJgVZbVnh-EfFA0-kYGRbpGM/edit",
-    "custom_files_url": null,
-    "approval_date": "2020-08-21",
-    "image": "images/cases/The Elementary.png",
-    "logo_credit": "Wolfang"
-  },
-  {
-    "id": 89,
-    "title": "Turnabout Thief",
-    "creator": "Zugwer",
-    "description": "The infamous yet charming thief “The Magician” has been arrested not for theft… but for murder.",
-    "difficulty": "medium",
-    "length": "Short",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/195wRwyCD302llml5OYHng7MnC8OzxYhKFKfCDvbUhek/edit#",
-    "custom_files_url": null,
-    "approval_date": "2020-08-21",
-    "image": "images/cases/Thief.png",
-    "logo_credit": "Wolfang"
-  },
-  {
-    "id": 90,
-    "title": "Turnabout Vigilante",
-    "creator": "Deadly",
-    "description": "A case with many exciting twists. The notorious vigilante has finally been apprehended for killing many corrupt politicians.",
-    "difficulty": "medium",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1DSjVwXNzPtiJOdyIu0JziQLDOWDSYcMPu79-ETYGRmk/edit#heading=h.5pp9ep4xsbza",
-    "custom_files_url": null,
-    "approval_date": "2020-08-21",
-    "image": "images/cases/Vigilante.png",
-    "logo_credit": "Wolfang"
-  },
-
-
-
-    {
-    "id": -3,
-    "title": "Beast and the Turnabout",
-    "creator": "Pina",
-    "description": "Someone said once that “man is the wolf of man”, and within us there are beasts that fight. Beasts, who roam at night… and kill, kill, kill…",
-    "difficulty": "hard",
     "length": "Long",
     "tags": [
       "NEW"
     ],
-    "url": "https://docs.google.com/document/d/1RuRPG2P_198pyr6KGjkd53bjEIoAKZYPKhS6qERQseA/edit?tab=t.0",
+    "url": "https://docs.google.com/document/d/14Cj-w0s1sXJa5CLyJOth6dlj6zeSJqR7s3ylP8UbdPY/edit?tab=t.0",
     "custom_files_url": null,
     "approval_date": "2026-06-01",
     "image": "images/cases/",
-    "logo_credit": "Pina"
+    "logo_credit": ""
   },
   {
-    "id": -2,
-    "title": "Secret of the Turnabout",
-    "creator": "Wolfang",
-    "description": "The forest hides many secrets... from gnomes, creatures... to old tales.",
-    "difficulty": "hard",
-    "length": "Long",
+    "id": 52,
+    "title": "En Garde, Turnabout!",
+    "creator": "Sheepish",
+    "description": "A menial practice between two damsels of the sword. One fateful strike is all it needed for it to end with one victor over a slump loser…",
+    "difficulty": "medium",
+    "length": "Moderate",
     "tags": [
       "NEW"
     ],
-    "url": "https://docs.google.com/document/d/1x4vUgDYi71WhfCMI3rzhDvsXDSIOMfRjRWQACvetwSg/edit?tab=t.0#heading=h.illkap2s4brz",
-    "custom_files_url": "https://drive.google.com/drive/folders/1_ata4YTMgPQCarYBMNlrbllYCNfQCi9z?usp=drive_link",
+    "url": "https://docs.google.com/document/d/1xlVCgVlT9oNmAJiGkdN2tTOuE_t_4vcv4bv9jabGM3o/edit?tab=t.0#heading=h.5pp9ep4xsbza",
+    "custom_files_url": null,
     "approval_date": "2026-06-01",
-    "image": "images/cases/Secret.gif",
-    "logo_credit": "Wolfang"
+    "image": "images/cases/",
+    "logo_credit": ""
   },
   {
-    "id": 91,
-    "title": "Turnabout Godfather",
-    "creator": "Yoru",
-    "description": "From a simple mafia meeting, to witnesses that do not wish to divulge their secrets. Will you find the truth?",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1qNMw9qxhO1EdWqyBsuAdlD-Qy81ogAL77DscT27M-nA/edit?tab=t.0#heading=h.rouj0oapt2hm",
-    "custom_files_url": null,
-    "approval_date": "2026-04-05",
-    "image": "images/cases/Godfather.png",
-    "logo_credit": "Yoru"
-  },
-  {
-    "id": 92,
-    "title": "Turnabout Oh Turnabout… I’ve Been Waiting For This",
-    "creator": "Knight",
-    "description": "Gumshoe is accused of stealing top secret files by using… a parrot? Does the plaintiff actually have a case or is he just a generational hater having a monumental crashout.",
-    "difficulty": "hard",
+    "id": 53,
+    "title": "Turnabout Affairs",
+    "creator": "perfection",
+    "description": "A locked room murder. One where the defendant supposedly killed her husband out of anger and greed.",
+    "difficulty": "medium",
     "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/14v35C3s1-6CMeiytGqktUX4OJfdBeyXUsSwptNyXSos/edit",
-    "custom_files_url": null,
-    "approval_date": "2025-12-23",
-    "image": "images/cases/Ive been waiting.png",
-    "logo_credit": "Knight"
-  },
-  {
-    "id": 93,
-    "title": "Kasbah With a Turnabout",
-    "creator": "Pina",
-    "description": "In the lonely sands of the Arabian Peninsula, there is only one thing which creates hope in the fleeting hungry spirit of men… oil. Liquid gold, as it’s called.",
-    "difficulty": "hard",
-    "length": "Long",
     "tags": [
-      "CUSTOM FILES"
+      "NEW"
     ],
-    "url": "https://docs.google.com/document/d/1Agvz6f-4vVMXw2BfADwWOfHyBRmDOpfnGa9L9FZorP0/edit",
-    "custom_files_url": "https://drive.google.com/drive/folders/1NtzWI2uHHv53Fo2ArfRUqeEYI5cUybQ3?usp=drive_link",
-    "approval_date": "2025-08-21",
-    "image": "images/cases/Kasbah.png",
-    "logo_credit": "Pina"
-  },
-  {
-    "id": 94,
-    "title": "A Turnabout That’s Disturbing The Peace",
-    "creator": "Knight",
-    "description": "A woman is crucified at the top of a tall mysterious tower guarded by “The Gatekeeper”. Discover the mystery behind the Prophecy and uncover who nailed the victim to the cross. Extremely loosely inspired by Persona 3 though is not faithful to that series at all.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1x6bNXkygyzMlkrtrIRworFDgy5_tLvmhyQNfGIqXcmE/edit",
+    "url": "https://docs.google.com/document/d/1xYm7LRW1qTd2xFJ5UG-nYtM1i6qVwA38B_r1OrLrb8E/edit?tab=t.0#heading=h.reip6bf0hcn3",
     "custom_files_url": null,
-    "approval_date": "2025-08-21",
-    "image": "images/cases/Disturbing.png",
-    "logo_credit": "Knight"
+    "approval_date": "2026-06-01",
+    "image": "images/cases/",
+    "logo_credit": ""
   },
   {
-    "id": 95,
-    "title": "On the Lighthouse: A Turnabout",
-    "creator": "Pina",
-    "description": "November 18th, 2001… among the calm shores of the Baltimore coast, officers find something which was thought to be lost forever… The remnants of a body lost long ago!!",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [
-      "CUSTOM FILES"
-    ],
-    "url": "https://docs.google.com/document/d/1MA4U9cdo9-TUKGsGsSTAr6qbmct58vvDU0XmXufreFM/edit?usp=sharing",
-    "custom_files_url": "https://drive.google.com/drive/folders/1UZMAqSQjTdYF0SY-sfQ-6Sn7C3WQdB-j?usp=sharing",
-    "approval_date": "2025-05-01",
-    "image": "images/cases/Lighthouse.png",
-    "logo_credit": "Pina"
-  },
-  {
-    "id": 96,
-    "title": "Paying Out To Turnabout",
-    "creator": "Yoru, LegalGina, cass, KanameDate, NintenGunner, Alias_Crouton2, MLink, somebody",
-    "description": "Stadium. Finals. Twenty thousand people live, even more watching online. One million on the line, more than enough to change lives. Stakes were never higher. E-Sports can be different, but this time, things got explosive. Literally.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [
-      "CUSTOM FILES"
-    ],
-    "url": "https://docs.google.com/document/d/1jRY-4PMeRdWKf34dHAZsNxnCYrwnbHPUlXgIyJ8cuws/edit?usp=sharing",
-    "custom_files_url": "https://drive.google.com/drive/folders/1XoisAIcBu3gczn2hPMI2b5coCdQPo_w8",
-    "approval_date": "2025-05-01",
-    "image": "images/cases/Paying.png",
-    "logo_credit": "Knight"
-  },
-  {
-    "id": 97,
-    "title": "Olé!! Turnabout!",
-    "creator": "Pina",
-    "description": "Bull…",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1erMK7TYVbi1aE5Q4DOiE8RADzpQPsxkb-sLOuCcCYYw/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2025-04-01",
-    "image": "images/cases/Ole.png",
-    "logo_credit": "Pina"
-  },
-  {
-    "id": 98,
-    "title": "Turnabout’s Duty",
-    "creator": "Dunkleheart",
-    "description": "A man finally returns home from his time from war. However, it was 6 shots that sent him off that night.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/u/0/d/1wS_IpFUgFEc1RMyfyDDliXM_0o9txsEECe499XARHG8/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-09-22",
-    "image": "images/cases/Duty.png",
-    "logo_credit": "Dunkleheart"
-  },
-  {
-    "id": 99,
-    "title": "Turnabout Y2K",
-    "creator": "Pina",
-    "description": "31st of December, 2000! The second millennium’s real final day. Technology is untapped and an infinite fountain of innovation… and cash. “xD dAWg thEY dOn’T KnOW!”",
-    "difficulty": "hard",
+    "id": 54,
+    "title": "Turnabout Gensokyo",
+    "creator": ".dereos",
+    "description": "Murder at the gaming arena. It's a Touhou based case.",
+    "difficulty": "medium",
     "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1n2qdvipu3pzv2-kNbU2LdhOVzNEh90Bo5I2-p1nZ0lQ/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2024-08-01",
-    "image": "images/cases/y2k.png",
-    "logo_credit": "Pina"
-  },
-  {
-    "id": 100,
-    "title": "Roll the Turnabout",
-    "creator": "Fricka",
-    "description": "There’s a saying: You’re always one roll away from the jackpot. With the push of a lever, lives are ruined and lives are ended. The dice of time has decided. Next bid: Murder.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1ZbX8-njoxBQdcvyKBLcyJnOJYzXQC72i8VmGkToiNFQ/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2024-08-01",
-    "image": "images/cases/Roll.png",
-    "logo_credit": "Fricka"
-  },
-  {
-    "id": 101,
-    "title": "Turnabout in the Shadows",
-    "creator": "Fricka",
-    "description": "A case on the shorter side that takes place in the 1879 Ottoman Empire. The Sultan is murdered, and a complex mystery is at its centre.",
-    "difficulty": "hard",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1FeJcPYAmM7fzcHYq9SGZWdADlb0uPkcMFpKM2tAtEXw/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2024-05-01",
-    "image": "images/cases/In the Shadows.png",
-    "logo_credit": "Fricka"
-  },
-  {
-    "id": 102,
-    "title": "Turnabout Dealings",
-    "creator": "Ice",
-    "description": "Murder case involving a student intern who was believed to have shot her superior over her work appraisal. An experienced witness player is suggested.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1YwzqIFy2kfwaeI_roFtA7uTBghE3kvJ68HPDojkl0cg/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-05-01",
-    "image": "images/cases/Dealings.png",
-    "logo_credit": "Ice"
-  },
-  {
-    "id": 103,
-    "title": "Turnabout Trinity",
-    "creator": "Fricka",
-    "description": "The third monarch dies within 5 years, and three children are left to fight for the throne. However, don’t expect it to be simple, for many puzzles have yet to be solved.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1JXQkh9LDGDRBh-EbABJMfMlTn_PPttGRhjexEPjyEAo/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-04-01",
-    "image": "images/cases/Trinity.png",
-    "logo_credit": "Fricka"
-  },
-  {
-    "id": 104,
-    "title": "Turnabout Infamy",
-    "creator": "Sp",
-    "description": "Famous video producer, Richard Wellington, is murdered by the famous murderer, De Killer. However this time, it seems De Killer has finally been caught for his crimes…",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1vMYsc6eqn9CphFmqYL4jYWOuqRDWYKyUlI27dCzhzFA/edit",
-    "custom_files_url": null,
-    "approval_date": "2024-03-01",
-    "image": "images/cases/Infamy.png",
-    "logo_credit": "Sp"
-  },
-  {
-    "id": 105,
-    "title": "Turnabout Shootout",
-    "creator": "Fricka",
-    "description": "A gruesome school shooting has befallen an innocent school, and it seems all evidence points towards one student. A case that will test an attorney to their limits.",
-    "difficulty": "hard",
-    "length": "Long",
     "tags": [
-      "NSFW"
+      "NEW"
     ],
-    "url": "https://docs.google.com/document/d/1zbwB3X9IRI8ojP9VVq0JQ1WScR8tixSWV3MjSOgrBbQ/edit?usp=sharing",
+    "url": "https://docs.google.com/document/d/1M_WeH90qmVLyzDkQ_ueQ1F5q4uWDTQy4N-FBZMigDEo/edit?tab=t.0",
     "custom_files_url": null,
-    "approval_date": "2024-03-01",
-    "image": "images/cases/Shootout.png",
-    "logo_credit": "Fricka"
-  },
-  {
-    "id": 106,
-    "title": "Turnabout Trashcan",
-    "creator": "Sp",
-    "description": "On a cold snowing night, under the moonlight, a terrible murder takes place! Was it just a robbery gone wrong, or is there more than meets the eye? A case with very unique and innovative mechanics.",
-    "difficulty": "hard",
-    "length": "Moderate",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/199alfQhk2UmFCpjDC9GD6yH6B4csAh20nbQs14TC0XQ/edit",
-    "custom_files_url": null,
-    "approval_date": "2023-09-05",
-    "image": "images/cases/Trashcan.png",
-    "logo_credit": "Sp"
-  },
-  {
-    "id": 107,
-    "title": "A Turnabout at the Orphanage",
-    "creator": "SillyKevin, axe & KanameDate",
-    "description": "Two kids and an adult caretaker were killed at the small orphanage. In this basically locked down area of witnesses will you be able to find the truth or was the truth that the defendant did it all along?",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [
-      "CUSTOM FILES"
-    ],
-    "url": "https://docs.google.com/document/d/1n0b8TbxjlyV82KasP3T4UeOZXe1aIp0SInm6oXm4390/edit",
-    "custom_files_url": "https://drive.google.com/file/d/1mQRxQOCvJH65h9dAmFrTuAep4lqPWO_P/view?usp=sharing",
-    "approval_date": "2023-08-01",
-    "image": "images/cases/Orphanage.png",
-    "logo_credit": "SillyKevin, axe & KanameDate"
-  },
-  {
-    "id": 108,
-    "title": "Turnabout Sunshine and Fruit",
-    "creator": "Pina",
-    "description": "Nothing like the tropics… beach, sun and lovely times for all… Of course, Mr. Tius took advantage of this, and on his own private island, a party was hosted… unfortunately… Murder’s on the schedule!",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1OtQr_tTROsOQ2rmN7MU9JHUuvYTCiu9a2lwfYDbejuk/edit",
-    "custom_files_url": null,
-    "approval_date": "2022-09-01",
-    "image": "images/cases/sunshine&fruit.png",
-    "logo_credit": "Pina"
-  },
-  {
-    "id": 109,
-    "title": "Turnabout Desire",
-    "creator": "Redacted",
-    "description": "Larry Butz is held accountable for the brutal murder of Iris Fey, after he was found sleeping next to her disfigured corpse.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [
-      "NSFW"
-    ],
-    "url": "https://docs.google.com/document/d/1D1aLv3sQ4xjZHIgAEWo5eujPrc1_N3AqkoZIUObaEqo/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2021-03-01",
-    "image": "images/cases/Desire.png",
-    "logo_credit": "Redacted"
-  },
-  {
-    "id": 110,
-    "title": "Turnabout Broken Hearts",
-    "creator": "Hobro",
-    "description": "A long trial in which the boyfriend of the victim, Mia Fey, is accused of killing her in her own basement.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/14z7_tiWrtoSUqKZV8xKKmDotxLAcAJMkfCLZ81qu2Vk",
-    "custom_files_url": null,
-    "approval_date": "2020-11-15",
-    "image": "images/cases/Broken Hearts.png",
-    "logo_credit": "Hobro"
-  },
-  {
-    "id": 111,
-    "title": "The Strange case of Jekyll and Hyde",
-    "creator": "Knight",
-    "description": "A long and complex civil trial with a deep and engaging story on the mysterious Mr. Hyde. Based on the famous novella.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1GNm__xjKUw0IrWg0WBjz8mm_nMoiLcfopBWBwrSdHPY/edit",
-    "custom_files_url": null,
-    "approval_date": "2020-10-15",
-    "image": "images/cases/Jekyll.png",
-    "logo_credit": "Knight"
-  },
-  {
-    "id": 112,
-    "title": "Turnabout Night Terrors",
-    "creator": "Gazawhizz",
-    "description": "An abusive relationship between defendant and victim in a long and thrilling case with an extraordinary murder method.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1lghHYYU0a1aFk1SCzIKnNjey2vfH2ifcIemnU-N_saM/edit",
-    "custom_files_url": null,
-    "approval_date": "2020-08-31",
-    "image": "images/cases/Night Terrors.png",
-    "logo_credit": "Gazawhizz"
-  },
-  {
-    "id": 113,
-    "title": "Turnabout Drunken Night (Remake)",
-    "creator": "Knight",
-    "description": "A long and difficult case with an interesting plot. Phoenix Wright has been murdered in an alleyway just outside Klav’s Pints pub. Knowledge of Farewell, My Turnabout is required.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1fktBytfO37qXPl7Dl9iU9maT0qsO5Dfp__qveCTbC7M/edit",
-    "custom_files_url": null,
-    "approval_date": "2020-08-31",
-    "image": "images/cases/Drunken Night.png",
-    "logo_credit": "Knight"
-  },
-  {
-    "id": 114,
-    "title": "Turnabout Old Sins",
-    "creator": "Ordice",
-    "description": "Custom case which makes a sequel to Rise from the Ashes. The defence will have it tough to prove Gant’s innocence.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1NrqNjFVyrm0MPaZ2tJN1N43XUiSaov8KKe5frFhOFXE/edit",
-    "custom_files_url": null,
-    "approval_date": "2020-08-21",
-    "image": "images/cases/Old Sins.png",
-    "logo_credit": "Ordice"
-  },
-  {
-    "id": 115,
-    "title": "Turnabout Wildgame",
-    "creator": "Noobie",
-    "description": "Great case with many twists and turns, a classic and a must-play for learners desiring a challenge.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1mnCDbXtmZJBQfVAcZi0bmr0vtJ2IKND1mEFH6pToF_M/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2020-08-21",
-    "image": "images/cases/Wildgame.png",
-    "logo_credit": "Noobie"
-  },
-  {
-    "id": 116,
-    "title": "Turnabout Radio Check",
-    "creator": "Magic",
-    "description": "Long and challenging case featuring the death of Apollo Justice after a stormy night. With unique case mechanics.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1y4vw17kOAtPAQPTMJf_looke_rSKweJT0QQU4uZRmaw/edit",
-    "custom_files_url": null,
-    "approval_date": "2020-08-21",
-    "image": "images/cases/Radio Check.png",
-    "logo_credit": "Magic"
-  },
-  {
-    "id": 117,
-    "title": "Turnabout 'Til the End",
-    "creator": "Ordice",
-    "description": "The final boss of this case list. You will not survive.",
-    "difficulty": "hard",
-    "length": "Long",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/1RRrjUtsVTlVAoW7adyZhLzzV7kZ2P2r2h2VOXIkpW5I/edit?usp=sharing",
-    "custom_files_url": null,
-    "approval_date": "2020-08-21",
-    "image": "images/cases/tiltheend.png",
-    "logo_credit": "Ordice"
+    "approval_date": "2026-06-01",
+    "image": "images/cases/Gensokyo.png",
+    "logo_credit": ".dereos"
   }
 ]
