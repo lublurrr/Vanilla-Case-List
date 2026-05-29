@@ -1,6 +1,6 @@
 [
     {
-    "id": 0,
+    "id": 1,
     "title": "Turnabout Gensokyo",
     "creator": "Dereos",
     "description": "Murder at the gaming arena. It's a Touhou based case.",
@@ -1234,8 +1234,21 @@
     "image": "images/cases/Vigilante.png"
   },
 
-  
-  
+    {
+    "id": -1,
+    "title": "Secret of the Turnabout",
+    "creator": "Wolfang",
+    "description": "The forest hides many secrets... from ",
+    "difficulty": "hard",
+    "length": "Long",
+    "tags": [
+      "NEW"
+    ],
+    "url": "https://docs.google.com/document/d/1x4vUgDYi71WhfCMI3rzhDvsXDSIOMfRjRWQACvetwSg/edit?tab=t.0#heading=h.illkap2s4brz",
+    "custom_files_url": "https://drive.google.com/drive/folders/1_ata4YTMgPQCarYBMNlrbllYCNfQCi9z?usp=sharing",
+    "approval_date": "2026-06-01",
+    "image": "images/cases/Secret.gif"
+  },
   {
     "id": 91,
     "title": "Turnabout Godfather",
