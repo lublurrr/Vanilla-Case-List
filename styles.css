@@ -2208,3 +2208,30 @@ main {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================================
+   Logo credit — bottom-right of the image panel in the case detail modal
+   ========================================================================== */
+
+.case-modal-image-wrap {
+  position: relative;
+}
+
+.case-modal-logo-credit {
+  position: absolute;
+  bottom: 0.35rem;
+  right: 0.5rem;
+  font-size: 0.68rem;
+  font-style: italic;
+  color: var(--ink-light);
+  opacity: 0.75;
+  pointer-events: none;
+  line-height: 1.2;
+  text-align: right;
+}
+
+.case-modal-logo-credit strong {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
