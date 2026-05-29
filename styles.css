@@ -1830,20 +1830,21 @@ main {
   position: relative;
   display: grid;
   grid-template-columns: minmax(min(320px, 45%), 1fr) minmax(0, 1.15fr);
-  padding-top: 26px;
-  /* room for the folder tab */
+  padding-top: 0;
+  /* was 26px — tab is absolute so it doesn't need this */
   border-radius: 4px;
   overflow: hidden;
-  /* clip the card's own rounded corners */
 }
 
 
 
 .case-modal-tab {
   position: absolute;
-  top: 0;
+  top: -28px;
+  /* pull it up outside the modal body */
   width: 160px;
   left: -2px;
+  /* was -2px, keep flush with modal border */
   height: 28px;
   background-color: var(--ink-light);
   border-top: 2px solid var(--ink);
