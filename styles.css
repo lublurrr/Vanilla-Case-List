@@ -2218,49 +2218,6 @@ main {
     /* Flattens the top completely on mobile */
   }
 
-  @media (max-width: 780px) {
-  #random-modal .modal-body,
-  #case-modal .modal-body {
-    max-width: 1000px;
-    /* Widens the window by shrinking the left/right screen margins from 2rem to 10px */
-    width: calc(100vw - 20px) !important; 
-    margin: auto;
-  }
-}
-
-@media (max-width: 780px) {
-  .case-modal-image-wrap {
-    border-right: none;
-    border-bottom: 2px solid var(--ink);
-    aspect-ratio: 16 / 9;
-    min-height: 0;
-    width: 100%;
-  }
-
-    @media (max-width: 780px) {
-      .case-modal-logo-credit {
-        bottom: 0;
-        right: 0;
-        font-size: 0.65rem;
-        padding: 0.2rem 0.4rem;
-        /* Adds a subtle paper-colored backing so it doesn't mesh into the illustration line-art */
-        background-color: rgba(255, 250, 235, 0.85);
-        border-top-left-radius: 4px;
-        border-left: 1px solid var(--cream-deep);
-        border-top: 1px solid var(--cream-deep);
-        opacity: 0.9;
-      }
-    }
-
-  .case-modal-image {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    padding: 0.5rem;
-    /* Reduced padding slightly to give the logo image more room */
-  }
-}
-
   .case-modal-image-wrap {
     border-right: none;
     border-bottom: 2px solid var(--ink);
