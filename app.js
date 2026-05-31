@@ -100,7 +100,9 @@ function renderDocketInfo() {
   } else if (lastDate) {
     newCases = datedCases
       .filter(c => c.approval_date === lastDate)
-      .sort((a, b) => b.id - a.id);
+      .sort((a, b) =>
+        (DIFFICULTY_ORDER[a.difficulty] ?? 9) - (DIFFICULTY_ORDER[b.difficulty] ?? 9) ||
+        b.id - a.id);
   } else {
     newCases = [];
   }
@@ -253,7 +255,8 @@ function getFiltered() {
         const da = a.approval_date || '';
         const db = b.approval_date || '';
         if (da !== db) return db.localeCompare(da);
-        return b.id - a.id;
+        return (DIFFICULTY_ORDER[a.difficulty] ?? 9) - (DIFFICULTY_ORDER[b.difficulty] ?? 9)
+          || b.id - a.id;
       });
       break;
     case 'default':
