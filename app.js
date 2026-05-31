@@ -98,7 +98,9 @@ function renderDocketInfo() {
       .map(id => state.cases.find(c => c.id === id))
       .filter(Boolean);
   } else if (lastDate) {
-    newCases = datedCases.filter(c => c.approval_date === lastDate);
+    newCases = datedCases
+      .filter(c => c.approval_date === lastDate)
+      .sort((a, b) => b.id - a.id);
   } else {
     newCases = [];
   }
@@ -256,7 +258,8 @@ function getFiltered() {
     default:
       list.sort((a, b) =>
         (DIFFICULTY_ORDER[a.difficulty] ?? 9) - (DIFFICULTY_ORDER[b.difficulty] ?? 9) ||
-        a.id - b.id);
+        (b.approval_date || '').localeCompare(a.approval_date || '') ||
+        b.id - a.id);
   }
 
   return list;
