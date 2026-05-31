@@ -243,7 +243,9 @@ function getFiltered() {
     case 'length':
       list.sort((a, b) =>
         (LENGTH_ORDER[a.length] ?? 9) - (LENGTH_ORDER[b.length] ?? 9) ||
-        (DIFFICULTY_ORDER[a.difficulty] ?? 9) - (DIFFICULTY_ORDER[b.difficulty] ?? 9));
+        (DIFFICULTY_ORDER[a.difficulty] ?? 9) - (DIFFICULTY_ORDER[b.difficulty] ?? 9) ||
+        (b.approval_date || '').localeCompare(a.approval_date || '') ||
+        b.id - a.id);
       break;
     case 'newest':
       // Sort by approval date descending (most recently added first), tiebreak by id
