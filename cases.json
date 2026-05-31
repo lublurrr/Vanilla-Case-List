@@ -443,7 +443,7 @@
     "tags": ["NEW"],
     "url": "https://docs.google.com/document/d/1xYm7LRW1qTd2xFJ5UG-nYtM1i6qVwA38B_r1OrLrb8E/edit?tab=t.0#heading=h.reip6bf0hcn3",
     "custom_files_url": null,
-    "approval_date": "2026-06-04",
+    "approval_date": "2026-06-01",
     "image": "images/cases/Affairs.png",
     "logo_credit": ""
   },
@@ -457,7 +457,7 @@
     "tags": ["NEW"],
     "url": "https://docs.google.com/document/d/14Cj-w0s1sXJa5CLyJOth6dlj6zeSJqR7s3ylP8UbdPY/edit?tab=t.0",
     "custom_files_url": null,
-    "approval_date": "2026-06-04",
+    "approval_date": "2026-06-01",
     "image": "images/cases/",
     "logo_credit": ""
   },
@@ -471,7 +471,7 @@
     "tags": ["NEW"],
     "url": "https://docs.google.com/document/d/1xlVCgVlT9oNmAJiGkdN2tTOuE_t_4vcv4bv9jabGM3o/edit?tab=t.0#heading=h.5pp9ep4xsbza",
     "custom_files_url": null,
-    "approval_date": "2026-06-04",
+    "approval_date": "2026-06-01",
     "image": "images/cases/",
     "logo_credit": ""
   },
@@ -485,7 +485,7 @@
     "tags": ["NEW","CUSTOM FILES"],
     "url": "https://docs.google.com/document/d/1M_WeH90qmVLyzDkQ_ueQ1F5q4uWDTQy4N-FBZMigDEo/edit?tab=t.0",
     "custom_files_url": "https://drive.google.com/file/d/1cJ5BrxZmN7m_wyFgT82viRUV1MBdAAI8/view?usp=sharing",
-    "approval_date": "2026-06-04",
+    "approval_date": "2026-06-01",
     "image": "images/cases/Gensokyo.png",
     "logo_credit": ".dereos"
   },
@@ -1325,7 +1325,7 @@
     "tags": ["NEW"],
     "url": "https://docs.google.com/document/d/1RuRPG2P_198pyr6KGjkd53bjEIoAKZYPKhS6qERQseA/edit?tab=t.0",
     "custom_files_url": null,
-    "approval_date": "2026-06-04",
+    "approval_date": "2026-06-01",
     "image": "images/cases/Beast.png",
     "logo_credit": "Pina"
   },
@@ -1339,7 +1339,7 @@
     "tags": ["NEW","CUSTOM FILES"],
     "url": "https://docs.google.com/document/d/1x4vUgDYi71WhfCMI3rzhDvsXDSIOMfRjRWQACvetwSg/edit?tab=t.0#heading=h.illkap2s4brz",
     "custom_files_url": "https://drive.google.com/file/d/12A1NRtM_oEwY2l00W7aKXX_wL0Y8e-Ir/view?usp=sharing",
-    "approval_date": "2026-06-04",
+    "approval_date": "2026-06-01",
     "image": "images/cases/Secret.gif",
     "logo_credit": "Wolfang"
   },
@@ -1720,5 +1720,20 @@
     "approval_date": "2020-08-21",
     "image": "images/cases/tiltheend.png",
     "logo_credit": "Wolfang"
+  },
+  {
+    "id": 124,
+    "title": "Turnabout Training",
+    "creator": "Lom",
+    "description": "Many competitors gather together for one purpose: To go for Gold! And yet an athlete who has achieved this goal, had made it the cause of his eventual demise. 
+",
+    "difficulty": "easy",
+    "length": "Short",
+    "tags": ["NEW"],
+    "url": "https://docs.google.com/document/d/1JcVcLQ6G4I3la0bsdkhgrz2xYfBNsR2KrjvQdzNaZl8/edit?usp=sharing",
+    "custom_files_url": null,
+    "approval_date": "2026-06-01",
+    "image": "images/cases/",
+    "logo_credit": "Fricka"
   }
 ]
