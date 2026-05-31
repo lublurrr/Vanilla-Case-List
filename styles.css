@@ -398,7 +398,7 @@ main {
 
 .random-panel {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1.6fr;
   gap: 1.25rem;
   margin-bottom: 2rem;
   padding-top: 22px;
