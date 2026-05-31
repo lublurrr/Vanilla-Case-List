@@ -246,23 +246,6 @@
 
     <!-- Random + Docket-Info + Stats Panel -->
     <section class="random-panel">
-      <div class="random-card" data-tab-label="Random">
-        <div class="random-card-body">
-          <h2>Give Me a Random Case!</h2>
-          <p class="random-sub">Can't pick? Let fate decide.</p>
-          <div class="random-buttons">
-            <button class="btn-random btn-any" data-difficulty="any">Any</button>
-            <button class="btn-random btn-easy" data-difficulty="easy">Easy</button>
-            <button class="btn-random btn-medium" data-difficulty="medium">Medium</button>
-            <button class="btn-random btn-hard" data-difficulty="hard">Hard</button>
-          </div>
-        </div>
-        <!-- Featured case fills the empty space below the buttons -->
-        <div class="featured-case" id="featured-case">
-          <span class="featured-label">Featured Case</span>
-          <!-- Filled by app.js renderFeatured() -->
-        </div>
-      </div>
       <div class="docket-info-card" data-tab-label="The Docket" id="docket-info">
         <div class="docket-rows">
           <div class="docket-row">
@@ -281,6 +264,23 @@
         <div class="docket-whats-new">
           <h4 class="docket-subhead">What's new:</h4>
           <ul id="info-whats-new" class="whats-new-list"></ul>
+        </div>
+      </div>
+      <div class="random-card" data-tab-label="Random">
+        <div class="random-card-body">
+          <h2>Give Me a Random Case!</h2>
+          <p class="random-sub">Can't pick? Let fate decide.</p>
+          <div class="random-buttons">
+            <button class="btn-random btn-any" data-difficulty="any">Any</button>
+            <button class="btn-random btn-easy" data-difficulty="easy">Easy</button>
+            <button class="btn-random btn-medium" data-difficulty="medium">Medium</button>
+            <button class="btn-random btn-hard" data-difficulty="hard">Hard</button>
+          </div>
+        </div>
+        <!-- Featured case fills the empty space below the buttons -->
+        <div class="featured-case" id="featured-case">
+          <span class="featured-label">Featured Case</span>
+          <!-- Filled by app.js renderFeatured() -->
         </div>
       </div>
     </section>
