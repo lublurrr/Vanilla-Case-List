@@ -666,7 +666,7 @@ main {
 
 .whats-new-list .diff-badge.diff-medium {
   background: var(--medium);
-  color: var(--ink);
+  color: white;
 }
 
 .whats-new-list .diff-badge.diff-hard {
