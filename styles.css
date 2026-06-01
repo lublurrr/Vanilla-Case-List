@@ -609,7 +609,7 @@ main {
   font-family: var(--font-display);
   font-style: normal;
   font-weight: bold;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--ink-soft);
 }
 
@@ -617,7 +617,7 @@ main {
   font-family: var(--font-display);
   font-style: normal;
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--blue-deep);
 }
 
@@ -626,7 +626,7 @@ main {
   font-family: var(--font-display);
   font-style: normal;
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 1.0rem;
   color: var(--ink);
   border-bottom: 1px dashed var(--cream-deep);
   padding-bottom: 0.25rem;
