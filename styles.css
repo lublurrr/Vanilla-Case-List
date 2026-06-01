@@ -2084,6 +2084,25 @@ main {
   margin-top: 1.1rem;
 }
 
+.case-modal-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+}
+
+.case-modal-buttons .card-open-btn {
+  margin-top: 0;
+}
+
+.case-modal-custom-btn {
+  background-color: var(--green);
+}
+
+.case-modal-custom-btn:hover {
+  background-color: #3f6e30;
+}
+
 /* Mobile / narrow: stack vertically (logo on top, details below) */
 @media (max-width: 780px) {
   .case-modal-card {
