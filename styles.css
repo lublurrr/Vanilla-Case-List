@@ -441,7 +441,7 @@ main {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
@@ -482,7 +482,7 @@ main {
 
 .featured-label {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
@@ -553,7 +553,7 @@ main {
 
 .featured-title {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 1.05rem;
   color: var(--blue-deep);
@@ -569,7 +569,7 @@ main {
 .featured-creator::before {
   content: 'by ';
   color: var(--ink-light);
-  font-style: italic;
+  font-style: normal;
 }
 
 .featured-meta {
@@ -607,7 +607,7 @@ main {
 
 .docket-label {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.88rem;
   color: var(--ink-soft);
@@ -831,7 +831,7 @@ main {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
@@ -2065,7 +2065,7 @@ main {
 
 .case-modal-desc-label {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
