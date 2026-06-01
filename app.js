@@ -269,8 +269,20 @@ function getFiltered() {
   return list;
 }
 
+// Words ignored when sorting alphabetically, so a title sorts by its distinctive
+// word (e.g. every "Turnabout X" sorts under X instead of all clustering under T).
+// Whole words only, case-insensitive, removed wherever they appear in the title.
+// Editors: add or remove words here to tune the alphabetical order.
+const ALPHA_IGNORE = ['the', 'a', 'an', 'to', 'turnabout'];
+
 function stripArticle(t) {
-  return t.replace(/^(the|a|an)\s+/i, '').toLowerCase();
+  const ignore = new RegExp(`\\b(?:${ALPHA_IGNORE.join('|')})\\b`, 'gi');
+  const key = (t || '')
+    .toLowerCase()
+    .replace(ignore, ' ')         // drop ignored words anywhere in the title
+    .replace(/[^a-z0-9]+/g, ' ')  // normalize punctuation/spacing to single spaces
+    .trim();
+  return key || (t || '').toLowerCase();  // fallback if a title is only ignored words
 }
 
 /* ----------------------------------------------------------------
