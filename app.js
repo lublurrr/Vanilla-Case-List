@@ -365,7 +365,7 @@ function openCaseModal(caseId) {
     : '';
 
   const openBtn = c.url
-    ? `<a class="card-open-btn case-modal-open-btn" href="${escapeAttr(c.url)}" target="_blank" rel="noopener noreferrer">Open Case Document ↗</a>`
+    ? `<a class="card-open-btn case-modal-open-btn" href="${escapeAttr(c.url)}" target="_blank" rel="noopener noreferrer">Open Case Document <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.1em"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>`
     : `<span class="card-open-btn card-open-btn-disabled" aria-disabled="true">No document available yet</span>`;
 
   content.innerHTML = `
@@ -463,7 +463,7 @@ function renderTag(tag, caseObj) {
     return `<span class="tag-pill tag-Custom">Custom Files</span>`;
   }
   const cls = (tag === 'Tutorial Case') ? 'tag-Tutorial' : `tag-${tag}`;
-  const label = tag === 'NEW' ? '⭐ NEW'
+  const label = tag === 'NEW' ? '<svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-0.15em"><path d="M12 2 L14.6 8.6 L22 9.2 L16.5 13.9 L18.2 21 L12 17.3 L5.8 21 L7.5 13.9 L2 9.2 L9.4 8.6 Z"/></svg> NEW'
               : tag === 'Tutorial Case' ? 'Tutorial'
               : tag === 'NSFW' ? 'NSFW'
               : tag;
@@ -709,7 +709,7 @@ function showRandom(c, difficulty) {
       : '';
 
     const openBtn = c.url
-      ? `<a class="card-open-btn case-modal-open-btn" href="${escapeAttr(c.url)}" target="_blank" rel="noopener noreferrer">Open Case Document ↗</a>`
+      ? `<a class="card-open-btn case-modal-open-btn" href="${escapeAttr(c.url)}" target="_blank" rel="noopener noreferrer">Open Case Document <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.1em"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>`
       : `<span class="card-open-btn card-open-btn-disabled" aria-disabled="true">No document available yet</span>`;
 
     result.innerHTML = `
