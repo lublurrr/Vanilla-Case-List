@@ -1685,7 +1685,7 @@ main {
 }
 
 .modal-backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: rgba(42, 31, 10, 0.55);
   backdrop-filter: blur(2px);
