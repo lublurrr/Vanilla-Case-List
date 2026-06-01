@@ -746,9 +746,9 @@ main {
 
 .random-sub {
   margin: 0 0 1rem;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--ink-soft);
-  font-style: normal;
+  font-style: italic;
 }
 
 .random-buttons {
