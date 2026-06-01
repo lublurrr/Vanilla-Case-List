@@ -737,8 +737,8 @@ main {
 
 .random-card h2 {
   font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.6rem;
+  font-style: normal;
+  font-size: 1.3rem;
   margin: 0 0 0.25rem;
   color: var(--blue-deep);
   text-shadow: 1px 1px 0 var(--gold-light);
