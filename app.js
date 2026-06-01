@@ -117,7 +117,7 @@ function renderDocketInfo() {
     const diffLetter = c.difficulty[0].toUpperCase();
     // Clicking the title opens the case detail modal instead of navigating
     const link = `<a href="#" class="whats-new-case-link" data-case-id="${c.id}" onclick="event.preventDefault();">${escapeHtml(c.title)}</a>`;
-    return `<li>${link} <span class="diff-badge diff-${escapeAttr(c.difficulty)}">${diffLetter}</span></li>`;
+    return `<li><span class="diff-badge diff-${escapeAttr(c.difficulty)}">${diffLetter}</span> ${link}</li>`;
   }).join('');
 }
 
