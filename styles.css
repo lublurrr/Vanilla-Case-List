@@ -657,11 +657,14 @@ main {
 
 .whats-new-list .diff-badge {
   display: inline-block;
+  width: 1.5em;
+  box-sizing: border-box;
+  text-align:center;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0 0.35rem;
+  letter-spacing: 0;
+  padding: 0;
   margin-left: 0.3rem;
   border-radius: 3px;
   vertical-align: 0.05em;
