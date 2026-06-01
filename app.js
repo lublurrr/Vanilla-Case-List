@@ -31,6 +31,10 @@ async function init() {
     const res = await fetch('cases.json', { cache: 'no-store' });
     if (!res.ok) throw new Error(`Failed to load cases.json (${res.status})`);
     state.cases = await res.json();
+    // Most recent approval_date across all cases — drives the auto "NEW" badge/filter.
+    state.lastDate = state.cases.reduce(
+      (max, c) => (c.approval_date && c.approval_date > max) ? c.approval_date : max, ''
+    ) || null;
   } catch (err) {
     const isFileUrl = location.protocol === 'file:';
     document.getElementById('cases-grid').innerHTML =
@@ -72,12 +76,9 @@ async function init() {
  * ---------------------------------------------------------------- */
 function renderDocketInfo() {
   const info = state.siteInfo || {};
-  // Most recent approval_date across all cases
+  // Most recent approval_date across all cases (computed once in init()).
   const datedCases = state.cases.filter(c => c.approval_date);
-  let lastDate = null;
-  if (datedCases.length) {
-    lastDate = datedCases.reduce((max, c) => c.approval_date > max ? c.approval_date : max, datedCases[0].approval_date);
-  }
+  const lastDate = state.lastDate;
 
   const lastLabel = info.last_updated_label_override
     || (info.last_updated_override ? formatDateLong(info.last_updated_override) : null)
@@ -177,10 +178,8 @@ function renderFeatured() {
   const featured = state.cases[idx];
 
   const lengthLabel = featured.length || '?';
-  const tagsHtml = featured.tags
-    .filter(t => t === 'NEW')  // Keep it minimal — NEW is the only tag worth showing here
-    .map(t => renderTag(t, featured))
-    .join('');
+  // Keep it minimal — NEW is the only tag worth showing here.
+  const tagsHtml = caseHasTag(featured, 'NEW') ? renderTag('NEW', featured) : '';
 
   container.innerHTML = `
     <span class="featured-label">Featured Case</span>
@@ -225,7 +224,7 @@ function getFiltered() {
     if (length !== 'all' && c.length !== length) return false;
     if (tags.size) {
       for (const t of tags) {
-        if (!c.tags.includes(t)) return false;
+        if (!caseHasTag(c, t)) return false;
       }
     }
     if (q) {
@@ -304,8 +303,9 @@ function renderCard(c) {
   // element so the click handler can look the case back up.
   const cls = ['case-card', 'card-openable'];
 
-  const tagsHtml = c.tags.length
-    ? `<div class="card-tags">${c.tags.map(t => renderTag(t, c)).join('')}</div>`
+  const cardTags = effectiveTags(c);
+  const tagsHtml = cardTags.length
+    ? `<div class="card-tags">${cardTags.map(t => renderTag(t, c)).join('')}</div>`
     : '';
 
   const diffLabel = capitalize(c.difficulty);
@@ -359,8 +359,9 @@ function openCaseModal(caseId) {
   const dateLabel = c.approval_date ? formatDateLong(c.approval_date) : null;
 
   // All tags rendered (including Custom Files as a download link)
-  const tagsHtml = c.tags.length
-    ? `<div class="case-modal-tags">${c.tags.map(t => renderTag(t, c)).join('')}</div>`
+  const modalTags = effectiveTags(c);
+  const tagsHtml = modalTags.length
+    ? `<div class="case-modal-tags">${modalTags.map(t => renderTag(t, c)).join('')}</div>`
     : '';
 
   const openBtn = c.url
@@ -418,6 +419,33 @@ function openCaseModal(caseId) {
 function closeCaseModal() {
   document.getElementById('case-modal').hidden = true;
   document.body.style.overflow = '';
+}
+
+/* ----------------------------------------------------------------
+ * Tag helpers
+ * NEW and CUSTOM FILES are derived automatically, not stored:
+ *   - NEW          → the case's approval_date is the most recent one
+ *   - CUSTOM FILES → the case has a custom_files_url
+ * Any stored "NEW"/"CUSTOM FILES" tags in cases.json are ignored, so old
+ * data keeps working; editors no longer add or remove them by hand.
+ * ---------------------------------------------------------------- */
+function caseHasTag(c, tag) {
+  if (tag === 'NEW') return !!c.approval_date && c.approval_date === state.lastDate;
+  if (tag === 'CUSTOM FILES') return !!c.custom_files_url;
+  return Array.isArray(c.tags) && c.tags.includes(tag);
+}
+
+function effectiveTags(c) {
+  // Display order: NEW first, then stored manual tags (NSFW, Tutorial Case,
+  // …) in their saved order, then CUSTOM FILES last.
+  const out = [];
+  if (caseHasTag(c, 'NEW')) out.push('NEW');
+  for (const t of (Array.isArray(c.tags) ? c.tags : [])) {
+    if (t === 'NEW' || t === 'CUSTOM FILES') continue; // derived — skip stored copies
+    out.push(t);
+  }
+  if (caseHasTag(c, 'CUSTOM FILES')) out.push('CUSTOM FILES');
+  return out;
 }
 
 function renderTag(tag, caseObj) {
@@ -675,8 +703,9 @@ function showRandom(c, difficulty) {
     const lengthLabel = c.length || 'Unknown';
     const dateLabel = c.approval_date ? formatDateLong(c.approval_date) : null;
 
-    const tagsHtml = c.tags.length
-      ? `<div class="case-modal-tags">${c.tags.map(t => renderTag(t, c)).join('')}</div>`
+    const modalTags = effectiveTags(c);
+    const tagsHtml = modalTags.length
+      ? `<div class="case-modal-tags">${modalTags.map(t => renderTag(t, c)).join('')}</div>`
       : '';
 
     const openBtn = c.url
