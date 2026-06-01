@@ -965,7 +965,6 @@ main {
 .chip.chip-medium.is-active {
   background-color: var(--medium);
   border-color: var(--medium);
-  color: var(--ink);
 }
 
 .chip.chip-hard.is-active {
