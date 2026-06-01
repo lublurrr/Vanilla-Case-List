@@ -615,7 +615,7 @@ main {
 
 .docket-value {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.95rem;
   color: var(--blue-deep);
@@ -705,7 +705,7 @@ main {
 
 .stat-pill .stat-num {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 1.4rem;
   color: var(--ink);
