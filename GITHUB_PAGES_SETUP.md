@@ -207,9 +207,9 @@ You'll mostly edit two files:
 
 For each update cycle:
 
-1. **Add new cases** to `cases.json` (give each a fresh `id`, set `approval_date` to today's date or the planned update date).
+1. **Add new cases** to `cases.json` (give each the next unused `id`, set `approval_date` to today's date or the planned update date). Leave `tags` empty unless the case is NSFW or a tutorial.
 2. **Add corresponding logos** to `images/cases/`.
 3. **Update `site_info.json`** to set the next `scheduled_update` date.
-4. The "What's new" panel auto-detects which cases are new based on `approval_date`. You don't need to maintain it by hand.
+4. The "What's new" panel auto-detects which cases are new based on `approval_date`. The ⭐ **NEW** badge (newest `approval_date`) and the **Custom Files** pill (any case with a `custom_files_url`) are also automatic — you don't add `"NEW"` or `"CUSTOM FILES"` tags by hand.
 
 That's the whole rhythm. Happy hosting!
