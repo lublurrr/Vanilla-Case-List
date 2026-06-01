@@ -1195,7 +1195,7 @@ main {
 .cases-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem 1.5rem;
+  gap: 2.5rem 1.5rem;
   /* Extra top space so the tabs aren't clipped by the previous element */
   padding-top: 22px;
 }
