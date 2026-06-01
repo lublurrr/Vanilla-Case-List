@@ -367,6 +367,9 @@ function openCaseModal(caseId) {
   const openBtn = c.url
     ? `<a class="card-open-btn case-modal-open-btn" href="${escapeAttr(c.url)}" target="_blank" rel="noopener noreferrer">Open Case Document <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.1em"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>`
     : `<span class="card-open-btn card-open-btn-disabled" aria-disabled="true">No document available yet</span>`;
+  const customBtn = c.custom_files_url
+    ? `<a class="card-open-btn case-modal-custom-btn" href="${escapeAttr(c.custom_files_url)}" target="_blank" rel="noopener noreferrer" title="Download required custom files for this case">Custom Files <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.1em"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg></a>`
+    : '';
 
   content.innerHTML = `
     <div class="case-modal-card" data-difficulty="${escapeAttr(c.difficulty)}">
@@ -379,7 +382,7 @@ function openCaseModal(caseId) {
         <h2 id="case-modal-title" class="case-modal-title">${escapeHtml(c.title)}</h2>
         <p class="case-modal-creator">${escapeHtml(c.creator || 'Unknown')}</p>
 
-        ${openBtn}
+        <div class="case-modal-buttons">${openBtn}${customBtn}</div>
 
         <div class="case-modal-meta">
           <span class="case-modal-meta-item">
@@ -437,14 +440,14 @@ function caseHasTag(c, tag) {
 
 function effectiveTags(c) {
   // Display order: NEW first, then stored manual tags (NSFW, Tutorial Case,
-  // …) in their saved order, then CUSTOM FILES last.
+  // …) in their saved order. CUSTOM FILES is intentionally NOT shown as a tag —
+  // it renders as a dedicated button in the modal (and is still filterable).
   const out = [];
   if (caseHasTag(c, 'NEW')) out.push('NEW');
   for (const t of (Array.isArray(c.tags) ? c.tags : [])) {
     if (t === 'NEW' || t === 'CUSTOM FILES') continue; // derived — skip stored copies
     out.push(t);
   }
-  if (caseHasTag(c, 'CUSTOM FILES')) out.push('CUSTOM FILES');
   return out;
 }
 
@@ -711,6 +714,9 @@ function showRandom(c, difficulty) {
     const openBtn = c.url
       ? `<a class="card-open-btn case-modal-open-btn" href="${escapeAttr(c.url)}" target="_blank" rel="noopener noreferrer">Open Case Document <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.1em"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>`
       : `<span class="card-open-btn card-open-btn-disabled" aria-disabled="true">No document available yet</span>`;
+    const customBtn = c.custom_files_url
+      ? `<a class="card-open-btn case-modal-custom-btn" href="${escapeAttr(c.custom_files_url)}" target="_blank" rel="noopener noreferrer" title="Download required custom files for this case">Custom Files <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-0.1em"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg></a>`
+      : '';
 
     result.innerHTML = `
       <div class="case-modal-card" data-difficulty="${escapeAttr(c.difficulty)}">
@@ -722,7 +728,7 @@ function showRandom(c, difficulty) {
         <div class="case-modal-info">
           <h2 class="case-modal-title">${escapeHtml(c.title)}</h2>
           <p class="case-modal-creator">${escapeHtml(c.creator || 'Unknown')}</p>
-          ${openBtn}
+          <div class="case-modal-buttons">${openBtn}${customBtn}</div>
           <div class="case-modal-meta">
             <span class="case-modal-meta-item">
               <span class="case-modal-meta-label">Difficulty</span>
