@@ -2143,6 +2143,7 @@ main {
 @media (max-width: 768px) {
   .random-panel {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
   .random-buttons {
@@ -2189,7 +2190,7 @@ main {
 
   .cases-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 2.5rem;
   }
 
   .site-header {
