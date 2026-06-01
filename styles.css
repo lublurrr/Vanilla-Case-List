@@ -275,7 +275,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
@@ -624,7 +624,7 @@ main {
 .docket-subhead {
   margin: 0 0 0.4rem;
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.95rem;
   color: var(--ink);
@@ -748,7 +748,7 @@ main {
   margin: 0 0 1rem;
   font-size: 0.92rem;
   color: var(--ink-soft);
-  font-style: italic;
+  font-style: normal;
 }
 
 .random-buttons {
@@ -927,7 +927,7 @@ main {
 
 .filter-label {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.92rem;
   color: var(--blue-deep);
@@ -1176,7 +1176,7 @@ main {
 }
 
 .results-count {
-  font-style: italic;
+  font-style: normal;
   font-size: 0.9rem;
   color: var(--ink-soft);
   margin-top: 0.85rem;
@@ -1299,7 +1299,7 @@ main {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.75rem;
   letter-spacing: 0.06em;
@@ -1414,7 +1414,7 @@ main {
 
 .card-title {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 1.15rem;
   margin: 0;
@@ -1431,7 +1431,7 @@ main {
 .card-creator::before {
   content: 'by ';
   color: var(--ink-light);
-  font-style: italic;
+  font-style: normal;
 }
 
 /* "Open Case Document" button — used inside the detail modal */
@@ -1439,7 +1439,7 @@ main {
   display: inline-block;
   margin-top: 0.9rem;
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.95rem;
   padding: 0.55rem 1.15rem;
@@ -1469,7 +1469,7 @@ main {
   color: var(--ink-light);
   cursor: default;
   box-shadow: 0 3px 0 var(--ink-light);
-  font-style: italic;
+  font-style: normal;
   font-weight: normal;
 }
 
@@ -1665,7 +1665,7 @@ main {
 
 .empty-title {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-size: 1.6rem;
   margin: 0 0 0.5rem;
   color: var(--red-deep);
@@ -1745,7 +1745,7 @@ main {
 
 .modal-title {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   color: var(--blue-deep);
   margin: 0 0 1rem;
   font-size: 1.5rem;
@@ -1762,7 +1762,7 @@ main {
 
 .btn-secondary {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 1rem;
   padding: 0.7rem 1rem;
@@ -1871,7 +1871,7 @@ main {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.82rem;
   letter-spacing: 0.06em;
@@ -1952,7 +1952,7 @@ main {
 
 .case-modal-title {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 1.55rem;
   color: var(--blue-deep);
@@ -1972,7 +1972,7 @@ main {
 .case-modal-creator::before {
   content: 'by ';
   color: var(--ink-light);
-  font-style: italic;
+  font-style: normal;
 }
 
 .case-modal-meta {
@@ -2036,7 +2036,7 @@ main {
 
 .case-modal-meta-label {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
@@ -2279,7 +2279,7 @@ main {
   flex: 0 0 auto;
   max-width: 100%;
   font-size: 0.7rem;
-  font-style: italic;
+  font-style: normal;
   color: var(--ink-light);
   line-height: 1.2;
   text-align: center;
