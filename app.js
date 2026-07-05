@@ -339,7 +339,7 @@ function renderCard(c) {
     <div class="${cls.join(' ')}" data-difficulty="${escapeAttr(c.difficulty)}" data-case-id="${c.id}" tabindex="0" role="button" aria-label="${escapeAttr(c.title)} — click for full details">
       <div class="card-difficulty-strip" data-label="${diffLabel}"></div>
       <div class="card-image-wrap">
-        <img class="card-image" src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)} logo" loading="lazy" onerror="this.style.display='none'">
+        <img class="card-image" src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)} logo" loading="lazy" decoding="async" onerror="this.style.display='none'">
       </div>
       <div class="card-body">
         <div class="card-headline-text">
