@@ -351,7 +351,7 @@ body {
   transform: translateY(-50%);
   background-color: var(--gold);
   -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='m9%2018%206-6-6-6'/%3E%3C/svg%3E") center / contain no-repeat;
-          mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='m9%2018%206-6-6-6'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='m9%2018%206-6-6-6'/%3E%3C/svg%3E") center / contain no-repeat;
   transition: transform 0.15s;
 }
 
@@ -621,6 +621,14 @@ main {
   color: var(--blue-deep);
 }
 
+/* Shown when the scheduled update date is not yet determined
+   (site_info.json: scheduled_update / scheduled_update_label = "undetermined") */
+.docket-value.is-undetermined {
+  font-style: italic;
+  font-weight: normal;
+  opacity: 0.85;
+}
+
 .docket-subhead {
   margin: 0 0 0.4rem;
   font-family: var(--font-display);
@@ -659,7 +667,7 @@ main {
   display: inline-block;
   width: 1.5em;
   box-sizing: border-box;
-  text-align:center;
+  text-align: center;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1615,7 +1623,7 @@ main {
   vertical-align: -0.12em;
   background-color: currentColor;
   -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M12%203v12'/%3E%3Cpath%20d='m7%2011%205%205%205-5'/%3E%3Cpath%20d='M5%2021h14'/%3E%3C/svg%3E") center / contain no-repeat;
-          mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M12%203v12'/%3E%3Cpath%20d='m7%2011%205%205%205-5'/%3E%3Cpath%20d='M5%2021h14'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M12%203v12'/%3E%3Cpath%20d='m7%2011%205%205%205-5'/%3E%3Cpath%20d='M5%2021h14'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .tag-NSFW {

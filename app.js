@@ -84,11 +84,21 @@ function renderDocketInfo() {
     || (info.last_updated_override ? formatDateLong(info.last_updated_override) : null)
     || (lastDate ? formatDateLong(lastDate) : '—');
 
-  const schedLabel = info.scheduled_update_label
-    || (info.scheduled_update ? formatDateLong(info.scheduled_update) : '—');
+  // Scheduled date can be explicitly marked "Undetermined" by setting
+  // scheduled_update (or scheduled_update_label) to "undetermined" (case-insensitive)
+  // in site_info.json — shown in italics instead of a date.
+  const isUndetermined = [info.scheduled_update_label, info.scheduled_update]
+    .some(v => typeof v === 'string' && v.trim().toLowerCase() === 'undetermined');
+
+  const schedLabel = isUndetermined
+    ? 'Undetermined'
+    : (info.scheduled_update_label
+        || (info.scheduled_update ? formatDateLong(info.scheduled_update) : '—'));
 
   document.getElementById('info-last-updated').textContent = lastLabel;
-  document.getElementById('info-scheduled').textContent = schedLabel;
+  const schedEl = document.getElementById('info-scheduled');
+  schedEl.textContent = schedLabel;
+  schedEl.classList.toggle('is-undetermined', isUndetermined);
   document.getElementById('info-count').textContent = state.cases.length;
 
   // What's new: cases whose approval_date matches the most recent date

@@ -1,6 +1,8 @@
 {
   "_comment": "Edit this file to update the Last Updated, Scheduled Update, and any optional overrides shown in the docket panel. The 'What's new' list is derived automatically from cases.json by finding cases whose approval_date matches the most recent update date.",
 
+  "_scheduled_update_comment": "Set scheduled_update to a 'YYYY-MM-DD' date normally. If the next update date isn't known yet, set scheduled_update (or scheduled_update_label) to the string 'undetermined' (case-insensitive) instead of a date - the site will display 'Undetermined' in italics.",
+
   "scheduled_update": "2026-07-15",
   "scheduled_update_label": "15th July 2026",
 
