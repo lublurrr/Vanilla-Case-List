@@ -3,7 +3,7 @@
 
   "_scheduled_update_comment": "Set scheduled_update to a 'YYYY-MM-DD' date normally. If the next update date isn't known yet, set scheduled_update (or scheduled_update_label) to the string 'undetermined' (case-insensitive) instead of a date - the site will display 'Undetermined' in italics.",
 
-  "scheduled_update": "2026-07-15",
+  "scheduled_update": "undetermined",
   "scheduled_update_label": "15th July 2026",
 
   "_optional_overrides": "If you want to override the auto-derived values, fill in the keys below. Otherwise leave them as null and the site will compute them from cases.json.",
