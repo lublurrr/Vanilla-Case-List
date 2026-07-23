@@ -146,7 +146,9 @@
     "description": "は、ゲーム『逆転裁判』>の最初のエピソードであり、アニメ版『逆転裁判』三部 作の最初のストーリーアークで、1 つのエピソード「最初の逆転」で構成されてい ます。",
     "difficulty": "easy",
     "length": "Short",
-    "tags": ["Tutorial Case"],
+    "tags": [
+      "Tutorial Case"
+    ],
     "url": "https://docs.google.com/document/d/1IiF3fB39cyIiinBUh-BOozNrzG8WX_1fZA7VBnoHT_I/edit?usp=sharing",
     "custom_files_url": null,
     "approval_date": "2025-04-01",
@@ -244,7 +246,9 @@
     "description": "After being caught jerkin' it, Apollo pushed a woman to her death from the 3rd floor balcony of the luxurious May-Kout Hotel.",
     "difficulty": "easy",
     "length": "Short",
-    "tags": ["NSFW"],
+    "tags": [
+      "NSFW"
+    ],
     "url": "https://docs.google.com/document/d/1WNUrjHQNqSaA10FCI9E5-WrTMTX5y6ojHfvVWoZQv0k/edit",
     "custom_files_url": null,
     "approval_date": "2024-06-01",
@@ -272,7 +276,9 @@
     "description": "The revival and remake of Attorney Online's most infamous case, updated for modern standards.",
     "difficulty": "easy",
     "length": "Short",
-    "tags": ["Tutorial Case"],
+    "tags": [
+      "Tutorial Case"
+    ],
     "url": "https://docs.google.com/document/u/0/d/137KT0Qw0ajW_xXFPOWFAkPAdA9avARLERmICCZUnan8/edit",
     "custom_files_url": null,
     "approval_date": "2024-04-01",
@@ -286,7 +292,9 @@
     "description": "A romantic evening and a proposal turn sour when one lover gets hurled off a cliff to their death. A tutorial case that goes through the basics of casing.",
     "difficulty": "easy",
     "length": "Short",
-    "tags": ["Tutorial Case"],
+    "tags": [
+      "Tutorial Case"
+    ],
     "url": "https://docs.google.com/document/d/1wdSWCe7C2lQlVJkH0K_Bq_NOqyDfnkqlAQoSx2l6-vk/edit",
     "custom_files_url": null,
     "approval_date": "2024-04-01",
@@ -314,7 +322,9 @@
     "description": "A writer of gay erotica is arrested for the murder of a protester against porn.",
     "difficulty": "easy",
     "length": "Long",
-    "tags": ["NSFW"],
+    "tags": [
+      "NSFW"
+    ],
     "url": "https://docs.google.com/document/d/1R_McCsIPJ9bS8nh1QI4UJW2sW_2POjHCpWlrO8v1LeE/edit",
     "custom_files_url": null,
     "approval_date": "2024-04-01",
@@ -323,20 +333,6 @@
   },
   {
     "id": 24,
-    "title": "Turnabout Amnesiac",
-    "creator": "Distant",
-    "description": "A prosecution-based case where a wedding party turns sour, leading to the groom and two attendants being killed allegedly by the bride.",
-    "difficulty": "easy",
-    "length": "Short",
-    "tags": [],
-    "url": "https://docs.google.com/document/d/14rp-Z-lwmHhVxC9c62OgNXW8cHf1Fqo_kUMUkuX7YDc/edit#heading=h.eduh0zz38drk",
-    "custom_files_url": "https://drive.google.com/drive/folders/1TSZKpxUg1kvn6EvaGX6IltD5mQfnE3q6?usp=sharing",
-    "approval_date": "2022-03-01",
-    "image": "images/cases/Amnesiac.png",
-    "logo_credit": "Wolfang"
-  },
-  {
-    "id": 25,
     "title": "In Flander's Turnabout",
     "creator": "Fricka",
     "description": "The Queen is assassinated once again after Prince Richard Wellington is executed. A cleaner who was cleaning the room where the shot was fired, is arrested as the prime suspect. A Sequel to Turnabout Royal.",
@@ -350,7 +346,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 26,
+    "id": 25,
     "title": "Turnabout Rent Problems",
     "creator": "Apollo 11",
     "description": "The landlord of the apartment complex on Turnabout Road has been murdered, will the defence be able to get an acquittal for the defendant, Wendy Olgbag?",
@@ -364,7 +360,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 27,
+    "id": 26,
     "title": "Turnabout Ringmaster",
     "creator": "P1CKP0CK3T",
     "description": "A remake of the original. A fun starter case involving clowns, and a blackout.",
@@ -378,7 +374,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 28,
+    "id": 27,
     "title": "Turnabout Mc Lovin' It",
     "creator": "Alice",
     "description": "On a cold winter day, murder was committed in the hot kitchen of Mcdonalds. Did the defendant really commit a hideous crime over a patty? It is up to the defence to find out….",
@@ -392,13 +388,15 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 29,
+    "id": 28,
     "title": "Turnabout Abe: Tutorial",
     "creator": "XYZ",
     "description": "A farmer murders his boss in front of another farmer. A case loosely based on a real trial of Abraham Lincoln during his career as an Abe attorney.",
     "difficulty": "easy",
     "length": "Short",
-    "tags": ["Tutorial Case"],
+    "tags": [
+      "Tutorial Case"
+    ],
     "url": "https://docs.google.com/document/d/1oHjetfN_G6X0pPvfKCMQrgzSW5j39xjpGJIOsGYESgk/edit?usp=sharing",
     "custom_files_url": null,
     "approval_date": "2021-03-01",
@@ -406,7 +404,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 30,
+    "id": 29,
     "title": "Turnabout Royal",
     "creator": "Fricka",
     "description": "The Queen is killed, and her personal chef is accused of the deed. A short case with some mild difficulty to its solution.",
@@ -420,7 +418,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 31,
+    "id": 30,
     "title": "Turnabout Standpoint",
     "creator": "Noobie",
     "description": "A marriage ends tragically when a husband allegedly kills his own wife. A classic case that is simple in nature.",
@@ -434,7 +432,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 32,
+    "id": 31,
     "title": "Turnabout Affairs",
     "creator": "perfection",
     "description": "A locked room murder. One where the defendant supposedly killed her husband out of anger and greed.",
@@ -448,7 +446,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 33,
+    "id": 32,
     "title": "All On the Turnabout",
     "creator": "Sheepish",
     "description": "I raise by my SOUL! Another casino themed case.",
@@ -462,7 +460,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 34,
+    "id": 33,
     "title": "En Garde, Turnabout!",
     "creator": "Sheepish",
     "description": "A menial practice between two damsels of the sword. One fateful strike is all it needed for it to end with one victor over a slump loser…",
@@ -476,7 +474,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 35,
+    "id": 34,
     "title": "Turnabout Gensokyo",
     "creator": ".dereos",
     "description": "Murder at the gaming arena. It's a Touhou based case.",
@@ -490,7 +488,7 @@
     "logo_credit": ".dereos"
   },
   {
-    "id": 36,
+    "id": 35,
     "title": "Pump Up The Turnabout",
     "creator": "Knight",
     "description": "Car tyres are not meant to be cannons but fill one up with enough air and your lights will be knocked straight out.",
@@ -504,7 +502,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 37,
+    "id": 36,
     "title": "Turnabout Disco!",
     "creator": "Joniys",
     "description": "On the night, in the night club, while everyone was having fun, the disco ball struck Redd White's head from above, killing him on the spot.",
@@ -518,7 +516,7 @@
     "logo_credit": "pumpkinblaze"
   },
   {
-    "id": 38,
+    "id": 37,
     "title": "Super Turnabout World",
     "creator": "Yoru",
     "description": "WAHOOOOO!!! Let-sa go with a Super Mario themed case.",
@@ -532,7 +530,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 39,
+    "id": 38,
     "title": "Turnabout Voyage to the West",
     "creator": "Dereos & Orel",
     "description": "On the S.S. Wizzoree, a private investigator fell victim to a most tragic occurrence -- dying before he could expose the truth. From this, a new locked room mystery begins to take shape.",
@@ -546,7 +544,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 40,
+    "id": 39,
     "title": "Turnabout Burned",
     "creator": "Gilnaml",
     "description": "The Chief of Police's holiday lodge got burned to the ground, in what could have only been an act of arsoning. Can the defense prove their client innocent?",
@@ -560,7 +558,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 41,
+    "id": 40,
     "title": "The Undead Witch Trial",
     "creator": "Knight",
     "description": "At Dampé's Graveyard to the west of Labyrinthia, a father was brutally dismembered by the living dead. A witch trial is to commence as the accused is lowered into flames.",
@@ -574,7 +572,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 42,
+    "id": 41,
     "title": "Bet On Turnabout",
     "creator": "Lom",
     "description": "A regular goer of a casino in immense debt…a woman with an incredible amount of luck. One bets on black. The other bleeds red. LETS GO GAMBLING!!",
@@ -588,7 +586,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 43,
+    "id": 42,
     "title": "Railing on the Turnabout",
     "creator": "Sheepish",
     "description": "When the rails reach its stop, it appears it has brought yet another passenger… The Reaper…",
@@ -602,7 +600,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 44,
+    "id": 43,
     "title": "Knock Out! Turnabout!",
     "creator": "Sheepish",
     "description": "In this corner… We have the one who wandered the world… Searching for the next one to follow them… We have… DEEEEATH!!!",
@@ -616,7 +614,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 45,
+    "id": 44,
     "title": "Turnabout French Garden",
     "creator": "Yoru",
     "description": "An autistic child is accused of killing his mother in a Maze. (This case is by no means a parody. But any resemblance with real events is fortuitous.)",
@@ -630,7 +628,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 46,
+    "id": 45,
     "title": "Drive! It's for a Turnabout!",
     "creator": "Sheepish",
     "description": "Speed, I am speed. One winner, one loser. I eat the loser for breakfast.",
@@ -644,7 +642,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 47,
+    "id": 46,
     "title": "Royal Bank of a Turnabout (Remake)",
     "creator": "Knight",
     "description": "A midnight murder at the city Bank over money troubles… Ironic isn't it.",
@@ -658,7 +656,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 48,
+    "id": 47,
     "title": "Turnabout Like You're Livin' La Vida Loca",
     "creator": "Knight",
     "description": "Famous singer and dancer Ricky Martin gets shot in the head by his dance partner at a prestigious dance competition. I guess he's no longer \"Livin' La Vida Loca\".",
@@ -672,7 +670,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 49,
+    "id": 48,
     "title": "Turnabout Keyboard",
     "creator": "Window",
     "description": "Klavier Gavin is accused of killing someone with a keyboard over a contract that unfairly pays the Gavineer band.",
@@ -686,7 +684,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 50,
+    "id": 49,
     "title": "Turnabout Menace to Society",
     "creator": "Mephisto",
     "description": "A murder on a sidewalk. A police man lays dead, a biker gang lead accused. The police force are cracking down on criminal gangs. The gangs trying to survive are more ruthless than ever. Who will win? Who will lose? In this trial, we will decide the future of Noelia city!",
@@ -700,7 +698,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 51,
+    "id": 50,
     "title": "To Forget a Turnabout",
     "creator": "Fricka",
     "description": "Fates collide in one cataclysmic car crash. One is paralysed for life, the other walks scot free. Who is decidedly at fault?",
@@ -714,7 +712,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 52,
+    "id": 51,
     "title": "Ra! Curse this Turnabout!!",
     "creator": "Pina",
     "description": "Ancient Egypt is simply a fascinating thing for us westerners, and such legends around it make it incredibly profitable! Is this a true curse? Or simply a case of honour?",
@@ -728,7 +726,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 53,
+    "id": 52,
     "title": "Turnabout Tens",
     "creator": "Sheepish",
     "description": "Heart of the country, with mysteries running around, are you able to save this heart or let it bleed out?",
@@ -742,7 +740,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 54,
+    "id": 53,
     "title": "Turnabout Malware",
     "creator": "Krabbenfischer",
     "description": "Mr.Blackhat has left a scar on many companies already. Mysterious, and always able to get away, it seemed like he would never be caught, as police feared. However, their fears were quickly crushed after reports of Mr.Blackhat caught in Blue Screens Inc. arrive.",
@@ -756,7 +754,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 55,
+    "id": 54,
     "title": "Turnabout on Tape",
     "creator": "Fricka",
     "description": "BOO!! Ghosts!! That's what grandpa Joe thought, hiring 'em. Turns out, ghosts aren't real, but do you know what is? A good old mystery.",
@@ -770,7 +768,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 56,
+    "id": 55,
     "title": "Funfair and Turnabout",
     "creator": "LegalGina",
     "description": "A roller coaster derails, injuring an innocent man. For what usually would seem an accident, a fault in machinery, was instead a deliberate act of the worst intentions…",
@@ -784,7 +782,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 57,
+    "id": 56,
     "title": "The Colors of Turnabout",
     "creator": "Sheepish",
     "description": "A nice peaceful night ruined by a deadly rainbow with sinister motives. A man witnessed in the front, a woman from the back. Can the rainbow give a hint to the truth of this night?",
@@ -798,7 +796,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 58,
+    "id": 57,
     "title": "Stereotypical Russian Turnabout",
     "creator": "Clamet",
     "description": "In Russia it is vital to wear appropriate clothing in order to survive the cold winter. If you are in Russia and have no clothing, Russian weather will kill. It takes 2 days in-game to be beaten.",
@@ -812,7 +810,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 59,
+    "id": 58,
     "title": "Turnabout Shrink",
     "creator": "XYZ",
     "description": "A dead cleaning lady is found in the office of a clinical psychiatrist, his files all in disarray… All the evidence points to one of his patients, but is he innocent as he claims, or has he truly lost it…?",
@@ -826,7 +824,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 60,
+    "id": 59,
     "title": "The Elixir of Turnabout",
     "creator": "Fricka",
     "description": "The Elixir of Life has gone missing at an Arabian conference, and a Swedish princess is the suspect. A spiritual successor to Turnabout In the Shadows.",
@@ -840,13 +838,15 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 61,
+    "id": 60,
     "title": "Turnabout Karma",
     "creator": "Wolfang",
     "description": "Franziska is accused of killing her father, Manfred, inside Phoenix's own office. An old case updated to modern times, it is a dynamic gameplay-based trial that tackles different endings where your logic dictates the path.",
     "difficulty": "medium",
     "length": "Long",
-    "tags": ["NSFW"],
+    "tags": [
+      "NSFW"
+    ],
     "url": "https://docs.google.com/document/u/0/d/1neIlPCqICB63z_T_Ra6xTImA7ydOyGPmNwKmgP-GJJE/edit",
     "custom_files_url": null,
     "approval_date": "2020-08-21",
@@ -854,7 +854,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 62,
+    "id": 61,
     "title": "Love Thy Turnabout",
     "creator": "Fricka & Pina",
     "description": "In a rural village, secluded from the world, a corrupt politician is hung on the cross by none other than his own daughter. Religion has a control on them all. No one went to his funeral. Everyone wanted this to happen. Can there truly be salvation in sin?",
@@ -868,7 +868,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 63,
+    "id": 62,
     "title": "An Odyssey to a Greater Turnabout",
     "creator": "Fricka",
     "description": "A play goes awfully wrong when the lead actress is crushed whilst in flight through the air, with the culprit being a diagnosed schizophrenic.",
@@ -882,7 +882,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 64,
+    "id": 63,
     "title": "Turnabout Revenge",
     "creator": "Burber",
     "description": "The owner of a loan agency is shot dead by their own security guard upon realising the dirty and gruesome world of loan sharks.",
@@ -896,7 +896,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 65,
+    "id": 64,
     "title": "A Shortage of Turnabout",
     "creator": "Fricka",
     "description": "A farm and family goes into disarray when the tenant worker is grinded by a tractor whilst working the fields.",
@@ -910,7 +910,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 66,
+    "id": 65,
     "title": "Krabby Patty and Turnabout",
     "creator": "Yoru",
     "description": "On a normal day in Bikini Bottom, Spongebob Squarepants steals a Krabby Patty using a counterfeit bill and is placed on trial in the Krusty Krab diner.",
@@ -924,7 +924,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 67,
+    "id": 66,
     "title": "What's in the Turnabout",
     "creator": "Pina",
     "description": "A civil trial over a property dispute between an explorer digging for treasure and a landlord unfolds. What's in the box? Find out in What's in the Turnabout!",
@@ -938,7 +938,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 68,
+    "id": 67,
     "title": "Broadcast my Turnabout",
     "creator": "Pina",
     "description": "All the glamour and excitement of Live Television comes together to mourn the loss of its biggest producers! Or perhaps, the loss of its biggest villain. The show is on!!",
@@ -952,7 +952,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 69,
+    "id": 68,
     "title": "Turnabout Takeover",
     "creator": "Miless",
     "description": "Murder case involving a failed robbery in a paintball arena. Traumatised child and Larry Butz guest star in this slightly puzzling mystery.",
@@ -966,7 +966,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 70,
+    "id": 69,
     "title": "This is a Turnabout… Get me out of Here! (Remake)",
     "creator": "Knight",
     "description": "The jungle of famous reality TV show \"I'm a celebrity. . . Get me out of here\" became a crime scene for a mass murder. It's safe to say this season is cancelled. The show is over.",
@@ -980,7 +980,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 71,
+    "id": 70,
     "title": "The Disappeared Turnabout",
     "creator": "Fricka",
     "description": "A drug deal goes wrong and a murder becomes the centre of it. A case with a fun plot and even funnier characters.",
@@ -994,7 +994,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 72,
+    "id": 71,
     "title": "Turnabout Tempest",
     "creator": "Fricka",
     "description": "Two missing men, one blistering tempest. The snow of Antarctica seems to have no end, but one body has been found, and their death was no accident…",
@@ -1008,7 +1008,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 73,
+    "id": 72,
     "title": "Turnabout Faculty",
     "creator": "Jpeg & Womenarepog",
     "description": "A Parent-Teacher conference turns sour when the wife of the Principal is found drenched in the blood of the school nurse.",
@@ -1022,7 +1022,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 74,
+    "id": 73,
     "title": "Flaming Turnabout",
     "creator": "Papirini",
     "description": "Year-long rumours of the Minister's daughter finally result in the attempted murder of her father and his fiancee on her 18th birthday.",
@@ -1036,7 +1036,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 75,
+    "id": 74,
     "title": "Turnabout Heated Gaming Session",
     "creator": "Edgeworthless & SylphWind",
     "description": "Larry Butz's mother was murdered during an intimate encounter with Sal Manella. Stabbed in the chest and exsanguinated to death after a fight in the bedroom, with only 2 witnesses to the seemingly impulsive crime.",
@@ -1050,13 +1050,15 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 76,
+    "id": 75,
     "title": "A Little Turnabout",
     "creator": "Papirini",
     "description": "Phoenix Wright has the worst luck. Over a decade ago, he was accused of killing a man over love. Now, on the anniversary of that first murder… He's being accused again.",
     "difficulty": "medium",
     "length": "Moderate",
-    "tags": ["NSFW"],
+    "tags": [
+      "NSFW"
+    ],
     "url": "https://docs.google.com/document/d/1qxko306phk24V8VGfOia86eo1ESZmrGSet5IQmH3VXs/edit",
     "custom_files_url": null,
     "approval_date": "2023-05-30",
@@ -1064,7 +1066,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 77,
+    "id": 76,
     "title": "Clean my Turnabout",
     "creator": "Pina",
     "description": "20th of May, a day as good as any to do some laundry, wouldn't you say? But, be careful, in some laundry places… They're mixing white and red! Blood red!",
@@ -1078,7 +1080,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 78,
+    "id": 77,
     "title": "The Reborn Turnabout",
     "creator": "Rod123",
     "description": "An unfortunate actor finds himself on the wrong end of a loan shark's shovel. Good luck representing him.",
@@ -1092,7 +1094,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 79,
+    "id": 78,
     "title": "Cuckoo for Turnabout",
     "creator": "JJ",
     "description": "I honestly can't stop myself from laughing whenever I see this case. In essence, Ema's cereal is stolen, and Larry gets his eyes scooped out with a spoon. Good luck.",
@@ -1106,7 +1108,7 @@
     "logo_credit": "JJ"
   },
   {
-    "id": 80,
+    "id": 79,
     "title": "Turnabout Gold Rush",
     "creator": "Rod123",
     "description": "Gold… the ultimate metal to bring out the vices of man. Treachery, and deceit often follow in the wake of its discovery. Now, it goes one step further, to murder.",
@@ -1120,7 +1122,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 81,
+    "id": 80,
     "title": "Turnabout of the Ring",
     "creator": "Zizzy",
     "description": "One ring to rule them all…or, maybe just the courtroom. A single ring, a single victim, a single turnabout. Can you traverse to Middle-Earth and back to find the truth? …or, will you fall prey to the Turnabout of the Ring?",
@@ -1134,7 +1136,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 82,
+    "id": 81,
     "title": "Turnabout Performance",
     "creator": "Jpeg & Womenarepog",
     "description": "It's now for the grand end-of-school-year production! A fire breaks out during Macbeth. Do Sebastian and Apollo have what it takes to find the truth in this flaming finale?",
@@ -1148,7 +1150,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 83,
+    "id": 82,
     "title": "Turnabout Field Trip",
     "creator": "Jpeg & Womenarepog",
     "description": "The faculty have decided to arrange some field trips. Turns out, the vice principal they have in mind is actually a local rockstar! Unfortunately, things ended pretty badly for the band…",
@@ -1162,7 +1164,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 84,
+    "id": 83,
     "title": "Turnabout Lawn",
     "creator": "Delinard",
     "description": "A domestic conflict between Doug Swallows and Ini Miney results in the former being shot by the latter. A nicely detailed case.",
@@ -1176,7 +1178,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 85,
+    "id": 84,
     "title": "Turnabout Grisly",
     "creator": "Ordice",
     "description": "A magic trick gone horribly, horribly wrong. . . or murder? Ron Delite is accused of killing his long time rival Luke Atmey.",
@@ -1190,7 +1192,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 86,
+    "id": 85,
     "title": "Alike a Turnabout",
     "creator": "Pina",
     "description": "A mysteriously simple killing, carried out in a simple neighbourhood. One shot, one victim, one defendant.",
@@ -1204,7 +1206,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 87,
+    "id": 86,
     "title": "Turnabout High Moon",
     "creator": "Pina, Holyman & XYZ",
     "description": "On a horrible night, when the moon was high, a gunshot was heard throughout the locomotives speeding through the night.",
@@ -1218,7 +1220,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 88,
+    "id": 87,
     "title": "Turnabout Bruh Moment",
     "creator": "Bioro",
     "description": "An interesting case where Blackquill is accused of using his bird, Taka, to commit murder during a trial.",
@@ -1232,7 +1234,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 89,
+    "id": 88,
     "title": "The Parting Turnabout",
     "creator": "Deadly",
     "description": "The Judge himself is accused of poisoning his own grandson, in a case of twists and turns.",
@@ -1246,7 +1248,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 90,
+    "id": 89,
     "title": "Turnabout Assessment",
     "creator": "Noobie",
     "description": "Within the time an exam was being held, one of the students was killed in the act. Simplistic case which can reach long lengths.",
@@ -1260,13 +1262,15 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 91,
+    "id": 90,
     "title": "Turnabout Entwined Souls",
     "creator": "Ordice",
     "description": "Phoenix Wright is accused of killing his long time friend Maya Fey. A bit silly, a bit saucy. Not one to be taken too seriously.",
     "difficulty": "medium",
     "length": "Long",
-    "tags": ["NSFW"],
+    "tags": [
+      "NSFW"
+    ],
     "url": "https://docs.google.com/document/d/17x4Bv0S71r4WtztbdgUy2IXtXEenQpEx1jh75rWvMTI/edit",
     "custom_files_url": null,
     "approval_date": "2020-10-15",
@@ -1274,7 +1278,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 92,
+    "id": 91,
     "title": "The Elementary Turnabout",
     "creator": "SillyKevin",
     "description": "A job dispute turns violent, and a teacher is murdered in her own classroom by one of her peers. Thankfully none of the children saw.",
@@ -1288,7 +1292,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 93,
+    "id": 92,
     "title": "Turnabout Thief",
     "creator": "Zugwer",
     "description": "The infamous yet charming thief \"The Magician\" has been arrested not for theft… but for murder.",
@@ -1302,7 +1306,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 94,
+    "id": 93,
     "title": "Turnabout Vigilante",
     "creator": "Deadly",
     "description": "A case with many exciting twists. The notorious vigilante has finally been apprehended for killing many corrupt politicians.",
@@ -1316,7 +1320,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 95,
+    "id": 94,
     "title": "Beast and the Turnabout",
     "creator": "Pina",
     "description": "Someone said once that \"man is the wolf of man\", and within us there are beasts that fight. Beasts, who roam at night… and kill, kill, kill…",
@@ -1330,7 +1334,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 96,
+    "id": 95,
     "title": "Secret of the Turnabout",
     "creator": "Wolfang",
     "description": "The forest hides many secrets... from gnomes, creatures... to old tales.",
@@ -1344,7 +1348,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 97,
+    "id": 96,
     "title": "Turnabout Godfather",
     "creator": "Yoru",
     "description": "From a simple mafia meeting, to witnesses that do not wish to divulge their secrets. Will you find the truth?",
@@ -1358,7 +1362,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 98,
+    "id": 97,
     "title": "Turnabout Oh Turnabout… I've Been Waiting For This",
     "creator": "Knight",
     "description": "Gumshoe is accused of stealing top secret files by using… a parrot? Does the plaintiff actually have a case or is he just a generational hater having a monumental crashout.",
@@ -1372,7 +1376,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 99,
+    "id": 98,
     "title": "Kasbah With a Turnabout",
     "creator": "Pina",
     "description": "In the lonely sands of the Arabian Peninsula, there is only one thing which creates hope in the fleeting hungry spirit of men… oil. Liquid gold, as it's called.",
@@ -1386,7 +1390,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 100,
+    "id": 99,
     "title": "A Turnabout That's Disturbing The Peace",
     "creator": "Knight",
     "description": "A woman is crucified at the top of a tall mysterious tower guarded by \"The Gatekeeper\". Discover the mystery behind the Prophecy and uncover who nailed the victim to the cross. Extremely loosely inspired by Persona 3 though is not faithful to that series at all.",
@@ -1400,7 +1404,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 101,
+    "id": 100,
     "title": "On the Lighthouse: A Turnabout",
     "creator": "Pina",
     "description": "November 18th, 2001… among the calm shores of the Baltimore coast, officers find something which was thought to be lost forever… The remnants of a body lost long ago!!",
@@ -1414,7 +1418,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 102,
+    "id": 101,
     "title": "Paying Out To Turnabout",
     "creator": "Yoru, LegalGina, cass, KanameDate, NintenGunner, Alias_Crouton2, MLink, somebody",
     "description": "Stadium. Finals. Twenty thousand people live, even more watching online. One million on the line, more than enough to change lives. Stakes were never higher. E-Sports can be different, but this time, things got explosive. Literally.",
@@ -1428,7 +1432,7 @@
     "logo_credit": "Knight"
   },
   {
-    "id": 103,
+    "id": 102,
     "title": "Olé!! Turnabout!",
     "creator": "Pina",
     "description": "Bull…",
@@ -1442,7 +1446,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 104,
+    "id": 103,
     "title": "Turnabout's Duty",
     "creator": "Dunkleheart",
     "description": "A man finally returns home from his time from war. However, it was 6 shots that sent him off that night.",
@@ -1456,7 +1460,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 105,
+    "id": 104,
     "title": "Turnabout Y2K",
     "creator": "Pina",
     "description": "31st of December, 2000! The second millennium's real final day. Technology is untapped and an infinite fountain of innovation… and cash. \"xD dAWg thEY dOn'T KnOW!\"",
@@ -1470,7 +1474,7 @@
     "logo_credit": "Pina"
   },
   {
-    "id": 106,
+    "id": 105,
     "title": "Roll the Turnabout",
     "creator": "Fricka",
     "description": "There's a saying: You're always one roll away from the jackpot. With the push of a lever, lives are ruined and lives are ended. The dice of time has decided. Next bid: Murder.",
@@ -1484,7 +1488,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 107,
+    "id": 106,
     "title": "Turnabout in the Shadows",
     "creator": "Fricka",
     "description": "A case on the shorter side that takes place in the 1879 Ottoman Empire. The Sultan is murdered, and a complex mystery is at its centre.",
@@ -1498,7 +1502,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 108,
+    "id": 107,
     "title": "Turnabout Dealings",
     "creator": "Ice",
     "description": "Murder case involving a student intern who was believed to have shot her superior over her work appraisal. An experienced witness player is suggested.",
@@ -1512,7 +1516,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 109,
+    "id": 108,
     "title": "Turnabout Trinity",
     "creator": "Fricka",
     "description": "The third monarch dies within 5 years, and three children are left to fight for the throne. However, don't expect it to be simple, for many puzzles have yet to be solved.",
@@ -1526,7 +1530,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 110,
+    "id": 109,
     "title": "Turnabout Infamy",
     "creator": "Sp",
     "description": "Famous video producer, Richard Wellington, is murdered by the famous murderer, De Killer. However this time, it seems De Killer has finally been caught for his crimes…",
@@ -1540,13 +1544,15 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 111,
+    "id": 110,
     "title": "Turnabout Shootout",
     "creator": "Fricka",
     "description": "A gruesome school shooting has befallen an innocent school, and it seems all evidence points towards one student. A case that will test an attorney to their limits.",
     "difficulty": "hard",
     "length": "Long",
-    "tags": ["NSFW"],
+    "tags": [
+      "NSFW"
+    ],
     "url": "https://docs.google.com/document/d/1zbwB3X9IRI8ojP9VVq0JQ1WScR8tixSWV3MjSOgrBbQ/edit?usp=sharing",
     "custom_files_url": null,
     "approval_date": "2024-03-01",
@@ -1554,7 +1560,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 112,
+    "id": 111,
     "title": "Turnabout Trashcan",
     "creator": "Sp",
     "description": "On a cold snowing night, under the moonlight, a terrible murder takes place! Was it just a robbery gone wrong, or is there more than meets the eye? A case with very unique and innovative mechanics.",
@@ -1568,7 +1574,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 113,
+    "id": 112,
     "title": "A Turnabout at the Orphanage",
     "creator": "SillyKevin, axe & KanameDate",
     "description": "Two kids and an adult caretaker were killed at the small orphanage. In this basically locked down area of witnesses will you be able to find the truth or was the truth that the defendant did it all along?",
@@ -1582,7 +1588,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 114,
+    "id": 113,
     "title": "Turnabout Sunshine and Fruit",
     "creator": "Pina",
     "description": "Nothing like the tropics… beach, sun and lovely times for all… Of course, Mr. Tius took advantage of this, and on his own private island, a party was hosted… unfortunately… Murder's on the schedule!",
@@ -1596,13 +1602,15 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 115,
+    "id": 114,
     "title": "Turnabout Desire",
     "creator": "Redacted",
     "description": "Larry Butz is held accountable for the brutal murder of Iris Fey, after he was found sleeping next to her disfigured corpse.",
     "difficulty": "hard",
     "length": "Long",
-    "tags": ["NSFW"],
+    "tags": [
+      "NSFW"
+    ],
     "url": "https://docs.google.com/document/d/1D1aLv3sQ4xjZHIgAEWo5eujPrc1_N3AqkoZIUObaEqo/edit?usp=sharing",
     "custom_files_url": null,
     "approval_date": "2021-03-01",
@@ -1610,7 +1618,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 116,
+    "id": 115,
     "title": "Turnabout Broken Hearts",
     "creator": "Hobro",
     "description": "A long trial in which the boyfriend of the victim, Mia Fey, is accused of killing her in her own basement.",
@@ -1624,7 +1632,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 117,
+    "id": 116,
     "title": "The Strange case of Jekyll and Hyde",
     "creator": "Knight",
     "description": "A long and complex civil trial with a deep and engaging story on the mysterious Mr. Hyde. Based on the famous novella.",
@@ -1638,7 +1646,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 118,
+    "id": 117,
     "title": "Turnabout Night Terrors",
     "creator": "Gazawhizz",
     "description": "An abusive relationship between defendant and victim in a long and thrilling case with an extraordinary murder method.",
@@ -1652,7 +1660,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 119,
+    "id": 118,
     "title": "Turnabout Drunken Night (Remake)",
     "creator": "Knight",
     "description": "A long and difficult case with an interesting plot. Phoenix Wright has been murdered in an alleyway just outside Klav's Pints pub. Knowledge of Farewell, My Turnabout is required.",
@@ -1666,7 +1674,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 120,
+    "id": 119,
     "title": "Turnabout Old Sins",
     "creator": "Ordice",
     "description": "Custom case which makes a sequel to Rise from the Ashes. The defence will have it tough to prove Gant's innocence.",
@@ -1680,7 +1688,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 121,
+    "id": 120,
     "title": "Turnabout Wildgame",
     "creator": "Noobie",
     "description": "Great case with many twists and turns, a classic and a must-play for learners desiring a challenge.",
@@ -1694,7 +1702,7 @@
     "logo_credit": "Fricka"
   },
   {
-    "id": 122,
+    "id": 121,
     "title": "Turnabout Radio Check",
     "creator": "Magic",
     "description": "Long and challenging case featuring the death of Apollo Justice after a stormy night. With unique case mechanics.",
@@ -1708,7 +1716,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 123,
+    "id": 122,
     "title": "Turnabout 'Til the End",
     "creator": "Ordice",
     "description": "The final boss of this case list. You will not survive.",
@@ -1722,7 +1730,7 @@
     "logo_credit": "Wolfang"
   },
   {
-    "id": 124,
+    "id": 123,
     "title": "Turnabout Training",
     "creator": "Lom",
     "description": "Many competitors gather together for one purpose: To go for Gold! And yet an athlete who has achieved this goal, had made it the cause of his eventual demise.",
