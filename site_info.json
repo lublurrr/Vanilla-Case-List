@@ -3,8 +3,8 @@
 
   "_scheduled_update_comment": "To set no date, put on scheduled_update 'undetermined' (without the commas between strings) and on scheduled_update_label 'null' (without the commas nor strings)",
 
-  "scheduled_update": "undetermined",
-  "scheduled_update_label": null,
+  "scheduled_update": "2026-09-01 ",
+  "scheduled_update_label": "1st September 2026",
 
   "_optional_overrides": "If you want to override the auto-derived values, fill in the keys below. Otherwise leave them as null and the site will compute them from cases.json.",
   "last_updated_override": null,
