@@ -1742,5 +1742,91 @@
     "approval_date": "2026-06-01",
     "image": "images/cases/Training.png",
     "logo_credit": "Fricka"
+  },
+  {
+    "id": 124,
+    "title": "Fable of the Silent Sabotage",
+    "creator": "Walter Trite",
+    "description": "Simple case about how a guy got into a car crash... but was it an accident? Find out in this very intriguing trial!",
+    "difficulty": "easy",
+    "length": "Moderate",
+    "tags": [],
+    "url": "https://docs.google.com/document/d/1-tDpYKa97kk_rS9l2-q10B_Mc3Vwb8TCR6sZs3iaf8E/edit?usp=drivesdk",
+    "custom_files_url": "https://drive.google.com/file/d/1WToawipJV5uZ_VL2zcDnPy7JvB4cKWIc/view?usp=sharing",
+    "approval_date": "2026-08-20",
+    "image": "images/cases/Fable.png",
+    "logo_credit": "Wolfang"
+  },
+  {
+    "id": 125,
+    "title": "Cheat on my Turnabout",
+    "creator": "Sheepish",
+    "description": "A case with a gooner, a banker and a prostitute all in one dingy motel...",
+    "difficulty": "easy",
+    "length": "Short",
+     "tags": [
+      "NSFW"
+    ],
+    "url": "https://docs.google.com/document/d/1guhx5gM0ieSFY_MdDm7SAi2Un_wgHn28fBGDEjh0XRw/edit?tab=t.0",
+    "custom_files_url": null,
+    "approval_date": "2026-08-20",
+    "image": "images/cases/Cheat.png",
+    "logo_credit": "Fricka"
+  },
+  {
+    "id": 126,
+    "title": "Turnabout Citadel",
+    "creator": "Fricka",
+    "description": "In Chicago, crime families are commonplace. Tensions have reached a breaking point when one lieutenant kills another and it seems war is about to break.",
+    "difficulty": "medium",
+    "length": "Moderate",
+    "tags": [],
+    "url": "https://docs.google.com/document/d/1PNkJulJ0ZO8sHT2qnLIGRBEucEuJ4bf79Q5G_vl3TjI/edit?usp=sharing",
+    "custom_files_url": null,
+    "approval_date": "2026-08-20",
+    "image": "images/cases/Citadel.png",
+    "logo_credit": "Fricka"
+  },
+  {
+    "id": 127,
+    "title": "Turnabout Bronx Bombers",
+    "creator": "Pina & Fricka",
+    "description": "The year is 1922 and a Game between famous baseball teams the Lankees and Doggers leads to an explosive finale… the baseball was a bomb!",
+    "difficulty": "hard",
+    "length": "Moderate",
+    "tags": [],
+    "url": "https://docs.google.com/document/d/1joTH_EP-9J0nieodo6fuOmO8_ezFDMyrhQSkVP-wjcU/edit?usp=sharing",
+    "custom_files_url": null,
+    "approval_date": "2026-08-20",
+    "image": "images/cases/Bronx_Bombers.png",
+    "logo_credit": "Pina"
+  },
+  {
+    "id": 128,
+    "title": "Turnabout French Laundry",
+    "creator": "Kenny",
+    "description": "On an early afternoon at the French Laundry, one of Japalifornia’s most prestigious fine dining restaurants, underpaid line-cook Wu Ming went to speak with the fish delivery guy, only to discover that fate had other fish to fry. A simple, kitchen-themed, murder mystery.",
+    "difficulty": "hard",
+    "length": "Long",
+    "tags": [],
+    "url": "https://docs.google.com/document/d/1XNOYsKDZamiyf7EGE-kQhvJZBOQ8-Hjr7FqFb_qVhMc/edit?usp=sharing",
+    "custom_files_url": null,
+    "approval_date": "2026-08-20",
+    "image": "images/cases/FrenchLaundry.png",
+    "logo_credit": "Fricka"
+  },
+  {
+    "id": 129,
+    "title": "Turnabout Truck",
+    "creator": "Zelsix",
+    "description": "A down on his luck screenwriter finally snaps and crashes a semi-truck into a courthouse.",
+    "difficulty": "hard",
+    "length": "Long",
+    "tags": [],
+    "url": "https://docs.google.com/document/d/1AdlxNnsKpg3_06Ykw6TKEprqkMccpAgUjI_b4bGNg1s/edit?tab=t.0#heading=h.rouj0oapt2hm",
+    "custom_files_url": null,
+    "approval_date": "2026-08-20",
+    "image": "images/cases/Bronx_Bombers.png",
+    "logo_credit": "Knight"
   }
 ]
