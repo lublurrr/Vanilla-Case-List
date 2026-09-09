@@ -1,0 +1,631 @@
+/* ==========================================================================
+   Case Vault
+   Consumes the tokens defined in ../styles.css :root. No new colours and no
+   new typefaces are introduced here.
+   ========================================================================== */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.vault {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 28px 20px 56px;
+  display: grid;
+  grid-template-columns: 292px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar
+   -------------------------------------------------------------------------- */
+
+.vault-sidebar {
+  background: var(--paper);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 18px;
+  max-height: calc(100vh - 36px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.vault-case-head {
+  padding: 14px 16px 12px;
+  border-bottom: var(--border-medium);
+  background: var(--blue-deep);
+  color: var(--cream-light);
+}
+
+.vault-case-title {
+  font-family: var(--font-display);
+  font-size: 1.32rem;
+  line-height: 1.2;
+  margin: 0 0 6px;
+  color: var(--cream-light);
+}
+
+.vault-case-meta {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--blue-light);
+}
+
+.vault-case-meta strong {
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+.vault-search {
+  padding: 12px 14px;
+  border-bottom: var(--border-thin);
+  background: var(--cream-light);
+}
+
+.vault-search input {
+  width: 100%;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  padding: 8px 10px;
+  color: var(--ink);
+  background: var(--paper);
+  border: var(--border-medium);
+  border-radius: 0;
+}
+
+.vault-search input::placeholder {
+  color: var(--ink-light);
+}
+
+.vault-search input:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 1px;
+}
+
+.vault-tree {
+  overflow-y: auto;
+  padding: 10px 0 16px;
+  flex: 1 1 auto;
+}
+
+.tree-group {
+  margin-bottom: 4px;
+}
+
+.tree-group-label {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink-light);
+  padding: 10px 16px 6px;
+  margin: 0;
+}
+
+.tree-group-note {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: var(--red-deep);
+  background: var(--hard-bg);
+  border-left: 3px solid var(--red);
+  margin: 0 14px 8px;
+  padding: 6px 8px;
+}
+
+.tree-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 16px 6px 13px;
+  border-left: 3px solid transparent;
+  font-family: var(--font-ui);
+  font-size: 0.79rem;
+  line-height: 1.3;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.tree-item:hover {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.tree-item:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: -3px;
+}
+
+.tree-item.is-active {
+  background: var(--blue-pale);
+  border-left-color: var(--blue);
+  color: var(--blue-deep);
+  font-weight: 700;
+}
+
+.tree-item[hidden] {
+  display: none;
+}
+
+.tree-icon {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  color: var(--ink-light);
+}
+
+.tree-icon img {
+  width: 24px;
+  height: 24px;
+  image-rendering: pixelated;
+  display: block;
+}
+
+.tree-item.is-active .tree-icon {
+  color: var(--blue);
+}
+
+.tree-item-label {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.tree-external {
+  flex: 0 0 auto;
+  color: var(--ink-light);
+}
+
+.tree-empty {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  padding: 12px 16px;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Note card
+   -------------------------------------------------------------------------- */
+
+.note-card {
+  background: var(--paper);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-deep);
+  padding: 0 0 26px;
+}
+
+.note-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 26px;
+  border-bottom: var(--border-medium);
+  background: var(--cream-light);
+}
+
+.note-portrait {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border: var(--border-medium);
+  background: var(--cream-deep);
+  padding: 2px;
+}
+
+.note-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  display: block;
+}
+
+.note-heading {
+  min-width: 0;
+}
+
+.note-title {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--ink);
+}
+
+.note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 7px;
+}
+
+.note-tag {
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border: var(--border-thin);
+  color: var(--ink);
+  background: var(--cream-deep);
+}
+
+.note-tag[data-type="profile"] {
+  background: var(--blue-pale);
+  border-color: var(--blue);
+  color: var(--blue-deep);
+}
+
+.note-tag[data-type="evidence"] {
+  background: var(--green-pale);
+  border-color: var(--green);
+  color: var(--ink);
+}
+
+.note-tag[data-type="map"] {
+  background: var(--medium-bg);
+  border-color: var(--medium-strip);
+  color: var(--ink);
+}
+
+.note-tag[data-type="case"] {
+  background: var(--hard-bg);
+  border-color: var(--hard-strip);
+  color: var(--red-deep);
+}
+
+.note-body {
+  padding: 22px 26px 0;
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  line-height: 1.72;
+  color: var(--ink-soft);
+  max-width: 72ch;
+}
+
+.note-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin: 28px 0 10px;
+  padding-bottom: 5px;
+  border-bottom: var(--border-thin);
+}
+
+.note-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  color: var(--ink);
+  margin: 22px 0 8px;
+}
+
+.note-body p {
+  margin: 0 0 14px;
+}
+
+.note-body ul,
+.note-body ol {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+
+.note-body li {
+  margin-bottom: 5px;
+}
+
+.note-body hr {
+  border: 0;
+  border-top: var(--border-thin);
+  margin: 22px 0;
+}
+
+.note-body blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: var(--cream-light);
+  border: var(--border-thin);
+  border-left: 5px solid var(--gold);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.note-body blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.note-body code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--cream);
+  padding: 1px 4px;
+  border: var(--border-thin);
+}
+
+.note-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 18px;
+  font-size: 0.8rem;
+}
+
+.note-body th,
+.note-body td {
+  border: var(--border-thin);
+  padding: 7px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.note-body thead th {
+  background: var(--blue-deep);
+  color: var(--cream-light);
+}
+
+.note-body tbody tr:nth-child(odd) td {
+  background: var(--cream-light);
+}
+
+.note-body figure {
+  margin: 0 0 18px;
+}
+
+.note-body figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--border-medium);
+  background: var(--paper);
+}
+
+.note-body figcaption {
+  font-size: 0.72rem;
+  color: var(--ink-light);
+  padding-top: 6px;
+}
+
+.note-body a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.note-body a:hover {
+  color: var(--red);
+}
+
+.wikilink {
+  color: var(--blue-deep);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--blue-light);
+  padding-bottom: 1px;
+}
+
+.wikilink:hover {
+  color: var(--red-deep);
+  border-bottom-color: var(--red);
+}
+
+.wikilink:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.wikilink.is-broken {
+  color: var(--red-deep);
+  border-bottom-style: dotted;
+  border-bottom-color: var(--red);
+  cursor: help;
+}
+
+/* --------------------------------------------------------------------------
+   Backlinks
+   -------------------------------------------------------------------------- */
+
+.note-backlinks {
+  margin: 30px 26px 0;
+  padding: 14px 16px;
+  background: var(--cream-light);
+  border: var(--border-medium);
+}
+
+.note-backlinks h2 {
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--ink-light);
+  margin: 0 0 9px;
+}
+
+.backlink-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.backlink-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-ui);
+  font-size: 0.76rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: var(--border-thin);
+  box-shadow: var(--shadow-soft);
+  padding: 5px 9px;
+  text-decoration: none;
+}
+
+.backlink-list a:hover {
+  background: var(--blue-pale);
+  border-color: var(--blue);
+  color: var(--blue-deep);
+}
+
+.backlink-list img {
+  width: 18px;
+  height: 18px;
+  image-rendering: pixelated;
+}
+
+/* --------------------------------------------------------------------------
+   Case picker and messages
+   -------------------------------------------------------------------------- */
+
+.vault-loading,
+.vault-error {
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  padding: 26px;
+  margin: 0;
+}
+
+.vault-error strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--red-deep);
+  margin-bottom: 8px;
+}
+
+.case-picker {
+  padding: 24px 26px;
+}
+
+.case-picker h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.case-picker ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.case-picker a {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  padding: 12px 14px;
+  background: var(--cream-light);
+  border: var(--border-medium);
+  box-shadow: var(--shadow-soft);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.case-picker a:hover {
+  background: var(--blue-pale);
+  border-color: var(--blue);
+}
+
+.case-picker span {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--ink-light);
+  margin-top: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar toggle, small screens
+   -------------------------------------------------------------------------- */
+
+.vault-sidebar-toggle {
+  display: none;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--cream-light);
+  background: var(--blue-deep);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-card);
+  padding: 11px 14px;
+  cursor: pointer;
+}
+
+.vault-sidebar-toggle:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+@media (max-width: 780px) {
+  .vault {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 18px 14px 44px;
+    gap: 16px;
+  }
+
+  .vault-sidebar-toggle {
+    display: flex;
+  }
+
+  .vault-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .vault-sidebar[hidden] {
+    display: none;
+  }
+
+  .vault-tree {
+    overflow-y: visible;
+  }
+
+  .note-head {
+    padding: 14px 16px;
+  }
+
+  .note-title {
+    font-size: 1.45rem;
+  }
+
+  .note-body {
+    padding: 18px 16px 0;
+    font-size: 0.84rem;
+  }
+
+  .note-backlinks {
+    margin: 24px 16px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .vault *,
+  .vault *::before,
+  .vault *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

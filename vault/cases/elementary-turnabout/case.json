@@ -1,0 +1,57 @@
+{
+  "slug": "elementary-turnabout",
+  "title": "The Elementary Turnabout",
+  "author": "SillyKevin",
+  "contact": "Discord: SillyKevin",
+  "difficulty": { "defense": 5, "prosecution": 6 },
+  "duration": "2-4 Hours",
+  "home": "overview",
+  "sidebar": [
+    {
+      "label": "Case File",
+      "items": [
+        { "note": "overview" }
+      ]
+    },
+    {
+      "label": "Profiles",
+      "items": [
+        { "note": "adrian-andrews" },
+        { "note": "ini-miney" },
+        { "note": "ema-skye" },
+        { "note": "kristoph-gavin" },
+        { "note": "damon-gant" }
+      ]
+    },
+    {
+      "label": "Evidence",
+      "items": [
+        { "note": "autopsy-report" },
+        { "note": "knife" },
+        { "note": "letter-from-the-defendant" },
+        { "note": "diplomatics-report" },
+        { "note": "letter-from-unknown" },
+        { "note": "a-pencil" },
+        { "note": "school-map" },
+        { "note": "bottle-of-pills" },
+        { "note": "broken-mug" }
+      ]
+    },
+    {
+      "label": "Scene",
+      "items": [
+        { "note": "crime-scene-map" }
+      ]
+    },
+    {
+      "label": "Role Documents",
+      "note": "Open only the document for the role you are playing. Spectators may open all of them.",
+      "items": [
+        { "label": "Witness / Detective", "url": "https://docs.google.com/document/d/1zI69oHBoGFNQ0JDJy50BiiWtHsMYlVDalk9TBiRE2w4/edit?usp=sharing" },
+        { "label": "Prosecution", "url": "https://docs.google.com/document/d/1Ys81Vl9GVQH1pMfhdMpDlDJl_9QHJrv9bRhctbdpN3M/edit?usp=sharing" },
+        { "label": "Defense", "url": "https://docs.google.com/document/d/1aQFq1iROz0hvuP_4itluEPS-rzrXp-6K6mlF3cR1lD8/edit?usp=sharing" },
+        { "label": "Judge", "url": "https://docs.google.com/document/d/1IatuXPpbeEbUWA9pGXP4a23Tnc_AAWqE6h3f_LKqAyQ/edit?usp=sharing" }
+      ]
+    }
+  ]
+}
