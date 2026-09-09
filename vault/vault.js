@@ -515,17 +515,31 @@
     els.toggle.setAttribute('aria-expanded', String(open));
   });
 
+  var mobileQuery = window.matchMedia('(max-width: 780px)');
+
   function syncSidebarVisibility() {
-    if (window.matchMedia('(max-width: 780px)').matches) {
-      els.sidebar.hidden = true;
-      els.toggle.setAttribute('aria-expanded', 'false');
-    } else {
-      els.sidebar.hidden = false;
-    }
+    // Only called when the breakpoint is actually crossed. Reacting to every
+    // resize would slam the panel shut whenever mobile fires one, which the
+    // URL bar and the on-screen keyboard both do constantly.
+    var isMobile = mobileQuery.matches;
+    els.sidebar.hidden = isMobile;
+    els.toggle.setAttribute('aria-expanded', String(!isMobile));
   }
 
-  window.addEventListener('resize', syncSidebarVisibility);
+  function closeSidebarOnMobile() {
+    if (!mobileQuery.matches || els.sidebar.hidden) return;
+    els.sidebar.hidden = true;
+    els.toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (mobileQuery.addEventListener) {
+    mobileQuery.addEventListener('change', syncSidebarVisibility);
+  } else if (mobileQuery.addListener) {
+    mobileQuery.addListener(syncSidebarVisibility);
+  }
+
   window.addEventListener('hashchange', route);
+  window.addEventListener('hashchange', closeSidebarOnMobile);
 
   syncSidebarVisibility();
 
