@@ -219,21 +219,20 @@
   background: var(--cream-light);
 }
 
-.note-portrait {
-  flex: 0 0 auto;
-  width: 56px;
-  height: 56px;
-  border: var(--border-medium);
-  background: var(--cream-deep);
-  padding: 2px;
+.note-head--banner {
+  display: block;
+  padding: 20px 26px 16px;
 }
 
-.note-portrait img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  image-rendering: pixelated;
+.note-banner {
   display: block;
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+}
+
+.note-head--banner .note-tags {
+  margin-top: 12px;
 }
 
 .note-heading {
@@ -296,6 +295,45 @@
   line-height: 1.72;
   color: var(--ink-soft);
   max-width: 72ch;
+}
+
+/* Clears the floated icon plate so it can never escape the card. */
+.note-body::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Icon plate: sits top right with the text wrapping around it. The image is
+   drawn at exactly 2x its 70px source so the pixel art stays crisp. */
+.note-body .note-figure {
+  float: right;
+  width: 158px;
+  margin: 2px 0 14px 22px;
+  padding: 8px;
+  background: var(--cream-light);
+  border: var(--border-medium);
+  box-shadow: var(--shadow-soft);
+}
+
+.note-body .note-figure img {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+  border: 0;
+}
+
+.note-body .note-figure figcaption {
+  font-size: 0.68rem;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--ink-light);
+  padding-top: 7px;
+  margin-top: 6px;
+  border-top: var(--border-thin);
 }
 
 .note-body h2 {
@@ -617,6 +655,21 @@
 
   .note-backlinks {
     margin: 24px 16px 0;
+  }
+
+  .note-head--banner {
+    padding: 14px 16px 12px;
+  }
+
+  .note-body .note-figure {
+    width: 121px;
+    margin: 0 0 12px 14px;
+    padding: 6px;
+  }
+
+  .note-body .note-figure img {
+    width: 105px;
+    height: 105px;
   }
 }
 

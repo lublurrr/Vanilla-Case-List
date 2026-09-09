@@ -53,6 +53,16 @@
     return 'cases/' + state.caseSlug + '/';
   }
 
+  // Case assets are relative to the case folder, but a note may also point at
+  // something the wider site already hosts. Absolute URLs, site-root paths and
+  // explicit ../ paths are left alone.
+  function assetUrl(src) {
+    if (/^(https?:)?\/\//i.test(src) || src.charAt(0) === '/' || src.slice(0, 3) === '../') {
+      return src;
+    }
+    return caseBase() + src;
+  }
+
   /* ----------------------------------------------------------- type icons */
 
   var TYPE_ICONS = {
@@ -71,7 +81,7 @@
 
   function iconMarkup(note) {
     if (note && note.icon) {
-      return '<img src="' + esc(caseBase() + note.icon) + '" alt="" loading="lazy" />';
+      return '<img src="' + esc(assetUrl(note.icon)) + '" alt="" loading="lazy" />';
     }
     return svgIcon(note ? note.type : 'case');
   }
@@ -189,7 +199,7 @@
       // standalone image becomes a figure
       var img = /^!\[([^\]]*)\]\(([^)\s]+)\)\s*$/.exec(line);
       if (img) {
-        var src = /^https?:/i.test(img[2]) ? img[2] : caseBase() + img[2];
+        var src = assetUrl(img[2]);
         html += '<figure><img src="' + esc(src) + '" alt="' + esc(img[1]) + '" />' +
           (img[1] ? '<figcaption>' + esc(img[1]) + '</figcaption>' : '') + '</figure>';
         i++;
@@ -408,15 +418,37 @@
     }
     if (note.role) tags += '<span class="note-tag">' + esc(note.role) + '</span>';
 
-    var portrait = note.icon ?
-      '<span class="note-portrait"><img src="' + esc(caseBase() + note.icon) + '" alt="" /></span>' : '';
+    // The case note leads with the case logo when the manifest supplies one.
+    // The heading stays in the markup for screen readers and the tab title.
+    var isCaseNote = note.type === 'case' && state.manifest.logo;
+    var head;
+    if (isCaseNote) {
+      head = '<header class="note-head note-head--banner">' +
+        '<img class="note-banner" src="' + esc(assetUrl(state.manifest.logo)) + '" alt="' +
+        esc(state.manifest.title) + '" />' +
+        '<h1 class="note-title visually-hidden">' + esc(note.title) + '</h1>' +
+        (tags ? '<div class="note-tags">' + tags + '</div>' : '') +
+        '</header>';
+    } else {
+      head = '<header class="note-head">' +
+        '<div class="note-heading"><h1 class="note-title">' + esc(note.title) + '</h1>' +
+        (tags ? '<div class="note-tags">' + tags + '</div>' : '') +
+        '</div></header>';
+    }
 
-    var html = '<article class="note-card">' +
-      '<header class="note-head">' + portrait +
-      '<div class="note-heading"><h1 class="note-title">' + esc(note.title) + '</h1>' +
-      (tags ? '<div class="note-tags">' + tags + '</div>' : '') +
-      '</div></header>' +
-      '<div class="note-body">' + renderMarkdown(note.body) + '</div>';
+    // Icon becomes a floated plate the body text wraps around, unless the body
+    // already shows that same image (the map note embeds it full width).
+    var plate = '';
+    if (!isCaseNote && note.icon && note.body.indexOf(note.icon) === -1) {
+      plate = '<figure class="note-figure">' +
+        '<img src="' + esc(assetUrl(note.icon)) + '" alt="' + esc(note.title) + '" />' +
+        (note.caption || note.role ?
+          '<figcaption>' + esc(note.caption || note.role) + '</figcaption>' : '') +
+        '</figure>';
+    }
+
+    var html = '<article class="note-card">' + head +
+      '<div class="note-body">' + plate + renderMarkdown(note.body) + '</div>';
 
     var links = state.backlinks[slug] || [];
     if (links.length) {
