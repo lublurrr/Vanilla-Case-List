@@ -426,7 +426,7 @@
       head = '<header class="note-head note-head--banner">' +
         '<img class="note-banner" src="' + esc(assetUrl(state.manifest.logo)) + '" alt="' +
         esc(state.manifest.title) + '" />' +
-        '<h1 class="note-title visually-hidden">' + esc(note.title) + '</h1>' +
+        '<h1 class="note-title">' + esc(note.title) + '</h1>' +
         (tags ? '<div class="note-tags">' + tags + '</div>' : '') +
         '</header>';
     } else {

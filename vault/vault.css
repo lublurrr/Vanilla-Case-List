@@ -231,6 +231,13 @@
   height: auto;
 }
 
+.note-head--banner .note-title {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: var(--border-thin);
+  font-size: 1.5rem;
+}
+
 .note-head--banner .note-tags {
   margin-top: 12px;
 }
@@ -294,7 +301,17 @@
   font-size: 0.86rem;
   line-height: 1.72;
   color: var(--ink-soft);
+}
+
+/* Line length is capped on the text blocks rather than on .note-body itself.
+   Capping the body would shrink the containing block the icon plate floats
+   against, parking it well short of the card border on a wide screen. */
+.note-body > * {
   max-width: 72ch;
+}
+
+.note-body > .note-figure {
+  max-width: none;
 }
 
 /* Clears the floated icon plate so it can never escape the card. */
