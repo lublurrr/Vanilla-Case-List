@@ -11,6 +11,11 @@ reads its colours and fonts from `../styles.css`.
 3. Write `cases/<slug>/case.json` with the sidebar order.
 4. Add the case to the `cases` array in `cases/cases.json`.
 
+Optionally give `case.json` a `logo`, which replaces the title at the top of the
+note whose `type` is `case`. It follows the same path rules as `icon`, so
+`../images/cases/Name.png` reuses the artwork already on the site rather than
+duplicating it.
+
 Nothing else needs editing.
 
 ## Note format
@@ -29,7 +34,13 @@ Body text. Link other notes with [[knife]] or [[knife|the murder weapon]].
 - `type` colours the badge and picks the fallback sidebar icon. Known values
   are `case`, `profile`, `evidence` and `map`. Anything else renders with no
   badge and the default icon.
-- `icon` is optional and relative to the case folder.
+- `icon` is optional. It renders as a plate floated to the top right of the
+  note with the text wrapping around it, drawn at 2x so the pixel art stays
+  sharp. It is skipped when the body already embeds that same image.
+- `caption` is optional and labels the plate. Without it, `role` is used, and
+  without either the plate has no caption.
+- Paths are relative to the case folder unless they start with `http`, `/` or
+  `../`, which lets a note point at an image the wider site already hosts.
 - `aliases` let `[[the knife]]` resolve to `knife.md`. Matching is case
   insensitive and also tries the title.
 - A wikilink pointing at nothing renders in red with a dotted underline rather

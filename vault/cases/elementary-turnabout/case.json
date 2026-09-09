@@ -5,6 +5,7 @@
   "contact": "Discord: SillyKevin",
   "difficulty": { "defense": 5, "prosecution": 6 },
   "duration": "2-4 Hours",
+  "logo": "../images/cases/The%20Elementary.png",
   "home": "overview",
   "sidebar": [
     {
