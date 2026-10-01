@@ -1,0 +1,1207 @@
+{
+  "title": "Vanilla Resource Library",
+  "tagline": "Guides & tools for casing on Vanilla.",
+  "description": "The library for vanilla cases, resources, and more! All the extra casing resources you need, compiled into one place.",
+  "sourceDocUrl": "https://docs.google.com/document/d/1XS_D2jgcGp_61gl2dnAozOop3shUC06HEPOT3iuaU-s/edit?tab=t.0",
+  "sourceDocLabel": "Vanilla Resource Library (Google Doc)",
+  "importNote": "",
+  "categories": [
+    "Guides",
+    "Casemaking",
+    "Other Case Lists",
+    "Videos",
+    "Translations",
+    "Miscellaneous"
+  ],
+  "categoryDescriptions": {
+    "Guides": "All the useful guides for AO roles, the client, and casing.",
+    "Casemaking": "All the tools and resources you may need to make a case. Includes guides and templates.",
+    "Other Case Lists": "Case lists, from personal ones of specific casemakers, all the way to other case lists containing a wide variety of cases.",
+    "Videos": "Multimedia content related to Attorney Online that compiles from tutorials, to channels, playlists, VODs, and meme videos.",
+    "Translations": "Every case findable that doesn't belong to the English language is here. There can be original cases and translated vanilla cases whose language will be indicated with a flag.",
+    "Miscellaneous": "All other useful resources including templates, character files, case lists etc."
+  },
+  "legend": {
+    "AO": "Attorney Online",
+    "TA": "Turnabout",
+    "OS": "Opening Statement",
+    "AOV": "Attorney Online Vidya",
+    "VCL": "Vanilla Case List",
+    "OLE": "Official Law Empire"
+  },
+  "entries": [
+    {
+      "id": "rl-1",
+      "title": "Attorney Online Casing Guide",
+      "url": "https://docs.google.com/document/d/1H8T_pcGgx2ngrsiTzFHZxV4HgB0tpEplnt_OG-qGUdQ/edit?usp=sharing",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "mastyra",
+      "description": "An incredibly in-depth guide covering the essentials and basics of casing."
+    },
+    {
+      "id": "rl-2",
+      "title": "TrueAA: True Ace Attorney Casing Format",
+      "url": "https://docs.google.com/document/d/1kW_8UOvQ3AWAr_nBXwkhpyDa8HXBHBCcX9g2mlMn8cY/edit?tab=t.0",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Case Cafe",
+      "description": "Positioned as Case Cafe's official casing format, it attempts to adapt Ace Attorney into casing, diverting from MTP and MMO. Highly recommended if you need a guide on casing."
+    },
+    {
+      "id": "rl-3",
+      "title": "OLE Casing Handbook",
+      "url": "https://docs.google.com/document/d/1iSIdug1fYcWUraijLXiuRcYp3LTxttDfMe4bMHqPmbc/edit?usp=sharing",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "OLE",
+      "description": "A highly modern casing guide focused on the prioritisation of roleplay."
+    },
+    {
+      "id": "rl-4",
+      "title": "Attorney Online Tutorials",
+      "url": "https://sites.google.com/view/treasureboxreboot/home?authuser=0",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Boogiepop",
+      "description": "A visual guide for organising your folders and the creation/edition of characters on your files of AO. No longer updated as of 01/01/2020."
+    },
+    {
+      "id": "rl-5",
+      "title": "The Basics of Casing",
+      "url": "https://docs.google.com/document/d/1NerIMk8Eed0Y2h_5KWyVYZ5_Z9fPE13J0l94An5SxwE/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Sp",
+      "description": "The all in one guide to starting any Attorney Online case, covering the case process and the basis of each role in quite some depth."
+    },
+    {
+      "id": "rl-6",
+      "title": "Getting Started in AO",
+      "url": "https://docs.google.com/document/d/1TFQA0-CTVnl_78cZjYoDQbzBFXLf2xL2sAssp2gp0lg/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Frow Ahway",
+      "description": "An in-depth guide on how to get started in Attorney Online. Originally intended for Vidya, however the tips and steps also apply to the standard Vanilla client."
+    },
+    {
+      "id": "rl-7",
+      "title": "AO do's and don'ts",
+      "url": "https://docs.google.com/document/d/1eUUvlfdwlpa0zmC7oPPocxVcbNC9XIkS_CPA5ZE9DU8/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Truce",
+      "description": "A guide touching on casing in general and all of the roles. Covering what to do and not to do in a case."
+    },
+    {
+      "id": "rl-8",
+      "title": "AO Web Interface Guide",
+      "url": "https://docs.google.com/document/d/1ZJmlsYQUqSxuJMsxZPcvy2X1-61GOrQ1WdhN6pOJ9bU/edit#heading=h.qivbv2hq3irr",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "mastyra",
+      "description": "A guide that covers the basics of using WebAO."
+    },
+    {
+      "id": "rl-9",
+      "title": "Attorney Online User Manual",
+      "url": "https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Bennett Ramirez",
+      "description": "An in-depth guide that goes over all the features of the attorney online client INIs, and how everything works. A good read if you want to get into custom characters, objections etc."
+    },
+    {
+      "id": "rl-10",
+      "title": "Attorney Online 2023 Defense Guide",
+      "url": "https://docs.google.com/document/d/1IxNIF0tYFz5f454Dvh2CdTHYTXWprDop_M9uAytreLE/edit?usp=sharing",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "mastyra",
+      "description": "A modern guide on how to play the Defense attorney role."
+    },
+    {
+      "id": "rl-11",
+      "title": "So, you want to be an Attorney?",
+      "url": "https://docs.google.com/document/d/1rssKA4kurS5wwHu8ZD8ilvJyFm_WRrvYq_rF8S0I8Jc/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Koollan",
+      "description": "An in-depth guide to the Defense Attorney role. Covers the Cross-Examination phase, testimonies, and many more helpful tips."
+    },
+    {
+      "id": "rl-12",
+      "title": "Turnabout Defending",
+      "url": "https://docs.google.com/document/d/1uHLF7XwXqmFGIw66KfvBn5nKYVgWlTMJ-gJTYyhoiNE/edit?usp=sharing",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Kait",
+      "description": "A guide on how to be a Defense Attorney, with multiple examples used of existing cases to showcase tips and tools in RP scenarios."
+    },
+    {
+      "id": "rl-13",
+      "title": "Defense's Toolkit",
+      "url": "https://docs.google.com/document/d/1E2C7DEvQQ3APeKCmG-gk8_4VFoUZwLO2dzhSot18vSg/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Jontaneous",
+      "description": "An in-depth guide to the Defense Attorney role. Covers all the essentials to getting better at Defending."
+    },
+    {
+      "id": "rl-14",
+      "title": "Newbie's Guide to Lead Defense",
+      "url": "https://docs.google.com/document/d/1Z99LWzx_mxmA7f2XR5pbzibyudpNJV8ZvK_vWqdrUtU/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Truce",
+      "description": "An in-depth guide to the Defense Attorney role. Covers the do's and don'ts in some common situations you may find yourself in as Defense."
+    },
+    {
+      "id": "rl-130",
+      "title": "Yoru's Guide to Advanced Defense",
+      "url": "https://docs.google.com/document/d/1zoJjfTYwZ8E4YPNqSn2xYiESbafYXvpgnWHSu_Gg4Ig/edit?tab=t.0",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Yoru",
+      "description": "A step past the basics of defending, counters to common prosecution tactics, and finding the contradiction by trusting the witness."
+    },
+    {
+      "id": "rl-15",
+      "title": "Attorney Online 2023 Prosecutor Guide",
+      "url": "https://docs.google.com/document/d/18UcxK2WRWsZDZFJ4tSMZqhWL8YUhFAlP7mly5BsP_qs/edit#heading=h.qivbv2hq3irr",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "mastyra",
+      "description": "A modern guide on how to play the Prosecutor role."
+    },
+    {
+      "id": "rl-16",
+      "title": "Writing an effective OS",
+      "url": "https://docs.google.com/document/d/1Paow-e_hr78f9hADUZQvetebSKv4Zk2eNGCsdem3G5E/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "DoctorLag",
+      "description": "A guide for the Prosecutor role focusing on the Opening Statement and how to write one effectively."
+    },
+    {
+      "id": "rl-17",
+      "title": "Attorney Online 2023 Judge Guide",
+      "url": "https://docs.google.com/document/d/1eW1IXPjvHeDv53E7ZJP39bCPLHwslgPjKQoxZrWOcmo/edit#heading=h.qivbv2hq3irr",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "mastyra",
+      "description": "A modern guide on how to play the Judge role."
+    },
+    {
+      "id": "rl-18",
+      "title": "Smol Juror's Rulebook",
+      "url": "https://docs.google.com/document/d/1gr6zos85BOEBYdarjZ3GEADvv0738DGr0U-n9cugaQ0/edit#heading=h.f3nr0s24oxku",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Smol Fofa",
+      "description": "An informative document on Jury Trials, how to case one and how to play the Juror role in a casing setting."
+    },
+    {
+      "id": "rl-19",
+      "title": "Steno Guide",
+      "url": "https://docs.google.com/document/d/1WGO8v9tiT4GBwIAHGWKegKwVu9nxOqt-i0OEsLdz1do/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Truce",
+      "description": "A detailed guide on the Stenographer role and how to play it effectively."
+    },
+    {
+      "id": "rl-20",
+      "title": "How to Server - AO2 Edition",
+      "url": "https://docs.google.com/document/d/1xOd7SDCBmSA0RM8M7JX7xACA4YUsQn72Bob9HBOzhVM/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Trey & scatterflower",
+      "description": "The official guide on how to set up a server on Attorney Online."
+    },
+    {
+      "id": "rl-21",
+      "title": "So, you want to be a Prosecutor?",
+      "url": "https://docs.google.com/document/d/14j_sWeuUnNTeb--97GkwzfcaNqj3Hvvcq9f-w0WWGdY/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Scorpion",
+      "description": "An in-depth guide to the Prosecutor role. Covers the opening statement, direct examination and responding to the Defense."
+    },
+    {
+      "id": "rl-22",
+      "title": "Attorney Online Til Proven Guilty Mode",
+      "url": "https://docs.google.com/document/d/1OEchmHLwcwWCHZDyqsMjHYq23NKOFq938h3R08BuqsE/edit#heading=h.5h33c1w6djt8",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Analysis",
+      "description": "A guide that goes through the gamemode Til Proven Guilty."
+    },
+    {
+      "id": "rl-23",
+      "title": "So you want to be a defense?",
+      "url": "https://docs.google.com/document/d/1qh44hrBEPLB5XU5ta5H3woCNCkF348YQ14vHSVflmT8/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Renegade",
+      "description": "An older guide that follows more baseline RP and casing rules on how to be a defence player."
+    },
+    {
+      "id": "rl-24",
+      "title": "Improv Case Doc",
+      "url": "https://docs.google.com/document/d/1jEbWA-rKhZirY3PxfAzs1zlvkHXPJ79z0y5e4T_cEEA/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Retroxide",
+      "description": "An old document that generated ideas for brainstorming cases."
+    },
+    {
+      "id": "rl-25",
+      "title": "Ini-Making Guide",
+      "url": "https://github.com/AttorneyOnline/docs/blob/master/docs/Content%20Creation/characters/Overview.md",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "Attorney Online",
+      "description": "An official guide on how to create characters for Attorney Online."
+    },
+    {
+      "id": "rl-26",
+      "title": "Ace Attorney 3D Model Ripping Guide",
+      "url": "https://youtu.be/7xDCtNSXxsA?si=UfaiXKs9BpI3i4vd",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "CaptainSwag",
+      "description": "A useful tool to rip 3DS versions of 3D Ace Attorney characters."
+    },
+    {
+      "id": "rl-27",
+      "title": "FFMPEG Scriptmaking Tutorial",
+      "url": "https://youtu.be/cAdEWWXCB00?si=D_nHsO_mncTt6M_N",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "The Ripping Resource",
+      "description": "A tutorial on how to customize your own FFMPEG script to make WEBP out of PNG sequences."
+    },
+    {
+      "id": "rl-28",
+      "title": "MMO Basics",
+      "url": "https://docs.google.com/document/d/1dV6E7TsyIpjdpqswbfs6iIbVT9QRF29J/edit",
+      "category": "Guides",
+      "type": "guide",
+      "creator": "The MMO Community",
+      "description": "A document that covers the basics of the MMO style of playing."
+    },
+    {
+      "id": "rl-29",
+      "title": "Fricka's Casemaking Guide",
+      "url": "https://docs.google.com/document/d/1WRAzGB8P_5c5U5r9fA5WSmofkKHAedZardhwn7dbIu4/edit?usp=sharing",
+      "category": "Casemaking",
+      "type": "Guide",
+      "creator": "Fricka U",
+      "description": "A modern guide that covers the basics and essentials when it comes to writing a new case. Includes rules needed for VCL submission."
+    },
+    {
+      "id": "rl-30",
+      "title": "Trial Flow: How to Structure a Case",
+      "url": "https://aaonline.fr/forum/viewtopic.php?t=12150",
+      "category": "Casemaking",
+      "type": "Guide",
+      "creator": "Enthalpy",
+      "description": "A written summary of the theories of how trial composition is done in Ace Attorney games. Necessary reading for new members of the Central Committee."
+    },
+    {
+      "id": "rl-31",
+      "title": "Court Records",
+      "url": "https://www.court-records.net",
+      "category": "Casemaking",
+      "type": "Database",
+      "creator": "Court Records.net",
+      "description": "This database has a variety of images for profiles and evidence that you may need, as well as other fan-made content via its forums."
+    },
+    {
+      "id": "rl-32",
+      "title": "The Objectively Best Way to CM",
+      "url": "https://docs.google.com/document/d/1iDB8hL18jXlb2EvxcYWoiiLcrZ9I348AuPzyg9MvFPM/edit",
+      "category": "Casemaking",
+      "type": "Guide",
+      "creator": "Funky",
+      "description": "An older guide on how to casemake. It is still extremely relevant and can be a great tool/reference point."
+    },
+    {
+      "id": "rl-129",
+      "title": "Yoru's Guide to Case Making",
+      "url": "https://docs.google.com/document/d/10Ovfr5knVrMtzcWNHNyHpmwyvn8qjoziXNLAuE4VK68/edit?tab=t.0",
+      "category": "Casemaking",
+      "type": "Guide",
+      "creator": "Yoru",
+      "description": "Builds a case up from three starting ideas, in three stages: playable, complete, and great."
+    },
+    {
+      "id": "rl-33",
+      "title": "Evidence Collection",
+      "url": "https://drive.google.com/drive/folders/1v_JqEat4go2AHKHbi5cpksSGDIF0p1yq?usp=drive_link",
+      "category": "Casemaking",
+      "type": "Database",
+      "creator": "In1tiate & Assfedora",
+      "description": "The fully completed list of evidence and profiles from all games, in high quality."
+    },
+    {
+      "id": "rl-34",
+      "title": "Questrial",
+      "url": "https://docs.google.com/document/d/1u5yI84mHbHyQk2j-YCrl8QO1lMjyBj0XLRhZNF_U-VA/edit#heading=h.5pp9ep4xsbza",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Vidya",
+      "description": "The iconic and most common template widely used."
+    },
+    {
+      "id": "rl-35",
+      "title": "Questrial - Nightly",
+      "url": "https://docs.google.com/document/d/1hkXF3PfnqjaZvEBAEiey8CdG5GnoW-Fgb52ubxBtctE/edit#heading=h.rouj0oapt2hm",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Vidya",
+      "description": "The nightly version of the iconic Questrial template widely used."
+    },
+    {
+      "id": "rl-36",
+      "title": "AOV - Templates",
+      "url": "https://aovidya.pw/templates",
+      "category": "Casemaking",
+      "type": "Templates",
+      "creator": "AO Vidya",
+      "description": "A compiled webpage of all the popular AO Templates. Including the Questrial Family, the Roboto family and a lot more."
+    },
+    {
+      "id": "rl-37",
+      "title": "/aog/ Template Library",
+      "url": "https://docs.google.com/document/d/1KDlhpcr4Ibqpti-8kSYgAMQ0JWPJX2BGqF7mrODGZ8Q",
+      "category": "Casemaking",
+      "type": "Templates",
+      "creator": "/aog/",
+      "description": "A compiled document of great AO Templates. Includes Turnabout Template Mark IV and a lot more."
+    },
+    {
+      "id": "rl-38",
+      "title": "Case Café Library Corner",
+      "url": "https://docs.google.com/document/d/1UP-X4-cWMumzvBFrWRHXOixeHAPuZ614l2qpge4X3xA/edit",
+      "category": "Casemaking",
+      "type": "Templates + Themes",
+      "creator": "Case Café",
+      "description": "A compiled document of AO Templates and AO Themes. Includes the Classy Case family."
+    },
+    {
+      "id": "rl-39",
+      "title": "Georgia Template",
+      "url": "https://docs.google.com/document/d/1W6AvIqpdzTMRh-lSSSmgMPLW6Gpm9B5IlJrU_jf6P24/edit",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "P1CKP0CK3T",
+      "description": "Singular case template made by the creator P1CKP0CK3T."
+    },
+    {
+      "id": "rl-40",
+      "title": "Serif Template",
+      "url": "https://docs.google.com/document/d/1rcsF_ngqXP_SuUHuIfifHz_SqrRORlJAzaSh6fDS1EI/edit?usp=sharing",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Clamet",
+      "description": "Singular case template made by the creator Clamet."
+    },
+    {
+      "id": "rl-41",
+      "title": "Questrial Witchcraft",
+      "url": "https://docs.google.com/document/d/1Deaz-KsmrxRyC346aWsDMHf4MlLjjZScXg1GaeQx-DI",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Knight",
+      "description": "Singular case template made by the creator Knight, used for Witch trials based off of PL vs PW."
+    },
+    {
+      "id": "rl-42",
+      "title": "Turnabout Templates",
+      "url": "https://docs.google.com/document/d/1WfLWeEhuHKOnE1xShDAETtHMWzYaJZ_U_lIenBuWcXo/edit",
+      "category": "Casemaking",
+      "type": "Templates",
+      "creator": "Analysis",
+      "description": "An assortment of some more modern templates for case creation usage."
+    },
+    {
+      "id": "rl-43",
+      "title": "Map Template Library",
+      "url": "https://docs.google.com/document/d/1jYKBrhHl0t9H0dxwieVacuMxr9t55nhS5AMAnMV0izw/edit?usp=drivesdk",
+      "category": "Casemaking",
+      "type": "Templates",
+      "creator": "AO Vidya",
+      "description": "An assortment of pre-made maps that can be used as templates."
+    },
+    {
+      "id": "rl-44",
+      "title": "Turnabout Improvisation",
+      "url": "https://docs.google.com/document/d/163CiOYu8pyIsX-T8llkjW1DQESz-3UJNGvM3NTLnYaI/edit",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Retroxide",
+      "description": "Singular case template made by the creator Retroxide, dates from 2014."
+    },
+    {
+      "id": "rl-45",
+      "title": "Logic Template",
+      "url": "https://docs.google.com/document/d/1tTyfYxbH_gA1DE5dr5leNGb7MJEUwyXDmEoAxcJJGQI/edit#heading=h.thkmimn395f6",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Somebody",
+      "description": "A template designed for AAI style logic sequences."
+    },
+    {
+      "id": "rl-46",
+      "title": "Talkie Turnabout",
+      "url": "https://docs.google.com/document/d/1xMLAOiKgyDLFCdX7ktH15qLyrzErLdepowFcRnAWEhU/edit",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Adam",
+      "description": "A template based on old talkies."
+    },
+    {
+      "id": "rl-47",
+      "title": "Dunkle Case Template",
+      "url": "https://docs.google.com/document/d/1G_1sRLs2tKxcY67IbYgCQHDCsZMkZ2vDR9fNjaWHSXs/edit#heading=h.rouj0oapt2hm",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Dunkle",
+      "description": "A template used primarily by the casemaker Dunkleheart."
+    },
+    {
+      "id": "rl-48",
+      "title": "Lexend Templates",
+      "url": "https://docs.google.com/document/d/1VfwIJM_8dECWuyKtTNtcpjOVOEKiBHqpLlFGGo6xCpI/edit",
+      "category": "Casemaking",
+      "type": "Templates",
+      "creator": "Marquee du Bois",
+      "description": "An assortment of different templates."
+    },
+    {
+      "id": "rl-49",
+      "title": "Turnabout Y2K - Case Template",
+      "url": "https://docs.google.com/document/d/1aqTsvrbW1JT-uZyu6NpJzKryDBBRIi9xkMDRrnSDDgs/edit?usp=drivesdk",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Pina",
+      "description": "A template made for the case Turnabout Y2K."
+    },
+    {
+      "id": "rl-50",
+      "title": "Attorney of the Arcane Template",
+      "url": "https://docs.google.com/document/d/1wqcl-bHnutNqPJFB6ICd-7WTDHC91CKILNRinC_qRcA/edit",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Minion",
+      "description": "A template based on the game Attorney of the Arcane, inspired by Ace Attorney."
+    },
+    {
+      "id": "rl-51",
+      "title": "Map Making Guide",
+      "url": "https://static.wikia.nocookie.net/attorneyonlinevidya/images/c/c2/Map_guide_1-3.png/revision/latest?cb=20170120160343",
+      "category": "Casemaking",
+      "type": "Guide",
+      "creator": "AO Vidya",
+      "description": "Contains swift and direct guidelines on how to make a Map for your cases."
+    },
+    {
+      "id": "rl-52",
+      "title": "Casemaker's Guide",
+      "url": "https://docs.google.com/document/d/1ixWskiNF4gQ8jGjlnVNXPxVNOemZzC6UmoPhJachP-0/edit#heading=h.ororv9lab63o",
+      "category": "Casemaking",
+      "type": "Guide",
+      "creator": "Snoot Online",
+      "description": "A suggestion-related document that gives a quick but very short guide into casing as a casemaker."
+    },
+    {
+      "id": "rl-53",
+      "title": "Cass's Crazy Cool Template of Fun",
+      "url": "https://docs.google.com/document/d/1qhE9dyvpqN6i5L7S0hy13-b9RkvEcVx3wKOIG9oqKCY/edit?tab=t.0#heading=h.rouj0oapt2hm",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Cass",
+      "description": "A template stylised for stenography, based on questrial."
+    },
+    {
+      "id": "rl-54",
+      "title": "Trilogy Template",
+      "url": "https://docs.google.com/document/d/12N1CtmlWOJvh5vU3X0kSEyNE7oCvOqxpUjeXg5iiYaY/edit?tab=t.0",
+      "category": "Casemaking",
+      "type": "Template",
+      "creator": "Wolfang",
+      "description": "A template for the main document that simulates the Ace Attorney Trilogy's UI."
+    },
+    {
+      "id": "rl-55",
+      "title": "Vanilla Case List",
+      "url": "https://docs.google.com/document/d/1DgFg6CTjKMST69qlyQuhFzqYMZlA7pUZ8MHcrREdnm8/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Fricka U, Wolfang, Pina & Knight",
+      "description": "Renovated and revised, it is the classic. Designed to approve, collect, and distribute the most playable cases approved by a team of experienced casers. Cases are listed freely in Easy/Medium/Hard categories by order of approvals."
+    },
+    {
+      "id": "rl-56",
+      "title": "Unofficial Vanilla Case List",
+      "url": "https://docs.google.com/document/d/1e1u7nWOdHI2zmeKrIIHm2sxDGLg4WkhQpvELbnBNv5o/edit#",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Sp",
+      "description": "The predecessor of Vanilla Case List. This list has further cases to play and scorings for its difficulty. A good choice when you may run out of cases."
+    },
+    {
+      "id": "rl-57",
+      "title": "Ordice's Case Library",
+      "url": "https://docs.google.com/document/d/12jkYFEs3z1cIOb4-lPaH5FwL9kVtCF96sxeqDamRgz8/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Ordice",
+      "description": "A list of all the cases made by the creator Ordice. Includes gems like TA Old Sins and Til' the end."
+    },
+    {
+      "id": "rl-58",
+      "title": "Noobie's Case List",
+      "url": "https://docs.google.com/document/d/1AgC1KzOPctOPa_KW-N6ZBnElz5Ur6MkAeQNpb3Dv2OE/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Noobie",
+      "description": "A list of all the cases made by the creator Noobie. Includes classics like Standpoint and Assessment."
+    },
+    {
+      "id": "rl-59",
+      "title": "Sp'ectator's Cases",
+      "url": "https://docs.google.com/document/d/101PGOSMOTx3HIj1Ax3oZQ7kWHg7xiz1xk95w5SUtIhk/edit?usp=sharing",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Sp",
+      "description": "A list of cases made by the creator Sp. Includes iconic crafts such as TA Gallery and Scholar."
+    },
+    {
+      "id": "rl-60",
+      "title": "Fricka's Case List",
+      "url": "https://docs.google.com/document/d/13LXM08U6CnNcM_ZG6k7I4DgkbS-x2IgKGlMJDogUM98/edit?usp=sharing",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Fricka U",
+      "description": "The place to find all Fricka cases. Has many cases of a wide variety, from TA Royal, to story-focused pieces like Roll the TA and TA Trinity."
+    },
+    {
+      "id": "rl-61",
+      "title": "Wolfang's Cases",
+      "url": "https://docs.google.com/document/d/1U-ziQe8M1ovbfC824nlAqJjXWECikxMpIZThQi6aEdk/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Wolfang",
+      "description": "A list of cases made by the creator Wolfang. Includes cases such as the ever-popular TA Blue."
+    },
+    {
+      "id": "rl-62",
+      "title": "Knight's Cases",
+      "url": "https://docs.google.com/document/d/1bjyRKO3GTOgk6I2qVQ-R5N8LaeBuMobDGpzbujiRwtk/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Knight",
+      "description": "A list of cases made by the creator Knight. Includes cases like the Strange case of Dr. Jekyll and Mr. Hyde and the iconic Turnabout Ramsay."
+    },
+    {
+      "id": "rl-63",
+      "title": "Kelban Case List",
+      "url": "https://docs.google.com/document/d/1ADD9V-E8K9Qk0pP72EzZFvt7YRIpnzXMkFTCv2meb3Q/edit?usp=drivesdk",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Kelban",
+      "description": "A list of cases made by the creator Kelban. It has quite appealing visuals."
+    },
+    {
+      "id": "rl-64",
+      "title": "Deadly's Case Library",
+      "url": "https://docs.google.com/document/d/1ixVxpUa5aC_71UUJbT8l_G2DHZcTbx47u6Gn34Qw_Jo/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Deadly",
+      "description": "A list of all the cases made by the creator Deadly. Includes cases such as The Parting Turnabout."
+    },
+    {
+      "id": "rl-65",
+      "title": "AOV's Case Archive",
+      "url": "https://docs.google.com/spreadsheets/d/1gccXTYOX-hkIRqnCMtEXrYKs47M5yXM_wpVoWxtEfPg/htmlview",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "AO Vidya",
+      "description": "Archive of cases from AO Vidya which compiles tons of old cases from 2017-2018. There may be some hidden gems."
+    },
+    {
+      "id": "rl-66",
+      "title": "Zizzy's Cases",
+      "url": "https://docs.google.com/document/d/1wUPPeXowm_8hT2QfpiaBpG0vXxEWidk8Gx8O04bSFb0/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Zizzy",
+      "description": "A list of cases made by the creator Zizzy. Includes novel case ideas like Turnabout of the Ring and Turnabout Too Blue."
+    },
+    {
+      "id": "rl-67",
+      "title": "Jaeger's Case List",
+      "url": "https://docs.google.com/document/d/19zfcbyh3kdZyl5OzYdvMrd6QSOBha-QJaKeLMXEV1jA/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Delinard",
+      "description": "The predecessor to the UCL. It's no longer updated, but provides an insight into 2022 casemaking."
+    },
+    {
+      "id": "rl-68",
+      "title": "The Ultimate Attorney Online Case List",
+      "url": "https://docs.google.com/document/d/15tXoy9uWh0KCfCpLQjaMKaa8Kajnb4DKoW7eSKh6Z4E/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Papirini",
+      "description": "Also known as the UCL. A more recent case list with numbers into the hundreds."
+    },
+    {
+      "id": "rl-69",
+      "title": "Ultimate Case List",
+      "url": "https://docs.google.com/document/d/1u4n9jslV1Se1cqGkKFveFG7OmDtcy2Pe8Rq1wxAnhn0/edit#heading=h.rxmbmhpfd7bh",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Cope Man",
+      "description": "An older and outdated case list of some 2022 era cases by a few casemakers."
+    },
+    {
+      "id": "rl-70",
+      "title": "The OLE Case List",
+      "url": "https://docs.google.com/document/d/10pglwRrzLkxKhzw2awmEmoWLtuxmv_d0dgMToNB3TLg/edit?usp=sharing",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "XYZ",
+      "description": "A case list for the discord server Official Law Empire (OLE) which contains a hybrid of Vanilla and Case Café cases."
+    },
+    {
+      "id": "rl-71",
+      "title": "Team Delta Twist",
+      "url": "https://docs.google.com/document/d/1zmPy74g00BHhHDXAJy6bpJ8Le6-9ygblFo8qXzSP4iI/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Cherry, Kiwi, Arnold & Succling",
+      "description": "A list of cases made by a group of case writers called Team Delta Twist. The creators of TA Ultimatum."
+    },
+    {
+      "id": "rl-72",
+      "title": "The Great Case List",
+      "url": "https://docs.google.com/document/d/1Z4yffEoX10MCGm4nTjb2CXAbuPMQl0-FELDR0TRe478/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Jukeyles",
+      "description": "A smaller case list that places priority on quality over quantity."
+    },
+    {
+      "id": "rl-73",
+      "title": "Turnabout Fey Incident: Case Menu",
+      "url": "https://docs.google.com/document/d/1vWF5z8OzJkIi26BGoWW2Zhwhaw-_ktLRVb-bCOOuP9E/edit#heading=h.u3nytd95bj2b",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Zarrk0da & Fraxilism",
+      "description": "A series of cases that form a full trilogy. Certainly an ambitious project."
+    },
+    {
+      "id": "rl-74",
+      "title": "Yoru's Case List",
+      "url": "https://docs.google.com/document/d/1hx3iqMJitV79whfz9BnkP_szpKH2Pq8T5oTKj9QRha8/edit?tab=t.0",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Yoru",
+      "description": "A case list by one of the most veteran users in AO, Yoru."
+    },
+    {
+      "id": "rl-75",
+      "title": "Papirini's Case Library",
+      "url": "https://docs.google.com/document/d/1H-tGN8iWVnmOUvS-EoVUb75G9MmO_8h3rIuPBdW1upE/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Papirini",
+      "description": "A vast list of cases by one of the most prolific casemakers, Papirini."
+    },
+    {
+      "id": "rl-76",
+      "title": "Conundrums' Chaotic Case List",
+      "url": "https://docs.google.com/document/d/1bIJEfwDbRYL-qf-FhAOJja6BkDGYju_GjJKrnhJAK0w/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Turnabout Conundrums",
+      "description": "A case list for an old discord server that has long since passed."
+    },
+    {
+      "id": "rl-77",
+      "title": "Emslaya's Case Library",
+      "url": "https://docs.google.com/document/d/1NyFTA8890A381xjL7238lan6a1Fycbu-2L02l1eO3hU/edit#heading=h.aakg0vaaf527",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Emslaya",
+      "description": "A list of cases authored by Emslaya, notable for TA Problem Fixer."
+    },
+    {
+      "id": "rl-78",
+      "title": "Kait's Case Menu",
+      "url": "https://docs.google.com/document/d/1nRzwo9ndoUro-dYQDE2UWYiMF4oANf8eqc1DTKMgKCg/edit?usp=sharing",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Kait",
+      "description": "A list of cases made by the creator Kait. Includes some investigation cases."
+    },
+    {
+      "id": "rl-79",
+      "title": "Apollo and Athena: Ace Attorneys",
+      "url": "https://docs.google.com/document/d/1Jo6n-0OzXz6TtV0_laA1BVRKIF2_ZdrbQYAcnF6bwiU/edit?usp=sharing",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Ordice",
+      "description": "A series of cases that form one full story/game. Includes the famous case 'Till the End."
+    },
+    {
+      "id": "rl-80",
+      "title": "XYZ Case Menu",
+      "url": "https://docs.google.com/document/d/1gwWKWTywxzd4LYg21dPteG3MNs7KbF0MsA48zDFSOa4/edit#",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "XYZ",
+      "description": "A list of cases made by the creator XYZ. Has many DGS themed cases."
+    },
+    {
+      "id": "rl-81",
+      "title": "P1CKP0CK3T'S List of Cases",
+      "url": "https://docs.google.com/document/d/10lTPqRilv2uSTuB83K8DoCNTWpxJiFyJHckokj_MAhY/edit?usp=sharing",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "P1CKP0CK3T",
+      "description": "A list of cases made by the creator P1CKP0CK3T. Includes classic cases such as Ringmaster and Caribbean."
+    },
+    {
+      "id": "rl-82",
+      "title": "Slaya Approved Cases",
+      "url": "https://docs.google.com/document/d/13QGIAsQPxtjzcfHAFp3ijQBK2RDB3b8XWIpgOMiyk_A/edit?usp=sharing",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Emslaya",
+      "description": "A list of cases that have been approved personally by the creator Emslaya. Quite outdated (2020), but still helpful."
+    },
+    {
+      "id": "rl-83",
+      "title": "Distant's Case List",
+      "url": "https://docs.google.com/document/d/111dnXEMOMdXQmx10k3mjAYkO_46lyfEd0AlYYan_Gao/edit?usp=sharing",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "DistantNeko",
+      "description": "A list of cases made by the creator Distant. Many are gimmick based, such as Amnesiac and Kristoph vs Adrian."
+    },
+    {
+      "id": "rl-84",
+      "title": "Ace Attorney: Tales from the Academy",
+      "url": "https://docs.google.com/document/d/1xSOqbeR5z6Y6j5eOmKVtEdQvo1F46YBHiDNejxRPynk/edit?usp=sharing",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Jpeg & Womenarepog",
+      "description": "A fan-made series of cases of not one, but two games."
+    },
+    {
+      "id": "rl-85",
+      "title": "2013 Cases",
+      "url": "https://docs.google.com/document/d/1tKcCuHylcq3o2dzlmaDP4eg0ksvPd9gSZP3jjvw8pPU/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Case Archive (Unknown)",
+      "description": "A historic fossil, a collection of cases that span all the way back to 2013. Gives an interesting insight."
+    },
+    {
+      "id": "rl-86",
+      "title": "Bewitched",
+      "url": "https://docs.google.com/document/d/1e2O6NvUQNjwAEZvwTvIFeLquRALhVtLvXL0Vfu0oZ2s/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Pablo420",
+      "description": "A series of cases about magic and witches. It's incomplete and likely to stay this way."
+    },
+    {
+      "id": "rl-87",
+      "title": "The Crimson Shadow of Len'Zen Fah",
+      "url": "https://docs.google.com/document/d/15z3kdLP0K2AswZ8qEbUDHfTxsavlGpBy3gl0o0gMZ7o/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Dyleaon & Zealous",
+      "description": "A series of CM only cases about a fictional Eastern European country and its government."
+    },
+    {
+      "id": "rl-88",
+      "title": "Empress Kaina Case List",
+      "url": "https://docs.google.com/document/d/1tcluZg-Q5GDuWdBdd1nasWeOBR_oqYOCdVepyZuOxcY/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Empress Kaina",
+      "description": "A series of cases made by the casemaker Empress Kaina."
+    },
+    {
+      "id": "rl-89",
+      "title": "Minion's AO Case List",
+      "url": "https://docs.google.com/document/u/0/d/1QfxRUcfI_f2T-28-ZE7I1kxxfUfUqTFJTFPw9wM1yZg/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Minion",
+      "description": "A series of cases made by the casemaker Minion that utilises various gimmicks."
+    },
+    {
+      "id": "rl-90",
+      "title": "Tidiestflyer's (Tidy) Case Library",
+      "url": "https://docs.google.com/document/d/1HDEgZHTgiEnP4nUcpHrpXnVfZJDQfGB8TGy9tges6OE/edit#heading=h.1dluxtm2ly96",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Tidy",
+      "description": "A large list of cases made by the casemaker Tidy."
+    },
+    {
+      "id": "rl-91",
+      "title": "Director's Case List",
+      "url": "https://docs.google.com/document/d/1mR2ZtR_Uf0wVbwXzOMnCzymu6bjMQWwITsv42IWtRyM/edit",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Director",
+      "description": "A list of cases made by the casemaker Director."
+    },
+    {
+      "id": "rl-92",
+      "title": "The Chronicles of New Britannia",
+      "url": "https://docs.google.com/document/d/1ZZY_VukV4lBbLsz9MzW5J4iUP5TjIUP0Qu_PbEP5Efw/edit?tab=t.0#heading=h.5bsbgrw7ta96",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "Dunkleheart",
+      "description": "A series full of spin-offs on OLE/CC. Created by Dunkleheart, but others have made fan cases for it."
+    },
+    {
+      "id": "rl-93",
+      "title": "The Great Casing Era Case List!",
+      "url": "https://docs.google.com/document/d/1wtvPsAXaqYWXQxdMGIJVj1aN72V3UQR8ssfSe733TNk/edit?tab=t.0",
+      "category": "Other Case Lists",
+      "type": "case list",
+      "creator": "@orel2109 & @snowbythesnowcone",
+      "description": "A cooperative list for several casemakers from Untitled Courtroom that contains cases with neat logos."
+    },
+    {
+      "id": "rl-94",
+      "title": "An Ace Attorney CHAT PROGRAM!? - AO2 FULL TUTORIAL!",
+      "url": "https://youtu.be/-YGvxjU91Rk?si=Ezbyhp-o4yY7VH2R",
+      "category": "Videos",
+      "type": "Tutorial",
+      "creator": "Killing Fever Online Archives",
+      "description": "A video that gets you started right into the client version of Attorney Online 2 as of recent times."
+    },
+    {
+      "id": "rl-95",
+      "title": "Attorney Online - Turnabout Tumble",
+      "url": "https://youtu.be/LxskWdOFkf4",
+      "category": "Videos",
+      "type": "Tutorial",
+      "creator": "Fricka",
+      "description": "A 2024 run recording of a case made for starters. It shows you how cases are mostly played in general."
+    },
+    {
+      "id": "rl-96",
+      "title": "Attorney Online - Break during a court in a nutshell",
+      "url": "https://youtu.be/wfkeKaG8T40?si=jwh7DonfkGuEFTS6",
+      "category": "Videos",
+      "type": "Meme",
+      "creator": "Gaming With Luigi",
+      "description": "The most viral AO video of all time that encapsulates perfectly the chaotic nature of this site."
+    },
+    {
+      "id": "rl-97",
+      "title": "Attorney Online: How NOT to start a case",
+      "url": "https://youtu.be/GbnzDIdZcTg?si=XzLf_uVT3oFnRu5z",
+      "category": "Videos",
+      "type": "Meme",
+      "creator": "Aaron Woolvine",
+      "description": "The first viral video that catapulted AO back in 2013. It is a joke on how not to start casing."
+    },
+    {
+      "id": "rl-98",
+      "title": "Official Law Empire - Youtube Channel",
+      "url": "https://www.youtube.com/@officiallawempire7136/featured",
+      "category": "Videos",
+      "type": "Channel",
+      "creator": "Official Law Empire",
+      "description": "The channel from OLE on Youtube. It has recorded several case runs between 2021 and 2022."
+    },
+    {
+      "id": "rl-99",
+      "title": "Attorney Online - Perkorn",
+      "url": "https://youtube.com/playlist?list=PLiHaeYYaTtqyhL7anD8vER1rsVNDwTcFg&si=OyGmpWQwoJgG1vak",
+      "category": "Videos",
+      "type": "Playlist",
+      "creator": "PerKorn",
+      "description": "A playlist of hundreds of recorded runs that have cases tried from the Case Café AO server."
+    },
+    {
+      "id": "rl-100",
+      "title": "Hearts Bot - Youtube Channel",
+      "url": "https://www.youtube.com/@The_Hearts_Bot",
+      "category": "Videos",
+      "type": "Channel",
+      "creator": "Hearts Bot",
+      "description": "A channel that has uploaded content from early 2020 to 2021, containing various meme videos."
+    },
+    {
+      "id": "rl-101",
+      "title": "Turnabout Luigi 'Til the End",
+      "url": "https://youtu.be/z1nst9954DU?si=XtsLehDdCIhwHmyQ",
+      "category": "Videos",
+      "type": "Meme",
+      "creator": "Unknown",
+      "description": "A 2022 run recording that shows a prosecutor called Naoto beating 10 defense attorneys by doing absolutely nothing."
+    },
+    {
+      "id": "rl-102",
+      "title": "The 2024 AO JUNE YEAR AWARDS",
+      "url": "https://www.youtube.com/watch?v=x357RHtOfjE",
+      "category": "Videos",
+      "type": "Meme",
+      "creator": "Fricka & Pina",
+      "description": "An award show that was hosted in June 2024 on the official AO discord, garnering 33 users in a VC."
+    },
+    {
+      "id": "rl-103",
+      "title": "The Second Annual 2025 AO June Year Awards in January",
+      "url": "https://youtu.be/MTYbuCtZcYU",
+      "category": "Videos",
+      "type": "Meme",
+      "creator": "Fricka, Pina & Fruit",
+      "description": "The long anticipated successor to the first AO June Year Awards with special guest and professional German sD."
+    },
+    {
+      "id": "rl-104",
+      "title": "Attorney Online /Vidya/ - Full Court Turnabout",
+      "url": "https://youtu.be/XMTU56CRQy8?si=A8I5NJ_wRr3PMPlW",
+      "category": "Videos",
+      "type": "VOD",
+      "creator": "Sunny",
+      "description": "An old case VOD from 2017."
+    },
+    {
+      "id": "rl-105",
+      "title": "Apollo Justice - Online Attorney: The Turnabout Dab",
+      "url": "https://youtu.be/NB5mk0XyQn8?si=a6MZTAOlzJg76ScC",
+      "category": "Videos",
+      "type": "VOD",
+      "creator": "christophr",
+      "description": "An old improv case from 2017 very thematic to the culture of the time."
+    },
+    {
+      "id": "rl-106",
+      "title": "Ace Attorney Online: Turnabout Obliterator (Normal Version)",
+      "url": "https://www.youtube.com/watch?v=rOntnODHXCU",
+      "category": "Videos",
+      "type": "VOD",
+      "creator": "Aaron Woolwine",
+      "description": "An old case VOD of one of Woolwine's own cases."
+    },
+    {
+      "id": "rl-107",
+      "title": "The Fastest Case in Ace Attorney Online",
+      "url": "https://www.youtube.com/watch?v=3bK9LblDc5Y&feature=youtu.be",
+      "category": "Videos",
+      "type": "Meme",
+      "creator": "r1n",
+      "description": "An attempt to do a case as fast as possible (although, record has since been beaten)."
+    },
+    {
+      "id": "rl-108",
+      "title": "Russian Turnabout (XYZ vs. Yoru)",
+      "url": "https://www.youtube.com/watch?v=5O2SMAPvA_8",
+      "category": "Videos",
+      "type": "VOD",
+      "creator": "Official Law Empire",
+      "description": "A run from the winner of the Summer 2024 Casemaking Jam."
+    },
+    {
+      "id": "rl-109",
+      "title": "Lista de Casos em Português",
+      "url": "https://docs.google.com/spreadsheets/d/1F661YNszdjgfBZZh29nyuWqIjmYHoC_3L8FEHeWv1fo/edit#gid=0",
+      "category": "Translations",
+      "type": "Case List",
+      "creator": "Advocacia Geral Brasil",
+      "language": "Portuguese",
+      "description": "A list of cases in the Portuguese language. Some are translations, but many are original."
+    },
+    {
+      "id": "rl-110",
+      "title": "Lista de Casos de D9",
+      "url": "https://docs.google.com/document/d/1OWJxwjkkvKBNgs9lWhFRD86HQqMbda4kWkF5yMxrl2o/edit",
+      "category": "Translations",
+      "type": "Case List",
+      "creator": "Distrito 9",
+      "language": "Spanish",
+      "description": "A list of cases in the Spanish language. Like the other one, some are translations, but most are original."
+    },
+    {
+      "id": "rl-111",
+      "title": "Shapeshifter Русскоязычный Attorney Online 2 сервер",
+      "url": "https://sshapeshifter.ru/",
+      "category": "Translations",
+      "type": "Website",
+      "creator": "Shapeshifter",
+      "language": "Russian",
+      "description": "A website in Russian containing guides and links for casing on their Discord server."
+    },
+    {
+      "id": "rl-112",
+      "title": "AOV - Case Archive (2015-2021)",
+      "url": "https://aovidya.pw/archive#",
+      "category": "Miscellaneous",
+      "type": "Website",
+      "creator": "AO Vidya",
+      "description": "Up-to-date archive of cases stored in the website of AOV includes other events within their website."
+    },
+    {
+      "id": "rl-113",
+      "title": "Characters",
+      "url": "https://drive.google.com/drive/folders/1FDBYIEParEa17lPPNqMLwPskVO4ejrjn",
+      "category": "Miscellaneous",
+      "type": "Files",
+      "creator": "Sp Ga de Fi",
+      "description": "Contains an array of characters which includes the rest of the characters in the Ace Attorney games."
+    },
+    {
+      "id": "rl-114",
+      "title": "Canon Character Custom Sprites",
+      "url": "http://aaonline.fr/forum/viewtopic.php?f=30&t=7314",
+      "category": "Miscellaneous",
+      "type": "Sprites",
+      "creator": "ApolloGrimoire",
+      "description": "Includes many Custom Sprites of the Ace Attorney characters. Eg. 2D DDPhoenix, Robert Hammond etc."
+    },
+    {
+      "id": "rl-115",
+      "title": "AO2 Theme Library",
+      "url": "https://docs.google.com/document/d/1CuduJm723hEVhPnxHl0n16BJ9scASwyH_8TzV4d-TjU/edit",
+      "category": "Miscellaneous",
+      "type": "Themes",
+      "creator": "poyoko",
+      "description": "Includes many themes to spice up the look of your AO Client."
+    },
+    {
+      "id": "rl-116",
+      "title": "2013 Cases",
+      "url": "https://docs.google.com/document/d/1tKcCuHylcq3o2dzlmaDP4eg0ksvPd9gSZP3jjvw8pPU/edit",
+      "category": "Miscellaneous",
+      "type": "Case Archive",
+      "creator": "Unknown",
+      "description": "A historic fossil, a collection of cases that span all the way back to 2013. Gives an interesting insight."
+    },
+    {
+      "id": "rl-117",
+      "title": "Turnabout Blue - Database",
+      "url": "https://docs.google.com/document/d/1JFxYXP8dG2zyRVBE_22tmZzw-tGptaOALLaPtrJa9Fo/edit#heading=h.4os4b3bqhgzh",
+      "category": "Miscellaneous",
+      "type": "Database",
+      "creator": "Wolfang",
+      "description": "A collection of resources to do with the famous AO case, Turnabout Blue."
+    },
+    {
+      "id": "rl-118",
+      "title": "Case Making Guide for Blox Attorney v1.01",
+      "url": "https://docs.google.com/document/d/1hu6qGadsnVGPRHRqs0QuHH2DkLH5QbcadP956eCLJOM/edit#heading=h.659qa42cavt6",
+      "category": "Miscellaneous",
+      "type": "Guide",
+      "creator": "CenroDisconnect, Protogeniax",
+      "description": "Technically a guide, but it's for Roblox. Gives an interesting insight into how cases are made and played on Roblox instead of AO."
+    },
+    {
+      "id": "rl-119",
+      "title": "Demon Server for Demons! Downloads!",
+      "url": "https://docs.google.com/document/d/1c9yBBtcCFso_Zee7Ysa-Fiue-SefPQLaiIZFR4_4aLs/edit",
+      "category": "Miscellaneous",
+      "type": "Download",
+      "creator": "Demon Server",
+      "description": "An old download link for a long dead archaic server."
+    },
+    {
+      "id": "rl-120",
+      "title": "(AO) Hotel Drax Official Server Document",
+      "url": "https://docs.google.com/document/d/1pms9BEI4vfkhqxpD120Pp9y5ret7Z6hw7YH5WRO1GZY/edit",
+      "category": "Miscellaneous",
+      "type": "Download",
+      "creator": "Hotel Drax",
+      "description": "An old document detailing an old AO server from 2014 to 2015. Do be warned, it has My Little Pony."
+    },
+    {
+      "id": "rl-121",
+      "title": "The AO Thank You Project",
+      "url": "https://docs.google.com/document/d/1zTO8oWfqC-rK028-EpysIk7aLXrNKV8FGVeDVxX5CvM/edit",
+      "category": "Miscellaneous",
+      "type": "Archive",
+      "creator": "Various Users",
+      "description": "An old document showing appreciation to other casers of the time."
+    },
+    {
+      "id": "rl-122",
+      "title": "Turnabout Brothers Database",
+      "url": "https://docs.google.com/document/d/1YNLeOa7A5SrBJT4tmjtlmKgsYzFw9ZWcHm6LYVZ_QpQ/edit",
+      "category": "Miscellaneous",
+      "type": "Database",
+      "creator": "Mgnony",
+      "description": "A database tracking all 18 runs of the case Turnabout Brothers."
+    },
+    {
+      "id": "rl-123",
+      "title": "Ace Attorney Trilogy PC (Almost Every) Files",
+      "url": "https://drive.google.com/drive/folders/12I2g0r_pA5ABJMMkzx1x7phslhBXS6Qo",
+      "category": "Miscellaneous",
+      "type": "Files",
+      "creator": "Court Records.net",
+      "description": "A Google Drive compilation that contains every essential graphic of the game Ace Attorney Trilogy for PC."
+    },
+    {
+      "id": "rl-124",
+      "title": "CharIniMaker",
+      "url": "https://github.com/Salanto/AO2-CharIniMaker",
+      "category": "Miscellaneous",
+      "type": "Tool",
+      "creator": "Salanto",
+      "description": "A char.ini maker that can be used in the creation of Attorney Online files."
+    },
+    {
+      "id": "rl-125",
+      "title": "DRO Button Maker",
+      "url": "https://github.com/Chrezm/DROButtonMaker",
+      "category": "Miscellaneous",
+      "type": "Tool",
+      "creator": "Chrezm",
+      "description": "A tool that can be used to make buttons for Danganronpa Online."
+    },
+    {
+      "id": "rl-126",
+      "title": "Advanced Renamer",
+      "url": "https://www.advancedrenamer.com/download",
+      "category": "Miscellaneous",
+      "type": "Tool",
+      "creator": "Kim Jensen",
+      "description": "A useful tool for quickly renaming files."
+    },
+    {
+      "id": "rl-127",
+      "title": "VCL Logos",
+      "url": "https://drive.google.com/drive/folders/1aHkWClnnwsEA7HWNwzjQxaFqDVqaqzOR",
+      "category": "Miscellaneous",
+      "type": "Files",
+      "creator": "Vanilla Casing Hub",
+      "description": "A collection of all the logos that can be used for thumbnails elsewhere."
+    },
+    {
+      "id": "rl-128",
+      "title": "Court of Attrition Stenography Library",
+      "url": "https://docs.google.com/spreadsheets/d/1RYbkLHc2o9sXP12HL2OYeEcAkTuaMBxgNY0Df0tQYa8/edit?usp=sharing",
+      "category": "Miscellaneous",
+      "type": "Database",
+      "creator": "Court of Attrition",
+      "description": "A list of recorded runs of cases spanning from original Court of Attrition to current day with cases from other servers too."
+    }
+  ]
+}

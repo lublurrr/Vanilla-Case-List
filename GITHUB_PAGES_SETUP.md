@@ -114,27 +114,26 @@ If it doesn't appear right away, wait another minute or two and refresh. First-t
 
 ## Step 6 — Make the Discord embed image work (one-time fix)
 
-When someone pastes your site link into Discord, Discord shows a preview card ("embed") with the VCL logo. For that logo to show up, the site needs the **full** image URL — and you only know that URL after Step 5.
+When someone pastes a site link into Discord, Discord shows a preview card ("embed"). Each page has its own: the Case List shows the VCL logo behind a navy bar, the Ultimate Archive its logo behind a cyan bar, and the Resource Library the VRL logo behind a brown bar.
 
-1. Note your live URL from Step 5, e.g. `https://YOUR-USERNAME.github.io/vanilla-case-list/`
-2. In your repository, open `index.html` and click the pencil icon (✏️) to edit it.
-3. Near the top, find these two lines:
-   ```
-   <meta property="og:image" content="images/vcl-logo.png" />
-   ```
-   ```
-   <meta name="twitter:image" content="images/vcl-logo.png" />
-   ```
-4. Change **both** `images/vcl-logo.png` values to the full URL — your live URL with `images/vcl-logo.png` on the end. For example:
-   ```
-   <meta property="og:image" content="https://YOUR-USERNAME.github.io/vanilla-case-list/images/vcl-logo.png" />
-   ```
-   ```
-   <meta name="twitter:image" content="https://YOUR-USERNAME.github.io/vanilla-case-list/images/vcl-logo.png" />
-   ```
-5. Scroll down, write a commit message like "Fix embed image URL", and click **Commit changes**.
+Those cards need the **full** image URL, and you only know it after Step 5. If you move the site — a different repository name, or your own domain — update the URL in **three** files:
 
-That's it — you only ever need to do this once. To test it, paste your site link into a Discord channel; you should see the VCL logo in the preview card. (If Discord still shows the old preview, it's caching — try adding `?v=2` to the end of the link once to force a refresh.)
+| File | Lines to change |
+|------|-----------------|
+| `index.html` | `og:url`, `og:image`, `twitter:image` |
+| `archive.html` | `og:url`, `og:image`, `twitter:image` |
+| `resources.html` | `og:url`, `og:image`, `twitter:image` |
+
+Each currently starts with `https://lublurrr.github.io/vanilla-test-list/`. Swap that prefix for your live URL from Step 5, keeping the rest of the path (`images/vcl-logo.png`, `images/vua-logo.png`, `images/vrl-logo.png`) as it is.
+
+To test, paste a site link into a Discord channel.
+
+**Two different caches can go stale, and they need two different fixes:**
+
+- **The page itself looks cached** (old title/description) → add `?v=2` (any real `key=value`, not just a bare `?something`) to the end of the **page** link once, to force Discord to re-fetch the HTML.
+- **The title/description update but the picture doesn't** → Discord caches the **image** separately from the page, keyed by the image's own URL. Bumping the page URL doesn't touch it. Instead, add a version number to the image URL itself in that page's `og:image` and `twitter:image` tags — e.g. change `images/vua-logo.png` to `images/vua-logo.png?v=2` — and bump that number by one again next time you swap the file. This is exactly what happened when the real Ultimate Archive logo replaced its placeholder: the page's text updated instantly, but Discord kept showing the old picture until the image URL itself changed.
+
+**Replacing a logo later** (e.g. real Resource Library or Case List artwork): overwrite the file in `images/` at the same size — 1440×720 — then bump the `?v=` number on that page's `og:image`/`twitter:image` tags so Discord actually picks up the new picture. The on-page header logo updates immediately either way; it's only the Discord/social preview that needs the version bump.
 
 ---
 
