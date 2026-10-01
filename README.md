@@ -1,7 +1,31 @@
-# Vanilla Case List — Website
+# Vanilla Case List — Seasonal Themes
 
-A drop-in static website for the Vanilla Case List. Just place this folder
-anywhere on your existing website and link to its `index.html`.
+This is the **theme workshop** for the [Vanilla Case List](https://github.com/lublurrr/vanilla-test-list):
+a full, working copy of the site with a seasonal theme layer on top, so new
+looks can be built and tried out here without touching the live list.
+
+The site dresses itself for the time of year — pumpkins through late October,
+holly through December, pastels around Easter — from the date on each
+visitor's own clock. There is no theme menu: everyone sees the season their
+calendar is in.
+
+| | |
+| --- | --- |
+| **Theme gallery** | [`themes.html`](themes.html) — every theme side by side; linked from the Seasonal Themes strip on the Case List |
+| **Theme palettes** | [`themes.css`](themes.css) — one block of colour tokens per season |
+| **Theme logic** | [`themes.js`](themes.js) — which theme, and when |
+| **Scenes** | [`scenes.js`](scenes.js) — the illustrated horizon behind the masthead |
+| **Case Vault** | [`vault/`](vault/) — a linked case-file reader by axestyra, brought over from [Vanilla-Case-List](https://github.com/lublurrr/Vanilla-Case-List); live at `/vault/`, see [`vault/README.md`](vault/README.md) |
+
+Two differences from the live repository, both deliberate:
+
+- no `CNAME`, so this copy never competes for the `vanillacaselist.com`
+  domain — it publishes to `lublurrr.github.io/vanilla-test-list-themes/`;
+- no analytics tag, so staging traffic stays out of the live site's numbers.
+
+Everything below the theme chapter is the list-maintainer documentation
+carried over from the main repository; the case data here is a snapshot and is
+not the one to edit for the live list.
 
 > **New to GitHub or hosting websites?** See **`GITHUB_PAGES_SETUP.md`** in this folder for a step-by-step guide to publishing the site for free on GitHub Pages — no coding experience required.
 
@@ -11,14 +35,181 @@ anywhere on your existing website and link to its `index.html`.
 vanilla-case-list/
 ├── index.html               The main page (drop-in entry point)
 ├── styles.css               Ace Attorney inspired styling, manilla folder cards
-├── app.js                   Search, sort, filter, random selector
+├── app.js                   Case List: search, sort, filter, random selector
+├── resources.js             Resource Library / Ultimate Archive: overlay windows, search
 ├── cases.json               The case data — edit this to add/remove cases
 ├── site_info.json           Last-updated / scheduled-update labels for the Docket panel
+├── data/
+│   ├── resource-library.json   Resource Library entries (see below)
+│   └── ultimate-archive.json   Ultimate Archive entries (see below)
 ├── images/
 │   └── cases/               Many case logos
+├── themes.css               Seasonal palettes — one block of tokens per season
+├── themes.js                Picks the season from the visitor's date
+├── scenes.js                Draws each season's illustrated horizon
+├── themes.html              Gallery of every theme, built from the THEMES table
+├── vault/                   Case Vault: case documents as a linked case file (own README)
+├── .nojekyll                Keeps GitHub Pages from running Jekyll, which would turn the
+│                            vault's markdown notes into HTML before vault.js can read them
 ├── GITHUB_PAGES_SETUP.md    Beginner guide to hosting on GitHub Pages
 └── README.md                This file
 ```
+
+## Seasonal themes
+
+### How a theme gets chosen
+
+`themes.js` sets `data-theme="…"` on `<html>`, and every rule in `themes.css`
+hangs off that attribute. It resolves in this order, highest first:
+
+1. **`?theme=<id>` in the URL** — a one-off preview for checking a season out
+   of season, e.g. `index.html?theme=christmas`. It is not remembered: the next
+   page goes back to the date. Nothing on the site links to it except the
+   gallery's previews.
+2. **Today's date, on the visitor's clock** — the windows in the `THEMES`
+   table below. A visitor in Tokyo and one in London on either side of
+   midnight can briefly see different seasons; that is by design.
+3. **`classic`** — the courtroom cream the list has always worn.
+
+Earlier versions had a theme menu that saved the visitor's pick in
+`localStorage`. With the menu gone, a saved pick would be stuck and
+unchangeable, so it is ignored and cleared on the next visit.
+
+The script is loaded from `<head>` *without* `defer` on purpose: it has to set
+the attribute before the first paint, or the classic palette flashes on screen
+on its way to the season.
+
+### The seasons
+
+| Theme | `id` | Window |
+| --- | --- | --- |
+| Classic Vanilla | `classic` | all year (the fallback) |
+| New Year | `newyear` | Dec 28 – Jan 6 |
+| Valentine's | `valentines` | Feb 7 – Feb 16 |
+| Easter | `easter` | Mar 20 – Apr 21 |
+| Halloween | `halloween` | Oct 1 – Nov 2 |
+| Christmas | `christmas` | Dec 1 – Dec 27 |
+
+Any day outside every window wears Classic Vanilla — which now includes the
+summer months and most of the autumn, since those two seasons were removed.
+
+Easter moves around the calendar, so its window is a generous spring band
+rather than an exact date. Where two windows overlap, the **tighter** one wins,
+so a one-week holiday always beats a three-month season.
+
+### Adding a season
+
+Two edits, and nothing else in the site needs to know about it:
+
+1. **`themes.css`** — add a `[data-theme="<id>"]` block. Copy an existing one
+   and change the colours. Two house rules keep the site readable: the
+   cream/paper family stays light, the ink family stays dark. The difficulty
+   tokens (`--easy`, `--medium`, `--hard`) are deliberately left alone, so
+   blue/gold/red mean the same thing all year round.
+
+2. **`themes.js`** — draw the season's marks into the `MARK` library, then add
+   an entry to the `THEMES` table:
+
+   ```js
+   MARK.mask = '<path ' + SOLID + ' d="…"/>';   // inner markup, 24×24 viewBox
+
+   {
+     id: 'carnival',
+     label: 'Carnival',
+     blurb: 'Confetti and masks.',
+     windows: [['02-01', '02-06']],  // inclusive, "MM-DD"; wraps past New Year
+     emblem: MARK.mask,              // the crest and the gallery's icon
+     fall: [MARK.mask, MARK.confetti]   // tiled into the background wash
+   }
+   ```
+
+   Marks are inner markup for a **24×24 viewBox**, and they inherit their
+   colour, so use `currentColor` — the `LINE` and `SOLID` constants at the top
+   of the file carry the shared stroke weight and fill. A mark is drawn as
+   small as 20px, so keep the silhouette bold: fine serrations and interior
+   detail turn to mush at that size. Reuse a mark from another season freely.
+
+3. **For a scene** (optional — a season without one still gets its palette,
+   backdrop and marks): add the `--scene`, `--scene-sky`, `--scene-ink*`,
+   `--scene-accent` and `--horizon-*` tokens to its block in `themes.css`, and
+   a drawing function to the `SCENES` table in `scenes.js`. The function gets
+   the header's width and height, the half-width of the logo's column to keep
+   clear, a horizon height, a size unit and a seeded random source; `ridge()`
+   and `mark()` do most of the work.
+
+The theme gallery and the masthead both read from those tables, so they pick
+the new season up on their own.
+
+### Checking your work
+
+There is nothing to build — open `index.html` in a browser, or serve the folder
+with `python3 -m http.server`. To see a season out of season, open its card in
+the gallery, or use a URL: `index.html?theme=halloween`. To check what the
+calendar would choose on a given day, from the browser console:
+
+```js
+VCLThemes.forDate(new Date('2026-10-31'))  // "halloween"
+VCLThemes.active()                          // what this page is wearing
+```
+
+### What a theme does and does not touch
+
+A theme re-tints the shared palette, so the Case List follows it wholesale. The
+Ultimate Archive and the Resource Library keep their own page identities — the
+Archive's celeste, the Library's brown and gold are set per page in
+`styles.css` — so on those two pages the season shows in the backdrop rather
+than in the panel colours. That is
+intentional: the three windows are meant to stay tellable apart.
+
+### What sets each season apart
+
+The palettes keep every panel on readable paper. The seasons part company
+behind it, in two places:
+
+**The masthead is a scene.** Each season paints the header as a sky, puts a
+light right behind the logo, and draws a horizon along the bottom:
+
+| Season | Sky | Behind the logo | Horizon |
+| --- | --- | --- | --- |
+| New Year | midnight, starfield | gold glow | fireworks over a lit skyline |
+| Valentine's | rose | pale blush | heart garlands, a lace edge |
+| Easter | spring blue | soft sun | clouds, tulips and painted eggs on the hills |
+| Halloween | bruised purple | **the full moon** | a bare tree, a leaning graveyard, bats |
+| Christmas | winter night | lamplight | snowy pines and a lit cabin |
+
+The horizon is drawn by `scenes.js` at the header's real pixel size, not scaled
+from a fixed canvas, and redrawn whenever that size changes. It steps aside for
+the logo's column, and the ridges calm down towards the middle so the credits
+and crest always sit on open sky. Each season's shapes are seeded, so the scene
+is the same on every visit.
+
+The light and the moon are anchored to where the logo actually is (`--logo-w`
+and `--logo-cy` in `themes.css`), not to a percentage of the header: on a phone
+the header is shorter, and a percentage slid the moon down behind the credits.
+
+**The page has a backdrop.** Behind the panels, each season has a colour and a
+weave of its own: a starfield for New Year, tufted satin quilting for
+Valentine's, painted-egg stripes and polka dots for Easter, a spider's web in
+the corner of the night for Halloween, a gift-wrap lattice dusted with snow for
+Christmas. A
+sparse tile of the season's marks is washed over it.
+
+**Nothing moves.** An earlier version had marks falling down the page; they
+were taken out, so the themes are entirely still.
+
+Nothing is read straight off the backdrop: every panel sits on paper, and the
+Archive and Library footers, which used to be transparent, get a paper band
+when a scene is on. The Archive and Library heroes keep their own identity and
+get no scene.
+
+Every mark is SVG drawn on the same 24×24 grid at the same stroke weight. No
+emoji: they render differently on every platform, can't take the palette's
+colour, and never match the site's line work.
+
+### Accessibility
+
+The wash and the scene are decorative only: both are hidden from assistive
+technology and neither takes pointer events.
 
 ## Files you'll edit as a list maintainer
 
@@ -28,6 +219,88 @@ Almost all updates only touch two files:
 - **`site_info.json`** — sets the "Last updated" and "Scheduled update" dates shown in the Docket panel. Open the file in any text editor and change the date strings.
 
 The "What's new" list in the Docket panel is **auto-derived from cases.json**: cases with the most recent `approval_date` show up there automatically. You don't need to maintain it separately.
+
+## Resource Library & Ultimate Archive
+
+The site has two additional full-screen windows alongside the Case List, opened from the
+**Case List / Resource Library / Ultimate Archive** nav bar at the top of the page (or the
+matching buttons in the resource strip below it):
+
+- **Vanilla Resource Library** (`data/resource-library.json`) — guides, tools, and community
+  links for casing on Vanilla.
+- **Vanilla Ultimate Archive** (`data/ultimate-archive.json`) — the historical index of every
+  case ever created.
+
+Both pages are built from the same folder-tab boxes the Case List uses, stacked down the page,
+each one tinted to its own page's palette (celeste on the Archive, brown/gold on the Library):
+
+- **About** (Archive) — the page's `description` from its JSON, in its own box.
+- **Contents** (Library) — one compact card per section with its live entry count and blurb.
+  Click one to filter the results below.
+- **Filters** — the same panel as the Case List's: search, section/year chips, a Sort dropdown
+  (Listed order, A–Z, Z–A — no difficulty, length or NSFW controls, which are case-list-only)
+  and Reset, with the live count along the bottom.
+- The results grid itself, in its own panel.
+
+Picking a section drops its blurb in above the results, as a shelf label with an ornament of its
+own per section. Every control rides along in the URL (`?cat=`, `?q=`, `?sort=`) so a filtered
+view can be linked or bookmarked.
+
+Each window is completely independent: its own search box, its own category filter, its own
+scroll position, and its own `#resources` / `#archive` URL hash. Opening one never shows the
+other, and closing either one returns you to exactly where you were on the Case List. Escape,
+the × button, and the "Back to Case List" button all close the current window.
+
+### Adding or editing entries
+
+Both files share the same shape:
+
+```json
+{
+  "title": "...",
+  "tagline": "...",
+  "description": "...",
+  "sourceDocUrl": "https://docs.google.com/document/d/…",
+  "importNote": "Optional banner shown at the top of the window.",
+  "categories": ["Category A", "Category B"],
+  "entries": [
+    {
+      "id": "unique-id",
+      "title": "Entry title",
+      "category": "Category A",
+      "description": "One or two sentences.",
+      "url": "https://…",
+      "source": "google-doc | external | internal",
+      "type": "guide | tool | link | reference | download",
+      "tags": ["keyword", "keyword"]
+    }
+  ]
+}
+```
+
+Add a new object to `entries` and, if it introduces a new category, add that category name to
+the `categories` array so it shows up as a filter chip. No code changes are needed — both
+windows render straight from these two files, the same way the Case List renders from
+`cases.json`.
+
+### Why these files don't fully mirror the source Google Docs yet
+
+Both windows link back to their source Google Doc (via `sourceDocUrl` and the **View Source
+Document** button), which remains the authoritative, most current copy. The JSON files ship
+with a starter set of entries built from links and references that already existed elsewhere
+in this project (the Discord, the tier list, the submission form, the "How Do I Make a Case?"
+guide, etc.), rather than the full contents of the Docs themselves.
+
+That's because a Google Doc's body text isn't available to a static site (or to an automated
+tool reading the page) without a signed-in, JavaScript-rendered browser session — there's no
+public export endpoint for a Doc that isn't explicitly published to the web, and scraping the
+authenticated editor UI would be exactly the kind of fragile client-side scraper this project
+intentionally avoids. If you want the windows to show more of a Doc's contents:
+
+1. Open the source Doc yourself.
+2. For each section/link/guide you want listed, add an `entries` object following the schema
+   above (category, title, description, url, type, tags).
+3. Save the file — no rebuild step needed, it's picked up on next page load.
 
 ## Features
 
@@ -44,6 +317,7 @@ The "What's new" list in the Docket panel is **auto-derived from cases.json**: c
 - **Custom Files = clickable downloads.** When a case has a `custom_files_url` set, a green "Custom Files" pill appears automatically and links straight to the Drive folder for that case's assets. No tag needed.
 - **Resources nav strip** — Vanilla Ultimate Archive, Resource Library, Casing Hub Discord, Tier List, Submit form, FAQ.
 - **Built-in FAQ section** (toggleable) — all Q&As from the original doc.
+- **Per-page link previews.** Each page carries its own Open Graph card, so a pasted link shows that page's own logo, title and accent bar: navy + VCL logo for the Case List, cyan + the Ultimate Archive logo, brown + the VRL logo. See *Step 6* in `GITHUB_PAGES_SETUP.md` for the one prefix to change if the site moves.
 - **Mobile-responsive** down to phones.
 - **No build step, no dependencies.** Pure HTML/CSS/JS.
 

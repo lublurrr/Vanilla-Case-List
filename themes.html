@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seasonal Themes — Vanilla Case List</title>
+  <meta name="description" content="Every seasonal theme the Vanilla Case List wears through the year." />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vanilla Case List" />
+  <meta property="og:url" content="https://lublurrr.github.io/vanilla-test-list-themes/themes.html" />
+  <meta property="og:title" content="Seasonal Themes — Vanilla Case List" />
+  <meta property="og:description" content="Every seasonal theme the Vanilla Case List wears through the year." />
+  <meta property="og:image" content="https://lublurrr.github.io/vanilla-test-list-themes/images/vcl-logo.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="themes.css" />
+
+  <!-- Seasonal themes. Deliberately not deferred: it sets
+       <html data-theme="..."> before the first paint, so the classic
+       palette never flashes on its way to the season. -->
+  <script src="themes.js"></script>
+  <!-- The illustrated horizons. Deferred: it only draws once the page is
+       laid out, and the masthead's colours are already right without it. -->
+  <script src="scenes.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">
+        <img class="site-logo" src="images/vcl-logo-gold.png"
+          data-logo-auto="images/vcl-logo-gold.png" data-logo-preview="images/vcl-logo.png"
+          alt="Vanilla Case List" />
+      </h1>
+      <p class="site-credits">
+        <strong>Seasonal themes</strong><br>
+        <small>The same case list, dressed for the time of year</small>
+      </p>
+    </div>
+  </header>
+
+  <nav class="resources-nav" aria-label="Related pages">
+    <div class="resources-inner">
+      <a class="resource-link" href="index.html">
+        <span class="resource-text"><strong>Case List</strong><span>Back to the list</span></span>
+      </a>
+      <a class="resource-link" href="archive.html">
+        <span class="resource-text"><strong>Ultimate Archive</strong><span>Every case ever created</span></span>
+      </a>
+      <a class="resource-link" href="resources.html">
+        <span class="resource-text"><strong>Resource Library</strong><span>Guides &amp; tools</span></span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="theme-gallery">
+    <p class="theme-gallery__intro">
+      The site picks its own palette from the date on your calendar: pumpkins through late October,
+      holly through December, pastels around Easter, and the classic look in between. Every season is
+      shown below; open one to preview the case list in it out of season.
+    </p>
+
+    <div class="theme-gallery__grid" id="theme-gallery-grid">
+      <noscript>
+        <p>The theme gallery needs JavaScript. You can still reach a theme directly, for example
+          <a href="index.html?theme=halloween">index.html?theme=halloween</a>.</p>
+      </noscript>
+    </div>
+  </main>
+
+  <script>
+    /* Builds one card per theme straight from the THEMES table in themes.js,
+       so a season added there shows up here with no extra edits. Waits for
+       DOMContentLoaded because scenes.js is deferred, and deferred scripts
+       run after this inline one. */
+    document.addEventListener('DOMContentLoaded', function () {
+      'use strict';
+
+      var grid = document.getElementById('theme-gallery-grid');
+      if (!grid || !window.VCLThemes) return;
+
+      var emblem = window.VCLThemes.markup;
+      var SWATCHES = ['--cream', '--cream-deep', '--ink', '--gold', '--red', '--green'];
+      var activeToday = window.VCLThemes.forDate(new Date());
+
+      function windowText(theme) {
+        if (!theme.windows.length) return 'Available all year';
+        return window.VCLThemes.describeWindows(theme);
+      }
+
+      window.VCLThemes.list().forEach(function (theme) {
+        var card = document.createElement('article');
+        card.className = 'theme-card';
+        card.setAttribute('data-theme', theme.id);
+
+        var swatches = SWATCHES.map(function (token) {
+          return '<span class="theme-card__swatch" style="background: var(' + token + ')"></span>';
+        }).join('');
+
+        var isNow = theme.id === activeToday;
+
+        card.innerHTML =
+          '<div class="theme-card__scene">' +
+          '<span class="theme-card__medallion">' + emblem(theme.emblem, 'theme-card__emblem-lg') +
+          '</span></div>' +
+          '<div class="theme-card__preview">' +
+          '<h2 class="theme-card__name">' +
+          emblem(theme.emblem, 'theme-card__emblem') + theme.label + '</h2>' +
+          '<p class="theme-card__blurb">' + theme.blurb + '</p>' +
+          '<div class="theme-card__swatches" aria-hidden="true">' + swatches + '</div>' +
+          '<div class="theme-card__mock">' +
+          '<div class="theme-card__mock-title">Turnabout Sample</div>' +
+          '<div class="theme-card__mock-meta">3 days · Medium · Complete</div>' +
+          '</div>' +
+          '</div>' +
+          '<div class="theme-card__foot">' +
+          '<span class="theme-card__window' + (isNow ? ' is-now' : '') + '">' +
+          (isNow ? 'In season right now' : windowText(theme)) + '</span>' +
+          '<a class="theme-card__open" href="index.html?theme=' + theme.id + '">' +
+          'Open the case list in this theme</a>' +
+          '</div>';
+
+        grid.appendChild(card);
+
+        /* Drawn after the card is in the grid, so it knows its real width. */
+        var scene = card.querySelector('.theme-card__scene');
+        if (window.VCLScenes && window.VCLScenes.has(theme.id)) {
+          scene.insertAdjacentHTML('afterbegin',
+            window.VCLScenes.draw(theme.id, scene.clientWidth, scene.clientHeight, 34));
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

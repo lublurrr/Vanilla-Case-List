@@ -20,6 +20,11 @@
 
   --gold: #c9962b;
   --gold-light: #f0c14b;
+
+  --celeste-light: #e9fbfa;
+  --celeste: #cdf1ee;
+  --celeste-deep: #9fdedb;
+  --celeste-text: #0f5a57;
   --red: #b13438;
   --red-deep: #7d1a1f;
   --green: #4f8a3d;
@@ -143,8 +148,435 @@ body {
   line-height: 1.5;
 }
 
+/* ==========================================================================
+   Independent page hero (archive.html / resources.html)
+   Each of these pages has its own logo slot, separate from the
+   shared Vanilla Case List logo. Drop a file at the src path below
+   and it replaces the styled text fallback automatically.
+   ========================================================================== */
+
+.page-hero-logo-fallback {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: bold;
+  font-size: clamp(1.9rem, 5.5vw, 3.1rem);
+  line-height: 1.15;
+  margin: 0 auto;
+  max-width: 700px;
+  color: var(--blue-deep);
+  text-shadow: 2px 2px 0 var(--ink);
+}
+
+.page-hero-resources .page-hero-logo-fallback {
+  color: var(--gold);
+  text-shadow: 2px 2px 0 var(--ink);
+}
+
+.page-hero-resources.site-header {
+  background: linear-gradient(180deg, #2a1c10 0%, #1c130b 100%);
+  border-bottom: var(--border-thick);
+}
+
+.page-hero-resources .site-credits {
+  color: var(--cream-deep);
+}
+
 .site-credits small {
   color: var(--ink-light);
+}
+
+.page-hero-archive.site-header {
+  background: linear-gradient(180deg, var(--celeste-light) 0%, var(--celeste) 100%);
+  border-bottom: var(--border-thick);
+}
+
+.page-hero-archive .site-credits {
+  color: var(--celeste-text);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* The subtitle points back at the Case List, so the link has to read as one
+   against the celeste header rather than borrowing the site-wide link blue. */
+.page-hero-archive .site-credits a {
+  color: var(--celeste-text);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  /* Keep the site's name in one piece — split over a line break it read as
+     "…use the Vanilla Case / List instead." Held whole it drops to the last
+     line intact. */
+  white-space: nowrap;
+}
+
+.page-hero-archive .site-credits a:hover {
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   Whole-page theming for the standalone library pages.
+   Resource Library carries its header's dark brown down through the rest
+   of the page; Ultimate Archive uses a soft cyan "celeste" throughout.
+   ========================================================================== */
+
+body.page-resources {
+  background: linear-gradient(180deg, #2a1c10 0%, #1c130b 100%);
+}
+
+body.page-resources .resources-nav {
+  background-color: #1c130b;
+  border-bottom: var(--border-thick);
+}
+
+body.page-resources .resource-link {
+  background-color: #33240f;
+  border-color: var(--ink);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+body.page-resources .resource-link:hover {
+  background-color: #3f2c14;
+}
+
+body.page-resources .resource-text strong {
+  color: var(--gold-light);
+}
+
+body.page-resources .resource-text span:not(strong) {
+  color: var(--cream-deep);
+}
+
+body.page-resources .site-footer {
+  background-color: transparent;
+  border-top-color: var(--gold);
+  color: var(--cream-deep);
+}
+
+body.page-resources .site-footer .footer-small {
+  color: var(--cream-deep);
+  opacity: 0.8;
+}
+
+body.page-archive {
+  background: linear-gradient(180deg, var(--celeste-light) 0%, var(--celeste) 100%);
+}
+
+body.page-archive .resources-nav {
+  background-color: var(--celeste);
+  border-bottom: var(--border-thick);
+}
+
+body.page-archive .resource-link {
+  background-color: var(--celeste-light);
+  border-color: var(--ink);
+}
+
+body.page-archive .resource-link:hover {
+  background-color: #fff;
+}
+
+body.page-archive .resource-text strong {
+  color: var(--celeste-text);
+}
+
+body.page-archive .site-footer {
+  background-color: transparent;
+  border-top-color: var(--celeste-deep);
+}
+
+/* Big boxes (panel + entry cards) pick up the celeste theme that
+   surrounds them on the Ultimate Archive page. */
+body.page-archive .lib-page-panel {
+  background-color: var(--celeste-light);
+  background-image: none;
+  border-color: var(--ink);
+}
+
+body.page-archive .lib-entry-card {
+  background-color: #fff;
+  border-color: var(--ink);
+}
+
+body.page-archive .lib-box {
+  background-color: var(--celeste);
+  border-color: var(--ink);
+}
+
+/* The folder tabs follow the page, not the Case List's navy. */
+body.page-archive .lib-box::before {
+  background-color: var(--celeste-text);
+  color: var(--celeste-light);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+body.page-archive .lib-about-text,
+body.page-archive .lib-results-count {
+  color: var(--celeste-text);
+}
+
+body.page-archive .lib-note-banner {
+  background-color: var(--celeste-light);
+  border-color: var(--celeste-deep);
+  border-left-color: var(--celeste-text);
+}
+
+body.page-archive .lib-note-mark,
+body.page-archive .lib-note-label {
+  color: var(--celeste-text);
+}
+
+body.page-archive .lib-note-text {
+  color: var(--ink-soft);
+}
+
+body.page-archive .lib-box .search-wrap:focus-within {
+  background-color: #fff;
+  box-shadow: 0 0 0 3px var(--celeste-deep);
+}
+
+body.page-archive .lib-search-clear {
+  background-color: var(--celeste-text);
+  color: var(--celeste-light);
+}
+
+body.page-archive .lib-search-clear:hover {
+  background-color: var(--red);
+  color: #fff;
+}
+
+body.page-archive .lib-box .search-wrap,
+body.page-archive .lib-box .chip,
+body.page-archive .lib-box .lib-toc-card,
+body.page-archive .lib-box .lib-sort-select,
+body.page-archive .lib-box .reset-btn {
+  background-color: var(--celeste-light);
+}
+
+body.page-archive .lib-box .chip:hover,
+body.page-archive .lib-box .reset-btn:hover {
+  background-color: var(--celeste);
+  color: var(--ink);
+}
+
+body.page-archive .lib-box .chip.is-active {
+  background-color: var(--celeste-text);
+  border-color: var(--celeste-text);
+  color: var(--cream-light);
+}
+
+body.page-archive .lib-box .filter-label,
+body.page-archive .lib-toc-card-name {
+  color: var(--celeste-text);
+}
+
+body.page-archive .lib-results-count strong {
+  color: var(--celeste-text);
+}
+
+/* Resource Library: the panel + entry cards pick up the same warm
+   brown/gold theme used by the header and nav strip. */
+body.page-resources .lib-page-panel {
+  background-color: #2a1c10;
+  background-image: none;
+  border-color: var(--ink);
+}
+
+body.page-resources .lib-panel-desc,
+body.page-resources .lib-results-count,
+body.page-resources .lib-loading-state,
+body.page-resources .lib-error-sub,
+body.page-resources .lib-empty-sub {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-search-input {
+  color: var(--cream-light);
+}
+
+body.page-resources .lib-search-clear {
+  background-color: var(--gold);
+  color: var(--ink);
+}
+
+body.page-resources .lib-search-clear:hover {
+  background-color: var(--red);
+  color: #fff;
+}
+
+body.page-resources .lib-toc-legend {
+  background-color: #1c130b;
+  border-top-color: var(--ink);
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-box {
+  background-color: #33240f;
+  border-color: var(--ink);
+  color: var(--cream-deep);
+}
+
+/* The folder tabs follow the page, not the Case List's navy. */
+body.page-resources .lib-box::before {
+  background-color: #150d05;
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-about-text {
+  color: var(--cream-deep);
+}
+
+/* On the Library the blurb reads like a plate on a bookshelf: a gold-ruled
+   panel over dark leather, with the ornament and section name in gold. */
+body.page-resources .lib-note-banner {
+  background-color: #1c130b;
+  background-image: linear-gradient(160deg, rgba(240, 193, 75, 0.08), transparent 55%);
+  border: 1px solid var(--gold);
+  border-left: 4px solid var(--gold-light);
+  box-shadow: inset 0 0 0 1px rgba(240, 193, 75, 0.18), 0 3px 0 #000;
+}
+
+body.page-resources .lib-note-mark {
+  color: var(--gold-light);
+  background-color: #150d05;
+  box-shadow: 0 0 0 3px rgba(240, 193, 75, 0.12);
+}
+
+body.page-resources .lib-note-label {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-note-text {
+  color: var(--cream-light);
+}
+
+body.page-resources .lib-box .search-wrap:focus-within {
+  background-color: #150d05;
+  box-shadow: 0 0 0 3px var(--gold);
+}
+
+body.page-resources .lib-box .search-wrap,
+body.page-resources .lib-box .chip,
+body.page-resources .lib-box .lib-toc-card,
+body.page-resources .lib-box .lib-sort-select,
+body.page-resources .lib-box .reset-btn {
+  background-color: #1c130b;
+  color: var(--cream-deep);
+  border-color: var(--ink);
+}
+
+/* Native select chrome ignores the dark palette on some browsers, so on the
+   dark Library page draw the control (and its arrow) ourselves. */
+body.page-resources .lib-box .lib-sort-select {
+  color-scheme: dark;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%23e9d29a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 0.7rem;
+  padding-right: 1.9rem;
+}
+
+body.page-resources .lib-results-count strong {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-box .chip:hover,
+body.page-resources .lib-box .lib-toc-card:hover,
+body.page-resources .lib-box .reset-btn:hover {
+  background-color: #3f2c14;
+  color: var(--cream-light);
+}
+
+body.page-resources .lib-box .chip.is-active,
+body.page-resources .lib-box .lib-toc-card.is-active {
+  background-color: #150d05;
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+body.page-resources .lib-box .filter-label,
+body.page-resources .lib-toc-card-name,
+body.page-resources .lib-toc-card.is-active .lib-toc-card-name {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-toc-card-desc {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-toc-card-count {
+  background-color: #2a1c10;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+body.page-resources .lib-toc-legend {
+  margin-top: 1rem;
+  border: var(--border-thin);
+  border-radius: 4px;
+}
+
+body.page-resources .lib-entry-card {
+  background-color: #33240f;
+  border-color: var(--ink);
+  box-shadow: 0 3px 0 #000;
+}
+
+body.page-resources .lib-entry-card:hover {
+  background-color: #3f2c14;
+  box-shadow: 0 5px 0 #000;
+}
+
+body.page-resources .lib-entry-title {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-entry-desc,
+body.page-resources .lib-entry-meta {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-entry-category {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-entry-link {
+  color: var(--gold-light);
+}
+
+body.page-resources .lib-entry-link:hover {
+  color: var(--gold);
+}
+
+body.page-resources .lib-entry-footer {
+  border-top-color: var(--ink-light);
+}
+
+/* Type badges ("tags") on the Library keep the per-tag hues set above and
+   only restate them as darkened, translucent tones that sit naturally on the
+   dark brown cards. Nothing here names a tag, so adding a tag is still a
+   single line up in the hue table. */
+body.page-resources .lib-type-badge {
+  background-color: hsl(var(--tag-h) var(--tag-s) 30% / 0.45);
+  color: hsl(var(--tag-h) var(--tag-s) 78%);
+  border-color: hsl(var(--tag-h) var(--tag-s) 50%);
+}
+
+/* Icons need a lighter tone to stay visible against the dark theme. */
+body.page-resources .search-icon {
+  color: var(--cream-deep);
+}
+
+body.page-resources .lib-search-input::placeholder {
+  color: var(--cream-deep);
+  opacity: 0.65;
+}
+
+body.page-resources .resource-icon {
+  color: var(--gold-light);
 }
 
 /* ==========================================================================
@@ -154,7 +586,7 @@ body {
 .resources-nav {
   background-color: var(--cream-light);
   border-bottom: var(--border-thick);
-  padding: 0.85rem 1rem;
+  padding: 0.7rem 1rem;
 }
 
 .resources-inner {
@@ -172,7 +604,7 @@ body {
   background-color: var(--paper);
   border: var(--border-thin);
   border-radius: 4px;
-  padding: 0.55rem 0.75rem;
+  padding: 0.4rem 0.65rem;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -194,15 +626,17 @@ body {
 }
 
 .resource-icon {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1;
   flex-shrink: 0;
-  width: 28px;
+  width: 24px;
   text-align: center;
 }
 
 .resource-icon svg {
   display: block;
+  width: 19px;
+  height: 19px;
   margin: 0 auto;
 }
 
@@ -215,16 +649,14 @@ body {
 .resource-text strong {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: var(--blue-deep);
 }
 
 .resource-text span:not(strong) {
-  font-size: 0.78rem;
+  font-size: 0.73rem;
   color: var(--ink-soft);
 }
-
-
 
 .resource-faq-toggle[aria-expanded="true"] {
   background-color: var(--ink);
@@ -237,6 +669,212 @@ body {
 
 .resource-faq-toggle[aria-expanded="true"] .resource-text span:not(strong) {
   color: var(--cream-deep);
+}
+
+/* --- The site's own pages first, then the outbound links -----------------
+   The Case List, the Ultimate Archive and the Resource Library are pages of
+   this site, not links off it, so each page shows the other two as large
+   cards on a row of their own, each in its page's own colours. The outbound
+   links share the row below, in full rows only, so nothing is ever left
+   alone on a line of its own. */
+
+.resources-inner--split {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.resource-pages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.resource-page {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.65rem 1rem;
+  border: var(--border-medium);
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 3px 0 var(--ink);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.resource-page:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 var(--ink);
+}
+
+.resource-page:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 var(--ink);
+}
+
+.resource-page:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* The page's icon on a tile in the page's own colours. */
+.resource-page__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: var(--border-medium);
+  border-radius: 7px;
+}
+
+.resource-page__icon svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.resource-page__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  line-height: 1.25;
+}
+
+.resource-page__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+}
+
+.resource-page__blurb {
+  font-size: 0.8rem;
+}
+
+.resource-page__cta {
+  margin-top: 0.1rem;
+  font-size: 0.76rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.resource-page__cta span {
+  display: inline-block;
+  transition: transform 0.15s;
+}
+
+.resource-page:hover .resource-page__cta span {
+  transform: translateX(3px);
+}
+
+/* Case List: the courtroom cream and navy the list has always worn. */
+.resource-page--list {
+  background: linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%);
+}
+
+.resource-page--list .resource-page__icon {
+  color: var(--gold-light);
+  background: var(--blue-deep);
+}
+
+.resource-page--list .resource-page__title,
+.resource-page--list .resource-page__cta {
+  color: var(--blue-deep);
+}
+
+.resource-page--list .resource-page__blurb {
+  color: var(--ink-soft);
+}
+
+/* Archive: the celeste of its own header. */
+.resource-page--archive {
+  background: linear-gradient(180deg, var(--celeste-light) 0%, var(--celeste) 100%);
+}
+
+.resource-page--archive .resource-page__icon {
+  color: var(--celeste-light);
+  background: var(--celeste-text);
+}
+
+.resource-page--archive .resource-page__title,
+.resource-page--archive .resource-page__cta {
+  color: var(--celeste-text);
+}
+
+.resource-page--archive .resource-page__blurb {
+  color: var(--ink-soft);
+}
+
+/* Library: the candlelit brown of its own header, with gold lettering. */
+.resource-page--library {
+  background: linear-gradient(180deg, #2a1c10 0%, #1c130b 100%);
+}
+
+.resource-page--library .resource-page__icon {
+  color: var(--gold-light);
+  background: #3f2c14;
+  border-color: var(--gold);
+}
+
+.resource-page--library .resource-page__title,
+.resource-page--library .resource-page__cta {
+  color: var(--gold-light);
+}
+
+.resource-page--library .resource-page__blurb {
+  color: var(--cream-deep);
+}
+
+.resource-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+/* The Archive and Library have two outbound links: a pair at every width. */
+.resource-links--pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .resource-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Not even the pair fits on the narrowest phones without crushing. */
+@media (max-width: 340px) {
+  .resource-links--pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .resource-pages {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .resource-page {
+    gap: 0.7rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .resource-page__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .resource-page__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .resource-page__title {
+    font-size: 1.05rem;
+  }
 }
 
 /* ==========================================================================
@@ -865,6 +1503,7 @@ main {
 
 .search-wrap {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -895,6 +1534,13 @@ main {
   color: var(--ink);
   outline: none;
   min-width: 0;
+  /* width: 0 rather than just min-width: 0. A text input carries a
+     browser-default intrinsic width (~204px from the implied size=20), and
+     that width feeds the search label's min-content — which on a 320px phone
+     made the label wider than the toolbar holding it and scrolled the whole
+     page sideways. Zeroing it lets flex: 1 hand the input whatever room the
+     row actually has. */
+  width: 0;
 }
 
 #search::-webkit-search-decoration,
@@ -1864,12 +2510,15 @@ main {
   overflow: hidden;
 }
 
-
 .case-modal-tab {
   position: absolute;
   top: 0;
   width: 160px;
-  left: -2px;
+  /* The card itself has no border of its own — its 2px edge is drawn by the
+     panels inside it — so the tab starts at 0, not -2px. At -2px its left
+     border sat two pixels outside the card's, so the top-left corner looked
+     stepped instead of one continuous line. */
+  left: 0;
   height: 28px;
   background-color: var(--ink-light);
   border-top: 2px solid var(--ink);
@@ -2301,4 +2950,788 @@ main {
   font-style: normal;
   font-weight: 600;
   color: var(--ink-soft);
+}
+/* ==========================================================================
+   Primary section nav — Case List / Resource Library / Ultimate Archive
+   ========================================================================== */
+
+/* ==========================================================================
+   Resource Library / Ultimate Archive — overlay windows
+   Two structurally-identical, independently-stateful overlays. Styling is
+   shared via the .lib-* classes; only their content and data differ.
+   ========================================================================== */
+
+.lib-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  animation: fade-in 0.2s ease;
+}
+
+.lib-overlay[hidden] {
+  display: none;
+}
+
+.lib-overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(42, 31, 10, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+body.lib-overlay-open {
+  overscroll-behavior: contain;
+}
+
+.lib-panel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 1.25rem;
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(201, 150, 43, 0.07) 0%, transparent 25%),
+    radial-gradient(circle at 88% 92%, rgba(29, 67, 145, 0.05) 0%, transparent 30%);
+  border: var(--border-thick);
+  border-radius: 6px;
+  box-shadow: var(--shadow-deep);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 2.5rem);
+  overflow: hidden;
+  animation: pop-in 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lib-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%);
+  border-bottom: var(--border-thick);
+  flex: 0 0 auto;
+}
+
+.lib-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: var(--border-thin);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.12s, transform 0.08s;
+}
+
+.lib-back-btn:hover {
+  background-color: var(--cream-deep);
+  transform: translateX(-2px);
+}
+
+.lib-panel-titlewrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.lib-panel-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: bold;
+  color: var(--blue-deep);
+  margin: 0;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  text-shadow: 1px 1px 0 var(--gold-light);
+  letter-spacing: 0.01em;
+}
+
+.lib-panel-tagline {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.lib-close-btn {
+  flex-shrink: 0;
+  background: var(--cream-deep);
+  border: var(--border-thin);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 2px 5px rgba(42, 31, 10, 0.4);
+}
+
+.lib-close-btn:hover {
+  background: var(--red);
+  color: #fff;
+}
+
+.lib-panel-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 1.25rem;
+}
+
+.lib-panel-desc {
+  margin: 0 auto 1rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  max-width: 70ch;
+  text-align: center;
+}
+
+/* Section blurb — a shelf label: ornament, section name, then the blurb. */
+.lib-note-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  background-color: var(--blue-pale);
+  border: 1px solid var(--blue);
+  border-left: 4px solid var(--blue-deep);
+  border-radius: 4px;
+  padding: 0.85rem 1.1rem;
+  margin: 0 0 1.25rem;
+}
+
+.lib-note-mark {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  color: var(--blue-deep);
+  opacity: 0.85;
+}
+
+.lib-note-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.lib-note-label {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-deep);
+}
+
+.lib-note-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* ==========================================================================
+   Table of Contents — dynamically built from the loaded JSON (categories,
+   category blurbs, entry types, and the initialism legend).
+   ========================================================================== */
+
+.lib-toc-legend {
+  margin-top: 1rem;
+  border: var(--border-thin);
+  border-radius: 4px;
+  background-color: var(--cream-deep);
+  padding: 0.65rem 1rem;
+}
+
+.lib-toc-legend-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.lib-toc-legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.lib-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--ink);
+  outline: none;
+  min-width: 0;
+  /* Same browser-default intrinsic width as #search above — see the note
+     there for why this is width: 0 and not just min-width: 0. */
+  width: 0;
+}
+
+.lib-search-input::-webkit-search-decoration,
+.lib-search-input::-webkit-search-cancel-button,
+.lib-search-input::-webkit-search-results-button,
+.lib-search-input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.lib-search-input::placeholder {
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+.lib-search-clear {
+  flex-shrink: 0;
+  background: var(--ink-light);
+  color: var(--paper);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+.lib-search-clear:hover {
+  background-color: var(--red);
+}
+
+.lib-roulette-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0.55rem 0.9rem;
+}
+
+/* ==========================================================================
+   Standalone library pages — folder-tab boxes
+   --------------------------------------------------------------------------
+   The Resource Library and Ultimate Archive are stacks of the same
+   folder-tab panels the Case List uses: About/Contents, Filters,
+   then the results panel.
+   ========================================================================== */
+
+.lib-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* This sits inside <main>, which already supplies the page's 2rem/1.25rem
+     inset, so it adds none of its own — a second top inset here was what
+     pushed the box stack lower than the Case List's panels. Only the extra
+     breathing room under the last box is ours. */
+  padding: 0 0 1rem;
+}
+
+.lib-box {
+  background-color: var(--cream-light);
+  border: 2px solid var(--ink);
+  border-radius: 0 8px 8px 8px;
+  padding: 1rem 1.25rem;
+  /* 22px for the folder tab that hangs above the box, plus the same 1.5rem
+     of clear space every box leaves below itself. Adjacent margins collapse,
+     so this is the whole gap between two stacked boxes. */
+  margin-top: calc(22px + 1.5rem);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+/* The top box has nothing stacked above it, so it only needs the 22px the tab
+   hangs into — not the 1.5rem of separation between boxes. That puts it 54px
+   under the resource strip, the same as the Case List's first panel. */
+.lib-main>.lib-box:first-child {
+  margin-top: 22px;
+}
+
+.lib-box::before {
+  content: attr(data-tab-label);
+  position: absolute;
+  top: -22px;
+  left: -2px;
+  min-width: 130px;
+  height: 24px;
+  background-color: var(--blue-deep);
+  border: 2px solid var(--ink);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  padding: 0 1.1rem 0 0.55rem;
+}
+
+.lib-nowrap {
+  white-space: nowrap;
+}
+
+.lib-about-text {
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 78ch;
+  text-align: center;
+}
+
+/* --- Contents box: one compact card per section ------------------------- */
+.lib-toc-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.6rem;
+}
+
+.lib-toc-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  text-align: left;
+  font-family: var(--font-ui);
+  background-color: var(--cream);
+  border: var(--border-thin);
+  border-radius: 4px;
+  padding: 0.6rem 0.7rem;
+  cursor: pointer;
+  transition: background-color 0.12s, border-color 0.12s, transform 0.08s;
+}
+
+.lib-toc-card:hover {
+  background-color: var(--cream-deep);
+  transform: translateY(-1px);
+}
+
+.lib-toc-card.is-active {
+  border-color: var(--blue-deep);
+  background-color: var(--blue-pale);
+}
+
+.lib-toc-card-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.lib-toc-card-name {
+  font-family: var(--font-display);
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--blue-deep);
+}
+
+.lib-toc-card-desc {
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--ink-soft);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.lib-toc-card-count {
+  flex-shrink: 0;
+  align-self: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  background-color: var(--paper);
+  border: var(--border-thin);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+}
+
+/* --- Filters box ------------------------------------------------------- */
+.lib-box-filters .lib-results-count {
+  margin: 1.1rem 0 0;
+  padding-top: 0.9rem;
+}
+
+.lib-box-filters .lib-roulette-btn {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+}
+
+.lib-box-filters .reset-btn {
+  margin-left: auto;
+}
+
+/* The results panel sits inside .lib-main now, so it no longer centres
+   itself or adds the page's outer margin. */
+.lib-main .lib-page-panel {
+  margin: 0;
+  max-width: none;
+}
+
+/* Alphabetical index — a row of the same chips used everywhere else on
+   these pages, plus the same round "×" the search box uses to clear. */
+
+.lib-results-count {
+  font-size: 0.82rem;
+  color: var(--ink-light);
+  margin: 0 0 0.85rem;
+  font-style: italic;
+}
+
+.lib-entries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.lib-entry-card {
+  /* A grid item's automatic minimum is its min-content width, and a card
+     holding a long unbreakable title or a kept-whole site name can push that
+     past the column — which scrolled the whole page sideways on small phones.
+     Let the card shrink to its track and wrap the long word instead. */
+  min-width: 0;
+  overflow-wrap: anywhere;
+  background-color: var(--paper);
+  border: var(--border-medium);
+  border-radius: 4px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 3px 0 var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.lib-entry-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 var(--ink);
+}
+
+.lib-entry-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.lib-entry-category {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--blue-deep);
+}
+
+/* Tag badges.
+   Every tag gets its own hue so "Case List", "Templates", "Channel" and the
+   rest are told apart at a glance. Each tag class only names a hue and a
+   saturation; the badge rule below turns those into the background, text and
+   border, so the whole set stays in one family and a new tag is one line.
+   Tags with no hue of their own fall back to the parchment default declared
+   here. */
+.lib-type-badge {
+  --tag-h: 35;
+  --tag-s: 14%;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  padding: 0.12rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  background-color: hsl(var(--tag-h) var(--tag-s) 89%);
+  color: hsl(var(--tag-h) var(--tag-s) 27%);
+  border: 1px solid hsl(var(--tag-h) var(--tag-s) 52%);
+}
+
+/* Reference / documentation */
+.lib-type-guide { --tag-h: 220; --tag-s: 62%; }
+.lib-type-tutorial { --tag-h: 190; --tag-s: 60%; }
+.lib-type-reference { --tag-h: 205; --tag-s: 45%; }
+
+/* Things you use or download */
+.lib-type-tool { --tag-h: 162; --tag-s: 52%; }
+.lib-type-database { --tag-h: 138; --tag-s: 42%; }
+.lib-type-files,
+.lib-type-download,
+.lib-type-sprites { --tag-h: 96; --tag-s: 42%; }
+
+/* Lists and archives */
+.lib-type-case-list { --tag-h: 44; --tag-s: 74%; }
+.lib-type-archive,
+.lib-type-case-archive { --tag-h: 26; --tag-s: 72%; }
+
+/* Video */
+.lib-type-channel { --tag-h: 6; --tag-s: 68%; }
+.lib-type-playlist { --tag-h: 338; --tag-s: 56%; }
+.lib-type-vod { --tag-h: 290; --tag-s: 62%; }
+.lib-type-meme { --tag-h: 308; --tag-s: 70%; }
+
+/* Starting points you build a case from */
+.lib-type-template,
+.lib-type-templates,
+.lib-type-themes,
+.lib-type-templates-themes { --tag-h: 254; --tag-s: 50%; }
+
+/* Plain destinations */
+.lib-type-website { --tag-h: 212; --tag-s: 20%; }
+.lib-type-link { --tag-h: 35; --tag-s: 14%; }
+
+.lib-entry-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.08rem;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.lib-entry-desc {
+  font-size: 0.87rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.lib-entry-meta {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  opacity: 0.85;
+  margin-bottom: 0.35rem !important;
+}
+
+.lib-entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.lib-tag-pill {
+  font-size: 0.68rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background-color: var(--cream-deep);
+  color: var(--ink-soft);
+  border: 1px solid var(--ink-light);
+}
+
+.lib-entry-footer {
+  padding-top: 0.4rem;
+  border-top: 1px dashed var(--ink-light);
+  margin-top: auto;
+}
+
+.lib-entry-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.lib-entry-link:hover {
+  color: var(--blue-deep);
+  text-decoration: underline;
+}
+
+.lib-entry-link-disabled {
+  color: var(--ink-light);
+  cursor: default;
+}
+
+.lib-entry-link-disabled:hover {
+  color: var(--ink-light);
+  text-decoration: none;
+}
+
+.lib-panel-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--ink-light);
+  text-align: center;
+}
+
+.lib-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--cream-light);
+  background-color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  padding: 0.55rem 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 3px 0 var(--ink-soft);
+  transition: transform 0.08s, box-shadow 0.08s, background-color 0.15s;
+}
+
+.lib-source-link:hover {
+  background-color: var(--blue-deep);
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 var(--ink-soft);
+}
+
+.lib-loading-state,
+.lib-error-state,
+.lib-empty-state {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.lib-error-title,
+.lib-empty-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--red-deep);
+  margin: 0 0 0.5rem;
+}
+
+.lib-error-sub,
+.lib-empty-sub {
+  color: var(--ink-soft);
+  margin: 0.3rem 0;
+}
+
+.lib-empty-state {
+  grid-column: 1 / -1;
+}
+
+/* Focus visibility for keyboard users across the overlay */
+/* ============================================================
+   Standalone library page mode (Resource Library / Ultimate
+   Archive as real pages, not overlays). Reuses all .lib-* card,
+   toolbar and entry styling above, just laid out inline in the
+   page instead of a fixed, backdrop-covered overlay.
+   ============================================================ */
+.lib-page-panel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 1.5rem auto 3rem;
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(201, 150, 43, 0.07) 0%, transparent 25%),
+    radial-gradient(circle at 88% 92%, rgba(29, 67, 145, 0.05) 0%, transparent 30%);
+  border: var(--border-thick);
+  border-radius: 6px;
+  box-shadow: var(--shadow-deep);
+  padding: 0;
+}
+
+.lib-page-panel .lib-panel-header {
+  border-radius: 4px 4px 0 0;
+}
+
+.lib-page-panel .lib-panel-body {
+  overflow: visible;
+  padding: 1.25rem 1.5rem 1.75rem;
+}
+
+.lib-page-panel .lib-back-btn {
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .lib-page-panel {
+    margin: 0.75rem auto 2rem;
+    border-radius: 4px;
+  }
+}
+
+.lib-back-btn:focus-visible,
+.lib-close-btn:focus-visible,
+.chip:focus-visible,
+.lib-entry-link:focus-visible,
+.lib-source-link:focus-visible,
+.resource-link:focus-visible {
+  outline: 3px solid var(--gold-light);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .lib-panel {
+    margin: 0;
+    max-height: 100vh;
+    height: 100vh;
+    border-radius: 0;
+    border-width: 0 0 3px 0;
+  }
+
+  .lib-panel-header {
+    flex-wrap: wrap;
+  }
+
+  .lib-back-btn span {
+    display: none;
+  }
+
+  .lib-entries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lib-toc-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .lib-box-filters .reset-btn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .lib-panel-header {
+    padding: 0.75rem;
+    gap: 0.6rem;
+  }
+
+  .lib-back-btn {
+    padding: 0.5rem;
+  }
+
+  .lib-main {
+    padding: 0 0 0.5rem;
+  }
+
+  .lib-box {
+    padding: 0.85rem 0.75rem;
+  }
 }

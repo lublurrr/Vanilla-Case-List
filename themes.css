@@ -1,0 +1,944 @@
+/* ==========================================================================
+   Vanilla Case List — Seasonal themes
+   --------------------------------------------------------------------------
+   Every theme is a re-tint of the palette tokens declared in styles.css.
+   Nothing here restyles individual components: load this file AFTER
+   styles.css and the whole site follows along.
+
+   Adding a season means two things and no more:
+     1. a  :root[data-theme="<id>"]  block below,
+     2. an entry in the THEMES table in themes.js (id, label, date window).
+
+   House rules for a theme, so the site stays readable:
+     - the cream/paper family stays light, the ink family stays dark;
+     - the difficulty tokens (--easy / --medium / --hard) are left alone,
+       so blue/gold/red keep meaning the same thing all year round.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared seasonal plumbing
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* The accent every theme may override; all the seasonal marks are drawn in
+     it, so a season's ornaments always match its paper. */
+  --season-accent: var(--gold);
+}
+
+/* --- the crest under the masthead ---------------------------------------- */
+
+/* A drawn rule with the season's emblem set into the middle. themes.js leaves
+   it out entirely for the classic look, which wears no season. */
+.season-crest {
+  display: block;
+  width: min(300px, 70%);
+  height: auto;
+  margin: 0.7rem auto 0;
+  color: var(--season-accent);
+}
+
+.season-crest__rule path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  opacity: 0.55;
+}
+
+.season-crest__rule circle {
+  fill: currentColor;
+  opacity: 0.55;
+}
+
+/* --- the backdrop --------------------------------------------------------- */
+
+/* Behind the whole page: the season's colour and weave (--scene), with a
+   sparse tile of its marks washed over it. A fixed layer, not a body
+   background: iOS ignores background-attachment: fixed, and the scene would
+   smear down the full height of a 129-case page. z-index keeps it under the
+   content but over the body's own paper texture. */
+.season-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--scene, none);
+}
+
+.season-backdrop svg {
+  width: 100%;
+  height: 100%;
+  color: var(--wash-color, var(--season-accent));
+  opacity: var(--wash-opacity, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   Classic Vanilla — the original courtroom palette
+   --------------------------------------------------------------------------
+   styles.css already declares these on :root. They are restated here so a
+   nested [data-theme="classic"] element (a swatch on themes.html, say) shows
+   the classic look even while the page around it wears a season.
+   -------------------------------------------------------------------------- */
+
+[data-theme="classic"] {
+  --cream: #f5e7c4;
+  --cream-light: #fcf2d9;
+  --cream-deep: #e9d29a;
+  --paper: #fffaeb;
+
+  --ink: #2a1f0a;
+  --ink-soft: #4d3c1a;
+  --ink-light: #7a6738;
+
+  --blue: #1d4391;
+  --blue-deep: #0a2563;
+  --blue-light: #82a8e6;
+  --blue-pale: #d6e2f7;
+
+  --gold: #c9962b;
+  --gold-light: #f0c14b;
+
+  --celeste-light: #e9fbfa;
+  --celeste: #cdf1ee;
+  --celeste-deep: #9fdedb;
+  --celeste-text: #0f5a57;
+
+  --red: #b13438;
+  --red-deep: #7d1a1f;
+  --green: #4f8a3d;
+  --green-light: #b6dca5;
+  --green-pale: #dff0d4;
+
+  --shadow-soft: 0 2px 6px rgba(42, 31, 10, 0.12);
+  --shadow-card: 0 4px 0 rgba(42, 31, 10, 0.85), 0 6px 12px rgba(42, 31, 10, 0.18);
+  --shadow-deep: 0 8px 0 rgba(42, 31, 10, 0.85), 0 14px 30px rgba(42, 31, 10, 0.22);
+
+  --season-accent: #c9962b;
+}
+
+/* --------------------------------------------------------------------------
+   New Year — midnight navy, gold confetti
+   -------------------------------------------------------------------------- */
+
+[data-theme="newyear"] {
+  --cream: #e7e4f4;
+  --cream-light: #f6f4fd;
+  --cream-deep: #cdc6e6;
+  --paper: #fbfaff;
+
+  --ink: #191540;
+  --ink-soft: #342c63;
+  --ink-light: #6b649e;
+
+  --blue: #2f3f9e;
+  --blue-deep: #10154f;
+  --blue-light: #8f9ae4;
+  --blue-pale: #dcdff8;
+
+  --gold: #bf9220;
+  --gold-light: #f4d370;
+
+  --celeste-light: #eef1ff;
+  --celeste: #d8def7;
+  --celeste-deep: #a9b4e8;
+  --celeste-text: #262a6b;
+
+  --red: #a4335f;
+  --red-deep: #6d1c3c;
+  --green: #3f7d74;
+  --green-light: #a9d8d1;
+  --green-pale: #dcefec;
+
+  --shadow-soft: 0 2px 6px rgba(25, 21, 64, 0.14);
+  --shadow-card: 0 4px 0 rgba(25, 21, 64, 0.85), 0 6px 12px rgba(25, 21, 64, 0.2);
+  --shadow-deep: 0 8px 0 rgba(25, 21, 64, 0.85), 0 14px 30px rgba(25, 21, 64, 0.24);
+
+  --season-accent: #f4d370;
+}
+
+:root[data-theme="newyear"] body {
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(244, 211, 112, 0.14) 0%, transparent 26%),
+    radial-gradient(circle at 88% 92%, rgba(47, 63, 158, 0.12) 0%, transparent 30%),
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(25, 21, 64, 0.03) 39px 40px);
+}
+
+/* --------------------------------------------------------------------------
+   Valentine's — rose paper, plum ink
+   -------------------------------------------------------------------------- */
+
+[data-theme="valentines"] {
+  --cream: #fbe2ea;
+  --cream-light: #fff3f7;
+  --cream-deep: #f3c0d2;
+  --paper: #fffafc;
+
+  --ink: #46112f;
+  --ink-soft: #6c2049;
+  --ink-light: #a05b7c;
+
+  --blue: #8b2f77;
+  --blue-deep: #5c1a4e;
+  --blue-light: #d99ec9;
+  --blue-pale: #f7dcee;
+
+  --gold: #c76a86;
+  --gold-light: #f0a8bc;
+
+  --celeste-light: #fff0f4;
+  --celeste: #fbd8e3;
+  --celeste-deep: #eeaec5;
+  --celeste-text: #7a2148;
+
+  --red: #c02b4c;
+  --red-deep: #85162f;
+  --green: #8a7f4e;
+  --green-light: #ddd2a8;
+  --green-pale: #f0e9cf;
+
+  --shadow-soft: 0 2px 6px rgba(70, 17, 47, 0.14);
+  --shadow-card: 0 4px 0 rgba(70, 17, 47, 0.8), 0 6px 12px rgba(70, 17, 47, 0.2);
+  --shadow-deep: 0 8px 0 rgba(70, 17, 47, 0.8), 0 14px 30px rgba(70, 17, 47, 0.24);
+
+  --season-accent: #c02b4c;
+}
+
+:root[data-theme="valentines"] body {
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(192, 43, 76, 0.1) 0%, transparent 26%),
+    radial-gradient(circle at 88% 92%, rgba(139, 47, 119, 0.09) 0%, transparent 30%),
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(70, 17, 47, 0.03) 39px 40px);
+}
+
+/* --------------------------------------------------------------------------
+   Easter — pastel spring, painted eggs
+   -------------------------------------------------------------------------- */
+
+[data-theme="easter"] {
+  --cream: #f3f7dd;
+  --cream-light: #fbfdf0;
+  --cream-deep: #dde7bb;
+  --paper: #fdfff6;
+
+  --ink: #2f4021;
+  --ink-soft: #4a6135;
+  --ink-light: #7b8f63;
+
+  --blue: #4d7fbe;
+  --blue-deep: #2b5488;
+  --blue-light: #a9c9ec;
+  --blue-pale: #dfecf9;
+
+  --gold: #d3a83c;
+  --gold-light: #f6da7f;
+
+  --celeste-light: #f0fbf4;
+  --celeste: #d3f0de;
+  --celeste-deep: #a6ddbb;
+  --celeste-text: #1f5c39;
+
+  --red: #d4658a;
+  --red-deep: #a03c60;
+  --green: #5c9a45;
+  --green-light: #bfe3ab;
+  --green-pale: #e4f4d9;
+
+  --shadow-soft: 0 2px 6px rgba(47, 64, 33, 0.12);
+  --shadow-card: 0 4px 0 rgba(47, 64, 33, 0.75), 0 6px 12px rgba(47, 64, 33, 0.18);
+  --shadow-deep: 0 8px 0 rgba(47, 64, 33, 0.75), 0 14px 30px rgba(47, 64, 33, 0.22);
+
+  --season-accent: #d4658a;
+}
+
+:root[data-theme="easter"] body {
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(212, 101, 138, 0.1) 0%, transparent 26%),
+    radial-gradient(circle at 88% 92%, rgba(92, 154, 69, 0.1) 0%, transparent 30%),
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(47, 64, 33, 0.025) 39px 40px);
+}
+
+/* --------------------------------------------------------------------------
+   Halloween — pumpkin on a bruised-purple night
+   -------------------------------------------------------------------------- */
+
+[data-theme="halloween"] {
+  --cream: #ddc7a4;
+  --cream-light: #f0dfbd;
+  --cream-deep: #bfa478;
+  --paper: #fcf3e0;
+
+  --ink: #241033;
+  --ink-soft: #3f1d55;
+  --ink-light: #6d4a87;
+
+  --blue: #5b2a8c;
+  --blue-deep: #35145a;
+  --blue-light: #b493d8;
+  --blue-pale: #e6dbf3;
+
+  --gold: #d9731a;
+  --gold-light: #f7a441;
+
+  --celeste-light: #f1eaf8;
+  --celeste: #ded0ee;
+  --celeste-deep: #bda4da;
+  --celeste-text: #3f1d55;
+
+  --red: #b8331f;
+  --red-deep: #7d1d10;
+  --green: #5a7a22;
+  --green-light: #bcd189;
+  --green-pale: #e2ecc6;
+
+  --shadow-soft: 0 2px 6px rgba(36, 16, 51, 0.18);
+  --shadow-card: 0 4px 0 rgba(36, 16, 51, 0.88), 0 6px 12px rgba(36, 16, 51, 0.26);
+  --shadow-deep: 0 8px 0 rgba(36, 16, 51, 0.88), 0 14px 30px rgba(36, 16, 51, 0.3);
+
+  --season-accent: #d9731a;
+}
+
+:root[data-theme="halloween"] body {
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(217, 115, 26, 0.3) 0%, transparent 32%),
+    radial-gradient(circle at 88% 92%, rgba(91, 42, 140, 0.28) 0%, transparent 36%),
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(36, 16, 51, 0.035) 39px 40px);
+}
+
+/* --------------------------------------------------------------------------
+   Christmas — holly red, pine green, gold trim
+   -------------------------------------------------------------------------- */
+
+[data-theme="christmas"] {
+  --cream: #e3eed8;
+  --cream-light: #f5faee;
+  --cream-deep: #c3d6b2;
+  --paper: #fcfdf8;
+
+  --ink: #1e3320;
+  --ink-soft: #2f4d33;
+  --ink-light: #5f7d63;
+
+  --blue: #1d6b3a;
+  --blue-deep: #0f4423;
+  --blue-light: #92c9a5;
+  --blue-pale: #dcefe1;
+
+  --gold: #c19a2b;
+  --gold-light: #f0cc63;
+
+  --celeste-light: #eef7fb;
+  --celeste: #d3e9f2;
+  --celeste-deep: #a6cfe0;
+  --celeste-text: #17505f;
+
+  --red: #b32430;
+  --red-deep: #7c121c;
+  --green: #2c7a42;
+  --green-light: #a5d8b4;
+  --green-pale: #d9f0e0;
+
+  --shadow-soft: 0 2px 6px rgba(30, 51, 32, 0.14);
+  --shadow-card: 0 4px 0 rgba(30, 51, 32, 0.85), 0 6px 12px rgba(30, 51, 32, 0.2);
+  --shadow-deep: 0 8px 0 rgba(30, 51, 32, 0.85), 0 14px 30px rgba(30, 51, 32, 0.24);
+
+  --season-accent: #b32430;
+}
+
+:root[data-theme="christmas"] body {
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(179, 36, 48, 0.1) 0%, transparent 26%),
+    radial-gradient(circle at 88% 92%, rgba(44, 122, 66, 0.12) 0%, transparent 30%),
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(30, 51, 32, 0.03) 39px 40px);
+}
+
+/* ==========================================================================
+   Scenes
+   --------------------------------------------------------------------------
+   The palettes above keep the paper readable; the scenes are where the
+   seasons part company. Each one sets:
+
+     --scene          the page backdrop: a colour and a weave of its own
+     --scene-sky      the sky behind the masthead, with a light behind the logo
+     --scene-ink      text that sits on the sky (the credits), and its halo
+     --scene-accent   the crest, drawn on the sky rather than on paper
+     --wash-*         the tile of marks over the backdrop
+     --horizon-*      the colours scenes.js paints the horizon with
+
+   Nothing is meant to be read straight off the backdrop: every panel sits on
+   paper, and the footers that used to be transparent get a paper band below.
+   ========================================================================== */
+
+/* Where the logo sits, so every scene can put its light — and Halloween its
+   moon — right behind it. Mirrors .site-logo's width and the header's top
+   padding in styles.css. A percentage of the header would drift: on a phone
+   the header is shorter and the moon slid down behind the credits. */
+:root {
+  --logo-w: clamp(280px, 42vw, 500px);
+  --logo-top: 2.5rem;
+  --logo-cy: calc(var(--logo-top) + var(--logo-w) / 4);
+}
+
+@media (max-width: 480px) {
+  :root {
+    --logo-top: 1.5rem;
+  }
+}
+
+/* Classic has no scene, but restates the tokens so a classic card nested in a
+   seasonal page (the gallery) does not inherit the page's sky. */
+[data-theme="classic"] {
+  --scene: none;
+  --scene-sky: linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%);
+  --scene-band:
+    linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%);
+  --scene-ink: var(--ink-soft);
+  --scene-ink-soft: var(--ink-light);
+  --scene-shadow: transparent;
+  --scene-accent: var(--gold);
+}
+
+/* --- New Year: a starfield over the city --------------------------------- */
+
+[data-theme="newyear"] {
+  --stars:
+    radial-gradient(circle at 23px 31px, rgba(255, 244, 214, 0.95) 0 1.2px, transparent 1.8px) 0 0 / 97px 89px,
+    radial-gradient(circle at 61px 12px, rgba(255, 255, 255, 0.8) 0 0.8px, transparent 1.4px) 0 0 / 131px 113px,
+    radial-gradient(circle at 110px 74px, rgba(244, 211, 112, 0.9) 0 1.5px, transparent 2.2px) 0 0 / 173px 157px,
+    radial-gradient(circle at 40px 90px, rgba(200, 210, 255, 0.85) 0 1px, transparent 1.6px) 0 0 / 211px 191px;
+
+  --scene:
+    var(--stars),
+    radial-gradient(ellipse 70% 45% at 50% 115%, rgba(164, 51, 95, 0.55), transparent 70%),
+    linear-gradient(180deg, #070a24 0%, #121249 55%, #231a55 100%);
+
+  --scene-sky:
+    radial-gradient(ellipse calc(var(--logo-w) * 0.9) calc(var(--logo-w) * 0.52) at 50% var(--logo-cy), rgba(255, 236, 170, 0.5) 0%, rgba(244, 211, 112, 0.16) 45%, transparent 75%),
+    var(--stars),
+    linear-gradient(180deg, #070a24 0%, #141452 58%, #3a2160 100%);
+  --scene-band:
+    linear-gradient(180deg, #070a24 0%, #141452 58%, #3a2160 100%);
+
+  --scene-ink: #f6f0dc;
+  --scene-ink-soft: #cfc9ee;
+  --scene-shadow: rgba(7, 10, 36, 0.9);
+  --scene-accent: #f4d370;
+  --wash-color: #f4d370;
+  --wash-opacity: 0.12;
+
+  --horizon-far: #221f63;
+  --horizon-near: #090a24;
+  --horizon-light: #f4d370;
+  --horizon-accent: #ea7aa6;
+}
+
+/* --- Valentine's: a tufted, quilted satin -------------------------------- */
+
+[data-theme="valentines"] {
+  --scene:
+    radial-gradient(circle at 0 0, rgba(255, 224, 234, 0.55) 0 2.2px, transparent 2.8px) 0 0 / 56px 56px,
+    radial-gradient(circle at 28px 28px, rgba(255, 224, 234, 0.55) 0 2.2px, transparent 2.8px) 0 0 / 56px 56px,
+    conic-gradient(from 45deg, rgba(255, 255, 255, 0.08) 25%, transparent 0 50%, rgba(255, 255, 255, 0.08) 0 75%, transparent 0) 0 0 / 56px 56px,
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(234, 111, 143, 0.8), transparent 70%),
+    linear-gradient(165deg, #c0264f 0%, #8e1840 50%, #5a0f2e 100%);
+
+  --scene-sky:
+    radial-gradient(ellipse calc(var(--logo-w) * 0.9) calc(var(--logo-w) * 0.52) at 50% var(--logo-cy), rgba(255, 246, 249, 0.9) 0%, rgba(255, 224, 234, 0.4) 45%, transparent 75%),
+    linear-gradient(180deg, #f9c4d3 0%, #ee98b0 55%, #d8698c 100%);
+  --scene-band:
+    linear-gradient(180deg, #f9c4d3 0%, #ee98b0 55%, #d8698c 100%);
+
+  --scene-ink: #3d0c27;
+  --scene-ink-soft: #6c2049;
+  --scene-shadow: rgba(255, 236, 242, 0.75);
+  --scene-accent: #8e1840;
+  --wash-color: #ffd9e4;
+  --wash-opacity: 0.14;
+
+  --horizon-far: #d8698c;
+  --horizon-near: #fff5f8;
+  --horizon-light: #fff0f4;
+  --horizon-accent: #b01e4a;
+}
+
+/* --- Easter: painted-egg stripes and polka dots -------------------------- */
+
+[data-theme="easter"] {
+  --scene:
+    radial-gradient(circle, rgba(255, 255, 255, 0.6) 0 3px, transparent 3.6px) 0 0 / 38px 38px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.6) 0 3px, transparent 3.6px) 19px 19px / 38px 38px,
+    repeating-linear-gradient(115deg,
+      #f6c2d4 0 64px, #fbe5a4 64px 128px, #c4ebcf 128px 192px,
+      #cbd7f6 192px 256px, #e1ccf4 256px 320px);
+
+  --scene-sky:
+    radial-gradient(ellipse calc(var(--logo-w) * 0.9) calc(var(--logo-w) * 0.52) at 50% var(--logo-cy), rgba(255, 252, 230, 0.95) 0%, rgba(255, 246, 200, 0.45) 42%, transparent 72%),
+    linear-gradient(180deg, #b8e0f4 0%, #dcf0f4 55%, #fbf2cc 100%);
+  --scene-band:
+    linear-gradient(180deg, #b8e0f4 0%, #dcf0f4 55%, #fbf2cc 100%);
+
+  --scene-ink: #2f4021;
+  --scene-ink-soft: #4a6135;
+  --scene-shadow: rgba(255, 255, 255, 0.75);
+  --scene-accent: #c24f78;
+  --wash-color: #7a5aa0;
+  --wash-opacity: 0.1;
+
+  --horizon-far: #bfe3a6;
+  --horizon-mid: #97cf7e;
+  --horizon-near: #6cb35a;
+  --horizon-light: #ffffff;
+  --horizon-accent: #c7a3e6;
+}
+
+/* --- Halloween: a spider's web in the corner of the night ---------------- */
+
+[data-theme="halloween"] {
+  --scene:
+    repeating-radial-gradient(circle at 0 0, transparent 0 46px, rgba(214, 190, 240, 0.16) 46px 47.5px) 0 0 / 460px 460px no-repeat,
+    repeating-conic-gradient(from 90deg at 0 0, rgba(214, 190, 240, 0.16) 0 0.35deg, transparent 0.35deg 10deg) 0 0 / 460px 460px no-repeat,
+    repeating-radial-gradient(circle at 100% 100%, transparent 0 46px, rgba(214, 190, 240, 0.12) 46px 47.5px) 100% 100% / 380px 380px no-repeat,
+    repeating-conic-gradient(from 270deg at 100% 100%, rgba(214, 190, 240, 0.12) 0 0.35deg, transparent 0.35deg 10deg) 100% 100% / 380px 380px no-repeat,
+    radial-gradient(ellipse 70% 45% at 50% 115%, rgba(217, 115, 26, 0.4), transparent 70%),
+    linear-gradient(180deg, #14081f 0%, #22103a 55%, #2e1240 100%);
+
+  /* The moon sits right behind the logo, with a warm halo around it so the
+     whole masthead reads against the night. */
+  --scene-sky:
+    radial-gradient(circle calc(var(--logo-w) * 0.24) at 50% var(--logo-cy), #fff1d2 0 62%, #ffd79a 74%, rgba(255, 190, 110, 0.45) 84%, transparent 100%),
+    radial-gradient(ellipse calc(var(--logo-w) * 0.9) calc(var(--logo-w) * 0.52) at 50% var(--logo-cy), rgba(255, 190, 120, 0.42) 0%, rgba(255, 150, 80, 0.12) 50%, transparent 76%),
+    linear-gradient(180deg, #120720 0%, #2a1142 60%, #4a1d4f 100%);
+  --scene-band:
+    linear-gradient(180deg, #120720 0%, #2a1142 60%, #4a1d4f 100%);
+
+  --scene-ink: #f3e6ff;
+  --scene-ink-soft: #d9c4ec;
+  --scene-shadow: rgba(18, 7, 32, 0.92);
+  --scene-accent: #f7a441;
+  --wash-color: #f7a441;
+  --wash-opacity: 0.1;
+
+  --horizon-far: #2d133d;
+  --horizon-near: #0d0414;
+  --horizon-light: #f7922e;
+  --horizon-accent: #f7a441;
+}
+
+/* --- Christmas: gift-wrap lattice, dusted with snow ---------------------- */
+
+[data-theme="christmas"] {
+  --stars:
+    radial-gradient(circle at 23px 31px, rgba(255, 255, 255, 0.9) 0 1.1px, transparent 1.7px) 0 0 / 97px 89px,
+    radial-gradient(circle at 110px 74px, rgba(255, 226, 150, 0.85) 0 1.4px, transparent 2px) 0 0 / 173px 157px,
+    radial-gradient(circle at 40px 90px, rgba(220, 240, 255, 0.8) 0 1px, transparent 1.6px) 0 0 / 211px 191px;
+
+  --scene:
+    radial-gradient(circle, rgba(255, 255, 255, 0.6) 0 1.6px, transparent 2.2px) 0 0 / 34px 34px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.35) 0 1.2px, transparent 1.8px) 17px 17px / 34px 34px,
+    repeating-linear-gradient(45deg, transparent 0 23px, rgba(226, 186, 92, 0.3) 23px 24px),
+    repeating-linear-gradient(-45deg, transparent 0 23px, rgba(226, 186, 92, 0.3) 23px 24px),
+    linear-gradient(180deg, #11492a 0%, #0b301b 100%);
+
+  --scene-sky:
+    radial-gradient(ellipse calc(var(--logo-w) * 0.9) calc(var(--logo-w) * 0.52) at 50% var(--logo-cy), rgba(255, 226, 160, 0.55) 0%, rgba(255, 200, 110, 0.18) 45%, transparent 75%),
+    var(--stars),
+    linear-gradient(180deg, #0a1f33 0%, #0f3340 55%, #1d4a3c 100%);
+  --scene-band:
+    linear-gradient(180deg, #0a1f33 0%, #0f3340 55%, #1d4a3c 100%);
+
+  --scene-ink: #f4f1e4;
+  --scene-ink-soft: #cfe0d4;
+  --scene-shadow: rgba(8, 20, 28, 0.9);
+  --scene-accent: #f0cc63;
+  --wash-color: #f0cc63;
+  --wash-opacity: 0.1;
+
+  --horizon-far: #cfe3ea;
+  --horizon-mid: #0f4426;
+  --horizon-near: #ffffff;
+  --horizon-light: #ffd27a;
+  --horizon-accent: #b32430;
+}
+
+/* --- the masthead as a window onto the scene ----------------------------- */
+
+/* Gated on an explicit, non-classic data-theme: with JS off there is no
+   attribute, and the classic header stands. The archive and library heroes
+   keep their own identity. */
+[data-theme]:not([data-theme="classic"]) .site-header:not(.page-hero-archive):not(.page-hero-resources) {
+  background: var(--scene-sky);
+  /* Room for the horizon: the credits and crest sit on open sky above it. */
+  padding-bottom: 5.5rem;
+}
+
+.season-scene {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+[data-theme]:not([data-theme="classic"]) .site-header:not(.page-hero-archive):not(.page-hero-resources) .site-credits {
+  color: var(--scene-ink);
+  text-shadow: 0 1px 1px var(--scene-shadow), 0 0 10px var(--scene-shadow);
+}
+
+[data-theme]:not([data-theme="classic"]) .site-header:not(.page-hero-archive):not(.page-hero-resources) .site-credits small {
+  color: var(--scene-ink-soft);
+}
+
+[data-theme]:not([data-theme="classic"]) .site-header:not(.page-hero-archive):not(.page-hero-resources) .season-crest {
+  color: var(--scene-accent);
+}
+
+/* On the three night skies, a pale edge and a soft glow keep the logo's navy
+   and burgundy from sinking into the dark. */
+[data-theme="newyear"] .site-header:not(.page-hero-archive):not(.page-hero-resources) .site-logo,
+[data-theme="halloween"] .site-header:not(.page-hero-archive):not(.page-hero-resources) .site-logo,
+[data-theme="christmas"] .site-header:not(.page-hero-archive):not(.page-hero-resources) .site-logo {
+  filter:
+    drop-shadow(0 0 1.5px rgba(255, 248, 230, 0.95))
+    drop-shadow(0 0 16px rgba(255, 236, 190, 0.45))
+    drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.35));
+}
+
+/* The archive and library footers were transparent, reading straight off
+   their page's own colour. On a scene they get the paper band the Case List's
+   footer already has. */
+[data-theme]:not([data-theme="classic"]) body.page-archive .site-footer,
+[data-theme]:not([data-theme="classic"]) body.page-resources .site-footer {
+  background-color: var(--cream-light);
+  border-top-color: var(--ink);
+  color: var(--ink);
+}
+
+[data-theme]:not([data-theme="classic"]) body.page-archive .site-footer .footer-small,
+[data-theme]:not([data-theme="classic"]) body.page-resources .site-footer .footer-small {
+  color: var(--ink-light);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Seasonal Themes strip (Case List navigation)
+   --------------------------------------------------------------------------
+   A slim, full-width link to the gallery under the outbound links, painted
+   with the current season's sky so it reads as a small window onto it. The
+   fallbacks cover a page with no data-theme yet (JavaScript off). */
+
+.resource-season {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.7rem;
+  padding: 0.4rem 0.9rem;
+  color: var(--scene-ink, var(--ink));
+  text-decoration: none;
+  text-shadow: 0 1px 1px var(--scene-shadow, transparent), 0 0 8px var(--scene-shadow, transparent);
+  /* The band, not the full sky: the sky's glow and Halloween's moon are
+     anchored to the masthead logo, and on a phone they landed right behind
+     this strip's text (1:1 contrast). The band has no stars either: the star
+     tiles repeat every ~90px, and in a strip this low they lined up into a
+     dotted rule running through the words. */
+  background: var(--scene-band, linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%));
+  border: var(--border-medium);
+  border-radius: 6px;
+  box-shadow: 0 3px 0 var(--ink);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.resource-season:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 var(--ink);
+}
+
+.resource-season:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 var(--ink);
+}
+
+.resource-season:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.resource-season__emblem {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  color: var(--scene-accent, var(--gold));
+}
+
+.resource-season__emblem svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.resource-season__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.resource-season__now {
+  font-size: 0.76rem;
+  /* The sky's full ink, not its softer one: over the lighter skies the
+     softer ink sat right on the 4.5:1 line. */
+  color: inherit;
+}
+
+.resource-season__cta {
+  margin-left: auto;
+  font-size: 0.76rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.resource-season__cta [aria-hidden] {
+  display: inline-block;
+  transition: transform 0.15s;
+}
+
+.resource-season:hover .resource-season__cta [aria-hidden] {
+  transform: translateX(3px);
+}
+
+/* On a phone the strip becomes a fixed two-line block rather than a
+   wrapping row: the emblem on the left, the title over the season in the
+   middle, the call to action on the right. A wrapping row broke into four
+   ragged lines at 360px; this holds its shape at any width. */
+@media (max-width: 600px) {
+  .resource-season {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "emblem title cta"
+      "emblem now   cta";
+    column-gap: 0.7rem;
+    row-gap: 0.05rem;
+  }
+
+  .resource-season__emblem {
+    grid-area: emblem;
+  }
+
+  .resource-season__title {
+    grid-area: title;
+  }
+
+  .resource-season__now {
+    grid-area: now;
+  }
+
+  .resource-season__cta {
+    grid-area: cta;
+    margin-left: 0;
+  }
+}
+
+/* Under 430px "See every look" left the title too little room, and it broke
+   onto two lines. The words stay for screen readers; the arrow stays on
+   screen, and the whole strip is the link. */
+@media (max-width: 430px) {
+  .resource-season__cta-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .resource-season__cta {
+    font-size: 1.1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Theme gallery (themes.html)
+   --------------------------------------------------------------------------
+   Each card carries its own data-theme, so the tokens above resolve inside the
+   card and every preview shows its real palette side by side.
+   -------------------------------------------------------------------------- */
+
+.theme-gallery {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Sits on the backdrop, so it gets paper of its own. */
+.theme-gallery__intro {
+  max-width: 46rem;
+  margin: 0 auto 2rem;
+  padding: 1rem 1.4rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: var(--border-medium);
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+}
+
+.theme-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1.25rem;
+}
+
+.theme-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: var(--border-thick);
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+/* The top of each card is a small window onto that season's scene, with its
+   emblem on a paper medallion where the logo would be. */
+/* The scene tokens resolve on the card (it carries data-theme), so the logo
+   anchor is re-pointed there: the light and the moon sit behind the
+   medallion instead of 165px down a 128px band. */
+.theme-card {
+  --logo-w: 190px;
+  --logo-cy: 40%;
+}
+
+.theme-card__scene {
+  position: relative;
+  height: 128px;
+  overflow: hidden;
+  background: var(--scene-sky);
+  border-bottom: var(--border-medium);
+}
+
+.theme-card__medallion {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  transform: translate(-50%, -50%);
+  color: var(--season-accent);
+  background: var(--paper);
+  border: var(--border-medium);
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
+}
+
+.theme-card__medallion svg {
+  width: 30px;
+  height: 30px;
+}
+
+.theme-card__preview {
+  padding: 1rem;
+  background: linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%);
+  border-bottom: var(--border-medium);
+}
+
+.theme-card__emblem {
+  flex: 0 0 auto;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--season-accent);
+}
+
+.theme-card__name {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--ink);
+}
+
+.theme-card__blurb {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.theme-card__swatches {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0 0 0.75rem;
+}
+
+.theme-card__swatch {
+  flex: 1;
+  height: 2rem;
+  border: var(--border-thin);
+  border-radius: 3px;
+}
+
+.theme-card__mock {
+  padding: 0.55rem 0.7rem;
+  background: var(--paper);
+  border: var(--border-medium);
+  border-radius: 5px;
+  box-shadow: var(--shadow-soft);
+}
+
+.theme-card__mock-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--ink);
+}
+
+.theme-card__mock-meta {
+  font-size: 0.68rem;
+  color: var(--ink-light);
+}
+
+.theme-card__foot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem 1rem;
+}
+
+.theme-card__window {
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+.theme-card__window.is-now {
+  font-weight: bold;
+  color: var(--season-accent);
+}
+
+.theme-card__open {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: bold;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--cream-light) 0%, var(--cream-deep) 100%);
+  border: var(--border-medium);
+  border-radius: 5px;
+  box-shadow: var(--shadow-soft);
+}
+
+.theme-card__open:hover,
+.theme-card__open:focus-visible {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--cream) 100%);
+}
