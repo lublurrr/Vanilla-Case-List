@@ -42,27 +42,11 @@
   "graveyardNote": "Cases that are lost to time / deleted but are still remembered. R.I.P.",
   "entries": [
     {
-      "id": "ua-2",
-      "title": "Turnabout Sisters REDUX",
-      "url": "https://docs.google.com/document/d/1SH-VptSN1B0tXhSrxDhqfqwo1UUA4oKvsWxT0JUUAs0/edit#heading=h.sgb6qmhye37q",
-      "category": "2001",
-      "creator": "Shu Takumi",
-      "type": "case"
-    },
-    {
       "id": "ua-3",
       "title": "Turnabout Sisters: Finale",
       "url": "https://docs.google.com/document/d/1yE03CiE-4Vv3wa5Nw6TUiUjQ5GkSrdcZ5zIl0VKSzhA/edit#heading=h.5pp9ep4xsbza",
       "category": "2001",
       "creator": "Shu Takumi",
-      "type": "case"
-    },
-    {
-      "id": "ua-4",
-      "title": "Turnabout Roundabout",
-      "url": "https://docs.google.com/document/d/e/2PACX-1vQvAq3zW-99rvLebI4bN4E2EUkXb0w4rvDseg_76HF9UoeEHN1mgzhj3vESDDIC_Nf-RJPi5UnzXlBA/pub",
-      "category": "2001",
-      "creator": "Penix Wrong",
       "type": "case"
     },
     {
@@ -8895,6 +8879,22 @@
       "url": "https://docs.google.com/document/d/1E6L2RMBwl8QJ2pZI7Wkes1GIFdTYyJVZuil6q5CjJxE/edit#heading=h.rouj0oapt2hm",
       "category": "Graveyard",
       "creator": "Unknown",
+      "type": "case"
+    },
+    {
+      "id": "ua-2",
+      "title": "Turnabout Sisters REDUX",
+      "url": "https://docs.google.com/document/d/1SH-VptSN1B0tXhSrxDhqfqwo1UUA4oKvsWxT0JUUAs0/edit#heading=h.sgb6qmhye37q",
+      "category": "Graveyard",
+      "creator": "Shu Takumi",
+      "type": "case"
+    },
+    {
+      "id": "ua-4",
+      "title": "Turnabout Roundabout",
+      "url": "https://docs.google.com/document/d/e/2PACX-1vQvAq3zW-99rvLebI4bN4E2EUkXb0w4rvDseg_76HF9UoeEHN1mgzhj3vESDDIC_Nf-RJPi5UnzXlBA/pub",
+      "category": "Graveyard",
+      "creator": "Penix Wrong",
       "type": "case"
     }
   ]
