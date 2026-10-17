@@ -1,6 +1,6 @@
 # Vanilla Case List
 
-This is the [Vanilla Case List]:
+This is the Vanilla Case List:
 a full site with a seasonal theme layer on top, so new
 looks can be built and tried out here without touching the live list.
 
