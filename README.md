@@ -1,7 +1,7 @@
 # Vanilla Case List
 
-This is the **theme workshop** for the [Vanilla Case List](https://github.com/lublurrr/vanilla-test-list):
-a full, working copy of the site with a seasonal theme layer on top, so new
+This is the [Vanilla Case List]:
+a full site with a seasonal theme layer on top, so new
 looks can be built and tried out here without touching the live list.
 
 The site dresses itself for the time of year — pumpkins through late October,
