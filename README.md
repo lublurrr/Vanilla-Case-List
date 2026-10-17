@@ -1,4 +1,4 @@
-# Vanilla Case List — Seasonal Themes
+# Vanilla Case List
 
 This is the **theme workshop** for the [Vanilla Case List](https://github.com/lublurrr/vanilla-test-list):
 a full, working copy of the site with a seasonal theme layer on top, so new
