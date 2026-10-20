@@ -6,6 +6,6 @@
 version: 2
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "https://github.com/luwolfang/Vanilla-Case-List/blob/vcl-main/app.js" # Location of package manifests
+    directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
