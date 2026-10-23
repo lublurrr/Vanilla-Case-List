@@ -1203,7 +1203,7 @@
       "creator": "Court of Attrition",
       "description": "A list of recorded runs of cases spanning from original Court of Attrition to current day with cases from other servers too."
     }
-        {
+    {
       "id": "rl-129",
       "title": "Webfred's Template",
       "url": "https://docs.google.com/document/d/1vTHdL2yImfQxfhzpt6Qk1uOEM3VP9vk-U_oJvO_6wE8/edit?tab=t.0",
@@ -1211,6 +1211,6 @@
       "type": "Template",
       "creator": "Webfred",
       "description": "A template proclaimed to be the best in existence. Worth watching it out for."
-    }
+    },
   ]
 }
