@@ -1,4 +1,4 @@
-# Vanilla Case List
+# (OLD) Vanilla Case List
 
 This is the Vanilla Case List:
 a full site with a seasonal theme layer on top, so new
